@@ -1,0 +1,139 @@
+
+Buat dropdown yang dapat diarahkan menggunakan CSS.
+
+Demo: Contoh Dropdown
+Arahkan mouse pada contoh di bawah ini:
+
+Teks DropdownMenu Tarik-turunLainnya:Lima Tanah
+Dropdown Dasar
+Buat kotak dropdown yang muncul saat pengguna menggerakkan mouse di atas suatu elemen.
+
+Contoh
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div>
+Contoh Dijelaskan
+HTML) Gunakan elemen apa pun untuk membuka konten dropdown, misalnya elemen <span>, atau elemen <button>.
+
+Gunakan elemen wadah (seperti <div>) untuk membuat konten dropdown dan tambahkan apa pun yang Anda inginkan di dalamnya.
+
+Bungkus elemen <div> di sekitar elemen untuk memposisikan konten dropdown dengan benar dengan CSS.
+
+CSS) Kelas .dropdownmenggunakan position:relative, yang diperlukan saat kita ingin konten dropdown ditempatkan tepat di bawah tombol dropdown (menggunakan position:absolute).
+
+Kelas ini .dropdown-contentmenyimpan konten dropdown yang sebenarnya. Kelas ini disembunyikan secara default, dan akan ditampilkan saat kursor diarahkan (lihat di bawah). Perhatikan bahwa nilai `` min-widthdiatur ke 160 piksel. Silakan ubah nilai ini. Tips: Jika Anda ingin lebar konten dropdown selebar tombol dropdown, atur `` widthke 100% (dan overflow:autountuk mengaktifkan pengguliran di layar kecil).
+
+Alih-alih menggunakan border, kami menggunakan box-shadowproperti CSS untuk membuat menu dropdown tampak seperti "kartu".
+
+Pemilih :hoverdigunakan untuk menampilkan menu tarik-turun saat pengguna menggerakkan tetikus di atas tombol tarik-turun.
+
+IKLAN
+
+Menu Tarik-turun
+Buat menu tarik-turun yang memungkinkan pengguna memilih opsi dari daftar:
+
+Menu Tarik-turun
+Contoh ini serupa dengan contoh sebelumnya, kecuali kita menambahkan tautan di dalam kotak dropdown dan menatanya agar sesuai dengan tombol dropdown yang diberi gaya:
+
+Contoh
+<style>
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+Konten Dropdown Rata Kanan
+KiriBenar
+Jika Anda ingin menu dropdown bergerak dari kanan ke kiri, bukan dari kiri ke kanan, tambahkanright: 0;
+
+Contoh
+.dropdown-content {
+  right: 0;
+}
+Contoh Lainnya
+Gambar Dropdown
+Cara menambahkan gambar dan konten lainnya di dalam kotak dropdown.
+
+Arahkan kursor ke gambar:
+
+Lima Tanah
+
+Bilah Navigasi Tarik-turun
+Cara menambahkan menu tarik-turun di dalam bilah navigasi.
+
+

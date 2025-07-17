@@ -1,0 +1,164 @@
+Daftar CSS
+Daftar Tidak Berurut:
+Kopi
+Teh
+Coca Cola
+Kopi
+Teh
+Coca Cola
+Daftar Berurut:
+Kopi
+Teh
+Coca Cola
+Kopi
+Teh
+Coca Cola
+Daftar HTML dan Properti Daftar CSS
+Dalam HTML, ada dua jenis utama daftar:
+
+daftar tidak berurutan (<ul>) - item daftar ditandai dengan poin
+daftar berurutan (<ol>) - item daftar ditandai dengan angka atau huruf
+Properti daftar CSS memungkinkan Anda untuk:
+
+Tetapkan penanda item daftar yang berbeda untuk daftar yang diurutkan
+Tetapkan penanda item daftar yang berbeda untuk daftar yang tidak berurutan
+Tetapkan gambar sebagai penanda item daftar
+Tambahkan warna latar belakang ke daftar dan item daftar
+Penanda Item Daftar yang Berbeda
+Properti list-style-typemenentukan jenis penanda item daftar.
+
+Contoh berikut menunjukkan beberapa penanda item daftar yang tersedia:
+
+Contoh
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+Catatan: Beberapa nilai berlaku untuk daftar tak berurutan, dan beberapa berlaku untuk daftar berurutan.
+
+IKLAN
+
+Gambar sebagai Penanda Item Daftar
+Properti list-style-imagemenentukan gambar sebagai penanda item daftar:
+
+Contoh
+ul {
+  list-style-image: url('sqpurple.gif');
+}
+Posisikan Penanda Item Daftar
+Properti list-style-positionmenentukan posisi penanda item daftar (poin-poin penting).
+
+"list-style-position: outside;" berarti poin-poin akan berada di luar item daftar. Awal setiap baris item daftar akan disejajarkan secara vertikal. Ini adalah pengaturan default:
+
+Kopi - Minuman seduh yang dibuat dari biji kopi yang dipanggang...
+Teh
+Coca-cola
+"list-style-position: inside;" berarti poin-poin akan berada di dalam item daftar. Karena merupakan bagian dari item daftar, poin-poin tersebut akan menjadi bagian dari teks dan mendorong teks di awal:
+
+Kopi - Minuman seduh yang dibuat dari biji kopi yang dipanggang...
+Teh
+Coca-cola
+Contoh
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+Hapus Pengaturan Default
+Properti ini list-style-type:nonejuga dapat digunakan untuk menghapus penanda/poin. Perhatikan bahwa daftar ini juga memiliki margin dan padding default. Untuk menghapusnya, tambahkan margin:0dan padding:0ke <ul> atau <ol>:
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+Daftar - Properti singkatan
+Properti ini list-styleadalah properti singkat. Properti ini digunakan untuk mengatur semua properti daftar dalam satu deklarasi:
+
+Contoh
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+Saat menggunakan properti singkatan, urutan nilai properti adalah:
+
+list-style-type(jika gambar bergaya daftar ditentukan, nilai properti ini akan ditampilkan jika gambar karena alasan tertentu tidak dapat ditampilkan)
+list-style-position(menentukan apakah penanda item daftar harus muncul di dalam atau di luar alur konten)
+list-style-image(menentukan gambar sebagai penanda item daftar)
+Jika salah satu nilai properti di atas hilang, nilai default untuk properti yang hilang akan dimasukkan, jika ada.
+
+Daftar Gaya Dengan Warna
+Kita juga dapat memberi gaya pada daftar dengan warna, untuk membuatnya tampak sedikit lebih menarik.
+
+Apa pun yang ditambahkan ke tag <ol> atau <ul> akan memengaruhi keseluruhan daftar, sedangkan properti yang ditambahkan ke tag <li> akan memengaruhi item daftar individual:
+
+Contoh
+ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+Hasil:
+
+Coffee
+Tea
+Coca Cola
+Coffee
+Tea
+Coca Cola
+Contoh Lainnya
+Daftar yang disesuaikan dengan batas kiri merah
+Contoh ini memperagakan cara membuat daftar dengan batas kiri merah.
+
+Daftar berbatas lebar penuh
+Contoh ini memperagakan cara membuat daftar berbatas tanpa poin.
+
+Semua penanda item daftar yang berbeda untuk daftar
+Contoh ini menunjukkan semua penanda item daftar yang berbeda dalam CSS.
+
+Latihan
+?
+Properti CSS mana yang digunakan untuk menghapus penanda (poin atau angka) dari suatu daftar?
+
+
+list-style-position
+list-style-image
+list-style-type
+list-style
+
+Semua Properti Daftar CSS
+Property	Description
+list-style	Sets all the properties for a list in one declaration
+list-style-image	Specifies an image as the list-item marker
+list-style-position	Specifies the position of the list-item markers (bullet points)
+list-style-type	Specifies the type of list-item marker

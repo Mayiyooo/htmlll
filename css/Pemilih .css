@@ -1,0 +1,129 @@
+Pemilih CSS
+Pemilih CSS memilih elemen HTML yang ingin Anda beri gaya.
+
+Pemilih CSS
+Pemilih CSS digunakan untuk "menemukan" (atau memilih) elemen HTML yang ingin Anda beri gaya.
+
+Kita dapat membagi pemilih CSS menjadi lima kategori:
+
+Pemilih sederhana (pilih elemen berdasarkan nama, id, kelas)
+Pemilih kombinator (memilih elemen berdasarkan hubungan tertentu di antara elemen tersebut)
+Pemilih kelas semu (memilih elemen berdasarkan status tertentu)
+Pemilih elemen semu (memilih dan memberi gaya pada bagian suatu elemen)
+Pemilih atribut (memilih elemen berdasarkan atribut atau nilai atribut)
+Halaman ini akan menjelaskan pemilih CSS yang paling dasar.
+
+Pemilih elemen CSS
+Pemilih elemen memilih elemen HTML berdasarkan nama elemen.
+
+Contoh
+Di sini, semua elemen <p> pada halaman akan diratakan tengah, dengan warna teks merah: 
+
+p {
+  text-align: center;
+  color: red;
+}
+Pemilih ID CSS
+Pemilih id menggunakan atribut id dari elemen HTML untuk memilih elemen tertentu.
+
+Id suatu elemen bersifat unik dalam satu halaman, jadi pemilih id digunakan untuk memilih satu elemen unik!
+
+Untuk memilih elemen dengan id tertentu, tulis karakter hash (#), diikuti dengan id elemen.
+
+Contoh
+Aturan CSS di bawah ini akan diterapkan ke elemen HTML dengan id="para1": 
+
+#para1 {
+  text-align: center;
+  color: red;
+}
+Catatan: Nama id tidak dapat dimulai dengan angka!
+
+IKLAN
+
+Pemilih kelas CSS
+Pemilih kelas memilih elemen HTML dengan atribut kelas tertentu.
+
+Untuk memilih elemen dengan kelas tertentu, tulis karakter titik (.), diikuti dengan nama kelas.
+
+Contoh
+Dalam contoh ini semua elemen HTML dengan class="center" akan berwarna merah dan rata tengah: 
+
+.center {
+  text-align: center;
+  color: red;
+}
+Anda juga dapat menentukan bahwa hanya elemen HTML tertentu yang akan dipengaruhi oleh suatu kelas.
+
+Contoh
+Dalam contoh ini, hanya elemen <p> dengan class="center" yang akan berwarna merah dan rata tengah: 
+
+p.center {
+  text-align: center;
+  color: red;
+}
+Elemen HTML juga dapat merujuk ke lebih dari satu kelas.
+
+Contoh
+Dalam contoh ini elemen <p> akan diberi gaya menurut class="center" dan class="large": 
+
+<p class="center large">This paragraph refers to two classes.</p>
+Catatan: Nama kelas tidak dapat dimulai dengan angka!
+
+Pemilih Universal CSS
+Pemilih universal (*) memilih semua elemen HTML pada halaman.
+
+Contoh
+Aturan CSS di bawah ini akan memengaruhi setiap elemen HTML pada halaman: 
+
+* {
+  text-align: center;
+  color: blue;
+}
+Pemilih Pengelompokan CSS
+Pemilih pengelompokan memilih semua elemen HTML dengan definisi gaya yang sama.
+
+Lihatlah kode CSS berikut (elemen h1, h2, dan p memiliki definisi gaya yang sama):
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: red;
+}
+Akan lebih baik untuk mengelompokkan pemilih, untuk meminimalkan kode.
+
+Untuk mengelompokkan pemilih, pisahkan setiap pemilih dengan koma.
+
+Contoh
+Dalam contoh ini kami telah mengelompokkan pemilih dari kode di atas: 
+
+h1, h2, p {
+  text-align: center;
+  color: red;
+}
+Latihan
+?
+Pemilih CSS mana yang digunakan untuk memilih elemen dengan id tertentu?
+
+
+*
+.
+#
+%
+
+Semua Pemilih Sederhana CSS
+Selector	Example	Example description
+#id	#firstname	Selects the element with id="firstname"
+.class	.intro	Selects all elements with class="intro"
+*	*	Selects all elements
+element	p	Selects all <p> elements
+element,element,..	div, p	Selects all <div> elements and all <p> elements

@@ -1,0 +1,131 @@
+Desain Web Responsif - Kueri Media
+Apa itu Media Query?
+Media query adalah teknik CSS yang diperkenalkan dalam CSS3.
+
+Ia menggunakan @mediaaturan untuk menyertakan blok properti CSS hanya jika kondisi tertentu berlaku.
+
+Contoh
+Jika jendela browser berukuran 600px atau lebih kecil, warna latar belakang akan berwarna biru muda:
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+Tambahkan Titik Henti
+Sebelumnya dalam tutorial ini kita membuat halaman web dengan baris dan kolom, dan responsif, tetapi tidak terlihat bagus di layar kecil.
+
+Kueri media dapat membantu mengatasi hal ini. Kita dapat menambahkan titik henti di mana bagian-bagian tertentu dari desain akan berperilaku berbeda di setiap sisi titik henti.
+
+
+Meja kerja
+Telepon
+
+Contoh
+Di sini kami menggunakan kueri media untuk menambahkan titik henti pada 600 piksel:
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+IKLAN
+
+Titik Henti Lainnya
+Anda dapat menambahkan titik henti sebanyak yang Anda suka.
+
+Kami juga akan menyisipkan titik henti antara tablet dan telepon seluler.
+
+
+Meja kerja
+Tablet
+Telepon
+
+Contoh
+Di sini kita menggunakan kueri media untuk menambahkan titik henti saat layar berukuran maks. 600 piksel, saat layar berukuran min. 600 piksel, dan saat layar berukuran min. 768 piksel:
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
+Titik Henti Perangkat yang Umum
+Ada banyak layar dan perangkat dengan tinggi dan lebar yang berbeda-beda, sehingga sulit untuk menentukan titik henti yang tepat untuk setiap perangkat. Untuk menyederhanakannya, Anda dapat menargetkan lima kelompok:
+
+Contoh
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+Orientasi: Potret / Lanskap
+Kueri media juga dapat digunakan untuk mengubah tata letak halaman tergantung pada orientasi peramban.
+
+Anda dapat memiliki serangkaian properti CSS yang hanya akan berlaku ketika jendela browser lebih lebar dari tingginya, yang disebut orientasi "Lanskap":
+
+Contoh
+Halaman web akan memiliki latar belakang biru muda jika orientasinya dalam mode lanskap:
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+Sembunyikan Elemen dengan Kueri Media
+Penggunaan umum lainnya dari kueri media adalah untuk menyembunyikan elemen pada ukuran layar yang berbeda:
+
+Saya akan disembunyikan di layar kecil.
+Contoh
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+Ubah Ukuran Font dengan Media Query
+Anda juga dapat menggunakan kueri media untuk mengubah ukuran font suatu elemen pada ukuran layar yang berbeda:
+
+Ukuran Font Variabel.
+Contoh
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}

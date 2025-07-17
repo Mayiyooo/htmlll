@@ -1,0 +1,100 @@
+Gambar Batas CSS
+Gambar Batas CSS
+Dengan properti CSS border-image, Anda dapat mengatur gambar untuk digunakan sebagai batas di sekitar suatu elemen.
+
+Properti border-image CSS
+Properti CSS border-imagememungkinkan Anda menentukan gambar yang akan digunakan sebagai pengganti batas normal di sekitar suatu elemen.
+
+Properti ini memiliki tiga bagian:
+
+Gambar yang akan digunakan sebagai batas
+Di mana mengiris gambar
+Tentukan apakah bagian tengah harus diulang atau diregangkan
+Kami akan menggunakan gambar berikut (disebut "border.png"):
+
+Berbatasan
+
+Properti ini border-imagemengambil gambar dan membaginya menjadi sembilan bagian, seperti papan tic-tac-toe. Kemudian, properti ini menempatkan sudut-sudutnya di sudut-sudut tersebut, dan bagian tengahnya diulang atau diregangkan sesuai keinginan Anda.
+
+Catatan: Agar border-imageberfungsi, elemen juga memerlukan borderproperti yang ditetapkan!
+
+Di sini, bagian tengah gambar diulang untuk membuat batas:
+
+Gambar sebagai batas!
+
+Berikut kodenya:
+
+Contoh
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+Di sini, bagian tengah gambar direntangkan untuk membuat batas:
+
+Gambar sebagai batas!
+
+Berikut kodenya:
+
+Contoh
+#borderimg {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 stretch;
+}
+Tip: Properti border-imagesebenarnya adalah properti singkatan untuk properti border-image-source, border-image-slice, border-image-width, border-image-outset dan border-image-repeat.
+
+
+CSS border-image - Nilai Slice yang Berbeda
+Nilai irisan yang berbeda akan mengubah tampilan batas secara keseluruhan:
+
+Contoh 1:
+
+border-image: url(border.png) 50 bulat;
+
+Contoh 2:
+
+border-image: url(border.png) 20% bulat;
+
+Contoh 3:
+
+border-image: url(border.png) 30% bulat;
+
+Berikut kodenya:
+
+Contoh
+#borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 50 round;
+}
+
+#borderimg2 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 20% round;
+}
+
+#borderimg3 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30% round;
+}
+Latihan
+?
+Apa border-imagefungsi properti dalam CSS?
+
+
+Mengatur warna batas
+Menerapkan gambar latar belakang ke suatu elemen
+Menggunakan gambar sebagai batas elemen
+Membuat sudut membulat pada suatu elemen
+
+Properti Gambar Batas CSS
+Property	Description
+border-image	A shorthand property for setting all the border-image-* properties
+border-image-source	Specifies the path to the image to be used as a border
+border-image-slice	Specifies how to slice the border image
+border-image-width	Specifies the widths of the border image
+border-image-outset	Specifies the amount by which the border image area extends beyond the border box
+border-image-repeat	Specifies whether the border image should be repeated, rounded or stretched

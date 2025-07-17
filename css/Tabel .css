@@ -1,0 +1,271 @@
+Tabel CSS
+Tampilan tabel HTML dapat ditingkatkan dengan CSS:
+
+Perusahaan	Kontak	Negara
+Alfreds Futterkiste	Maria Anders	Jerman
+Berglunds snabbköp	Christina Berglund	Swedia
+Pusat komersial Moctezuma	Francisco Chang	Meksiko
+Ernst Handel	Roland Mendel	Austria
+Perdagangan Pulau	Helen Bennett	Inggris
+Königlich Essen	Philip Cramer	Jerman
+Gudang Anggur Bacchus Tertawa	Yoshi Tannamuri	Kanada
+Magazzini Alimentari Riuniti	Giovanni Rovelli	Italia
+
+Batas Meja
+Untuk menentukan batas tabel dalam CSS, gunakan borderproperti.
+
+Contoh di bawah ini menentukan batas padat untuk elemen <table>, <th>, dan <td>:
+
+Nama Depan	Nama belakang
+Petrus	Grifon
+Lois	Grifon
+Contoh
+table, th, td {
+  border: 1px solid;
+}
+IKLAN
+
+Meja Lebar Penuh
+Tabel di atas mungkin tampak kecil dalam beberapa kasus. Jika Anda membutuhkan tabel yang dapat menjangkau seluruh layar (lebar penuh), tambahkan width: 100%ke elemen <table>:
+
+Nama Depan	Nama belakang
+Petrus	Grifon
+Lois	Grifon
+Contoh
+table {
+  width: 100%;
+}
+Batas Ganda
+Perhatikan bahwa tabel pada contoh di atas memiliki batas ganda. Hal ini disebabkan tabel, elemen <th>, dan <td> memiliki batas terpisah.
+
+Untuk menghapus batas ganda, lihat contoh di bawah ini.
+
+Tutup Batas Tabel
+Properti ini border-collapsemenentukan apakah batas tabel harus diciutkan menjadi satu batas tunggal:
+
+Nama Depan	Nama belakang
+Petrus	Grifon
+Lois	Grifon
+Contoh
+table {
+  border-collapse: collapse;
+}
+Jika Anda hanya menginginkan batas di sekeliling tabel, tentukan borderproperti untuk <tabel> saja:
+
+Nama Depan	Nama belakang
+Petrus	Grifon
+Lois	Grifon
+Contoh
+table {
+  border: 1px solid;
+}
+Latihan
+?
+Properti CSS mana yang digunakan untuk menghapus batas ganda dalam tabel?
+
+
+border-spacing
+border-collapse
+border-style
+collapse-bordeR
+
+Ukuran Tabel CSS
+Lebar dan Tinggi Tabel
+Lebar dan tinggi tabel ditentukan oleh properti widthdan height.
+
+Contoh di bawah ini menetapkan lebar tabel menjadi 100%, dan tinggi elemen <th> menjadi 70px:
+
+Nama Depan	Nama belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+table {
+  width: 100%;
+}
+
+th {
+  height: 70px;
+}
+Untuk membuat tabel yang seharusnya hanya mencakup setengah halaman, gunakan width: 50%:
+
+Nama Depan	Nama belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+table {
+  width: 50%;
+}
+Latihan
+?
+Properti CSS mana yang digunakan untuk mengatur lebar tabel?
+
+
+height
+width
+border-width
+table-layout
+
+Penyelarasan Tabel CSS
+Penyelarasan Horizontal
+Properti ini text-alignmengatur perataan horizontal (seperti kiri, kanan, atau tengah) konten dalam <th> atau <td>.
+
+Secara default, konten elemen <th> rata tengah dan konten elemen <td> rata kiri.
+
+Untuk menyelaraskan konten elemen <td> ke tengah, gunakan text-align: center:
+
+Nama Depan	Nama belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+td {
+  text-align: center;
+}
+Untuk meratakan konten ke kiri, paksa perataan elemen <th> menjadi rata kiri, dengan text-align: leftproperti:
+
+Nama Depan	Nama belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+th {
+  text-align: left;
+}
+Penyelarasan Vertikal
+Properti ini vertical-alignmengatur perataan vertikal (seperti atas, bawah, atau tengah) konten dalam <th> atau <td>.
+
+Secara default, perataan vertikal konten dalam tabel berada di tengah (untuk elemen <th> dan <td>).
+
+Contoh berikut menetapkan perataan teks vertikal ke bawah untuk elemen <td>:
+
+Nama Depan	Nama belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+Latihan
+?
+Apa perataan horizontal default untuk konten di dalam <td>elemen?
+
+
+Tengah
+Kiri
+Benar
+Membenarkan
+
+
+Bantalan Meja
+Untuk mengontrol ruang antara batas dan konten dalam tabel, gunakan paddingproperti pada elemen <td> dan <th>:
+
+Nama depan	Nama Belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+Pembagi Horizontal
+Nama depan	Nama Belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Tambahkan border-bottomproperti ke <th> dan <td> untuk pembagi horizontal:
+
+Contoh
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+Meja yang Dapat Dilayang
+Gunakan :hoverpemilih pada <tr> untuk menyorot baris tabel saat mouse diarahkan:
+
+Nama depan	Nama Belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+tr:hover {background-color: coral;}
+IKLAN
+
+Meja Bergaris
+Nama depan	Nama Belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Untuk tabel bergaris zebra, gunakan nth-child()pemilih dan tambahkan a background-colorke semua baris tabel genap (atau ganjil):
+
+Contoh
+tr:nth-child(even) {background-color: #f2f2f2;}
+Warna Tabel
+Contoh di bawah ini menentukan warna latar belakang dan warna teks elemen <th>:
+
+Nama depan	Nama Belakang	Tabungan
+Petrus	Grifon	$100
+Lois	Grifon	$150
+Joe	Swanson	$300
+Contoh
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+Latihan
+?
+Seret dan lepas properti CSS yang benar untuk mengatur bantalan dan perataan untuk thdan td.
+th, td {
+  : 15px;
+  : left;
+}
+
+
+Tabel Responsif CSS
+Tabel Responsif
+Tabel responsif akan menampilkan bilah gulir horizontal jika layar terlalu kecil untuk menampilkan konten lengkap:
+
+Nama depan	Nama Belakang	Poin	Poin	Poin	Poin	Poin	Poin	Poin	Poin	Poin	Poin	Poin	Poin
+Jill	Smith	50	50	50	50	50	50	50	50	50	50	50	50
+Malam	Jackson	94	94	94	94	94	94	94	94	94	94	94	94
+Adam	Johnson	67	67	67	67	67	67	67	67	67	67	67	67
+Tambahkan elemen kontainer (seperti <div>) di overflow-x:autosekitar elemen <table> untuk membuatnya responsif:
+
+Contoh
+<div style="overflow-x:auto;">
+
+<table>
+... table content ...
+</table>
+
+</div>
+Catatan: Di OS X Lion (di Mac), bilah gulir disembunyikan secara default dan hanya ditampilkan saat digunakan (meskipun "overflow:scroll" diatur).
+
+Contoh Lainnya
+Membuat tabel yang indah
+Contoh ini memperagakan cara membuat tabel yang indah.
+
+Mengatur posisi judul tabel
+Contoh ini memperagakan cara memposisikan judul tabel.
+
+Latihan
+?
+Bagaimana Anda membuat tabel responsif menggunakan CSS?
+
+
+Gunakan overflow-y:autopada <table>elemen
+Bungkus bagian tabledalam <div>denganoverflow-x:auto
+Ditetapkan display: blockpada <table>elemen
+Terapkan width: 100%ke<table> element
+
+Properti Tabel CSS
+Property	Description
+border	Sets all the border properties in one declaration
+border-collapse	Specifies whether or not table borders should be collapsed
+border-spacing	Specifies the distance between the borders of adjacent cells
+caption-side	Specifies the placement of a table caption
+empty-cells	Specifies whether or not to display borders and background on empty cells in a table
+table-layout	Sets the layout algorithm to be used for a table

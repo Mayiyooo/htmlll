@@ -1,0 +1,117 @@
+Font Web CSS
+Aturan CSS @font-face
+Font web memungkinkan desainer web untuk menggunakan font yang tidak diinstal pada komputer pengguna.
+
+Bila Anda sudah menemukan/membeli font yang ingin digunakan, masukkan saja berkas font tersebut ke server web Anda, dan font tersebut akan otomatis diunduh ke pengguna saat dibutuhkan.
+
+Font "milik Anda" didefinisikan dalam @font-faceaturan CSS.
+
+Format Font Berbeda
+Font TrueType (TTF)
+
+TrueType adalah standar font yang dikembangkan pada akhir 1980-an oleh Apple dan Microsoft. TrueType adalah format font yang paling umum digunakan untuk sistem operasi Mac OS dan Microsoft Windows.
+
+Font OpenType (OTF)
+
+OpenType adalah format untuk fon komputer yang dapat diskalakan. Format ini dibangun di atas TrueType dan merupakan merek dagang terdaftar Microsoft. Fon OpenType umum digunakan saat ini di berbagai platform komputer utama.
+
+Format Font Web Terbuka (WOFF)
+
+WOFF adalah format fon untuk halaman web. Format ini dikembangkan pada tahun 2009 dan kini menjadi Rekomendasi W3C. WOFF pada dasarnya adalah OpenType atau TrueType dengan kompresi dan metadata tambahan. Tujuannya adalah untuk mendukung distribusi fon dari server ke klien melalui jaringan dengan batasan bandwidth.
+
+Format Font Web Terbuka (WOFF 2.0)
+
+Font TrueType/OpenType yang menyediakan kompresi lebih baik daripada WOFF 1.0.
+
+Font/Bentuk SVG
+
+Font SVG memungkinkan SVG digunakan sebagai glif saat menampilkan teks. Spesifikasi SVG 1.1 mendefinisikan modul font yang memungkinkan pembuatan font di dalam dokumen SVG. Anda juga dapat menerapkan CSS ke dokumen SVG, dan aturan @font-face dapat diterapkan pada teks dalam dokumen SVG.
+
+Font OpenType Tertanam (EOT)
+
+Font EOT adalah bentuk ringkas font OpenType yang dirancang oleh Microsoft untuk digunakan sebagai font tertanam pada halaman web.
+
+IKLAN
+
+Dukungan Browser untuk Format Font
+Angka dalam tabel menentukan versi browser pertama yang sepenuhnya mendukung format font.
+
+Font format					
+TTF/OTF	9.0*	4.0	3.5	3.1	10.0
+WOFF	9.0	5.0	3.6	5.1	11.1
+WOFF2	14.0	36.0	39.0	10.0	26.0
+SVG	No	No	No	3.2	No
+EOT	6.0	No	No	No	No
+*IE: Format font hanya berfungsi bila diatur menjadi "dapat diinstal".
+
+Menggunakan Font yang Anda Inginkan
+Dalam @font-faceaturan; pertama-tama tentukan nama untuk font (misalnya myFirstFont) dan kemudian arahkan ke file font.
+
+Tips: Selalu gunakan huruf kecil untuk URL font. Huruf kapital dapat memberikan hasil yang tidak terduga di IE.
+
+Untuk menggunakan font untuk elemen HTML, lihat nama font (myFirstFont) melalui font-familyproperti:
+
+Contoh
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+div {
+  font-family: myFirstFont;
+}
+Menggunakan Teks Tebal
+Anda harus menambahkan aturan lain @font-faceyang berisi deskriptor untuk teks tebal:
+
+Contoh
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_bold.woff);
+  font-weight: bold;
+}
+Berkas "sansation_bold.woff" adalah berkas font lain, yang berisi karakter tebal untuk font Sansation.
+
+Peramban akan menggunakan ini setiap kali teks dengan jenis huruf "myFirstFont" ingin ditampilkan dalam bentuk tebal.
+
+Dengan cara ini Anda dapat memiliki banyak @font-faceaturan untuk font yang sama.
+
+Latihan
+?
+Apa tujuan @font-faceaturan dalam CSS?
+
+
+Untuk menanamkan gambar ke dalam teks
+Untuk menyertakan font khusus di halaman web
+Untuk menata perataan teks
+Untuk membuat bentuk SVG yang dapat diskalakan
+
+Deskriptor Font CSS
+Tabel berikut mencantumkan semua deskriptor font yang dapat didefinisikan di dalam aturan: @font-face
+
+Descriptor	Values	Description
+font-family	name	Required. Defines a name for the font
+src	URL	Required. Defines the URL of the font file
+font-stretch	normal
+condensed
+ultra-condensed
+extra-condensed
+semi-condensed
+expanded
+semi-expanded
+extra-expanded
+ultra-expanded	Optional. Defines how the font should be stretched. Default is "normal"
+font-style	normal
+italic
+oblique	Optional. Defines how the font should be styled. Default is "normal"
+font-weight	normal
+bold
+100
+200
+300
+400
+500
+600
+700
+800
+900	Optional. Defines the boldness of the font. Default is "normal"
+unicode-range	unicode-range	Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-

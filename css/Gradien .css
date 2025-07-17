@@ -1,0 +1,319 @@
+Gradien CSS
+Latar Belakang Gradien
+Gradien CSS memungkinkan Anda menampilkan transisi halus antara dua atau lebih warna yang ditentukan.
+
+CSS mendefinisikan tiga jenis gradien:
+
+Gradien Linier (turun/atas/kiri/kanan/diagonal)
+Gradien Radial (ditentukan oleh pusatnya)
+Gradien Kerucut (diputar di sekitar titik pusat)
+Gradien Linier CSS
+Untuk membuat gradien linier, Anda harus menentukan setidaknya dua color stop. Color stop adalah warna-warna yang ingin Anda gunakan untuk membuat transisi yang halus. Anda juga dapat mengatur titik awal dan arah (atau sudut) bersamaan dengan efek gradien.
+
+Sintaksis
+background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+Arah - Atas ke Bawah (ini default)
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari atas. Gradien ini dimulai dengan warna merah, lalu bertransisi menjadi kuning:
+
+atas ke bawah (default)
+Contoh
+#grad {
+  background-image: linear-gradient(red, yellow);
+}
+Arah - Kiri ke Kanan
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari kiri. Gradien ini dimulai dengan warna merah, kemudian bertransisi menjadi kuning:
+
+kiri ke kanan
+Contoh
+#grad {
+  background-image: linear-gradient(to right, red , yellow);
+}
+Arah - Diagonal
+
+Anda dapat membuat gradien secara diagonal dengan menentukan posisi awal horizontal dan vertikal.
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari kiri atas (dan berlanjut ke kanan bawah). Gradien ini dimulai dengan warna merah, lalu bertransisi menjadi kuning:
+
+kiri atas ke kanan bawah
+Contoh
+#grad {
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+Menggunakan Sudut
+Jika Anda ingin kontrol lebih terhadap arah gradien, Anda dapat menentukan sudutnya, alih-alih arah yang telah ditentukan sebelumnya (ke bawah, ke atas, ke kanan, ke kiri, ke kanan bawah, dll.). Nilai 0 derajat setara dengan "ke atas". Nilai 90 derajat setara dengan "ke kanan". Nilai 180 derajat setara dengan "ke bawah".
+
+Sintaksis
+background-image: linear-gradient(angle, color-stop1, color-stop2);
+Contoh berikut menunjukkan cara menggunakan sudut pada gradien linier:
+
+180 derajat
+Contoh
+#grad {
+  background-image: linear-gradient(180deg, red, yellow);
+}
+Menggunakan Beberapa Penghentian Warna
+Contoh berikut menunjukkan gradien linier (dari atas ke bawah) dengan beberapa pemberhentian warna:
+
+Contoh
+#grad {
+  background-image: linear-gradient(red, yellow, green);
+}
+Contoh berikut menunjukkan cara membuat gradien linier (dari kiri ke kanan) dengan warna pelangi dan beberapa teks:
+
+Latar Belakang Pelangi
+Contoh
+#grad {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+Menggunakan Transparansi
+Gradien CSS juga mendukung transparansi, yang dapat digunakan untuk menciptakan efek memudar.
+
+Untuk menambahkan transparansi, kita menggunakan fungsi rgba() untuk menentukan batas warna. Parameter terakhir dalam fungsi rgba() dapat berupa nilai 0 hingga 1, dan fungsi ini menentukan transparansi warna: 0 menunjukkan transparansi penuh, 1 menunjukkan warna penuh (tanpa transparansi).
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari kiri. Gradien ini dimulai sepenuhnya transparan, lalu bertransisi menjadi merah penuh:
+
+Contoh
+#grad {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+Mengulang gradien linier
+Fungsi repeating-linear-gradient() digunakan untuk mengulang gradien linier:
+
+Contoh
+Gradien linier berulang:
+
+#grad {
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+Latihan
+?
+Apa arah default gradien linier dalam CSS?
+
+
+Atas ke bawah
+Kiri ke kanan
+Dari bawah ke atas
+Diagonal
+
+
+Gradien CSS
+Latar Belakang Gradien
+Gradien CSS memungkinkan Anda menampilkan transisi halus antara dua atau lebih warna yang ditentukan.
+
+CSS mendefinisikan tiga jenis gradien:
+
+Gradien Linier (turun/atas/kiri/kanan/diagonal)
+Gradien Radial (ditentukan oleh pusatnya)
+Gradien Kerucut (diputar di sekitar titik pusat)
+Gradien Linier CSS
+Untuk membuat gradien linier, Anda harus menentukan setidaknya dua color stop. Color stop adalah warna-warna yang ingin Anda gunakan untuk membuat transisi yang halus. Anda juga dapat mengatur titik awal dan arah (atau sudut) bersamaan dengan efek gradien.
+
+Sintaksis
+background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+Arah - Atas ke Bawah (ini default)
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari atas. Gradien ini dimulai dengan warna merah, lalu bertransisi menjadi kuning:
+
+atas ke bawah (default)
+Contoh
+#grad {
+  background-image: linear-gradient(red, yellow);
+}
+Arah - Kiri ke Kanan
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari kiri. Gradien ini dimulai dengan warna merah, kemudian bertransisi menjadi kuning:
+
+kiri ke kanan
+Contoh
+#grad {
+  background-image: linear-gradient(to right, red , yellow);
+}
+Arah - Diagonal
+
+Anda dapat membuat gradien secara diagonal dengan menentukan posisi awal horizontal dan vertikal.
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari kiri atas (dan berlanjut ke kanan bawah). Gradien ini dimulai dengan warna merah, lalu bertransisi menjadi kuning:
+
+kiri atas ke kanan bawah
+Contoh
+#grad {
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+Menggunakan Sudut
+Jika Anda ingin kontrol lebih terhadap arah gradien, Anda dapat menentukan sudutnya, alih-alih arah yang telah ditentukan sebelumnya (ke bawah, ke atas, ke kanan, ke kiri, ke kanan bawah, dll.). Nilai 0 derajat setara dengan "ke atas". Nilai 90 derajat setara dengan "ke kanan". Nilai 180 derajat setara dengan "ke bawah".
+
+Sintaksis
+background-image: linear-gradient(angle, color-stop1, color-stop2);
+Contoh berikut menunjukkan cara menggunakan sudut pada gradien linier:
+
+180 derajat
+Contoh
+#grad {
+  background-image: linear-gradient(180deg, red, yellow);
+}
+Menggunakan Beberapa Penghentian Warna
+Contoh berikut menunjukkan gradien linier (dari atas ke bawah) dengan beberapa pemberhentian warna:
+
+Contoh
+#grad {
+  background-image: linear-gradient(red, yellow, green);
+}
+Contoh berikut menunjukkan cara membuat gradien linier (dari kiri ke kanan) dengan warna pelangi dan beberapa teks:
+
+Latar Belakang Pelangi
+Contoh
+#grad {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+Menggunakan Transparansi
+Gradien CSS juga mendukung transparansi, yang dapat digunakan untuk menciptakan efek memudar.
+
+Untuk menambahkan transparansi, kita menggunakan fungsi rgba() untuk menentukan batas warna. Parameter terakhir dalam fungsi rgba() dapat berupa nilai 0 hingga 1, dan fungsi ini menentukan transparansi warna: 0 menunjukkan transparansi penuh, 1 menunjukkan warna penuh (tanpa transparansi).
+
+Contoh berikut menunjukkan gradien linier yang dimulai dari kiri. Gradien ini dimulai sepenuhnya transparan, lalu bertransisi menjadi merah penuh:
+
+Contoh
+#grad {
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+Mengulang gradien linier
+Fungsi repeating-linear-gradient() digunakan untuk mengulang gradien linier:
+
+Contoh
+Gradien linier berulang:
+
+#grad {
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+Latihan
+?
+Apa arah default gradien linier dalam CSS?
+
+
+Atas ke bawah
+Kiri ke kanan
+Dari bawah ke atas
+Diagonal
+
+
+
+Gradien Kerucut CSS
+Gradien kerucut adalah gradien dengan transisi warna yang diputar di sekitar titik pusat.
+
+Untuk membuat gradien kerucut, Anda harus menentukan setidaknya dua warna.
+
+Sintaksis
+background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+Secara default, sudutnya 0 derajat dan posisinya tengah.
+
+Jika tidak ada derajat yang ditentukan, warna akan disebarkan secara merata di sekitar titik pusat.
+
+Gradien Kerucut: Tiga Warna
+Contoh berikut menunjukkan gradien kerucut dengan tiga warna:
+
+Contoh
+Gradien kerucut dengan tiga warna:
+
+#grad {
+  background-image: conic-gradient(red, yellow, green);
+}
+Gradien Kerucut: Lima Warna
+Contoh berikut menunjukkan gradien kerucut dengan lima warna:
+
+Contoh
+Gradien kerucut dengan lima warna:
+
+#grad {
+  background-image: conic-gradient(red, yellow, green, blue, black);
+}
+Gradien Kerucut: Tiga Warna dan Derajat
+Contoh berikut menunjukkan gradien kerucut dengan tiga warna dan derajat untuk setiap warna:
+
+Contoh
+Gradien kerucut dengan tiga warna dan derajat untuk setiap warna:
+
+#grad {
+  background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+}
+IKLAN
+
+Membuat Diagram Lingkaran
+Tambahkan saja border-radius: 50%untuk membuat gradien kerucut tampak seperti pai:
+
+Contoh
+#grad {
+  background-image: conic-gradient(red, yellow, green, blue, black);
+  border-radius: 50%;
+}
+Berikut diagram lingkaran lain dengan derajat yang ditentukan untuk semua warna:
+
+Contoh
+#grad {
+  background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+  border-radius: 50%;
+}
+Gradien Kerucut Dengan Sudut Dari Yang Ditentukan
+Sudut [from ] menentukan sudut rotasi seluruh gradien kerucut.
+
+Contoh berikut menunjukkan gradien kerucut dengan sudut dari 90 derajat:
+
+Contoh
+Gradien kerucut dengan sudut dari:
+
+#grad {
+  background-image: conic-gradient(from 90deg, red, yellow, green);
+}
+Gradien Kerucut Dengan Posisi Pusat Tertentu
+[ Posisi pada ] menentukan pusat gradien kerucut.
+
+Contoh berikut menunjukkan gradien kerucut dengan posisi pusat 60% 45%:
+
+Contoh
+Gradien kerucut dengan posisi pusat yang ditentukan:
+
+#grad {
+  background-image: conic-gradient(at 60% 45%, red, yellow, green);
+}
+Mengulang Gradien Kerucut
+Fungsi repeating-conic-gradient()ini digunakan untuk mengulang gradien kerucut:
+
+Contoh
+Gradien kerucut berulang:
+
+#grad {
+  background-image: repeating-conic-gradient(red 10%, yellow 20%);
+  border-radius: 50%;
+}
+Berikut adalah gradien kerucut berulang dengan awal dan akhir warna yang telah ditentukan:
+
+Contoh
+Gradien kerucut berulang dengan awal dan akhir warna yang ditentukan:
+
+#grad {
+  background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+  border-radius: 50%;
+}
+Latihan
+?
+Berapakah posisi pusat default untuk gradien kerucut?
+
+
+Kiri atas
+Kanan bawah
+Tengah
+Tengah atas
+
+Fungsi Gradien CSS
+Tabel berikut mencantumkan fungsi gradien CSS:
+
+Function	Description
+conic-gradient()	Creates a conic gradient. Define at least two colors (around a center point)
+linear-gradient()	Creates a linear gradient. Define at least two colors (top to bottom)
+radial-gradient()	Creates a radial gradient. Define at least two colors (center to edges)
+repeating-conic-gradient()	Repeats a conic gradient
+repeating-linear-gradient()	Repeats a linear gradient
+repeating-radial-gradient()	Repeats a radial gradient

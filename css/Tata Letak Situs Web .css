@@ -1,0 +1,160 @@
+Tata Letak Situs Web CSS
+Tata Letak Situs Web
+Sebuah situs web sering dibagi menjadi header, menu, konten, dan footer:
+
+JudulMenu Navigasi
+IsiKonten UtamaIsi
+Catatan kaki
+Ada banyak sekali desain tata letak yang bisa dipilih. Namun, struktur di atas adalah salah satu yang paling umum, dan kita akan membahasnya lebih lanjut dalam tutorial ini.
+
+Judul
+Header biasanya terletak di bagian atas situs web (atau tepat di bawah menu navigasi atas). Header sering kali berisi logo atau nama situs web:
+
+Contoh
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+Hasil
+
+Header
+IKLAN
+
+Bilah Navigasi
+Bilah navigasi berisi daftar tautan untuk membantu pengunjung menavigasi situs web Anda:
+
+Contoh
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+Hasil
+
+Isi
+Tata letak di bagian ini seringkali bergantung pada pengguna target. Tata letak yang paling umum adalah salah satu (atau kombinasi) dari berikut ini:
+
+1 kolom (sering digunakan untuk browser seluler)
+2 kolom (sering digunakan untuk tablet dan laptop)
+Tata letak 3 kolom (hanya digunakan untuk desktop)
+1-kolom:
+
+2 kolom:
+
+3 kolom:
+
+Kita akan membuat tata letak 3 kolom, dan mengubahnya menjadi tata letak 1 kolom di layar yang lebih kecil:
+
+Contoh
+/* Create three equal columns that float next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+Hasil
+
+Column
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+
+Column
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+
+Column
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
+
+Tips: Untuk membuat tata letak 2 kolom, ubah lebarnya menjadi 50%. Untuk membuat tata letak 4 kolom, gunakan 25%, dst.
+
+Tips: Penasaran bagaimana cara kerja aturan @media? Baca selengkapnya di bab Kueri Media CSS kami .
+
+Tips: Cara yang lebih modern untuk membuat tata letak kolom adalah dengan menggunakan CSS Flexbox. Namun, metode ini tidak didukung di Internet Explorer 10 dan versi sebelumnya. Jika Anda memerlukan dukungan IE6-10, gunakan float (seperti yang ditunjukkan di atas).
+
+Untuk mempelajari lebih lanjut tentang Modul Tata Letak Kotak Fleksibel, baca bab CSS Flexbox kami .
+
+Kolom Tidak Sama Panjang
+Konten utama adalah bagian terbesar dan terpenting dari situs Anda.
+
+Hal ini umum terjadi pada lebar kolom yang tidak sama , sehingga sebagian besar ruang dialokasikan untuk konten utama. Konten samping (jika ada) sering digunakan sebagai navigasi alternatif atau untuk menentukan informasi yang relevan dengan konten utama. Ubah lebarnya sesuai keinginan, tetapi ingat bahwa totalnya harus 100%.
+
+Contoh
+.column {
+  float: left;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+Hasil
+
+Side
+Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+
+Main Content
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+
+Side
+Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+
+Catatan kaki
+Footer ditempatkan di bagian bawah halaman Anda. Footer sering kali berisi informasi seperti hak cipta dan informasi kontak:
+
+Contoh
+.footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
+}
+Hasil
+
+Footer
+Tata Letak Situs Web Responsif
+Dengan menggunakan beberapa kode CSS di atas, kami telah membuat tata letak situs web responsif, yang bervariasi antara dua kolom dan kolom lebar penuh tergantung pada lebar layar:
+
+
+
+Pernah dengar tentang W3Schools Spaces ? Di sini, Anda bisa membuat situs web dari awal atau menggunakan templat, dan menghostingnya secara gratis.
+
+* tidak perlu kartu kredit

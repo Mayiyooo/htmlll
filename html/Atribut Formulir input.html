@@ -1,0 +1,148 @@
+Atribut Formulir Input HTML *
+Bab ini menguraikan berbagai form*atribut untuk elemen HTML <input>.
+
+Atribut formulir
+Atribut input formmenentukan bentuk <input>yang dimiliki elemen.
+
+Nilai atribut ini harus sama dengan atribut id elemen <form> yang menjadi tempatnya.
+
+Contoh
+Bidang masukan yang terletak di luar formulir HTML (tetapi masih menjadi bagian dari formulir):
+
+<form action="/action_page.php" id="form1">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname" form="form1">
+Atribut formasi
+Atribut input formactionmenentukan URL file yang akan memproses input saat formulir dikirimkan.
+
+Catatan: Atribut ini menggantikan actionatribut <form>elemen.
+
+Atribut ini formactionberfungsi dengan tipe input berikut: kirim dan gambar.
+
+Contoh
+Formulir HTML dengan dua tombol kirim, dengan tindakan yang berbeda:
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+Atribut formenctype
+Atribut input formenctype menentukan bagaimana data formulir harus dikodekan saat dikirimkan (hanya untuk formulir dengan method="post").
+
+Catatan: Atribut ini menggantikan atribut enctype elemen <form>.
+
+Atribut ini formenctypeberfungsi dengan tipe input berikut: kirim dan gambar.
+
+Contoh
+Formulir dengan dua tombol kirim. Tombol pertama mengirimkan data formulir dengan pengodean default, sedangkan tombol kedua mengirimkan data formulir yang dikodekan sebagai "multipart/form-data":
+
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data"
+  value="Submit as Multipart/form-data">
+</form>
+
+Atribut formmethod
+Atribut input formmethod mendefinisikan metode HTTP untuk mengirim data formulir ke URL tindakan.
+
+Catatan: Atribut ini menggantikan atribut metode <form>elemen.
+
+Atribut ini formmethodberfungsi dengan tipe input berikut: kirim dan gambar.
+
+Data formulir dapat dikirim sebagai variabel URL (method="get") atau sebagai transaksi posting HTTP (method="post").
+
+Catatan tentang metode "get":
+
+Metode ini menambahkan data formulir ke URL dalam pasangan nama/nilai
+Metode ini berguna untuk pengiriman formulir di mana pengguna ingin menandai hasilnya
+Ada batasan berapa banyak data yang dapat Anda tempatkan di URL (bervariasi antara browser), oleh karena itu, Anda tidak dapat yakin bahwa semua data formulir akan ditransfer dengan benar
+Jangan pernah menggunakan metode "get" untuk memberikan informasi sensitif! (kata sandi atau informasi sensitif lainnya akan terlihat di bilah alamat browser)
+Catatan tentang metode "posting":
+
+Metode ini mengirimkan data formulir sebagai transaksi posting HTTP
+Pengiriman formulir dengan metode "posting" tidak dapat ditandai
+Metode "post" lebih kuat dan aman daripada "get", dan "post" tidak memiliki batasan ukuran
+Contoh
+Formulir dengan dua tombol kirim. Tombol pertama mengirimkan data formulir dengan metode="get". Tombol kedua mengirimkan data formulir dengan metode="post":
+
+<form action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit using GET">
+  <input type="submit" formmethod="post" value="Submit using POST">
+</form>
+Atribut formtarget
+Atribut input formtargetmenentukan nama atau kata kunci yang menunjukkan tempat menampilkan respons yang diterima setelah mengirimkan formulir.
+
+Catatan: Atribut ini menggantikan atribut target <form>elemen.
+
+Atribut ini formtargetberfungsi dengan tipe input berikut: kirim dan gambar.
+
+Contoh
+Formulir dengan dua tombol kirim, dengan jendela target yang berbeda:
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+</form>
+Atribut formnovalidate
+Atribut input formnovalidatemenentukan bahwa elemen <input> tidak boleh divalidasi saat dikirimkan.
+
+Catatan: Atribut ini menggantikan atribut novalidate elemen <form> .
+
+Atribut ini formnovalidateberfungsi dengan tipe input berikut: kirim.
+
+Contoh
+Formulir dengan dua tombol kirim (dengan dan tanpa validasi):
+
+<form action="/action_page.php">
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formnovalidate="formnovalidate"
+  value="Submit without validation">
+</form>
+Atribut novalidate
+Atribut novalidateadalah <form>atribut.
+
+Bila ada, novalidate menetapkan bahwa semua data formulir tidak boleh divalidasi saat dikirimkan.
+
+Contoh
+Tentukan bahwa tidak ada data formulir yang harus divalidasi saat dikirimkan:
+
+<form action="/action_page.php" novalidate>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="Submit">
+</form>
+Latihan
+?
+Apa yang bukan atribut bentuk hukum untuk elemen INPUT?
+
+
+formaction
+formtype
+formtarget
+
+Elemen Formulir dan Input HTML
+Tag	Description
+<form>	Defines an HTML form for user input
+<input>	Defines an input control
+Untuk daftar lengkap semua tag HTML yang tersedia, kunjungi Referensi Tag HTML kami .

@@ -1,0 +1,69 @@
+String Templat JavaScript
+Templat String
+String Templat
+Templat Literal
+Anak kesayangan punya banyak nama
+
+Sintaks Back-Tics
+Template String menggunakan tanda kutip terbalik (``) dan bukan tanda kutip ("") untuk mendefinisikan string:
+
+Contoh
+let text = `Hello World!`;
+
+Kutipan Di Dalam String
+Template String memperbolehkan tanda kutip tunggal dan ganda di dalam sebuah string:
+
+Contoh
+let text = `He's often called "Johnny"`;
+
+String Multiline
+Template String memperbolehkan string multiline:
+
+Contoh
+let text =
+`The quick
+brown fox
+jumps over
+the lazy dog`;
+
+Interpolasi
+Template String menyediakan cara mudah untuk menginterpolasi variabel dan ekspresi menjadi string.
+
+Metode ini disebut interpolasi string.
+
+Sintaksisnya adalah:
+
+${...}
+Substitusi Variabel
+Template String memperbolehkan variabel dalam string:
+
+Contoh
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName}, ${lastName}!`;
+
+Penggantian variabel secara otomatis dengan nilai riil disebut interpolasi string .
+
+Substitusi Ekspresi
+Template String memperbolehkan ekspresi dalam string:
+
+Contoh
+let price = 10;
+let VAT = 0.25;
+
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+Penggantian ekspresi secara otomatis dengan nilai riil disebut interpolasi string .
+
+Templat HTML
+Contoh
+let header = "Template Strings";
+let tags = ["template strings", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;

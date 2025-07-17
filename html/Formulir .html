@@ -1,0 +1,155 @@
+Formulir HTML
+Formulir HTML digunakan untuk mengumpulkan masukan pengguna. Masukan pengguna biasanya dikirim ke server untuk diproses.
+
+Contoh
+First name:
+John
+
+Last name:
+Doe
+
+
+Elemen <form>
+Elemen HTML <form>digunakan untuk membuat formulir HTML untuk masukan pengguna:
+
+<form>
+.
+form elements
+.
+</form>
+Elemen tersebut <form>merupakan wadah untuk berbagai jenis elemen input, seperti: bidang teks, kotak centang, tombol radio, tombol kirim, dll.
+
+Semua elemen formulir yang berbeda dibahas dalam bab ini: Elemen Formulir HTML .
+
+Elemen <input>
+Elemen HTML <input>adalah elemen formulir yang paling banyak digunakan.
+
+Suatu <input>elemen dapat ditampilkan dalam banyak cara, tergantung pada type atributnya.
+
+Berikut beberapa contohnya:
+
+Jenis	Keterangan
+<jenis input="teks">	Menampilkan bidang input teks satu baris
+<jenis masukan="radio">	Menampilkan tombol radio (untuk memilih salah satu dari banyak pilihan)
+<input type="kotak centang">	Menampilkan kotak centang (untuk memilih nol atau lebih dari banyak pilihan)
+<input type="kirim">	Menampilkan tombol kirim (untuk mengirimkan formulir)
+<input type="tombol">	Menampilkan tombol yang dapat diklik
+Semua jenis masukan yang berbeda dibahas dalam bab ini: Jenis Masukan HTML .
+
+IKLAN
+
+Bidang Teks
+Menentukan <input type="text">bidang masukan satu baris untuk masukan teks.
+
+Contoh
+Formulir dengan kolom input untuk teks:
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+Nama depan:
+
+Nama belakang:
+Catatan: Formulir itu sendiri tidak terlihat. Perhatikan juga bahwa lebar default kolom input adalah 20 karakter.
+
+Elemen <label>
+Perhatikan penggunaan <label>elemen pada contoh di atas.
+
+Tag <label>mendefinisikan label untuk banyak elemen formulir.
+
+Elemen <label>ini berguna bagi pengguna pembaca layar, karena pembaca layar akan membacakan label dengan suara keras saat pengguna berfokus pada elemen input.
+
+Elemen ini <label>juga membantu pengguna yang kesulitan mengklik pada area yang sangat kecil (seperti tombol radio atau kotak centang) - karena saat pengguna mengklik teks dalam <label>elemen, tombol radio/kotak centang akan aktif dan aktif.
+
+Atribut fortag <label>harus sama dengan idatribut <input> elemen untuk mengikatnya bersama.
+
+Tombol Radio
+Mendefinisikan <input type="radio">tombol radio.
+
+Tombol radio memungkinkan pengguna memilih SATU dari sejumlah pilihan yang terbatas.
+
+Contoh
+Formulir dengan tombol radio:
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+Pilih bahasa Web favorit Anda:
+
+ HTML
+ CSS
+ JavaScript
+Kotak centang
+Mendefinisikan <input type="checkbox">kotak centang .
+
+Kotak centang memungkinkan pengguna memilih NOL atau LEBIH banyak opsi dari sejumlah pilihan yang terbatas.
+
+Contoh
+Formulir dengan kotak centang:
+
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+ Saya punya sepeda
+ Saya punya mobil
+ Saya punya perahu
+Tombol Kirim
+Menentukan <input type="submit">tombol untuk mengirimkan data formulir ke penangan formulir.
+
+Penangan formulir biasanya berupa berkas pada server dengan skrip untuk memproses data masukan.
+
+Penangan formulir ditetapkan dalam atribut formulir action .
+
+Contoh
+Formulir dengan tombol kirim:
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+Nama depan:
+John
+
+Nama belakang:
+Doe
+
+
+Atribut Nama untuk <input>
+Perhatikan bahwa setiap bidang masukan harus memiliki nameatribut untuk dikirimkan.
+
+Jika nameatribut dihilangkan, nilai bidang input tidak akan dikirim sama sekali.
+
+Contoh
+Contoh ini tidak akan mengirimkan nilai bidang input "Nama depan": 
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" value="John"><br><br>
+  <input type="submit" value="Submit">
+</form>

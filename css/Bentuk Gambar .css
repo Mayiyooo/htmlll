@@ -1,0 +1,124 @@
+Bentuk Gambar CSS
+Dengan CSS mudah untuk membentuk (memotong) gambar menjadi lingkaran, elips, dan poligon.
+
+Properti clip-path CSS
+Properti ini clip-pathmemungkinkan Anda memotong elemen ke bentuk dasar.
+
+Fungsi CSS circle()
+Fungsi ini circle()mendefinisikan lingkaran dengan radius dan posisi.
+
+Fungsi circle()ini digunakan dalam clip-pathproperti.
+
+Di sini kita klip gambar ke lingkaran dengan radius 50%:
+
+Nanas
+Contoh
+Klip gambar ke lingkaran dengan radius 50%:
+
+img {
+  clip-path: circle(50%);
+}
+Kita juga bisa menentukan titik pusat lingkaran. Ini bisa berupa nilai panjang atau persentase. Bisa juga berupa nilai seperti kiri, kanan, atas, atau bawah. Nilai default-nya adalah tengah.
+
+Di sini kita klip gambar ke lingkaran dengan radius 50% dan posisikan pusat lingkaran di sebelah kanan:
+
+Nanas
+Contoh
+Klip gambar ke lingkaran dengan radius 50% dan posisikan pusat lingkaran di sebelah kanan:
+
+img {
+  clip-path: circle(50% at right);
+}
+Properti bentuk luar CSS
+Properti ini shape-outsidememungkinkan Anda menentukan bentuk untuk pembungkusan konten sebaris.
+
+Fungsi ini circle()juga digunakan dalam shape-outsideproperti.
+
+Di sini kita klip gambar ke lingkaran dengan radius 40%, dan atur bentuk luar ke lingkaran dengan radius 45% (untuk membentuk teks):
+
+Nanas
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac laoreet quam, id aliquet nisl. Itu dia eros liga. Euismod Aenean, enim sed mollis feugiat, magna massa cursus leo, ut maximus metus eros non ante. Terima kasih banyak, tetapi euismod ipsum. Dalam dictumst Hac Habitasse Platea. Dalam dapibus tortor magna, elementum elementum neque sagittis id. Integer vestibulum semper dui, quis finibus libero elementum nec. Fusce ultricies lectus a eros interdum, efficitur iaculis nibh varius. Praesent sed ex bibendum, fermentum tortor nec, tincidunt augue. Maecenas di lobortis ligula, dan viverra velit. Melakukan fasilitasi dengan mudah dan efisien. Duis est augue, bibendum quis bibendum sed, feugiat vel eros. Ini adalah hal yang sangat erat dengan euismod. Aliquam feugiat erat dengan sodales imperdiet. Ut vel tortor auctor, rutrum lectus a, tempor nunc. Vivamus nec elit ornare, diktum urna sollicitudin, ornare diam. Tidak ada diktum arcu vitae odio ultrices iaculis.
+
+Contoh
+Penggunaan circle(), clip-path dan shape-outside:
+
+img {
+  float: left;
+  clip-path: circle(40%);
+  shape-outside: circle(45%);
+}
+
+Fungsi CSS ellipse()
+Fungsi ini ellipse()mendefinisikan elips dengan dua jari-jari x dan y.
+
+Fungsi ini ellipse()digunakan dalam properti clip-path dan properti shape-outside .
+
+Di sini kita memotong gambar menjadi elips dengan radius 50% x dan radius 35% y:
+
+Nanas
+Contoh
+Klip gambar ke elips dengan radius 50% x dan radius 35% y:
+
+img {
+  clip-path: ellipse(50% 35%);
+}
+Kita juga dapat menentukan titik pusat elips. Ini bisa berupa nilai panjang atau persentase. Titik pusat juga bisa berupa nilai seperti kiri, kanan, atas, atau bawah. Nilai default-nya adalah tengah.
+
+Di sini kita klip gambar ke elips dengan radius 50% x dan radius y 35%, dan posisikan pusat elips di sebelah kanan:
+
+Nanas
+Contoh
+Klip gambar ke elips dengan radius 50% x dan radius y 35%, dan posisikan pusat elips di sebelah kanan:
+
+img {
+  clip-path: ellipse(50% 35% at right);
+}
+Properti bentuk-luar dan elips()
+Di sini kita klip gambar ke elips dengan radius 40% x dan 50% radius y, dan atur bentuk luar ke elips dengan radius 45% x dan 50% radius y (untuk membentuk teks):
+
+Nanas
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac laoreet quam, id aliquet nisl. Itu dia eros liga. Euismod Aenean, enim sed mollis feugiat, magna massa cursus leo, ut maximus metus eros non ante. Terima kasih banyak, tetapi euismod ipsum. Dalam dictumst Hac Habitasse Platea. Dalam dapibus tortor magna, elementum elementum neque sagittis id. Integer vestibulum semper dui, quis finibus libero elementum nec. Fusce ultricies lectus a eros interdum, efficitur iaculis nibh varius. Praesent sed ex bibendum, fermentum tortor nec, tincidunt augue. Maecenas di lobortis ligula, dan viverra velit. Melakukan fasilitasi dengan mudah dan efisien. Duis est augue, bibendum quis bibendum sed, feugiat vel eros. Ini adalah hal yang sangat erat dengan euismod. Aliquam feugiat erat dengan sodales imperdiet. Ut vel tortor auctor, rutrum lectus a, tempor nunc. Vivamus nec elit ornare, diktum urna sollicitudin, ornare diam. Tidak ada diktum arcu vitae odio ultrices iaculis.
+
+Contoh
+Penggunaan ellipse(), clip-path dan shape-outside:
+
+img {
+  float: left;
+  clip-path: ellipse(40% 50%);
+  shape-outside: ellipse(45% 50%);
+}
+Fungsi CSS polygon()
+Fungsi ini polygon()mendefinisikan poligon.
+
+Fungsi ini polygon()berisi titik-titik yang mendefinisikan poligon. Ini bisa berupa nilai panjang atau persentase. Setiap titik merupakan pasangan koordinat x dan y. 0 0 mendefinisikan sudut kiri atas dan 100% 100% mendefinisikan sudut kanan bawah.
+
+Fungsi ini polygon()digunakan dalam properti clip-path dan properti shape-outside .
+
+Di sini kita klip gambar ke poligon: 
+
+Nanas
+Contoh
+Memotong gambar ke dalam poligon:
+
+img {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+Latihan
+?
+Properti CSS mana yang digunakan untuk memotong gambar menjadi bentuk tertentu?
+
+
+shape-outside
+border-radius
+clip-path
+mask
+
+Properti dan Fungsi CSS
+Tabel berikut mencantumkan properti dan fungsi CSS yang digunakan dalam bab ini:
+
+Property/Function	Description
+clip-path	Lets you clip an element to a basic shape or to an SVG source
+shape-outside	Lets you define a shape for the wrapping of the inline content
+circle()	Defines a circle with a radius and a position
+ellipse()	Defines an ellipse with two radii x and y
+polygon()	Defines a polygon

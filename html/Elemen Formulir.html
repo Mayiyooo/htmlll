@@ -1,0 +1,194 @@
+Elemen Formulir HTML
+Bab ini menjelaskan semua elemen formulir HTML yang berbeda.
+
+Elemen HTML <form>
+Elemen HTML <form>dapat berisi satu atau lebih elemen formulir berikut:
+
+<input>
+<label>
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>
+Elemen <input>
+Salah satu elemen bentuk yang paling banyak digunakan adalah <input>elemen.
+
+Elemen <input>dapat ditampilkan dalam beberapa cara, tergantung pada type atributnya.
+
+Contoh
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname">
+Semua nilai atribut yang berbeda type dibahas dalam bab berikutnya: Jenis Input HTML .
+
+Elemen <label>
+Elemen <label>mendefinisikan label untuk beberapa elemen formulir.
+
+Elemen <label>ini berguna bagi pengguna pembaca layar, karena pembaca layar akan membacakan label dengan lantang saat pengguna fokus pada elemen input.
+
+Elemen ini <label>juga membantu pengguna yang kesulitan mengklik pada area yang sangat kecil (seperti tombol radio atau kotak centang) - karena saat pengguna mengklik teks dalam <label>elemen, tombol radio/kotak centang akan aktif dan aktif.
+
+Atribut fortag <label>harus sama dengan idatribut <input> elemen untuk mengikatnya bersama.
+
+Elemen <select>
+Elemen ini <select>mendefinisikan daftar drop-down:
+
+Contoh
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+Elemen <option>mendefinisikan opsi yang dapat dipilih.
+
+Secara default, item pertama pada daftar drop-down dipilih.
+
+Untuk menentukan opsi yang telah dipilih sebelumnya, tambahkan selectedatribut ke opsi:
+
+Contoh
+<option value="fiat" selected>Fiat</option>
+Nilai yang Terlihat:
+Gunakan sizeatribut untuk menentukan jumlah nilai yang terlihat:
+
+Contoh
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" size="3">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+Izinkan Beberapa Pilihan:
+Gunakan multipleatribut untuk mengizinkan pengguna memilih lebih dari satu nilai:
+
+Contoh
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" size="4" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+Elemen <textarea>
+Elemen ini <textarea>mendefinisikan bidang input multi-baris (area teks):
+
+Contoh
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+Atribut rowsmenentukan jumlah baris yang terlihat di area teks.
+
+Atribut colsmenentukan lebar area teks yang terlihat.
+
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+The cat was playing in the garden.
+
+Anda juga dapat menentukan ukuran area teks dengan menggunakan CSS:
+
+Contoh
+<textarea name="message" style="width:200px; height:600px;">
+The cat was playing in the garden.
+</textarea>
+IKLAN
+
+Elemen <button>
+Elemen ini <button>mendefinisikan tombol yang dapat diklik:
+
+Contoh
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+Klik Saya!
+Catatan: Selalu tentukan typeatribut untuk elemen tombol. Setiap browser mungkin menggunakan tipe default yang berbeda untuk elemen tombol.
+
+Elemen <fieldset> dan <legend>
+Elemen ini <fieldset>digunakan untuk mengelompokkan data terkait dalam suatu formulir.
+
+Elemen <legend>mendefinisikan judul untuk <fieldset> elemen tersebut.
+
+Contoh
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+Berikut ini adalah bagaimana kode HTML di atas akan ditampilkan di browser:
+
+Barang milik pribadi:
+Nama depan:
+John
+
+Nama belakang:
+Doe
+
+
+Elemen <datalist>
+Elemen <datalist>menentukan daftar opsi yang telah ditetapkan sebelumnya untuk suatu <input>elemen.
+
+Pengguna akan melihat daftar drop-down berisi pilihan yang telah ditetapkan sebelumnya saat mereka memasukkan data.
+
+Atribut listelemen <input>harus mengacu pada idatribut elemen <datalist>.
+
+Contoh
+<form action="/action_page.php">
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+Elemen <output>
+Elemen tersebut <output>mewakili hasil perhitungan (seperti perhitungan yang dilakukan oleh skrip).
+
+Contoh
+Lakukan perhitungan dan tampilkan hasilnya dalam <output>elemen:
+
+<form action="/action_page.php"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range"  id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+Latihan
+?
+Apa elemen HTML yang benar untuk mengelompokkan data terkait dalam suatu formulir dan juga, secara default, menggambar batas di sekitarnya?
+
+
+<group>
+<fieldset>
+<fence>
+
+Elemen Formulir HTML
+Tag	Description
+<form>	Defines an HTML form for user input
+<input>	Defines an input control
+<textarea>	Defines a multiline input control (text area)
+<label>	Defines a label for an <input> element
+<fieldset>	Groups related elements in a form
+<legend>	Defines a caption for a <fieldset> element
+<select>	Defines a drop-down list
+<optgroup>	Defines a group of related options in a drop-down list
+<option>	Defines an option in a drop-down list
+<button>	Defines a clickable button
+<datalist>	Specifies a list of pre-defined options for input controls
+<output>	Defines the result of a calculation

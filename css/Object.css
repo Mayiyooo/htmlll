@@ -1,0 +1,118 @@
+Properti CSS Object-fit
+Properti CSS object-fitdigunakan untuk menentukan bagaimana <img> atau <video> harus diubah ukurannya agar sesuai dengan wadahnya.
+
+Properti CSS object-fit
+Properti CSS object-fitdigunakan untuk menentukan bagaimana <img> atau <video> harus diubah ukurannya agar sesuai dengan wadahnya.
+
+Properti ini memberi tahu konten untuk mengisi wadah dengan berbagai cara; seperti "mempertahankan rasio aspek" atau "meregangkan dan menempati ruang sebanyak mungkin".
+
+Lihatlah gambar berikut dari Paris. Gambar ini memiliki lebar 400 piksel dan tinggi 300 piksel:
+
+Paris
+Akan tetapi, jika kita memberi gaya pada gambar di atas menjadi setengah lebarnya (200 piksel) dan tingginya sama (300 piksel), maka akan tampak seperti ini:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+}
+Kita melihat gambar tersebut dipadatkan agar sesuai dengan wadah berukuran 200x300 piksel (rasio aspek aslinya hancur).
+
+Di sinilah object-fitproperti berperan. object-fitProperti dapat memiliki salah satu nilai berikut:
+
+fill- Ini default. Ukuran gambar diubah agar sesuai dengan dimensi yang diberikan. Jika perlu, gambar akan diregangkan atau dikompresi agar pas.
+contain- Gambar mempertahankan rasio aspeknya, tetapi diubah ukurannya agar sesuai dengan dimensi yang diberikan
+cover- Gambar mempertahankan rasio aspeknya dan memenuhi dimensi yang ditentukan. Gambar akan dipotong agar sesuai.
+none- Gambar tidak diubah ukurannya
+scale-down- gambar diperkecil ke versi terkecil noneatau contain
+Menggunakan object-fit: cover;
+Jika kita menggunakan object-fit: cover;gambar yang rasio aspeknya tetap terjaga dan memenuhi dimensi yang diberikan, gambar akan terpotong agar sesuai:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+IKLAN
+
+Menggunakan object-fit: contain;
+Jika kita menggunakan object-fit: contain;gambar, rasio aspeknya tetap sama, tetapi ukurannya diubah agar sesuai dengan dimensi yang diberikan:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+Menggunakan object-fit: fill;
+Jika kita menggunakan object-fit: fill;gambar yang ukurannya diubah agar sesuai dengan dimensi yang diberikan, gambar akan diregangkan atau dikompresi agar sesuai jika diperlukan:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+}
+Menggunakan object-fit: none;
+Jika kita menggunakan object-fit: none;gambar yang tidak diubah ukurannya:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: none;
+}
+Menggunakan object-fit: scale-down;
+Jika kita menggunakan object-fit: scale-down;gambar yang diperkecil ke versi terkecil noneatau contain:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: scale-down;
+}
+Contoh Lain
+Di sini kita memiliki dua gambar dan kita ingin gambar tersebut memenuhi lebar 50% jendela browser dan tinggi 100%.
+
+Dalam contoh berikut ini kami TIDAK menggunakan object-fit, jadi ketika kami mengubah ukuran jendela browser, rasio aspek gambar akan hancur:
+
+Contoh
+NorwegiaParis
+
+Pada contoh berikutnya, kami menggunakan object-fit: cover;, jadi saat kami mengubah ukuran jendela browser, rasio aspek gambar tetap terjaga:
+
+Contoh
+NorwegiaParis
+
+ CSS object-fit Contoh Lainnya
+Contoh berikut menunjukkan semua kemungkinan nilai properti object-fitdalam satu contoh:
+
+Contoh
+.fill {object-fit: fill;}
+.contain {object-fit: contain;}
+.cover {object-fit: cover;}
+.scale-down {object-fit: scale-down;}
+.none {object-fit: none;}
+Latihan
+?
+Apa tujuan dari object-fitproperti CSS?
+
+
+Untuk menambahkan efek bayangan pada suatu elemen.
+Untuk memotong gambar menjadi lingkaran.
+Untuk mengubah ukuran gambar atau video agar sesuai dengan wadahnya.
+Untuk menerapkan efek filter pada gambar.
+
+Properti Objek CSS-*
+Tabel berikut mencantumkan properti objek CSS-*:
+
+Property	Description
+object-fit	Specifies how an <img> or <video> should be resized to fit its container
+object-position	Specifies how an <img> or <video> should be positioned with x/y coordinates inside its "own content box"

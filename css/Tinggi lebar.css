@@ -1,0 +1,97 @@
+
+CSS heightdan widthproperti digunakan untuk mengatur tinggi dan lebar suatu elemen.
+
+Properti CSS max-widthdigunakan untuk mengatur lebar maksimum suatu elemen.
+
+Elemen ini memiliki tinggi 50 piksel dan lebar 100%.
+
+Pengaturan CSS tinggi dan lebar
+Properti heightdan widthdigunakan untuk mengatur tinggi dan lebar suatu elemen.
+
+Properti tinggi dan lebar tidak mencakup padding, border, atau margin. Properti ini mengatur tinggi/lebar area di dalam padding, border, dan margin elemen.
+
+Nilai tinggi dan lebar CSS
+Properti heightdan widthdapat memiliki nilai berikut:
+
+auto- Ini default. Peramban menghitung tinggi dan lebar
+length- Menentukan tinggi/lebar dalam px, cm, dll.
+%- Menentukan tinggi/lebar dalam persen dari blok yang berisi
+initial- Mengatur tinggi/lebar ke nilai defaultnya
+inherit- Tinggi/lebar akan diwarisi dari nilai induknya
+Contoh tinggi dan lebar CSS
+Elemen ini memiliki tinggi 200 piksel dan lebar 50%
+Contoh
+Mengatur tinggi dan lebar elemen <div>:
+
+div {
+  height: 200px;
+  width: 50%;
+  background-color: powderblue;
+}
+
+Elemen ini memiliki tinggi 100 piksel dan lebar 500 piksel.
+Contoh
+Tetapkan tinggi dan lebar elemen <div> lainnya:
+
+div {
+  height: 100px;
+  width: 500px;
+  background-color: powderblue;
+}
+
+Catatan: Ingat bahwa properti heightdan widthtidak menyertakan padding, border, atau margin! Properti ini mengatur tinggi/lebar area di dalam padding, border, dan margin elemen!
+
+
+Mengatur lebar maksimum
+Properti max-widthini digunakan untuk mengatur lebar maksimum suatu elemen.
+
+Dapat max-widthditentukan dalam nilai panjang , seperti px, cm, dsb., atau dalam persen (%) dari blok yang memuatnya, atau ditetapkan ke tidak ada (ini adalah default. Berarti tidak ada lebar maksimum).
+
+Masalah di <div>atas terjadi ketika jendela peramban lebih kecil dari lebar elemen (500 piksel). Peramban kemudian menambahkan bilah gulir horizontal ke halaman.
+
+Dalam situasi ini, penggunaan max-widthakan meningkatkan penanganan jendela kecil oleh browser.
+
+Tip: Seret jendela browser ke ukuran lebih kecil dari 500px, untuk melihat perbedaan antara dua div!
+
+Elemen ini memiliki tinggi 100 piksel dan lebar maksimum 500 piksel.
+Catatan: Jika karena alasan tertentu Anda menggunakan kedua widthproperti tersebut dan max-widthproperti pada elemen yang sama, dan nilai properti widthlebih besar dari max-widthproperti tersebut; max-widthproperti tersebut akan digunakan (dan widthproperti tersebut akan diabaikan).
+
+Contoh
+Elemen <div> ini memiliki tinggi 100 piksel dan lebar maksimum 500 piksel: 
+
+div {
+  max-width: 500px;
+  height: 100px;
+  background-color: powderblue;
+}
+
+Coba Sendiri - Contoh
+Mengatur tinggi dan lebar elemen
+Contoh ini menunjukkan cara mengatur tinggi dan lebar elemen yang berbeda.
+
+Mengatur tinggi dan lebar gambar menggunakan persen
+Contoh ini memperagakan cara mengatur tinggi dan lebar gambar menggunakan nilai persen.
+
+Tetapkan lebar minimum dan lebar maksimum suatu elemen
+Contoh ini memperagakan cara menetapkan lebar minimum dan lebar maksimum suatu elemen menggunakan nilai piksel.
+
+Tetapkan tinggi minimum dan tinggi maksimum suatu elemen
+Contoh ini memperagakan cara menetapkan tinggi minimum dan tinggi maksimum suatu elemen menggunakan nilai piksel.
+
+Latihan
+?
+Tetapkan lebar maksimum divmenjadi 500 piksel.
+div {
+  : ;
+  height: 100px;
+}
+
+
+Semua Properti Dimensi CSS
+Property	Description
+height	Sets the height of an element
+max-height	Sets the maximum height of an element
+max-width	Sets the maximum width of an element
+min-height	Sets the minimum height of an element
+min-width	Sets the minimum width of an element
+width	Sets the width of an element

@@ -1,0 +1,222 @@
+Gambar Gaya CSS
+Pelajari cara menata gambar menggunakan CSS.
+
+Gambar Bulat
+Anda dapat menggunakan border-radiusproperti untuk membuat gambar bulat:
+
+
+Paris
+Contoh
+Gambar Bulat:
+
+img {
+  border-radius: 8px;
+}
+Paris
+Contoh
+Gambar yang Dilingkari:
+
+img {
+  border-radius: 50%;
+}
+Lihat juga bab Bentuk Gambar CSS untuk mempelajari cara membentuk (memotong) gambar menjadi lingkaran, elips, dan poligon.
+
+Gambar Miniatur
+Gunakan borderproperti untuk membuat gambar mini.
+
+Gambar Mini:
+
+Paris
+Contoh
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+<img src="paris.jpg" alt="Paris">
+Gambar Miniatur sebagai Tautan:
+
+
+Contoh
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+<a href="paris.jpg">
+  <img src="paris.jpg" alt="Paris">
+</a>
+Gambar Responsif
+Gambar responsif akan secara otomatis menyesuaikan dengan ukuran layar.
+
+Ubah ukuran jendela browser untuk melihat efeknya:
+
+Lima Tanah
+Jika Anda ingin gambar diperkecil jika perlu, tetapi tidak ingin memperbesarnya hingga lebih besar dari ukuran aslinya, tambahkan yang berikut ini:
+
+Contoh
+img {
+  max-width: 100%;
+  height: auto;
+}
+Tip: Baca selengkapnya tentang Desain Web Responsif di Tutorial CSS RWD kami .
+
+Gambar/Kartu Polaroid
+Lima Tanah
+Lima Tanah
+
+Norwegia
+Cahaya Utara
+
+Contoh
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {width: 100%}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+Gambar Transparan
+Properti opacitydapat memiliki nilai 0,0 - 1,0. Semakin rendah nilainya, semakin transparan:
+
+Hutan
+opasitas 0,2
+
+Hutan
+opasitas 0,5
+
+Hutan
+opasitas 1
+(default)
+
+Contoh
+img {
+  opacity: 0.5;
+}
+Lihat juga bab Filter Gambar CSS untuk mempelajari cara menggunakan properti filter untuk menambahkan efek visual (seperti opasitas, buram, saturasi, dll.) ke gambar.
+
+Teks Gambar
+Cara memposisikan teks dalam gambar:
+
+Contoh
+Cingue TerreBottom LeftTop LeftTop RightBottom RightCentered
+Cobalah Sendiri:
+
+    
+Hamparan Gambar Hover
+Buat efek overlay saat mengarahkan kursor:
+
+Contoh
+Memudar dalam teks:
+
+AvatarHalo Dunia
+Contoh
+Memudar dalam kotak:
+
+Avatar
+Yohanes
+Contoh
+Geser ke dalam (atas):
+
+AvatarHalo Dunia
+Contoh
+Geser ke dalam (bawah):
+
+AvatarHalo Dunia
+Contoh
+Geser ke dalam (kiri):
+
+AvatarHalo Dunia
+Contoh
+Geser ke dalam (kanan):
+
+AvatarHalo Dunia
+Membalik Gambar
+Gerakkan mouse Anda pada gambar:
+
+Paris
+Contoh
+img:hover {
+  transform: scaleX(-1);
+}
+Galeri Gambar Responsif
+CSS dapat digunakan untuk membuat galeri gambar. Contoh ini menggunakan kueri media untuk mengatur ulang gambar pada berbagai ukuran layar. Ubah ukuran jendela peramban untuk melihat efeknya:
+
+Lima Tanah
+Tambahkan deskripsi gambar di sini
+Hutan
+Tambahkan deskripsi gambar di sini
+Cahaya Utara
+Tambahkan deskripsi gambar di sini
+Pegunungan
+Tambahkan deskripsi gambar di sini
+Contoh
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+  }
+}
+Tip: Baca selengkapnya tentang Desain Web Responsif di Tutorial CSS RWD kami .
+
+Modal Gambar (Lanjutan)
+Ini adalah contoh untuk menunjukkan bagaimana CSS dan JavaScript dapat bekerja bersama.
+
+Pertama, gunakan CSS untuk membuat jendela modal (kotak dialog), dan sembunyikan secara default.
+
+Kemudian, gunakan JavaScript untuk menampilkan jendela modal dan menampilkan gambar di dalam modal, saat pengguna mengklik gambar:
+
+Cahaya Utara, Norwegia
+Contoh
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk membuat gambar responsif.
+.responsive {
+  : ;
+  : auto;
+}

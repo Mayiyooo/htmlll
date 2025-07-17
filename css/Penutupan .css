@@ -1,0 +1,166 @@
+Penutupan CSS
+Dengan masking CSS, Anda membuat lapisan masking untuk ditempatkan di atas suatu elemen guna menyembunyikan sebagian atau seluruh bagian elemen.
+
+Properti CSS mask-image
+Properti CSS mask-imagemenentukan gambar lapisan masker.
+
+Gambar lapisan topeng dapat berupa gambar PNG, gambar SVG, gradien CSS , atau elemen <mask> SVG .
+
+Dukungan Peramban
+Angka dalam tabel di bawah ini menentukan versi browser pertama yang sepenuhnya mendukung properti tersebut.
+
+Angka yang diikuti oleh -webkit- menunjukkan versi pertama yang bekerja dengan awalan.
+
+Property					
+mask-image	120	120	53	15.4	15 -webkit-
+Gunakan Gambar sebagai Lapisan Masker
+Untuk menggunakan gambar PNG atau SVG sebagai lapisan topeng, gunakan nilai url() untuk meneruskan gambar lapisan topeng.
+
+Gambar topeng harus memiliki area transparan atau semi-transparan. Hitam menunjukkan transparansi penuh.
+
+Berikut adalah gambar topeng (gambar PNG) yang akan kita gunakan:
+
+W3Schools.com
+Berikut adalah gambar dari Cinque Terre, di Italia:
+
+Lima Tanah
+Sekarang, kita terapkan gambar topeng (gambar PNG di atas) sebagai lapisan topeng untuk gambar dari Cinque Terre, Italia:
+
+Lima Tanah
+Contoh
+Berikut ini kode sumbernya:
+
+.mask1 {
+  -webkit-mask-image: url(w3logo.png);
+  mask-image: url(w3logo.png);
+  mask-repeat: no-repeat;
+}
+Contoh Dijelaskan
+Properti mask-imagemenentukan gambar yang akan digunakan sebagai lapisan masker untuk suatu elemen.
+
+Properti ini mask-repeatmenentukan apakah atau bagaimana gambar masker akan diulang. no-repeat Nilai ini menunjukkan bahwa gambar masker tidak akan diulang (gambar masker hanya akan ditampilkan sekali).
+
+Contoh Lain
+Jika kita menghilangkan mask-repeatproperti tersebut, gambar topeng akan diulang di seluruh gambar dari Cinque Terre, Italia:
+
+Lima Tanah
+Contoh
+Berikut ini kode sumbernya:
+
+.mask1 {
+  -webkit-mask-image: url(w3logo.png);
+  mask-image: url(w3logo.png);
+}
+IKLAN
+
+Gunakan Gradien sebagai Lapisan Masker
+Gradien linear dan radial CSS juga dapat digunakan sebagai gambar topeng.
+
+Contoh Gradien Linier
+Di sini, kami menggunakan gradien linier sebagai lapisan masker untuk gambar kami. Gradien linier ini bergerak dari atas (hitam) ke bawah (transparan):
+
+Lima Tanah
+ 
+Contoh
+Gunakan gradien linier sebagai lapisan masker:
+
+.mask1 {
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
+Di sini, kami menggunakan gradien linier beserta penutupan teks sebagai lapisan penutupan untuk gambar kami:
+
+Cinque Terre adalah kawasan pesisir di Liguria, di barat laut Italia. Itu terletak di sebelah barat Provinsi La Spezia, dan terdiri dari lima desa: Monterosso al Mare, Vernazza, Corniglia, Manarola, dan Riomaggiore.
+
+Cinque Terre adalah kawasan pesisir di Liguria, di barat laut Italia. Itu terletak di sebelah barat Provinsi La Spezia, dan terdiri dari lima desa: Monterosso al Mare, Vernazza, Corniglia, Manarola, dan Riomaggiore.
+
+Cinque Terre adalah kawasan pesisir di Liguria, di barat laut Italia. Itu terletak di sebelah barat Provinsi La Spezia, dan terdiri dari lima desa: Monterosso al Mare, Vernazza, Corniglia, Manarola, dan Riomaggiore.
+
+Contoh
+Gunakan gradien linier beserta penutupan teks sebagai lapisan penutup:
+
+.mask1 {
+  max-width: 600px;
+  height: 350px;
+  overflow-y: scroll;
+  background: url(img_5terre.jpg) no-repeat;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient (black, transparent);
+}
+Contoh Gradien Radial
+Di sini, kami menggunakan gradien radial (berbentuk lingkaran) sebagai lapisan topeng untuk gambar kami:
+
+Lima Tanah
+Contoh
+Gunakan gradien radial sebagai lapisan topeng (lingkaran):
+
+.mask2 {
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+Di sini, kami menggunakan gradien radial (berbentuk elips) sebagai lapisan topeng untuk gambar kami:
+
+Lima Tanah
+Contoh
+Gunakan gradien radial lain sebagai lapisan masker (elips):
+
+.mask3 {
+  -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+Gunakan SVG sebagai Lapisan Masker
+Elemen SVG <mask>dapat digunakan di dalam grafik SVG untuk membuat efek masking.
+
+Di sini, kami menggunakan elemen SVG <mask>untuk membuat lapisan masker yang berbeda untuk gambar kami:
+
+Contoh
+Lapisan topeng SVG (dibentuk sebagai segitiga):
+
+<svg width="600" height="400">
+  <mask id="svgmask1">
+    <polygon fill="#ffffff" points="200 0, 400 400, 0 400"></polygon>
+  </mask>
+  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img_5terre.jpg" mask="url(#svgmask1)"></image>
+</svg>
+Contoh
+Lapisan topeng SVG (dibentuk sebagai bintang):
+
+<svg width="600" height="400">
+  <mask id="svgmask2">
+    <polygon fill="#ffffff" points="100,10 40,198 190,78 10,78 160,198"></polygon>
+  </mask>
+  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img_5terre.jpg" mask="url(#svgmask2)"></image>
+</svg>
+Contoh
+Lapisan topeng SVG (dibentuk sebagai lingkaran):
+
+<svg width="600" height="400">
+  <mask id="svgmask3">
+    <circle fill="#ffffff" cx="75" cy="75" r="75"></circle>
+    <circle fill="#ffffff" cx="80" cy="260" r="75"></circle>
+    <circle fill="#ffffff" cx="270" cy="160" r="75"></circle>
+  </mask>
+  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img_5terre.jpg" mask="url(#svgmask3)"></image>
+</svg>
+Latihan
+?
+Manakah dari berikut ini yang dapat digunakan sebagai lapisan masker dalam CSS?
+
+
+Gambar PNG
+Gambar SVG
+Gradien CSS
+Semua hal di atas
+
+Properti Masking CSS
+Tabel berikut mencantumkan semua properti masking CSS:
+
+Property	Description
+mask-clip	Specifies which area is affected by a mask image
+mask-composite	Specifies a compositing operation used on the current mask layer with the mask layers below it
+mask-image	Specifies an image to be used as a mask layer for an element
+mask-mode	Specifies whether the mask layer image is treated as a luminance mask or as an alpha mask
+mask-origin	Specifies the origin position (the mask position area) of a mask layer image
+mask-position	Sets the starting position of a mask layer image (relative to the mask position area)
+mask-repeat	Specifies how the mask layer image is repeated
+mask-size	Specifies the size of a mask layer image

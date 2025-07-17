@@ -1,0 +1,106 @@
+Ikon CSS
+Ikon dapat dengan mudah ditambahkan ke halaman HTML Anda, dengan menggunakan pustaka ikon.
+
+      
+Cara Menambahkan Ikon
+Cara paling sederhana untuk menambahkan ikon ke halaman HTML Anda adalah dengan pustaka ikon, seperti Font Awesome.
+
+Tambahkan nama kelas ikon yang ditentukan ke elemen HTML sebaris mana pun (seperti <i>atau <span>).
+
+Semua ikon di pustaka ikon di bawah ini, adalah vektor berskala yang dapat disesuaikan dengan CSS (ukuran, warna, bayangan, dll.)
+
+Ikon Font Awesome
+Untuk menggunakan ikon Font Awesome, kunjungi fontawesome.com , masuk, dan dapatkan kode untuk ditambahkan di <head>bagian halaman HTML Anda:
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+Baca selengkapnya tentang cara memulai dengan Font Awesome di tutorial Font Awesome 5 kami .
+
+Catatan: Tidak diperlukan pengunduhan atau instalasi!
+
+Contoh
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<i class="fas fa-cloud"></i>
+<i class="fas fa-heart"></i>
+<i class="fas fa-car"></i>
+<i class="fas fa-file"></i>
+<i class="fas fa-bars"></i>
+
+</body>
+</html>
+Hasil:
+
+    
+Untuk referensi lengkap semua ikon Font Awesome, kunjungi Referensi Ikon kami .
+
+IKLAN
+
+Ikon Bootstrap
+Untuk menggunakan glifikon Bootstrap, tambahkan baris berikut di dalam <head>bagian halaman HTML Anda:
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+Catatan: Tidak diperlukan pengunduhan atau instalasi!
+
+Contoh
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<i class="glyphicon glyphicon-cloud"></i>
+<i class="glyphicon glyphicon-remove"></i>
+<i class="glyphicon glyphicon-user"></i>
+<i class="glyphicon glyphicon-envelope"></i>
+<i class="glyphicon glyphicon-thumbs-up"></i>
+
+</body>
+</html>
+Hasil:
+
+
+Ikon Google
+Untuk menggunakan ikon Google, tambahkan baris berikut di dalam <head>bagian halaman HTML Anda:
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+Catatan: Tidak diperlukan pengunduhan atau instalasi!
+
+Contoh
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<i class="material-icons">cloud</i>
+<i class="material-icons">favorite</i>
+<i class="material-icons">attachment</i>
+<i class="material-icons">computer</i>
+<i class="material-icons">traffic</i>
+
+</body>
+</html>
+Hasil:
+
+
+Untuk daftar lengkap semua ikon, kunjungi Tutorial Ikon kami .
+
+Latihan
+?
+Pustaka ikon mana yang dapat digunakan jika Anda menyertakan skrip dari "fontawesome.com" dalam berkas HTML Anda?
+
+
+Ikon Bootstrap
+Ikon Font Awesome
+Ikon Google
+Ikon Material

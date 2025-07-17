@@ -1,0 +1,44 @@
+Pengantar CSS
+CSS adalah bahasa yang kita gunakan untuk menata halaman Web.
+
+Apa itu CSS?
+CSS adalah singkatan dari Cascading Style Sheets
+CSS menjelaskan bagaimana elemen HTML ditampilkan di layar, kertas, atau media lainnya
+CSS menghemat banyak pekerjaan. CSS dapat mengontrol tata letak beberapa halaman web sekaligus.
+Stylesheet eksternal disimpan dalam file CSS
+Demo CSS - Satu Halaman HTML - Berbagai Gaya!
+Di sini, kami akan menampilkan satu halaman HTML dengan empat lembar gaya yang berbeda. Klik tautan "Lembar Gaya 1", "Lembar Gaya 2", "Lembar Gaya 3", dan "Lembar Gaya 4" di bawah ini untuk melihat berbagai gaya:
+
+
+
+Mengapa Menggunakan CSS?
+CSS digunakan untuk menentukan gaya halaman web Anda, termasuk desain, tata letak, dan variasi tampilan untuk berbagai perangkat dan ukuran layar.
+
+Contoh CSS
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+CSS Memecahkan Masalah Besar
+HTML TIDAK PERNAH dimaksudkan untuk memuat tag untuk memformat halaman web!
+
+HTML diciptakan untuk mendeskripsikan konten halaman web, seperti:
+
+<h1>Ini adalah judul</h1>
+
+<p>Ini adalah sebuah paragraf.</p>
+
+Ketika tag seperti <font> dan atribut warna ditambahkan ke spesifikasi HTML 3.2, hal itu memicu mimpi buruk bagi para pengembang web. Pengembangan situs web besar, di mana font dan informasi warna ditambahkan ke setiap halaman, menjadi proses yang panjang dan mahal.
+
+Untuk mengatasi masalah ini, World Wide Web Consortium (W3C) menciptakan CSS.
+
+CSS menghapus format gaya dari halaman HTML!

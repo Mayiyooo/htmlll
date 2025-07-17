@@ -1,0 +1,72 @@
+Audio HTML
+Elemen HTML <audio>digunakan untuk memutar berkas audio pada halaman web.
+
+Elemen HTML <audio>
+Untuk memutar berkas audio dalam HTML, gunakan <audio>elemen:
+
+Contoh
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+Audio HTML - Cara Kerjanya
+Atribut controlsmenambahkan kontrol audio, seperti putar, jeda, dan volume.
+
+Elemen ini <source>memungkinkan Anda menentukan berkas audio alternatif yang dapat dipilih oleh peramban. Peramban akan menggunakan format pertama yang dikenali.
+
+Teks antara tag <audio>dan </audio>hanya akan ditampilkan di browser yang tidak mendukung <audio>elemen tersebut.
+
+HTML <audio> Putar Otomatis
+Untuk memulai berkas audio secara otomatis, gunakan autoplayatribut:
+
+Contoh
+<audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+Catatan: Peramban Chromium tidak mengizinkan putar otomatis dalam kebanyakan kasus. Namun, putar otomatis tanpa suara selalu diizinkan.
+
+Tambahkan mutedsetelah autoplayuntuk membiarkan berkas audio Anda mulai diputar secara otomatis (tetapi tanpa suara):
+
+Contoh
+<audio controls autoplay muted>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+Dukungan Peramban
+Angka dalam tabel menunjukkan versi browser pertama yang sepenuhnya mendukung <audio>elemen tersebut.
+
+Element					
+<audio>	4.0	9.0	3.5	4.0	10.5
+Format Audio HTML
+Ada tiga format audio yang didukung: MP3, WAV, dan OGG. Dukungan peramban untuk berbagai format tersebut adalah: 
+
+Browser	MP3	WAV	OGG
+Edge/IE	YES	YES*	YES*
+Chrome	YES	YES	YES
+Firefox	YES	YES	YES
+Safari	YES	YES	NO
+Opera	YES	YES	YES
+*Dari Edge 79
+
+Audio HTML - Jenis Media
+File Format	Media Type
+MP3	audio/mpeg
+OGG	audio/ogg
+WAV	audio/wav
+Audio HTML - Metode, Properti, dan Peristiwa
+DOM HTML mendefinisikan metode, properti, dan peristiwa untuk <audio>elemen.
+
+Ini memungkinkan Anda memuat, memutar, dan menjeda audio, serta mengatur durasi dan volume.
+
+Ada juga peristiwa DOM yang dapat memberitahukan Anda saat audio mulai diputar, dijeda, dll.
+
+Untuk referensi DOM lengkap, kunjungi Referensi DOM Audio/Video HTML kami .
+
+Tag Audio HTML
+Tag	Description
+<audio>	Defines sound content
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>

@@ -1,0 +1,118 @@
+
+Pelajari cara membuat pagination responsif menggunakan CSS.
+
+Paginasi Sederhana
+Jika Anda memiliki situs web dengan banyak halaman, Anda mungkin ingin menambahkan semacam pagination ke setiap halaman:
+
+"123456"❮    ❯
+Contoh
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+Paginasi Aktif dan Dapat Diarahkan
+"1234567"
+Sorot halaman saat ini dengan suatu .active kelas, dan gunakan :hover pemilih untuk mengubah warna setiap tautan halaman saat menggerakkan mouse di atasnya:
+
+Contoh
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+Tombol Aktif dan Dapat Diarahkan yang Bulat
+"1234567"
+Tambahkan border-radiusproperti jika Anda menginginkan tombol "aktif" dan "arahkan kursor" yang membulat:
+
+Contoh
+.pagination a {
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  border-radius: 5px;
+}
+Efek Transisi yang Dapat Diarahkan
+"1234567"
+Tambahkan transitionproperti ke tautan halaman untuk membuat efek transisi saat mengarahkan kursor:
+
+Contoh
+.pagination a {
+  transition: background-color .3s;
+}
+IKLAN
+
+Paginasi Berbatasan
+"1234567"
+Gunakan borderproperti untuk menambahkan batas pada pagination:
+
+Contoh
+.pagination a {
+  border: 1px solid #ddd; /* Gray */
+}
+Batas Bulat
+Tip: Tambahkan batas bulat pada tautan pertama dan terakhir di pagination:
+
+"1234567"
+Contoh
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+Spasi Antar Tautan
+Tip: Tambahkan marginproperti jika Anda tidak ingin mengelompokkan tautan halaman:
+
+"1234567"
+Contoh
+.pagination a {
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+}
+Ukuran Paginasi
+"1234567"
+Ubah ukuran pagination dengan font-sizeproperti:
+
+Contoh
+.pagination a {
+  font-size: 22px;
+}
+Paginasi Terpusat
+"1234567"
+Untuk memusatkan pagination, bungkus elemen kontainer (seperti <div>) di sekitarnya dengantext-align:center
+
+Contoh
+.center {
+  text-align: center;
+}
+Contoh Lainnya
+Contoh
+
+Tepung roti
+Rumah Gambar Musim Panas 15 Italia
+Variasi lain dari pagination disebut "breadcrumbs":
+
+Contoh
+ul.breadcrumb {
+  padding: 8px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+ul.breadcrumb li {display: inline;}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}

@@ -1,0 +1,80 @@
+Aturan CSS @supports
+Aturan CSS @supports
+Aturan CSS @supportsmemungkinkan Anda memeriksa apakah peramban mendukung properti atau nilai CSS tertentu, dan menentukan gaya fallback jika fitur tersebut tidak didukung.
+
+Ini berguna untuk menerapkan gaya hanya saat browser dapat menanganinya.
+
+Sintaks Dasar
+@supports (property: value) {
+  /* CSS rules */
+}
+Contoh: Menggunakan @supports dengan grid dan flex
+Anda dapat menggabungkan @supportsdengan CSS biasa untuk menyediakan gaya fallback.
+
+Di sini, jika browser mendukung display: flex, CSS di dalam @supportsaturan akan diterapkan. Jika tidak, kelas .container di luar @supportsaturan akan diterapkan:
+
+Contoh
+/* use this CSS if the browser does not support display: flex */
+.container {
+  float: left;
+  width: 100%;
+}
+
+/* use this CSS if the browser supports display: flex */
+@supports (display: flex) {
+  .container {
+    display: flex;
+  }
+}
+Di sini, jika browser mendukung display: grid, CSS di dalam @supportsaturan akan diterapkan. Jika tidak, kelas .container di luar @supportsaturan akan diterapkan:
+
+Contoh
+/* use this CSS if the browser does not support display: grid */
+.container {
+  display: table;
+  width: 90%;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+/* use this CSS if the browser supports display: grid */
+@supports (display: grid) {
+  .container {
+    display: grid;
+    grid: auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+}
+IKLAN
+
+Meniadakan dengannot
+Anda dapat menggunakannya notuntuk menerapkan gaya hanya ketika suatu fitur tidak didukung:
+
+Contoh
+@supports not (display: grid) {
+  .warning {
+    background-color: pink;
+    padding: 10px;
+    border: 1px solid red;
+  }
+}
+Menggabungkan Kondisi
+Anda dapat menggunakan and, or, dan notuntuk beberapa kondisi:
+
+Contoh
+@supports (display: grid) and (gap: 10px) {
+  .container {
+    display: grid;
+    gap: 10px;
+  }
+}
+Dukungan Peramban
+Aturan ini @supportsdidukung di semua peramban modern (Chrome, Firefox, Edge, Safari). Aturan ini tidak didukung di Internet Explorer.
+
+Catatan: Selalu sediakan gaya fallback di luar @supportsuntuk browser lama.
+
+Referensi CSS
+At-rule	Description
+@supports	Used to test whether a browser supports a CSS feature

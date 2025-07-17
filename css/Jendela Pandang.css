@@ -1,0 +1,60 @@
+Viewport
+Apa itu Viewport?
+Area pandang adalah area yang dapat dilihat pengguna pada suatu halaman web.
+
+Area pandang bervariasi tergantung pada perangkat, dan akan lebih kecil pada ponsel dibandingkan pada layar komputer.
+
+Sebelum adanya tablet dan telepon seluler, halaman web hanya dirancang untuk layar komputer, dan halaman web pada umumnya memiliki desain statis dan ukuran tetap.
+
+Lalu, ketika kita mulai menjelajahi internet menggunakan tablet dan ponsel, halaman web berukuran tetap terlalu besar untuk muat di viewport. Untuk mengatasinya, peramban di perangkat tersebut memperkecil keseluruhan halaman web agar muat di layar.
+
+Ini tidak sempurna!! Tapi ada perbaikan cepat.
+
+Mengatur Viewport
+HTML5 memperkenalkan metode yang memungkinkan desainer web mengendalikan viewport, melalui <meta>tag.
+
+Anda harus menyertakan elemen viewport berikut <meta>di <head>bagian semua halaman web Anda:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+Ini memberikan instruksi kepada browser tentang cara mengendalikan dimensi dan skala halaman.
+
+Bagian ini width=device-widthmengatur lebar halaman agar mengikuti lebar layar perangkat (yang akan bervariasi tergantung pada perangkat).
+
+Bagian ini initial-scale=1.0mengatur tingkat zoom awal saat halaman pertama kali dimuat oleh browser.
+
+Berikut adalah contoh halaman web tanpa tag meta viewport, dan halaman web yang sama dengan tag meta viewport:
+
+
+
+
+Tanpa tag meta viewport
+
+
+
+Dengan tag meta viewport
+
+Kiat: Jika Anda menelusuri halaman ini dengan ponsel atau tablet, Anda dapat mengeklik dua tautan di atas untuk melihat perbedaannya.
+
+Ukuran Konten ke Viewport
+Pengguna terbiasa menggulir situs web secara vertikal di perangkat desktop dan seluler - tetapi tidak secara horizontal!
+
+Jadi, jika pengguna dipaksa untuk menggulir secara horizontal, atau memperkecil tampilan, untuk melihat keseluruhan halaman web, hal itu akan mengakibatkan pengalaman pengguna yang buruk.
+
+Beberapa aturan tambahan yang harus diikuti:
+
+1. JANGAN gunakan elemen berukuran besar dengan lebar tetap - Misalnya, jika gambar memiliki lebar lebih lebar dari area pandang, hal ini menyebabkan area pandang bergulir secara horizontal. Ingatlah untuk menyesuaikan konten ini agar pas dengan lebar area pandang.
+
+2. JANGAN biarkan konten bergantung pada lebar tertentu agar dapat ditampilkan dengan baik - Karena dimensi dan lebar layar dalam piksel CSS sangat bervariasi antara perangkat, konten tidak boleh bergantung pada lebar viewport tertentu agar dapat ditampilkan dengan baik.
+
+3. Gunakan kueri media CSS untuk menerapkan gaya yang berbeda untuk layar kecil dan besar - Menetapkan lebar CSS absolut yang besar untuk elemen halaman akan menyebabkan elemen menjadi terlalu lebar untuk perangkat yang lebih kecil. Sebagai gantinya, pertimbangkan untuk menggunakan nilai lebar relatif, seperti width: 100%. Selain itu, berhati-hatilah saat menggunakan nilai posisi absolut yang besar. Hal ini dapat menyebabkan elemen berada di luar viewport pada perangkat kecil.
+
+Latihan
+?
+Apa yang diwakili oleh viewport dalam desain web?
+
+
+Area konsol halaman web
+Area yang terlihat dari halaman web di perangkat pengguna
+Resolusi layar pengguna
+Area halaman yang dimuat oleh cache browser
+

@@ -1,0 +1,25 @@
+Sintaks CSS
+Aturan CSS terdiri dari pemilih dan blok deklarasi.
+
+Sintaks CSS
+Pemilih CSS
+
+Pemilih menunjuk ke elemen HTML yang ingin Anda beri gaya.
+
+Blok deklarasi berisi satu atau lebih deklarasi yang dipisahkan oleh titik koma.
+
+Setiap deklarasi menyertakan nama properti CSS dan nilai, dipisahkan oleh titik dua.
+
+Beberapa deklarasi CSS dipisahkan dengan titik koma, dan blok deklarasi diapit oleh kurung kurawal.
+
+Contoh
+Dalam contoh ini semua elemen <p> akan diratakan tengah, dengan warna teks merah:
+
+p {
+  color: red;
+  text-align: center;
+}
+Contoh Dijelaskan
+padalah pemilih dalam CSS (menunjuk ke elemen HTML yang ingin Anda beri gaya: <p>).
+coloradalah properti, dan redmerupakan nilai properti
+text-alignadalah properti, dan centermerupakan nilai properti

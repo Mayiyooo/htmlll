@@ -1,0 +1,71 @@
+Gaya Aksesibilitas CSS
+Gaya Aksesibilitas CSS
+Gaya CSS yang baik akan membantu semua pengguna berinteraksi dengan situs web Anda, termasuk mereka yang memiliki tantangan visual atau mobilitas.
+
+1. Gunakan Indikator Fokus yang Terlihat
+Pseudo-kelas CSS :focusdigunakan untuk memilih dan memberi gaya pada elemen yang mendapat fokus.
+
+Selalu gunakan :focusstatus agar pengguna keyboard dan pembaca layar dapat melihat elemen mana yang aktif.
+
+Contoh
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+2. Memberikan Kontras Tinggi
+Selalu gunakan kontras tinggi antara teks dan latar belakang untuk memastikan keterbacaan.
+
+Contoh Kontras yang Baik
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+Contoh Kontras Buruk
+body {
+  background-color: #eeeeee;
+  color: #cccccc;
+}
+3. Hindari Gaya yang Menyembunyikan Fokus
+Jangan pernah menghapus garis luar tanpa menggantinya dengan gaya fokus lain yang terlihat.
+
+Contoh Buruk
+button:focus {
+  outline: none;
+}
+Contoh yang Lebih Baik
+button:focus {
+  outline: 2px solid blue;
+}
+4. Gunakan HTML + CSS Semantik
+Gunakan elemen semantik daripada menggunakan tag non-semantik seperti <div>untuk semuanya.
+
+Contoh
+nav {
+  background-color: #333333;
+  color: white;
+}
+aside {
+  background-color: #333333;
+  color: white;
+}
+5. Hormati Preferensi Pengguna
+Fitur media CSS prefers-reduced-motionmemungkinkan Anda memeriksa apakah pengguna telah meminta untuk mengurangi gerakan, seperti animasi atau transisi.
+
+Beberapa pengguna sensitif terhadap gerakan dan lebih menyukai situs web dengan animasi yang lebih sedikit. Anda dapat menggunakan kueri media ini untuk menonaktifkan atau mengurangi animasi jika diperlukan:
+
+Contoh
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+Anda akan mempelajari lebih lanjut tentang kueri media di bab berikutnya.
+
+Ringkasan
+Jaga agar garis fokus tetap terlihat
+Pertahankan kontras warna yang baik
+Gunakan elemen HTML semantik
+Hormati preferensi gerakan

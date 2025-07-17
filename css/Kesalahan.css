@@ -1,0 +1,48 @@
+Kesalahan CSS
+Kesalahan CSS
+Kesalahan dalam CSS dapat menyebabkan perilaku yang tidak diharapkan atau gaya yang tidak diterapkan dengan benar. Halaman ini menunjukkan kesalahan umum CSS dan cara menghindarinya.
+
+Titik Koma Hilang
+Melupakan titik koma di akhir deklarasi properti dapat melanggar aturan gaya.
+
+Contoh
+.bad {
+  color: red
+  background-color: yellow;
+}
+Nama Properti Tidak Valid
+Menggunakan nama properti yang tidak ada akan diabaikan begitu saja oleh browser.
+
+Contoh
+.bad {
+  colr: blue;
+  font-size: 16px;
+}
+IKLAN
+
+Nilai Tidak Valid
+Properti yang benar tetapi nilai yang tidak valid juga akan diabaikan.
+
+Contoh
+.bad {
+  width: -100px;
+  color: green;
+}
+Kawat Gigi Tidak Tertutup
+Jika Anda lupa menutup tanda kurung }, seluruh aturan dapat diabaikan.
+
+Contoh
+.bad {
+  padding: 20px;
+  margin: 10px;
+Titik Dua atau Kawat Gigi Tambahan
+Kesalahan ketik seperti titik dua tambahan atau kurung kurawal yang salah tempat dapat mengakibatkan aturan dilanggar.
+
+Contoh
+.bad {
+  color:: blue;
+}
+Tips untuk Menghindari Kesalahan CSS
+Gunakan editor kode dengan penyorotan sintaksis.
+Validasi CSS Anda dengan linter atau validator CSS.
+Tulis CSS dalam bagian-bagian kecil dan uji secara berkala.

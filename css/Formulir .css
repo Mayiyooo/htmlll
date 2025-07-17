@@ -1,0 +1,159 @@
+Formulir CSS
+Tampilan formulir HTML dapat ditingkatkan secara signifikan dengan CSS:
+
+Nama depan 
+Nama kamu..
+ Nama Belakang 
+Nama belakang Anda..
+ Negara 
+Australia
+ 
+Menata Bidang Input
+Gunakan widthproperti untuk menentukan lebar bidang input:
+
+Nama depan 
+Contoh
+input {
+  width: 100%;
+}
+Contoh di atas berlaku untuk semua elemen <input>. Jika Anda hanya ingin memberi gaya pada tipe input tertentu, Anda dapat menggunakan pemilih atribut:
+
+input[type=text]- hanya akan memilih bidang teks
+input[type=password]- hanya akan memilih bidang kata sandi
+input[type=number]- hanya akan memilih bidang angka
+dll..
+
+Input yang Dipadatkan
+Gunakan paddingproperti untuk menambahkan spasi di dalam kolom teks.
+
+Kiat: Bila Anda memiliki banyak masukan yang berurutan, Anda mungkin juga ingin menambahkan beberapa margin, untuk menambah ruang di luarnya:
+
+Nama depan 
+ Nama Belakang 
+Contoh
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+Perhatikan bahwa kita telah menetapkan box-sizingproperti ke border-box. Ini memastikan bahwa padding dan akhirnya border disertakan dalam total lebar dan tinggi elemen.
+Baca selengkapnya tentang box-sizingproperti ini di bab "Pengukuran Kotak CSS" .
+
+Input Berbatasan
+Gunakan borderproperti untuk mengubah ukuran dan warna batas, dan gunakan border-radiusproperti untuk menambahkan sudut membulat:
+
+Nama depan 
+Contoh
+input[type=text] {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+Jika Anda hanya menginginkan batas bawah, gunakan border-bottomproperti:
+
+Nama depan 
+Contoh
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid red;
+}
+Input Berwarna
+Gunakan background-colorproperti untuk menambahkan warna latar belakang ke input, dan colorproperti untuk mengubah warna teks:
+
+John
+Contoh
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+}
+Masukan Terfokus
+Secara default, beberapa peramban akan menambahkan garis biru di sekitar input saat mendapat fokus (diklik). Anda dapat menghilangkan perilaku ini dengan menambahkan sesuatu outline: none;ke input.
+
+Gunakan :focuspemilih untuk melakukan sesuatu dengan bidang input saat mendapat fokus:
+
+Contoh
+input[type=text]:focus {
+  background-color: lightblue;
+}
+Contoh
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+Masukan dengan ikon/gambar
+Jika Anda ingin ikon berada di dalam input, gunakan background-imageproperti dan posisikan dengan background-positionproperti tersebut. Perhatikan juga bahwa kami menambahkan padding kiri yang besar untuk menyisakan ruang bagi ikon:
+
+Mencari..
+Contoh
+input[type=text] {
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+Input Pencarian Animasi
+Dalam contoh ini, kami menggunakan transitionproperti CSS untuk menganimasikan lebar input pencarian saat mendapat fokus. Anda akan mempelajari lebih lanjut tentang transitionproperti ini nanti, di bab Transisi CSS kami .
+
+Mencari..
+Contoh
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+Menata Textarea
+Tips: Gunakan resizeproperti untuk mencegah textarea diubah ukurannya (nonaktifkan "grabber" di pojok kanan bawah):
+
+Some text...
+
+Contoh
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+Menata Menu Pilihan
+
+Australia
+Contoh
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+Tombol Input Gaya
+Contoh
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Tip: use width: 100% for full-width buttons */
+Untuk informasi lebih lanjut tentang cara menata tombol dengan CSS, baca Tutorial Tombol CSS kami .
+
+Formulir Responsif
+Ubah ukuran jendela peramban untuk melihat efeknya. Jika lebar layar kurang dari 600 piksel, buat kedua kolom bertumpuk di atas satu sama lain, bukan bersebelahan.
+
+Lanjutan: Contoh berikut menggunakan kueri media untuk membuat formulir responsif. Anda akan mempelajari lebih lanjut tentang hal ini di bab selanjutnya.
+
+ 
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk memberi gaya pada semua bidang masukan teks agar memiliki lebar 100%.
+input[type=text] {
+  : ;
+}

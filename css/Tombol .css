@@ -1,0 +1,167 @@
+Tombol CSS
+Pelajari cara menata tombol menggunakan CSS.
+
+Gaya Tombol Dasar
+Tombol Default Tombol CSS
+
+Contoh
+.button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+Warna Tombol
+Hijau Biru Merah Abu-abu Hitam
+Gunakan background-colorproperti untuk mengubah warna latar belakang tombol:
+
+Contoh
+.button1 {background-color: #04AA6D;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+IKLAN
+
+Ukuran Tombol
+10 piksel 12 piksel 16 piksel 20 piksel 24 piksel
+Gunakan font-sizeproperti untuk mengubah ukuran font tombol:
+
+Contoh
+.button1 {font-size: 10px;}
+.button2 {font-size: 12px;}
+.button3 {font-size: 16px;}
+.button4 {font-size: 20px;}
+.button5 {font-size: 24px;}
+Gunakan paddingproperti untuk mengubah bantalan tombol:
+
+10 piksel 24 piksel 12 piksel 28 piksel 14 piksel 40 piksel 32 piksel 16 piksel 16 piksel
+Contoh
+.button1 {padding: 10px 24px;}
+.button2 {padding: 12px 28px;}
+.button3 {padding: 14px 40px;}
+.button4 {padding: 32px 16px;}
+.button5 {padding: 16px;}
+Tombol Bulat
+2 piksel 4 piksel 8 piksel 12 piksel 50%
+Gunakan border-radiusproperti untuk menambahkan sudut membulat pada tombol:
+
+Contoh
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+Batas Tombol Berwarna
+Hijau Biru Merah Abu-abu Hitam
+Gunakan borderproperti untuk menambahkan batas berwarna ke tombol:
+
+Contoh
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D; /* Green */
+}
+...
+Tombol yang Dapat Diarahkan
+Hijau Biru Merah Abu-abu Hitam
+Hijau Biru Merah Abu-abu Hitam
+Gunakan :hoverpemilih untuk mengubah gaya tombol saat Anda menggerakkan mouse di atasnya.
+
+Tip: Gunakan transition-durationproperti untuk menentukan kecepatan efek "hover":
+
+Contoh
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
+...
+Tombol Bayangan
+Tombol Bayangan Bayangan saat melayang
+Gunakan box-shadowproperti untuk menambahkan bayangan ke tombol:
+
+Contoh
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+Tombol Dinonaktifkan
+Tombol Normal Tombol Nonaktif
+Gunakan opacityproperti untuk menambahkan transparansi ke tombol (menciptakan tampilan "nonaktif").
+
+Tips: Anda juga dapat menambahkan cursorproperti dengan nilai "tidak diizinkan", yang akan menampilkan "rambu dilarang parkir" saat Anda mengarahkan kursor ke tombol tersebut:
+
+Contoh
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+Lebar Tombol
+250 piksel
+50% 100%
+Secara default, ukuran tombol ditentukan oleh konten teksnya (selebar kontennya). Gunakan widthproperti ini untuk mengubah lebar tombol:
+
+Contoh
+.button1 {width: 250px;}
+.button2 {width: 50%;}
+.button3 {width: 100%;}
+Grup Tombol
+TombolTombolTombolTombol
+
+Hapus margin dan tambahkan float:leftke setiap tombol untuk membuat grup tombol:
+
+Contoh
+.button {
+  float: left;
+}
+Grup Tombol Berbatasan
+TombolTombolTombolTombol
+
+Gunakan borderproperti untuk membuat grup tombol berbatas:
+
+Contoh
+.button {
+  float: left;
+  border: 1px solid green;
+}
+Grup Tombol Vertikal
+Tombol
+Tombol
+Tombol
+Tombol
+
+Gunakan display:blocksebagai ganti float:leftuntuk mengelompokkan tombol-tombol di bawah satu sama lain, alih-alih berdampingan:
+
+Contoh
+.button {
+  display: block;
+}
+Tombol pada Gambar
+Salju
+Tombol Animasi
+Contoh
+Tambahkan tanda panah saat mengarahkan kursor:
+
+Arahkan kursor
+Contoh
+Tambahkan efek "ditekan" saat diklik:
+
+Klik
+Contoh
+Memudar saat melayang:
+
+Memudar
+Contoh
+Tambahkan efek "riak" saat diklik:
+

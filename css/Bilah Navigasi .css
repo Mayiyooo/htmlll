@@ -1,0 +1,325 @@
+Bilah Navigasi CSS
+Demo: Bilah Navigasi
+Vertikal
+
+Rumah
+Berita
+Kontak
+Tentang
+Horisontal
+
+RumahBeritaKontakTentang
+
+Rumah
+Berita
+Kontak
+Tentang
+Bilah Navigasi
+Memiliki navigasi yang mudah digunakan penting untuk situs web mana pun.
+
+Dengan CSS Anda dapat mengubah menu HTML yang membosankan menjadi bilah navigasi yang menarik.
+
+Bilah Navigasi = Daftar Tautan
+Bilah navigasi memerlukan HTML standar sebagai dasarnya.
+
+Dalam contoh kita, kita akan membuat bilah navigasi dari daftar HTML standar.
+
+Bilah navigasi pada dasarnya adalah daftar tautan, jadi penggunaan elemen <ul> dan <li> sangat masuk akal:
+
+Contoh
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+Sekarang mari kita hapus poin-poin, margin, dan padding dari daftar:
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+Contoh dijelaskan:
+
+list-style-type: none;- Menghapus poin. Bilah navigasi tidak memerlukan penanda daftar.
+Mengatur margin: 0;dan padding: 0; menghapus pengaturan default browser
+Kode dalam contoh di atas adalah kode standar yang digunakan pada bilah navigasi vertikal dan horizontal, yang akan Anda pelajari lebih lanjut di bab berikutnya.
+
+
+Bilah Navigasi Vertikal
+Rumah
+Berita
+Kontak
+Tentang
+Untuk membuat bilah navigasi vertikal, Anda dapat memberi gaya pada elemen <a> di dalam daftar, selain kode dari halaman sebelumnya:
+
+Contoh
+li a {
+  display: block;
+  width: 60px;
+}
+Contoh dijelaskan:
+
+display: block;- Menampilkan tautan sebagai elemen blok membuat seluruh area tautan dapat diklik (bukan hanya teksnya), dan memungkinkan kita menentukan lebarnya (dan bantalan, margin, tinggi, dll. jika Anda mau)
+width: 60px;- Elemen blok menggunakan lebar penuh yang tersedia secara default. Kami ingin menentukan lebar 60 piksel.
+Anda juga dapat mengatur lebar <ul>, dan menghapus lebar <a>, karena keduanya akan menggunakan lebar penuh yang tersedia saat ditampilkan sebagai elemen blok. Ini akan menghasilkan hasil yang sama seperti contoh sebelumnya:
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+li a {
+  display: block;
+}
+IKLAN
+
+Contoh Bilah Navigasi Vertikal
+Buat bilah navigasi vertikal dasar dengan warna latar belakang abu-abu dan ubah warna latar belakang tautan saat pengguna menggerakkan mouse di atasnya:
+
+Rumah
+Berita
+Kontak
+Tentang
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+Tautan Navigasi Aktif/Saat Ini
+Tambahkan kelas "aktif" ke tautan saat ini untuk memberi tahu pengguna halaman mana yang sedang dia buka:
+
+Rumah
+Berita
+Kontak
+Tentang
+Contoh
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+Tautan Tengah & Tambahkan Batas
+Tambahkan text-align:center<li> atau <a> untuk memusatkan tautan.
+
+Tambahkan borderproperti ke <ul> untuk menambahkan batas di sekitar navbar. Jika Anda juga ingin batas di dalam navbar, tambahkan a border-bottomke semua elemen <li>, kecuali yang terakhir:
+
+Rumah
+Berita
+Kontak
+Tentang
+Contoh
+ul {
+  border: 1px solid #555;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+Navbar Vertikal Tetap Setinggi Penuh
+Buat navigasi samping "lengket" dengan ketinggian penuh:
+
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+Catatan: Contoh ini mungkin tidak berfungsi dengan baik pada perangkat seluler.
+
+
+Bilah Navigasi Horizontal CSS
+Bilah Navigasi Horizontal
+RumahBeritaKontakTentang
+Ada dua cara untuk membuat bilah navigasi horizontal: Menggunakan item daftar sebaris atau mengambang .
+
+Item Daftar Sebaris
+Salah satu cara untuk membuat bilah navigasi horizontal adalah dengan menentukan elemen <li> sebagai inline, selain kode "standar" dari halaman sebelumnya:
+
+Contoh
+li {
+  display: inline;
+}
+Contoh dijelaskan:
+
+display: inline;- Secara default, elemen <li> adalah elemen blok. Di sini, kami menghapus jeda baris sebelum dan sesudah setiap item daftar agar dapat ditampilkan dalam satu baris.
+Item Daftar Mengambang
+Cara lain untuk membuat bilah navigasi horizontal adalah dengan mengapungkan elemen <li>, dan menentukan tata letak untuk tautan navigasi:
+
+Contoh
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+Contoh dijelaskan:
+
+float: left;- Gunakan float untuk membuat elemen blok mengapung berdampingan satu sama lain
+display: block;- Memungkinkan kita menentukan bantalan (dan tinggi, lebar, margin, dll. jika Anda mau)
+padding: 8px;- Tentukan beberapa bantalan di antara setiap elemen <a>, untuk membuatnya terlihat bagus
+background-color: #dddddd;- Tambahkan warna latar belakang abu-abu ke setiap elemen <a>
+Tip: Tambahkan background-color ke <ul> sebagai ganti setiap elemen <a> jika Anda menginginkan warna latar belakang lebar penuh:
+
+Contoh
+ul {
+  background-color: #dddddd;
+}
+Contoh Bilah Navigasi Horizontal
+Buat bilah navigasi horizontal dasar dengan warna latar belakang gelap dan ubah warna latar belakang tautan saat pengguna menggerakkan mouse di atasnya:
+
+RumahBeritaKontakTentang
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+Tautan Navigasi Aktif/Saat Ini
+Tambahkan kelas "aktif" ke tautan saat ini untuk memberi tahu pengguna halaman mana yang sedang dia buka:
+
+RumahBeritaKontakTentang
+Contoh
+.active {
+  background-color: #04AA6D;
+}
+Tautan Rata Kanan
+Sejajarkan kanan tautan dengan mengarahkan item daftar ke kanan ( float:right;):
+
+RumahBeritaKontakTentang
+Contoh
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+Pembatas Perbatasan
+Tambahkan border-rightproperti ke <li> untuk membuat pemisah tautan:
+
+RumahBeritaKontakTentang
+Contoh
+/* Add a gray right border to all list items, except the last item (last-child) */
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+Bilah Navigasi Tetap
+Jadikan bilah navigasi tetap berada di bagian atas atau bawah halaman, bahkan saat pengguna menggulir halaman:
+
+
+Atasan Tetap
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+Bagian Bawah Tetap
+ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+Catatan: Posisi tetap mungkin tidak berfungsi dengan baik pada perangkat seluler.
+
+Bilah Navigasi Horizontal Abu-abu
+Contoh bilah navigasi horizontal berwarna abu-abu dengan batas abu-abu tipis:
+
+RumahBeritaKontakTentang
+Contoh
+ul {
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li a {
+  color: #666;
+}
+Navbar Lengket
+Tambahkan position: sticky;ke <ul> untuk membuat navbar yang lengket.
+
+Elemen lengket dapat berubah antara relatif dan tetap, bergantung pada posisi gulir. Elemen ini diposisikan relatif hingga posisi offset tertentu terpenuhi di area pandang - lalu "menempel" di tempatnya (seperti position:fixed).
+
+
+Contoh
+ul {
+  position: sticky;
+  top: 0;
+}
+Catatan: Anda harus menentukan setidaknya satu dari top, right, bottomatau leftagar pemosisian lengket berfungsi.
+
+IKLAN
+
+Contoh Lainnya
+Topnav Responsif
+Cara menggunakan kueri media CSS untuk membuat navigasi atas yang responsif.
+
+
+Sidenav Responsif
+Cara menggunakan kueri media CSS untuk membuat navigasi samping yang responsif.
+
+
+Bilah Navigasi Tarik-turun
+Cara menambahkan menu tarik-turun di dalam bilah navigasi.
+
+
+Pernah dengar tentang W3Schools Spaces ? Di sini, Anda bisa membuat situs web dari awal atau menggunakan templat, dan menghostingnya secara gratis.
+
+* tidak perlu kartu kredit

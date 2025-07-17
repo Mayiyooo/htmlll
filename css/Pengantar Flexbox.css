@@ -1,0 +1,69 @@
+Kotak Fleksibel CSS
+1
+2
+3
+4
+5
+6
+7
+8
+
+Apa itu CSS Flexbox?
+Flexbox merupakan kependekan dari modul Flexible Box Layout.
+
+Flexbox adalah metode tata letak untuk mengatur item dalam baris atau kolom.
+
+Flexbox memudahkan perancangan struktur tata letak responsif yang fleksibel, tanpa menggunakan float atau pemosisian.
+
+Flexbox vs. Grid
+Tata Letak CSS Flexbox sebaiknya digunakan untuk tata letak satu dimensi, dengan baris ATAU kolom.
+
+Tata Letak Kisi CSS sebaiknya digunakan untuk tata letak dua dimensi, dengan baris DAN kolom.
+
+Modul Tata Letak Kotak Fleksibel CSS
+Sebelum modul Tata Letak Kotak Fleksibel, ada empat mode tata letak:
+
+Blok, untuk bagian dalam halaman web
+Sebaris, untuk teks
+Tabel, untuk data tabel dua dimensi
+Diposisikan, untuk posisi eksplisit suatu elemen
+CSS flexbox didukung di semua browser modern.
+
+Komponen CSS Flexbox
+Sebuah flexbox selalu terdiri dari:
+
+Flex Container - elemen induk (kontainer) <div>
+Item Fleksibel - item di dalam wadah <div>
+IKLAN
+
+Kontainer Fleksibel dengan Tiga Barang Fleksibel
+Untuk mulai menggunakan CSS Flexbox, pertama-tama Anda perlu mendefinisikan wadah fleksibel.
+
+Kontainer fleksibel menjadi fleksibel dengan menetapkan displayproperti ke flex.
+
+1
+2
+3
+Elemen di atas mewakili wadah fleksibel (area biru) dengan tiga item fleksibel .
+
+Contoh
+Kontainer fleksibel dengan tiga item fleksibel:
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+Anda akan mempelajari lebih lanjut tentang kontainer fleksibel dan item fleksibel di bab berikutnya.
+
+Latihan
+?
+Properti dan nilai mana yang digunakan untuk membuat wadah fleksibel?
+
+
+display: flexbox
+display: flex
+display: flex-item
+flexbox: layout
+flex: layout

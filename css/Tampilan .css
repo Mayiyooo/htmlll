@@ -1,0 +1,145 @@
+Tata Letak CSS - Properti Tampilan
+Properti ini displaymerupakan properti CSS yang paling penting untuk mengendalikan tata letak.
+
+Properti tampilan
+Properti displayini digunakan untuk menentukan bagaimana suatu elemen ditampilkan pada halaman web.
+
+Setiap elemen HTML memiliki nilai tampilan default, tergantung jenis elemennya. Nilai tampilan default untuk sebagian besar elemen adalah blockatau inline.
+
+Properti displayini digunakan untuk mengubah perilaku tampilan default elemen HTML.
+
+Elemen Tingkat Blok
+Elemen tingkat blok SELALU dimulai pada baris baru dan menempati lebar penuh yang tersedia (membentang ke kiri dan kanan sejauh mungkin).
+
+Elemen <div> adalah elemen tingkat blok.
+Contoh elemen tingkat blok:
+
+<div>
+<h1> - <h6>
+<p>
+<formulir>
+<judul>
+<kaki>
+<bagian>
+Elemen Segaris
+Elemen sebaris TIDAK dimulai pada baris baru dan hanya mengambil lebar seperlunya.
+
+Ini adalah elemen <span> sebaris di dalam paragraf.
+
+Contoh elemen sebaris:
+
+<span>
+<a>
+<img>
+IKLAN
+
+Tampilan Nilai Properti
+Properti displaymemiliki banyak nilai:
+
+Value	Description
+inline	Displays an element as an inline element
+block	Displays an element as a block element
+contents	Makes the container disappear, making the child elements children of the element the next level up in the DOM
+flex	Displays an element as a block-level flex container
+grid	Displays an element as a block-level grid container
+inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+inline-flex	Displays an element as an inline-level flex container
+inline-grid	Displays an element as an inline-level grid container
+inline-table	The element is displayed as an inline-level table
+list-item	Let the element behave like a <li> element
+run-in	Displays an element as either block or inline, depending on context
+table	Let the element behave like a <table> element
+table-caption	Let the element behave like a <caption> element
+table-column-group	Let the element behave like a <colgroup> element
+table-header-group	Let the element behave like a <thead> element
+table-footer-group	Let the element behave like a <tfoot> element
+table-row-group	Let the element behave like a <tbody> element
+table-cell	Let the element behave like a <td> element
+table-column	Let the element behave like a <col> element
+table-row	Let the element behave like a <tr> element
+none	The element is completely removed
+initial	Sets this property to its default value
+inherit	Inherits this property from its parent element
+Tampilan: tidak ada;
+display: none;Umumnya digunakan dengan JavaScript untuk menyembunyikan dan menampilkan elemen tanpa menghapus dan membuatnya ulang. Lihat contoh terakhir kami di halaman ini jika Anda ingin tahu bagaimana cara melakukannya.
+
+Elemen <script>digunakan display: none; sebagai default.
+
+Klik untuk menampilkan panel
+
+Mengganti Nilai Tampilan Default
+Seperti yang telah disebutkan, setiap elemen memiliki nilai tampilan default. Namun, Anda dapat menggantinya.
+
+Mengubah elemen sebaris menjadi elemen blok, atau sebaliknya, dapat berguna untuk membuat halaman tampak dengan cara tertentu, dan tetap mengikuti standar web.
+
+Contoh umum adalah membuat <li>elemen sebaris untuk menu horizontal:
+
+Contoh
+li {
+  display: inline;
+}
+Catatan: Mengatur properti tampilan suatu elemen hanya mengubah cara elemen tersebut ditampilkan , BUKAN jenis elemennya. Jadi, elemen sebaris dengan display: block;tidak boleh memiliki elemen blok lain di dalamnya.
+
+Contoh berikut menampilkan elemen <span> sebagai elemen blok:
+
+Contoh
+span {
+  display: block;
+}
+Contoh berikut menampilkan elemen <a> sebagai elemen blok:
+
+Contoh
+a {
+  display: block;
+}
+Sembunyikan Elemen - display:none atau visibility:hidden?
+display:none
+
+Italia
+
+visibility:hidden
+
+Hutan
+
+Mengatur ulang
+
+Lampu
+
+Menyembunyikan elemen dapat dilakukan dengan menyetel displayproperti ke none. Elemen tersebut akan disembunyikan, dan halaman akan ditampilkan seolah-olah elemen tersebut tidak ada:
+
+Contoh
+h1.hidden {
+  display: none;
+}
+visibility:hidden;juga menyembunyikan suatu elemen.
+
+Namun, elemen tersebut akan tetap menempati ruang yang sama seperti sebelumnya. Elemen tersebut akan disembunyikan, tetapi tetap memengaruhi tata letak:
+
+Contoh
+h1.hidden {
+  visibility: hidden;
+}
+Contoh Lainnya
+Perbedaan antara display: none; dan visibility: hidden;
+Contoh ini menunjukkan display: none; versus visibility: hidden;
+
+Menampilkan lebih banyak jenis tampilan
+Contoh ini memperagakan beberapa jenis tampilan lainnya.
+
+Menggunakan CSS bersama JavaScript untuk menampilkan konten
+Contoh ini memperagakan cara menggunakan CSS dan JavaScript untuk menampilkan elemen saat diklik.
+
+Latihan
+?
+Berapakah nilai tampilan default untuk sebagian besar elemen HTML?
+
+
+blok sebaris
+blok atau sebaris
+melenturkan
+tidak ada
+
+Properti Tampilan/Visibilitas CSS
+Property	Description
+display	Specifies how an element should be displayed
+visibility	Specifies whether or not an element should be visible

@@ -1,0 +1,27 @@
+Desain Web Responsif - Video
+Menggunakan Properti Lebar
+Jika widthproperti ditetapkan ke 100%, pemutar video akan responsif dan diskalakan ke atas dan ke bawah:
+
+Contoh
+video {
+  width: 100%;
+  height: auto;
+}
+Perhatikan bahwa pada contoh di atas, pemutar video dapat diperbesar hingga lebih besar dari ukuran aslinya. Solusi yang lebih baik, dalam banyak kasus, adalah menggunakan max-widthproperti tersebut.
+
+Menggunakan Properti max-width
+Jika max-widthproperti ditetapkan pada 100%, pemutar video akan diperkecil jika perlu, tetapi tidak akan pernah diperbesar hingga lebih besar dari ukuran aslinya:
+
+Contoh
+video {
+  max-width: 100%;
+  height: auto;
+}
+Tambahkan Video ke Halaman Web Contoh
+Kami ingin menambahkan video di halaman web contoh kami. Video akan diubah ukurannya agar selalu memenuhi semua ruang yang tersedia:
+
+Contoh
+video {
+  width: 100%;
+  height: auto;
+}

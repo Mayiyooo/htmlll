@@ -1,0 +1,70 @@
+Fungsi Matematika CSS
+Fungsi matematika CSS memungkinkan ekspresi matematika digunakan sebagai nilai properti. Di sini, kami akan menjelaskan fungsi calc(), max()dan min().
+
+Fungsi calc()
+Fungsi ini calc()melakukan perhitungan yang akan digunakan sebagai nilai properti.
+
+Sintaks CSS
+calc(expression)
+Value	Description
+expression	Required. A mathematical expression. The result will be used as the value.
+The following operators can be used: + - * /
+Mari kita lihat sebuah contoh:
+
+Contoh
+Gunakan calc() untuk menghitung lebar elemen <div>:
+
+#div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+}
+
+Fungsi max()
+Fungsi ini max()menggunakan nilai terbesar, dari daftar nilai yang dipisahkan koma, sebagai nilai properti.
+
+Sintaks CSS
+max(value1, value2, ...)
+Value	Description
+value1, value2, ...	Required. A list of comma-separated values - where the largest value is chosen
+Mari kita lihat sebuah contoh:
+
+Contoh
+Gunakan max() untuk mengatur lebar #div1 ke nilai mana pun yang terbesar, 50% atau 300px:
+
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: max(50%, 300px);
+}
+
+IKLAN
+
+Fungsi min()
+Fungsi ini min()menggunakan nilai terkecil, dari daftar nilai yang dipisahkan koma, sebagai nilai properti.
+
+Sintaks CSS
+min(value1, value2, ...)
+Value	Description
+value1, value2, ...	Required. A list of comma-separated values - where the smallest value is chosen
+Mari kita lihat sebuah contoh:
+
+Contoh
+Gunakan min() untuk mengatur lebar #div1 ke nilai mana pun yang terkecil, 50% atau 300px:
+
+#div1 {
+  background-color: yellow;
+  height: 100px;
+  width: min(50%, 300px);
+}
+
+Latihan
+?
+Seret dan lepas fungsi matematika CSS yang benar untuk menghitung lebar div.
+#div1 {
+  width: (100% - 50px);
+}
+

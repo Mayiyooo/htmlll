@@ -1,0 +1,134 @@
+Bantalan CSS
+Padding digunakan untuk membuat ruang di sekitar konten elemen, di dalam batas yang ditentukan.
+
+Elemen ini memiliki padding 70px.
+
+Bantalan CSS
+Properti CSS paddingdigunakan untuk menghasilkan spasi di sekitar konten elemen, di dalam batas yang ditentukan.
+
+Dengan CSS, Anda memiliki kendali penuh atas padding. Terdapat properti untuk mengatur padding untuk setiap sisi elemen (atas, kanan, bawah, dan kiri).
+
+Bantalan - Sisi Individual
+CSS memiliki properti untuk menentukan padding untuk setiap sisi elemen:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+Semua properti padding dapat memiliki nilai berikut:
+
+panjang - menentukan bantalan dalam px, pt, cm, dll.
+% - menentukan bantalan dalam % dari lebar elemen yang memuatnya
+mewarisi - menentukan bahwa bantalan harus diwarisi dari elemen induk
+Catatan: Nilai negatif tidak diizinkan.
+
+Contoh
+Tetapkan bantalan yang berbeda untuk keempat sisi elemen <div>:  
+
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+IKLAN
+
+Padding - Properti Singkatan
+Untuk mempersingkat kode, dimungkinkan untuk menentukan semua properti padding dalam satu properti.
+
+Properti ini paddingadalah properti singkatan untuk properti padding individual berikut:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+Jadi, beginilah cara kerjanya:
+
+Jika paddingproperti memiliki empat nilai:
+
+bantalan: 25 piksel 50 piksel 75 piksel 100 piksel;
+bantalan atas adalah 25px
+padding kanan adalah 50px
+bantalan bawah adalah 75px
+padding kiri adalah 100px
+Contoh
+Gunakan properti singkatan padding dengan empat nilai:
+
+div {
+  padding: 25px 50px 75px 100px;
+}
+Jika paddingproperti memiliki tiga nilai:
+
+bantalan: 25px 50px 75px;
+bantalan atas adalah 25px
+bantalan kanan dan kiri adalah 50px
+bantalan bawah adalah 75px
+Contoh
+Gunakan properti singkatan padding dengan tiga nilai: 
+
+div {
+  padding: 25px 50px 75px;
+}
+Jika paddingproperti memiliki dua nilai:
+
+bantalan: 25px 50px;
+bantalan atas dan bawah adalah 25px
+bantalan kanan dan kiri adalah 50px
+Contoh
+Gunakan properti singkatan padding dengan dua nilai: 
+
+div {
+  padding: 25px 50px;
+}
+Jika paddingproperti memiliki satu nilai:
+
+bantalan: 25 piksel;
+keempat bantalannya berukuran 25 piksel
+Contoh
+Gunakan properti singkatan padding dengan satu nilai: 
+
+div {
+  padding: 25px;
+}
+Padding dan Lebar Elemen
+Properti CSS widthmenentukan lebar area konten suatu elemen. Area konten adalah bagian di dalam padding, border, dan margin suatu elemen ( model kotak ).
+
+Jadi, jika suatu elemen memiliki lebar tertentu, padding yang ditambahkan ke elemen tersebut akan ditambahkan ke lebar total elemen tersebut. Hal ini seringkali merupakan hasil yang tidak diinginkan.
+
+Contoh
+Di sini, elemen <div> diberi lebar 300 piksel. Namun, lebar sebenarnya dari elemen <div> adalah 350 piksel (300 piksel + 25 piksel padding kiri + 25 piksel padding kanan):
+
+div {
+  width: 300px;
+  padding: 25px;
+}
+Untuk mempertahankan lebar 300 piksel, berapa pun jumlah padding, Anda dapat menggunakan box-sizingproperti ini. Hal ini akan mempertahankan lebar elemen yang sebenarnya; jika Anda menambah padding, ruang konten yang tersedia akan berkurang.
+
+Contoh
+Gunakan properti box-sizing untuk menjaga lebar pada 300px, berapa pun jumlah paddingnya:
+
+div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+Contoh Lainnya
+Mengatur bantalan kiri
+Contoh ini memperagakan cara mengatur bantalan kiri elemen <p>.
+
+Mengatur bantalan yang tepat
+Contoh ini menunjukkan cara mengatur bantalan yang tepat untuk elemen <p>.
+
+Mengatur bantalan atas
+Contoh ini memperagakan cara mengatur bantalan atas elemen <p>.
+
+Mengatur bantalan bawah
+Contoh ini memperagakan cara mengatur bantalan bawah elemen <p>.
+
+Latihan
+?
+Seret dan lepas nilai yang benar untuk menetapkan bantalan atas 20 piksel, bantalan kanan 40 piksel, bantalan bawah 30 piksel, dan bantalan kiri 50 piksel.
+div {
+  padding:    ;
+}
+

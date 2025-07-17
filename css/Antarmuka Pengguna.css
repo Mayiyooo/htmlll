@@ -1,0 +1,79 @@
+Antarmuka Pengguna CSS
+Antarmuka Pengguna CSS
+Dalam bab ini Anda akan mempelajari tentang properti antarmuka pengguna CSS berikut:
+
+resize
+outline-offset
+Pengubahan Ukuran CSS
+Properti resizemenentukan apakah (dan bagaimana) suatu elemen dapat diubah ukurannya oleh pengguna.
+
+Elemen div ini dapat diubah ukurannya oleh pengguna!
+
+Untuk mengubah ukuran: Klik dan seret sudut kanan bawah elemen div ini.
+
+Contoh berikut memungkinkan pengguna mengubah ukuran hanya lebar elemen <div>:
+
+Contoh
+div {
+  resize: horizontal;
+  overflow: auto;
+}
+Contoh berikut memungkinkan pengguna mengubah ukuran tinggi elemen <div> saja:
+
+Contoh
+div {
+  resize: vertical;
+  overflow: auto;
+}
+Contoh berikut memungkinkan pengguna mengubah ukuran tinggi dan lebar elemen <div>:
+
+Contoh
+div {
+  resize: both;
+  overflow: auto;
+}
+Di banyak peramban, <textarea> dapat diubah ukurannya secara default. Di sini, kami menggunakan properti resize untuk menonaktifkan pengubahan ukuran:
+
+Contoh
+textarea {
+  resize: none;
+}
+IKLAN
+
+Offset Garis Besar CSS
+Properti ini outline-offsetmenambahkan ruang antara garis luar dan tepi atau batas suatu elemen.
+
+Div ini memiliki garis luar 15px di luar tepi batas.
+Catatan: Garis luar berbeda dengan batas! Tidak seperti batas, garis luar digambar di luar batas elemen, dan mungkin tumpang tindih dengan konten lainnya. Selain itu, garis luar BUKAN bagian dari dimensi elemen; lebar dan tinggi total elemen tidak terpengaruh oleh lebar garis luar.
+
+Contoh berikut menggunakan outline-offsetproperti untuk menambahkan spasi antara batas dan garis luar:
+
+Contoh
+div.ex1 {
+  margin: 20px;
+  border: 1px solid black;
+  outline: 4px solid red;
+  outline-offset: 15px;
+}
+
+div.ex2 {
+  margin: 10px;
+  border: 1px solid black;
+  outline: 5px dashed blue;
+  outline-offset: 5px;
+}
+Latihan
+?
+Seret dan lepas nilai yang benar untuk memungkinkan pengubahan ukuran tinggi dan lebar elemen.
+div {
+  resize: ;
+  overflow: auto;
+}
+
+
+Properti Antarmuka Pengguna CSS
+Tabel berikut mencantumkan semua properti antarmuka pengguna:
+
+Property	Description
+outline-offset	Adds space between an outline and the edge or border of an element
+resize	Specifies whether or not an element is resizable by the user

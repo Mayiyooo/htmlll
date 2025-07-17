@@ -1,0 +1,84 @@
+Tata Letak CSS - Overflow
+Properti CSS overflowmengontrol apa yang terjadi pada konten yang terlalu besar untuk dimuat dalam suatu area.
+
+Teks ini sangat panjang dan tinggi wadahnya hanya 100 piksel. Oleh karena itu, ditambahkan scrollbar untuk membantu pembaca menggulir konten. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Dengan sedikit racun, latihan yang kita lakukan ullamcorper suscipit lobortis tidak akan keluar dari komodo yang diakibatkannya. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molstie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim asumsi. Typi non habent claritatem insitam; Ini adalah hal yang sah dalam hal ini yang facit eorum claritatem.
+
+CSS Meluap
+Properti overflowmenentukan apakah akan memotong konten atau menambahkan bilah gulir ketika konten suatu elemen terlalu besar untuk dimuat di area yang ditentukan.
+
+Properti ini overflowmemiliki nilai-nilai berikut:
+
+visible- Default. Overflow tidak terpotong. Konten dirender di luar kotak elemen.
+hidden- Luapan akan terpotong, dan sisa konten akan tidak terlihat
+scroll- Luapan dipotong, dan bilah gulir ditambahkan untuk melihat sisa konten
+auto- Mirip dengan scroll, tetapi menambahkan bilah gulir hanya bila diperlukan
+Catatan: Properti ini overflowhanya berfungsi untuk elemen blok dengan tinggi tertentu.
+
+Catatan: Di OS X Lion (di Mac), bilah gulir disembunyikan secara default dan hanya ditampilkan saat digunakan (meskipun "overflow:scroll" diatur).
+
+luapan: terlihat
+Secara default, luapannya adalah visible, yang berarti tidak terpotong dan ditampilkan di luar kotak elemen:
+
+Anda dapat menggunakan properti overflow jika ingin memiliki kontrol tata letak yang lebih baik. Properti overflow menentukan apa yang terjadi jika konten melebihi batas kotak elemen.
+Contoh
+div {
+  width: 200px;
+  height: 65px;
+  background-color: coral;
+  overflow: visible;
+}
+IKLAN
+
+luapan: tersembunyi
+Dengan hiddennilai tersebut, luapan akan terpotong, dan sisa konten akan disembunyikan:
+
+Anda dapat menggunakan properti overflow jika ingin memiliki kontrol tata letak yang lebih baik. Properti overflow menentukan apa yang terjadi jika konten melebihi batas kotak elemen.
+Contoh
+div {
+  overflow: hidden;
+}
+luapan: gulir
+Dengan menetapkan nilai ke scroll, luapan akan terpotong dan bilah gulir akan ditambahkan untuk menggulir di dalam kotak. Perhatikan bahwa ini akan menambahkan bilah gulir baik secara horizontal maupun vertikal (meskipun Anda tidak membutuhkannya):
+
+Anda dapat menggunakan properti overflow jika ingin memiliki kontrol tata letak yang lebih baik. Properti overflow menentukan apa yang terjadi jika konten melebihi batas kotak elemen.
+Contoh
+div {
+  overflow: scroll;
+}
+luapan: otomatis
+Nilainya automirip dengan scroll, tetapi hanya menambahkan bilah gulir bila diperlukan:
+
+Anda dapat menggunakan properti overflow jika ingin memiliki kontrol tata letak yang lebih baik. Properti overflow menentukan apa yang terjadi jika konten melebihi batas kotak elemen.
+Contoh
+div {
+  overflow: auto;
+}
+overflow-x dan overflow-y
+Properti overflow-xdan overflow-ymenentukan apakah akan mengubah luapan konten hanya secara horizontal atau vertikal (atau keduanya):
+
+overflow-xMenentukan apa yang harus dilakukan dengan tepi kiri/kanan konten.
+overflow-yMenentukan apa yang harus dilakukan dengan tepi atas/bawah konten.
+
+Anda dapat menggunakan properti overflow jika ingin memiliki kontrol tata letak yang lebih baik. Properti overflow menentukan apa yang terjadi jika konten melebihi batas kotak elemen.
+Contoh
+div {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
+Latihan
+?
+Apa yang overflowdikontrol properti?
+
+
+Penjajaran teks dalam suatu elemen
+Apa yang terjadi pada konten yang terlalu besar untuk dimasukkan ke dalam suatu elemen?
+Ukuran suatu elemen
+Visibilitas suatu elemen
+
+Semua Properti CSS Overflow
+Property	Description
+overflow	Specifies what happens if content overflows an element's box
+overflow-anchor	Makes it possible to turn off scroll anchoring
+overflow-x	Specifies what to do with the left/right edges of the content if it overflows the element's content area
+overflow-y	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area
+overflow-wrap	Specifies whether or not the browser can break lines with long words, if they overflow its container

@@ -1,0 +1,176 @@
+Fleksibel
+Item CSS Flex
+Elemen anak langsung dari wadah fleksibel secara otomatis menjadi item fleksibel.
+
+1
+2
+3
+4
+Elemen di atas mewakili empat item fleksibel biru di dalam wadah fleksibel abu-abu.
+
+Contoh
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+
+Properti CSS yang kami gunakan untuk item fleksibel adalah:
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self
+Urutan Properti
+Properti ordermenentukan urutan item fleksibel di dalam wadah fleksibel.
+
+Item fleksibel pertama dalam kode tidak harus muncul sebagai item pertama dalam tata letak.
+
+Nilai pesanan harus berupa angka, nilai default adalah 0.
+
+1
+2
+3
+4
+Contoh
+Properti order dapat mengubah urutan item fleksibel:
+
+<div class="flex-container">
+  <div style="order: 3">1</div>
+  <div style="order: 2">2</div>
+  <div style="order: 4">3</div>
+  <div style="order: 1">4</div>
+</div>
+
+Properti Flex-Grow
+Properti ini flex-growmenentukan seberapa besar item fleksibel akan tumbuh relatif terhadap item fleksibel lainnya.
+
+1
+2
+3
+Nilai harus berupa angka, nilai default adalah 0.
+
+Contoh
+Jadikan item fleksibel ketiga tumbuh delapan kali lebih cepat daripada item fleksibel lainnya:
+
+<div class="flex-container">
+  <div style="flex-grow: 1">1</div>
+  <div style="flex-grow: 1">2</div>
+  <div style="flex-grow: 8">3</div>
+</div>
+
+IKLAN
+
+Properti flex-shrink
+Properti ini flex-shrinkmenentukan seberapa besar item fleksibel akan menyusut relatif terhadap item fleksibel lainnya.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Nilai harus berupa angka, nilai default adalah 1.
+
+Contoh
+Jangan biarkan item fleksibel ketiga menyusut sebanyak item fleksibel lainnya:
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-shrink: 0">3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+</div>
+
+Properti flex-basis
+Properti flex-basismenentukan panjang awal item fleksibel.
+
+1
+2
+3
+4
+Contoh
+Tetapkan panjang awal item flex ketiga menjadi 200 piksel:
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex-basis: 200px">3</div>
+  <div>4</div>
+</div>
+
+Properti fleksibel
+Properti ini flexmerupakan properti singkatan untuk properti flex-grow, flex-shrink, dan flex-basis.
+
+Contoh
+Jadikan item flex ketiga tidak dapat tumbuh (0), tidak dapat menyusut (0), dan dengan panjang awal 200 piksel:
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="flex: 0 0 200px">3</div>
+  <div>4</div>
+</div>
+
+Properti align-self
+Properti align-selfmenentukan perataan untuk item yang dipilih di dalam wadah fleksibel.
+
+Properti ini align-self mengesampingkan penyelarasan default yang ditetapkan oleh properti kontainer align-items.
+
+1
+2
+3
+4
+Dalam contoh ini kami menggunakan wadah setinggi 200 piksel, untuk menunjukkan align-selfproperti dengan lebih baik:
+
+Contoh
+Sejajarkan item fleksibel ketiga di tengah wadah:
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div style="align-self: center">3</div>
+  <div>4</div>
+</div>
+
+Contoh
+Sejajarkan item fleksibel kedua di bagian atas wadah, dan item fleksibel ketiga di bagian bawah wadah:
+
+<div class="flex-container">
+  <div>1</div>
+  <div style="align-self: flex-start">2</div>
+  <div style="align-self: flex-end">3</div>
+  <div>4</div>
+</div>
+
+Latihan
+?
+Seret dan lepas nama properti yang benar untuk mengubah urutan item fleksibel.
+.flex-container div {
+  : 3;
+}
+
+
+Properti Item CSS Flex
+Tabel berikut mencantumkan semua properti CSS Flex Items:
+
+Property	Description
+align-self	Specifies the alignment for a flex item (overrides the flex container's align-items property)
+flex	A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties
+flex-basis	Specifies the initial length of a flex item
+flex-grow	Specifies how much a flex item will grow relative to the rest of the flex items inside the container
+flex-shrink	Specifies how much a flex item will shrink relative to the rest of the flex items inside the container
+order	Specifies the order of the flex items inside the container

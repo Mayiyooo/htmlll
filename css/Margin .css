@@ -1,0 +1,169 @@
+Margin CSS
+Margin digunakan untuk membuat ruang di sekitar elemen, di luar batas yang ditentukan.
+
+Elemen ini memiliki margin 70px.
+Margin CSS
+Properti CSS margindigunakan untuk membuat ruang di sekitar elemen, di luar batas yang ditentukan.
+
+Dengan CSS, Anda memiliki kendali penuh atas margin. Terdapat properti untuk mengatur margin untuk setiap sisi elemen (atas, kanan, bawah, dan kiri).
+
+Margin - Sisi Individu
+CSS memiliki properti untuk menentukan margin untuk setiap sisi elemen:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Semua properti margin dapat memiliki nilai berikut:
+
+otomatis - browser menghitung margin
+panjang - menentukan margin dalam px, pt, cm, dll.
+% - menentukan margin dalam % dari lebar elemen yang memuatnya
+mewarisi - menentukan bahwa margin harus diwarisi dari elemen induk
+Tip: Nilai negatif diperbolehkan.
+
+Contoh
+Tetapkan margin yang berbeda untuk keempat sisi elemen <p>:
+
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+IKLAN
+
+Margin - Properti Singkatan
+Untuk mempersingkat kode, adalah mungkin untuk menentukan semua properti margin dalam satu properti.
+
+Properti ini marginadalah properti singkatan untuk properti margin individual berikut:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Jadi, beginilah cara kerjanya:
+
+Jika marginproperti memiliki empat nilai:
+
+margin: 25 piksel 50 piksel 75 piksel 100 piksel;
+margin atas adalah 25px
+margin kanan 50px
+margin bawah 75px
+margin kiri 100px
+Contoh
+Gunakan properti singkatan margin dengan empat nilai:
+
+p {
+  margin: 25px 50px 75px 100px;
+}
+Jika marginproperti memiliki tiga nilai:
+
+margin: 25 piksel 50 piksel 75 piksel;
+margin atas adalah 25px
+margin kanan dan kiri adalah 50px
+margin bawah 75px
+Contoh
+Gunakan properti singkatan margin dengan tiga nilai: 
+
+p {
+  margin: 25px 50px 75px;
+}
+Jika marginproperti memiliki dua nilai:
+
+margin: 25px 50px;
+margin atas dan bawah adalah 25px
+margin kanan dan kiri adalah 50px
+Contoh
+Gunakan properti singkatan margin dengan dua nilai: 
+
+p {
+  margin: 25px 50px;
+}
+Jika marginproperti memiliki satu nilai:
+
+margin: 25 piksel;
+semua empat margin berukuran 25px
+Contoh
+Gunakan properti singkatan margin dengan satu nilai: 
+
+p {
+  margin: 25px;
+}
+Nilai Otomatis
+Anda dapat mengatur properti margin untuk automemusatkan elemen secara horizontal di dalam wadahnya.
+
+Elemen tersebut kemudian akan mengambil lebar yang ditentukan, dan ruang yang tersisa akan dibagi sama rata antara margin kiri dan kanan.
+
+Contoh
+Gunakan margin: otomatis:
+
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+}
+Nilai Warisan
+Contoh ini memungkinkan margin kiri elemen <p class="ex1"> diwarisi dari elemen induk (<div>):
+
+Contoh
+Penggunaan nilai warisan:
+
+div {
+  border: 1px solid red;
+  margin-left: 100px;
+}
+
+p.ex1 {
+  margin-left: inherit;
+}
+Latihan
+?
+Seret dan lepas nilai yang benar untuk mengatur margin:
+10px untuk atas, 20px untuk kanan, 30px untuk bawah, dan 40px untuk kiri.
+div {
+  width: 200px;
+  margin:    ;
+}
+
+CSS Margin Collapse
+Kadang-kadang dua margin runtuh menjadi satu margin tunggal.
+
+Runtuhnya Margin
+Margin atas dan bawah elemen terkadang diringkas menjadi margin tunggal yang sama dengan margin terbesar dari keduanya.
+
+Ini tidak terjadi di margin kiri dan kanan! Hanya di margin atas dan bawah!
+
+Lihatlah contoh berikut:
+
+Contoh
+Demonstrasi keruntuhan margin:
+
+h1 {
+  margin: 0 0 50px 0;
+}
+
+h2 {
+  margin: 20px 0 0 0;
+}
+Dalam contoh di atas, elemen <h1> memiliki margin bawah 50 piksel dan elemen <h2> memiliki margin atas yang ditetapkan sebesar 20 piksel.
+
+Akal sehat tampaknya menyarankan margin vertikal antara <h1> dan <h2> seharusnya berjumlah 70 piksel (50 piksel + 20 piksel). Namun, karena margin collaps, margin sebenarnya menjadi 50 piksel.
+
+Latihan
+?
+Apa yang terjadi apabila margin atas suatu elemen dan margin bawah elemen lain saling tumpang tindih?
+
+
+Nilai margin yang lebih besar digunakan.
+Nilai margin yang lebih kecil digunakan.
+Kedua margin dijumlahkan.
+Tidak ada margin yang diterapkan.
+
+Semua Properti Margin CSS
+Property	Description
+margin	A shorthand property for setting all the margin properties in one declaration
+margin-bottom	Sets the bottom margin of an element
+margin-left	Sets the left margin of an element
+margin-right	Sets the right margin of an element
+margin-top	Sets the top margin of an element

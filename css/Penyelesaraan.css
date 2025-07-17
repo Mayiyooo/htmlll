@@ -1,0 +1,168 @@
+Tata Letak CSS - Sejajarkan Horizontal & Vertikal
+
+▲▼
+◀►
+Pusatkan elemen
+secara horizontal dan vertikal
+Elemen Rata Tengah
+Untuk memusatkan elemen blok secara horizontal (seperti <div>), gunakanmargin: auto;
+
+Mengatur lebar elemen akan mencegahnya meregang hingga ke tepi wadahnya.
+
+Elemen tersebut kemudian akan mengambil lebar yang ditentukan, dan ruang yang tersisa akan dibagi rata antara dua margin:
+
+Elemen div ini dipusatkan.
+
+Contoh
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+Catatan: Perataan tengah tidak berpengaruh jika widthproperti tidak diatur (atau diatur ke 100%).
+
+Ratakan Teks Tengah
+Untuk memusatkan teks di dalam suatu elemen, gunakantext-align: center;
+
+Teks ini dipusatkan.
+
+Contoh
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+Tip: Untuk contoh lebih lanjut tentang cara menyelaraskan teks, lihat bab Teks CSS .
+
+IKLAN
+
+Pusatkan Gambar
+Untuk memusatkan gambar, atur margin kiri dan kanan autodan buat menjadi blockelemen:
+
+Paris
+Contoh
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+Sejajarkan Kiri dan Kanan - Menggunakan posisi
+Salah satu metode untuk menyelaraskan elemen adalah dengan menggunakan position: absolute;:
+
+Di masa mudaku yang masih rentan, ayahku memberiku beberapa nasihat yang terus kupikirkan dalam pikiranku sejak saat itu.
+
+Contoh
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+Catatan: Elemen yang diposisikan absolut dihilangkan dari alur normal, dan dapat tumpang tindih dengan elemen lainnya.
+
+Rata Kiri dan Kanan - Menggunakan float
+Metode lain untuk menyelaraskan elemen adalah dengan menggunakan floatproperti:
+
+Contoh
+.right {
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+Peretasan Clearfix
+Catatan: Jika suatu elemen lebih tinggi daripada elemen yang memuatnya, dan elemen tersebut berada dalam posisi mengambang (float), elemen tersebut akan meluap keluar dari wadahnya. Anda dapat menggunakan "clearfix hack" untuk memperbaikinya (lihat contoh di bawah).
+
+Tanpa Clearfix
+
+Dengan Clearfix
+
+Kemudian kita dapat menambahkan hack clearfix ke elemen yang berisi untuk memperbaiki masalah ini:
+
+Contoh
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+Pusatkan Secara Vertikal - Menggunakan bantalan
+Ada banyak cara untuk memusatkan elemen secara vertikal di CSS. Solusi sederhananya adalah dengan menggunakan top dan bottom padding:
+
+Saya berpusat secara vertikal.
+
+Contoh
+.center {
+  padding: 70px 0;
+  border: 3px solid green;
+}
+Untuk memusatkan secara vertikal dan horizontal, gunakan paddingdan text-align: center:
+
+Saya berpusat secara vertikal dan horizontal.
+
+Contoh
+.center {
+  padding: 70px 0;
+  border: 3px solid green;
+  text-align: center;
+}
+Pusatkan Secara Vertikal - Menggunakan tinggi garis
+Trik lainnya adalah menggunakan line-heightproperti dengan nilai yang sama dengan heightproperti:
+
+Saya berpusat secara vertikal dan horizontal.
+Contoh
+.center {
+  line-height: 200px;
+  height: 200px;
+  border: 3px solid green;
+  text-align: center;
+}
+
+/* If the text has multiple lines, add the following: */
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+Pusatkan Secara Vertikal - Menggunakan posisi & transformasi
+Jika paddingdan line-height bukan merupakan pilihan, solusi lain adalah menggunakan posisi dan transformproperti:
+
+Saya berpusat secara vertikal dan horizontal.
+Contoh
+.center {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+Tip: Anda akan mempelajari lebih lanjut tentang properti transformasi di Bab Transformasi 2D kami .
+
+Pusatkan Secara Vertikal - Menggunakan Flexbox
+Anda juga bisa menggunakan flexbox untuk memusatkan konten. Perlu diketahui bahwa flexbox tidak didukung di IE10 dan versi sebelumnya:
+
+Saya berpusat secara vertikal dan horizontal.
+Contoh
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
+Latihan
+?
+Properti CSS apa yang dapat digunakan untuk memusatkan elemen blok secara horizontal seperti <div>?
+
+
+text-align: middle
+margin: auto
+display: block
+position: relative

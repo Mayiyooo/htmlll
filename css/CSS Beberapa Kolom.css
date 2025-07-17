@@ -1,0 +1,108 @@
+CSS Beberapa Kolom
+Tata Letak Multi-kolom CSS
+Tata letak multi-kolom CSS memungkinkan definisi beberapa kolom teks dengan mudah - seperti di surat kabar:
+
+Ping Harian
+Lorem ipsum
+dolor sit amet, pembentuk adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Dengan sedikit racun, latihan yang kita lakukan ullamcorper suscipit lobortis tidak akan keluar dari komodo yang diakibatkannya. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molstie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim asumsi.
+
+Properti Multi-kolom CSS
+Dalam bab ini Anda akan mempelajari tentang properti multi-kolom berikut:
+
+column-count
+column-gap
+column-rule-style
+column-rule-width
+column-rule-color
+column-rule
+column-span
+column-width
+IKLAN
+
+CSS Membuat Beberapa Kolom
+Properti column-countmenentukan jumlah kolom tempat suatu elemen harus dibagi.
+
+Contoh berikut akan membagi teks dalam elemen <div> menjadi 3 kolom:
+
+Contoh
+div {
+  column-count: 3;
+}
+CSS Menentukan Jarak Antar Kolom
+Properti column-gapmenentukan jarak antar kolom.
+
+Contoh berikut menentukan celah 40 piksel antara kolom:
+
+Contoh
+div {
+  column-gap: 40px;
+}
+Aturan Kolom CSS
+Properti column-rule-stylemenentukan gaya aturan antar kolom:
+
+Contoh
+div {
+  column-rule-style: solid;
+}
+Properti column-rule-widthmenentukan lebar aturan antar kolom:
+
+Contoh
+div {
+  column-rule-width: 1px;
+}
+Properti column-rule-colormenentukan warna aturan antara kolom:
+
+Contoh
+div {
+  column-rule-color: lightblue;
+}
+Properti ini column-ruleadalah properti singkatan untuk menetapkan semua properti aturan-kolom-* di atas.
+
+Contoh berikut menetapkan lebar, gaya, dan warna aturan antar kolom:
+
+Contoh
+div {
+  column-rule: 1px solid lightblue;
+}
+Tentukan Berapa Banyak Kolom yang Harus Dicakup Elemen
+Properti column-spanmenentukan berapa banyak kolom yang harus dicakup suatu elemen.
+
+Contoh berikut menentukan bahwa elemen <h2> harus mencakup semua kolom:
+
+Contoh
+h2 {
+  column-span: all;
+}
+Tentukan Lebar Kolom
+Properti ini column-widthmenentukan lebar kolom yang disarankan dan optimal.
+
+Contoh berikut menetapkan bahwa lebar kolom yang disarankan dan optimal adalah 100 piksel:
+
+Contoh
+div {
+  column-width: 100px;
+}
+Latihan
+?
+Apa tujuan dari column-countproperti CSS?
+
+
+Untuk mengatur lebar setiap kolom dalam tata letak multi-kolom.
+Untuk menentukan jumlah kolom di mana suatu elemen harus dibagi.
+Untuk menentukan jarak antar kolom.
+Untuk menambahkan aturan antar kolom.
+
+Properti Multi-kolom CSS
+Tabel berikut mencantumkan semua properti multi-kolom: 
+
+Property	Description
+column-count	Specifies the number of columns an element should be divided into
+column-fill	Specifies how to fill columns
+column-gap	Specifies the gap between the columns
+column-rule	A shorthand property for setting all the column-rule-* properties
+column-rule-color	Specifies the color of the rule between columns
+column-rule-style	Specifies the style of the rule between columns
+column-rule-width	Specifies the width of the rule between columns
+column-span	Specifies how many columns an element should span across
+column-width	Specifies a suggested, optimal width for the columns
+columns	A shorthand property for setting column-width and column-count

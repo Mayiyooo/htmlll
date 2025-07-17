@@ -1,0 +1,85 @@
+
+Pelajari cara memusatkan gambar secara horizontal dan vertikal dengan CSS.
+
+Memusatkan Gambar Secara Horizontal dengan Dua Cara
+1. Menggunakan margin: otomatis
+Salah satu cara untuk memusatkan gambar secara horizontal pada halaman adalah dengan menggunakan margin: auto.
+
+Karena elemen <img> adalah elemen sebaris (dan margin: auto tidak memiliki efek apa pun pada elemen sebaris), kita juga harus mengonversi gambar menjadi elemen blok, dengan display: block.
+
+Selain itu, kita harus mendefinisikan width. Lebar gambar harus lebih kecil dari lebar halaman.
+
+Berikut adalah gambar yang dipusatkan secara horizontal menggunakan margin: auto:
+
+Paris
+Contoh
+img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+2. Menggunakan display: flex
+Cara lain untuk memusatkan gambar secara horizontal pada halaman adalah dengan menggunakan display: flex.
+
+Di sini, kita meletakkan elemen <img> di dalam wadah <div>.
+
+Kami menambahkan CSS berikut ke wadah div:
+
+display: flex
+justify-content: center(memusatkan gambar secara horizontal dalam wadah div)
+Kemudian, kita atur a widthuntuk gambar. Lebar gambar harus lebih kecil dari lebar halaman.
+
+Berikut adalah gambar yang dipusatkan secara horizontal menggunakan display: flex:
+
+Paris
+Contoh
+div {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 50%;
+}
+Pusatkan Gambar Secara Vertikal
+display: flexjuga digunakan untuk memusatkan gambar secara vertikal pada halaman.
+
+Katakanlah kita memiliki wadah <div> yang tingginya 600px.
+
+Sekarang kita ingin memusatkan gambar secara vertikal dalam wadah div.
+
+Di sini, kami juga menempatkan elemen <img> di dalam wadah <div>.
+
+Kami menambahkan CSS berikut ke wadah div:
+
+display: flex
+justify-content: center(memusatkan gambar secara horizontal dalam wadah div)
+align-items: center(memusatkan gambar secara vertikal dalam wadah div)
+height: 600px(ketinggian wadah div)
+Kemudian, kita tetapkan a heightuntuk gambar (harus lebih kecil dari tinggi wadah).
+
+Berikut adalah gambar yang berpusat secara vertikal:
+
+Paris
+Contoh
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  border: 1px solid black;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
+Latihan
+?
+Bagaimana Anda dapat memusatkan gambar secara horizontal menggunakan margin?
+
+
+Diatur marginke align-center.
+Atur marginke autodan pastikan gambar memiliki display: inline;.
+Atur marginke autodan pastikan gambar memiliki display: block;.
+Diatur marginke center.

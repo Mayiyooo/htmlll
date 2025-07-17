@@ -1,0 +1,151 @@
+Elemen semu CSS
+Apa itu Pseudo-Elements?
+Pseudo-elemen CSS digunakan untuk memberi gaya pada bagian tertentu suatu elemen.
+
+Misalnya, dapat digunakan untuk:
+
+Gaya huruf atau baris pertama suatu elemen
+Masukkan konten sebelum atau sesudah elemen
+Memberi gaya pada penanda item daftar
+Menata kotak tampilan di belakang kotak dialog
+Sintaksis
+Sintaksis pseudo-elemen:
+
+selector::pseudo-element {
+  property: value;
+}
+Pseudo-elemen ::baris pertama
+Pseudo ::first-line-elemen digunakan untuk menambahkan gaya khusus pada baris pertama teks.
+
+Contoh berikut memformat baris pertama teks di semua elemen <p>:
+
+Contoh 
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+Catatan: Pseudo ::first-line-elemen hanya dapat diterapkan pada elemen tingkat blok.
+
+Properti berikut berlaku untuk ::first-line pseudo-elemen:
+
+properti font
+properti warna
+properti latar belakang
+spasi kata
+spasi huruf
+dekorasi teks
+sejajar vertikal
+transformasi teks
+tinggi garis
+jernih
+Perhatikan notasi titik dua ganda - ::first-line versus :first-line
+
+Titik dua ganda menggantikan notasi titik dua tunggal untuk pseudo-elemen di CSS3. Ini merupakan upaya W3C untuk membedakan antara pseudo-kelas dan pseudo-elemen .
+
+Sintaks titik dua tunggal digunakan untuk pseudo-kelas dan pseudo-elemen di CSS2 dan CSS1.
+
+Untuk kompatibilitas mundur, sintaksis titik dua tunggal dapat diterima untuk pseudo-elemen CSS2 dan CSS1.
+
+IKLAN
+
+Pseudo-elemen huruf pertama ::
+Pseudo ::first-letter-elemen digunakan untuk menambahkan gaya khusus pada huruf pertama suatu teks.
+
+Contoh berikut memformat huruf pertama teks di semua elemen <p>: 
+
+Contoh
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+Catatan: Pseudo ::first-letter-elemen hanya dapat diterapkan pada elemen tingkat blok.
+
+Properti berikut berlaku untuk pseudo-elemen ::huruf pertama: 
+
+properti font
+properti warna 
+properti latar belakang
+properti margin
+properti bantalan
+properti perbatasan
+dekorasi teks
+vertical-align (hanya jika "float" adalah "none")
+transformasi teks
+tinggi garis
+mengambang
+jernih
+Elemen semu dan Kelas HTML
+Pseudo-elemen dapat dikombinasikan dengan kelas HTML: 
+
+Contoh
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}
+Contoh di atas akan menampilkan huruf pertama paragraf dengan class="intro", berwarna merah dan dalam ukuran yang lebih besar.
+
+Beberapa Pseudo-elemen
+Beberapa pseudo-elemen juga dapat digabungkan.
+
+Dalam contoh berikut, huruf pertama paragraf akan berwarna merah, dengan ukuran font xx-besar. Sisa baris pertama akan berwarna biru, dengan huruf kapital kecil. Sisa paragraf akan menggunakan ukuran dan warna font default:
+
+Contoh
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+CSS - Pseudo-elemen ::before
+Pseudo ::before-elemen dapat digunakan untuk menyisipkan beberapa konten sebelum konten suatu elemen.
+
+Contoh berikut menyisipkan gambar sebelum konten setiap elemen <h1>:
+
+Contoh
+h1::before {
+  content: url(smiley.gif);
+}
+CSS - Pseudo-elemen ::after
+Pseudo ::after-elemen dapat digunakan untuk menyisipkan beberapa konten setelah konten suatu elemen.
+
+Contoh berikut menyisipkan gambar setelah konten setiap elemen <h1>:
+
+Contoh
+h1::after {
+  content: url(smiley.gif);
+}
+CSS - Pseudo-elemen ::marker
+Pseudo ::marker-elemen memilih penanda item daftar.
+
+Contoh berikut memberi gaya pada penanda item daftar:
+
+Contoh
+::marker {
+  color: red;
+  font-size: 23px;
+}
+CSS - Pseudo-elemen ::selection
+Pseudo ::selection-elemen cocok dengan bagian elemen yang dipilih oleh pengguna.
+
+Properti CSS berikut dapat diterapkan ke ::selection: color, background, cursor, dan outline.
+
+Contoh berikut membuat teks yang dipilih menjadi merah pada latar belakang kuning:
+
+Contoh
+::selection {
+  color: red;
+  background: yellow;
+}
+Latihan
+?
+Seret dan letakkan pseudo-elemen yang benar untuk menyisipkan konten sebelum teks suatu <h1>elemen.
+h1:: {
+  content: 'Hello';
+}
+
+
+Referensi Elemen Semu CSS
+Untuk daftar lengkap semua Pseudo-elemen CSS, kunjungi Referensi Pseuodo-elemen CSS kami .

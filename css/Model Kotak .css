@@ -1,0 +1,71 @@
+Model Kotak CSS
+Semua elemen HTML dapat dianggap sebagai kotak.
+
+Model Kotak CSS
+Dalam CSS, istilah "model kotak" digunakan ketika berbicara tentang desain dan tata letak.
+
+Model kotak CSS pada dasarnya adalah kotak yang membungkus setiap elemen HTML. Model ini terdiri dari: konten, padding, border, dan margin. Gambar di bawah ini mengilustrasikan model kotak tersebut:
+
+Penjelasan bagian-bagian yang berbeda:
+
+Konten - Konten kotak, tempat teks dan gambar muncul
+Padding - Membersihkan area di sekitar konten. Paddingnya transparan.
+Batas - Batas yang mengelilingi bantalan dan konten
+Margin - Membersihkan area di luar batas. Margin transparan.
+Model kotak memungkinkan kita untuk menambahkan batas di sekitar elemen, dan menentukan ruang antar elemen. 
+
+Contoh
+Demonstrasi model kotak:
+
+div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+IKLAN
+
+Lebar dan Tinggi Elemen
+Untuk mengatur lebar dan tinggi elemen dengan benar di semua browser, Anda perlu mengetahui cara kerja model kotak.
+
+Penting: Saat Anda mengatur properti lebar dan tinggi suatu elemen dengan CSS, Anda hanya perlu mengatur lebar dan tinggi area konten . Untuk menghitung total lebar dan tinggi suatu elemen, Anda juga harus menyertakan padding dan border.
+
+Contoh
+Elemen <div> ini akan memiliki lebar total 350px dan tinggi total 80px: 
+
+div {
+  width: 320px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+Berikut perhitungannya:
+
+  320px (lebar area konten)
++ 20px (padding kiri + padding kanan)
++ 10px (batas kiri + batas kanan)
+= 350px (lebar total)
+
+  50px (tinggi area konten)
++ 20px (padding atas + padding bawah)
++ 10px (batas atas + batas bawah)
+= 80px (tinggi total)
+Lebar total suatu elemen harus dihitung seperti ini:
+
+Lebar elemen total = lebar + bantalan kiri + bantalan kanan + batas kiri + batas kanan
+
+Tinggi total suatu elemen harus dihitung seperti ini:
+
+Tinggi elemen total = tinggi + bantalan atas + bantalan bawah + batas atas + batas bawah
+
+Catatan: Properti margin juga memengaruhi total ruang yang akan digunakan kotak di halaman, tetapi margin tidak termasuk dalam ukuran kotak yang sebenarnya. Lebar dan tinggi total kotak berhenti di tepinya.
+
+Latihan
+?
+Seret dan lepas nilai yang benar untuk menetapkan lebar 300 piksel, bantalan 20 piksel, dan batas hijau 10 piksel.
+div {
+  width: ;
+  padding: ;
+  border:  solid green;
+}

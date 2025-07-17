@@ -1,0 +1,265 @@
+Garis Besar CSS
+Garis luar adalah garis yang digambar di luar batas elemen.
+
+Elemen ini memiliki batas hitam dan garis tepi hijau dengan lebar 10px.
+
+Garis Besar CSS
+Garis luar adalah garis yang digambar di sekeliling elemen, DI LUAR batas, untuk membuat elemen tersebut "menonjol".
+
+CSS memiliki properti garis besar berikut:
+
+outline-style
+outline-color
+outline-width
+outline-offset
+outline
+Catatan: Garis luar berbeda dengan batas ! Tidak seperti batas, garis luar digambar di luar batas elemen, dan mungkin tumpang tindih dengan konten lainnya. Selain itu, garis luar BUKAN bagian dari dimensi elemen; lebar dan tinggi total elemen tidak terpengaruh oleh lebar garis luar.
+
+Gaya Garis Besar CSS
+Properti outline-stylemenentukan gaya garis besar, dan dapat memiliki salah satu nilai berikut:
+
+dotted- Menentukan garis putus-putus
+dashed- Menentukan garis putus-putus
+solid- Menentukan garis besar yang solid
+double- Menentukan garis ganda
+groove- Menentukan garis alur 3D
+ridge- Menentukan garis lengkung 3D
+inset- Menentukan garis sisipan 3D
+outset- Menentukan garis besar awal 3D
+none- Tidak menentukan garis besar
+hidden- Menentukan garis tersembunyi
+Contoh berikut menunjukkan outline-stylenilai-nilai yang berbeda:
+
+Contoh
+Demonstrasi berbagai gaya garis besar:
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+Hasil:
+
+A dotted outline.
+
+A dashed outline.
+
+A solid outline.
+
+A double outline.
+
+A groove outline. The effect depends on the outline-color value.
+
+A ridge outline. The effect depends on the outline-color value.
+
+An inset outline. The effect depends on the outline-color value.
+
+An outset outline. The effect depends on the outline-color value.
+
+Catatan: Tidak ada properti kerangka lainnya (yang akan Anda pelajari lebih lanjut di bab berikutnya) yang akan memiliki efek APAPUN kecuali outline-styleproperti tersebut ditetapkan!
+
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk membuat garis putus-putus di sekelilingnya <p>.
+p.dotted {
+  : ;
+}
+
+Lebar Garis Besar CSS
+Lebar Garis Besar CSS
+Properti outline-widthmenentukan lebar garis luar, dan dapat memiliki salah satu nilai berikut:
+
+tipis (biasanya 1px)
+sedang (biasanya 3px)
+tebal (biasanya 5px)
+Ukuran tertentu (dalam px, pt, cm, em, dll)
+Contoh berikut menunjukkan beberapa garis luar dengan lebar yang berbeda:
+
+Garis tipis.
+
+Garis luar sedang.
+
+Garis luar yang tebal.
+
+Garis luar setebal 4px.
+
+Contoh
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+Latihan
+?
+Seret dan lepas nilai yang benar untuk membuat garis luar berwarna merah pekat dengan lebar tipis.
+p {
+  border: 1px solid black;
+  outline-style: ;
+  outline-color: ;
+  outline-width: ;
+}
+
+Warna Garis Besar CSS
+Warna Garis Besar CSS
+Properti outline-colorini digunakan untuk mengatur warna garis luar.
+
+Warna dapat diatur dengan:
+
+nama - tentukan nama warna, seperti "merah"
+HEX - tentukan nilai hex, seperti "#ff0000"
+RGB - tentukan nilai RGB, seperti "rgb(255,0,0)"
+HSL - tentukan nilai HSL, seperti "hsl(0, 100%, 50%)"
+invert - melakukan inversi warna (yang memastikan bahwa garis luar terlihat, terlepas dari warna latar belakang)
+Contoh berikut menunjukkan beberapa garis luar dengan warna yang berbeda. Perhatikan juga bahwa elemen-elemen ini juga memiliki batas hitam tipis di dalam garis luarnya:
+
+Garis merah pekat.
+
+Garis putus-putus berwarna biru.
+
+Garis luar berwarna abu-abu.
+
+Contoh
+p.ex1 {
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+
+p.ex2 {
+  border: 2px solid black;
+  outline-style: dotted;
+  outline-color: blue;
+}
+
+p.ex3 {
+  border: 2px solid black;
+  outline-style: outset;
+  outline-color: grey;
+}
+Nilai HEX
+Warna garis luar juga dapat ditentukan menggunakan nilai heksadesimal (HEX):
+
+Contoh
+p.ex1 {
+  outline-style: solid;
+  outline-color: #ff0000; /* red */
+}
+IKLAN
+
+Nilai RGB
+Atau dengan menggunakan nilai RGB:
+
+Contoh
+p.ex1 {
+  outline-style: solid;
+  outline-color: rgb(255, 0, 0); /* red */
+}
+Nilai HSL
+Anda juga dapat menggunakan nilai HSL:
+
+Contoh
+p.ex1 {
+  outline-style: solid;
+  outline-color: hsl(0, 100%, 50%); /* red */
+}
+Singkatan Garis Besar CSS
+CSS Outline - Properti Singkatan
+Properti ini outlineadalah properti singkatan untuk menetapkan properti kerangka individual berikut:
+
+outline-width
+outline-style(diperlukan)
+outline-color
+Properti outlineditentukan sebagai satu, dua, atau tiga nilai dari daftar di atas. Urutan nilai tidak menjadi masalah.
+
+Contoh berikut menunjukkan beberapa kerangka yang ditentukan dengan outline properti singkatan:
+
+Garis putus-putus.
+
+Garis merah putus-putus.
+
+Garis luar berwarna kuning pekat berukuran 5px.
+
+Garis luar merah muda yang tebal.
+
+Contoh
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+Latihan
+?
+Manakah dari berikut ini merupakan deklarasi singkatan yang valid untuk garis luar merah pekat berukuran 3px?
+
+
+garis luar: 3px merah pekat;
+garis luar: merah 3px padat;
+garis luar: merah pekat 3px;
+Semua hal di atas
+Offset Garis Besar CSS
+Offset Garis Besar CSS
+Properti ini outline-offsetmenambahkan spasi antara garis luar dan tepi/batas elemen. Spasi antara elemen dan garis luarnya bersifat transparan.
+
+Contoh berikut menentukan garis luar 15px di luar tepi batas:
+
+Paragraf ini memiliki garis luar 15px di luar tepi batas.
+
+Contoh
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+Contoh berikut menunjukkan bahwa ruang antara elemen dan garis luarnya transparan:
+
+Paragraf ini memiliki garis luar 15px di luar tepi batas.
+
+Contoh
+p {
+  margin: 30px;
+  background: yellow;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+Latihan
+?
+Apa fungsi outline-offsetproperti itu?
+
+
+Mengatur ketebalan garis luar
+Menambahkan ruang antara garis luar dan tepi/batas suatu elemen
+Menentukan warna garis luar
+
+Semua Properti Garis Besar CSS
+Property	Description
+outline	A shorthand property for setting outline-width, outline-style, and outline-color in one declaration
+outline-color	Sets the color of an outline
+outline-offset	Specifies the space between an outline and the edge or border of an element
+outline-style	Sets the style of an outline
+outline-width	Sets the width of an outline

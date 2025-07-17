@@ -1,0 +1,339 @@
+Variabel CSS - Fungsi var()
+Variabel CSS
+Fungsi ini var()digunakan untuk memasukkan nilai variabel CSS.
+
+Variabel CSS memiliki akses ke DOM, yang berarti Anda dapat membuat variabel dengan cakupan lokal atau global, mengubah variabel dengan JavaScript, dan mengubah variabel berdasarkan kueri media.
+
+Cara yang baik untuk menggunakan variabel CSS adalah untuk warna desain Anda. Daripada menyalin dan menempel warna yang sama berulang kali, Anda dapat menempatkannya dalam variabel.
+
+Cara Tradisional
+Contoh berikut menunjukkan cara tradisional mendefinisikan beberapa warna dalam lembar gaya (dengan mendefinisikan warna yang akan digunakan, untuk setiap elemen tertentu):
+
+Contoh
+body { background-color: #1e90ff; }
+
+h2 { border-bottom: 2px solid #1e90ff; }
+
+.container {
+  color: #1e90ff;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #1e90ff;
+  border: 1px solid #1e90ff;
+  padding: 5px;
+}
+
+Sintaks Fungsi var()
+Fungsi ini var()digunakan untuk memasukkan nilai variabel CSS.
+
+Sintaks fungsinya var()adalah sebagai berikut:
+
+var(--name, value)
+Value	Description
+name	Required. The variable name (must start with two dashes)
+value	Optional. The fallback value (used if the variable is not found)
+Catatan: Nama variabel harus diawali dengan dua tanda hubung (--) dan peka huruf besar-kecil!
+
+IKLAN
+
+Cara Kerja var()
+Pertama-tama: variabel CSS dapat memiliki cakupan global atau lokal.
+
+Variabel global dapat diakses/digunakan melalui keseluruhan dokumen, sementara variabel lokal hanya dapat digunakan di dalam pemilih tempat ia dideklarasikan.
+
+Untuk membuat variabel dengan cakupan global, deklarasikan variabel tersebut di dalam :root selektor. :rootSelektor tersebut cocok dengan elemen akar dokumen.
+
+Untuk membuat variabel dengan cakupan lokal, deklarasikan variabel tersebut di dalam pemilih yang akan menggunakannya.
+
+Contoh berikut sama dengan contoh di atas, tetapi di sini kita menggunakan var()fungsi.
+
+Pertama, kita mendeklarasikan dua variabel global (--blue dan --white). Kemudian, kita menggunakan var()fungsi tersebut untuk memasukkan nilai variabel tersebut nanti di lembar gaya:
+
+Contoh
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body { background-color: var(--blue); }
+
+h2 { border-bottom: 2px solid var(--blue); }
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+Keuntungan menggunakan var() adalah:
+
+membuat kode lebih mudah dibaca (lebih mudah dipahami)
+membuatnya lebih mudah untuk mengubah nilai warna
+Untuk mengubah warna biru dan putih menjadi biru dan putih yang lebih lembut, Anda hanya perlu mengubah dua nilai variabel:
+
+Contoh
+:root {
+  --blue: #6495ed;
+  --white: #faf0e6;
+}
+
+body { background-color: var(--blue); }
+
+h2 { border-bottom: 2px solid var(--blue); }
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+Latihan
+?
+Seret dan lepas nama variabel yang benar untuk mendeklarasikan variabel CSS global untuk warna biru.
+:root {
+  : #1e90ff;
+}
+
+
+Fungsi CSS var()
+Function	Description
+var()	Inserts the value of a CSS variable
+
+
+Mengganti Variabel Global dengan Variabel Lokal
+Dari halaman sebelumnya kita telah mempelajari bahwa variabel global dapat diakses/digunakan melalui keseluruhan dokumen, sedangkan variabel lokal hanya dapat digunakan di dalam pemilih tempat ia dideklarasikan.
+
+Lihat contoh dari halaman sebelumnya:
+
+Contoh
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+Terkadang kita ingin variabel berubah hanya di bagian halaman tertentu.
+
+Asumsikan kita menginginkan warna biru yang berbeda untuk elemen tombol. Kemudian, kita dapat mendeklarasikan ulang variabel --blue di dalam selektor tombol. Ketika kita menggunakan var(--blue) di dalam selektor ini, nilai variabel --blue lokal yang dideklarasikan di sini akan digunakan.
+
+Kita melihat bahwa variabel --blue lokal akan menggantikan variabel --blue global untuk elemen tombol:
+
+Contoh
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  --blue: #0000ff; /* local variable will override global */
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+}
+
+ADVERTISEMENT
+
+Tambahkan Variabel Lokal Baru
+Jika suatu variabel hanya akan digunakan di satu tempat saja, kita juga dapat mendeklarasikan variabel lokal baru, seperti ini:
+
+Contoh
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+button {
+  --button-blue: #0000ff; /* new local variable */
+  background-color: var(--white);
+  color: var(--button-blue);
+  border: 1px solid var(--button-blue);
+  padding: 5px;
+}
+
+Fungsi CSS var()
+Function	Description
+var()	Inserts the value of a CSS variable
+
+Mengubah Variabel CSS dengan JavaScript
+Mengubah Variabel Dengan JavaScript
+Variabel CSS memiliki akses ke DOM, yang berarti Anda dapat mengubahnya dengan JavaScript.
+
+Berikut adalah contoh cara membuat skrip untuk menampilkan dan mengubah variabel --blue dari contoh yang digunakan di halaman sebelumnya. Untuk saat ini, jangan khawatir jika Anda belum familiar dengan JavaScript. Anda dapat mempelajari lebih lanjut tentang JavaScript di Tutorial JavaScript kami :
+
+Contoh
+<script>
+// Get the root element
+var r = document.querySelector(':root');
+
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(r);
+  // Alert the value of the --blue variable
+  alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
+}
+
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  r.style.setProperty('--blue', 'lightblue');
+}
+</script>
+
+Fungsi CSS var()
+Function	Description
+var()	Inserts the value of a CSS variable
+
+
+Menggunakan Variabel dalam Kueri Media
+Sekarang kita ingin mengubah nilai variabel di dalam media query.
+
+Tips: Kueri Media membahas tentang mendefinisikan aturan gaya yang berbeda untuk berbagai perangkat (layar, tablet, ponsel, dll.). Anda dapat mempelajari lebih lanjut tentang Kueri Media di Bab Kueri Media kami .
+
+Di sini, pertama-tama kita mendeklarasikan variabel lokal baru bernama --fontsize untuk .containerkelas tersebut. Kita tetapkan nilainya menjadi 25 piksel. Kemudian kita gunakan variabel tersebut di .containerkelas selanjutnya. Setelah itu, kita buat @mediaaturan yang menyatakan "Jika lebar browser 450 piksel atau lebih, ubah nilai variabel --fontsize kelas .containermenjadi 50 piksel."
+
+Berikut adalah contoh lengkapnya:
+
+Contoh
+/* Variable declarations */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+.container {
+  --fontsize: 25px;
+}
+
+/* Styles */
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+  font-size: var(--fontsize);
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 50px;
+  }
+}
+
+ADVERTISEMENT
+
+Berikut adalah contoh lain di mana kita juga mengubah nilai variabel --blue dalam @mediaaturan:
+
+Contoh
+/* Variable declarations */
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+.container {
+  --fontsize: 25px;
+}
+
+/* Styles */
+body {
+  background-color: var(--blue);
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+  font-size: var(--fontsize);
+}
+
+@media screen and (min-width: 450px) {
+  .container {
+    --fontsize: 50px;
+  }
+   :root {
+    --blue: lightblue;
+  }
+}
+
+Fungsi CSS var()
+Function	Description
+var()	Inserts the value of a CSS variable

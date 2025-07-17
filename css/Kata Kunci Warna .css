@@ -1,0 +1,77 @@
+Kata Kunci Warna CSS
+Halaman ini akan menjelaskan kata kunci transparent, currentcolor, dan inherit.
+
+Kata Kunci Transparan
+Kata kunci ini transparentdigunakan untuk membuat warna menjadi transparan. Kata kunci ini sering digunakan untuk membuat warna latar belakang transparan pada suatu elemen.
+
+Contoh
+Di sini, warna latar belakang elemen <div> akan sepenuhnya transparan, dan gambar latar belakang akan terlihat:
+
+body {
+  background-image: url("paper.gif");
+}
+
+div {
+  background-color: transparent;
+}
+Catatan: Kata transparent kunci ini setara dengan rgba(0,0,0,0). Nilai warna RGBA merupakan perluasan dari nilai warna RGB dengan kanal alfa - yang menentukan opasitas suatu warna. Baca selengkapnya di bab CSS RGB dan bab Warna CSS kami .
+
+IKLAN
+
+Kata Kunci currentcolor
+Kata currentcolorkunci seperti variabel yang menampung nilai properti warna suatu elemen saat ini.
+
+Kata kunci ini dapat berguna jika Anda menginginkan warna tertentu konsisten dalam suatu elemen atau halaman.
+
+Contoh
+Dalam contoh ini, warna batas elemen <div> akan berwarna biru, karena warna teks elemen <div> berwarna biru:
+
+div {
+  color: blue;
+  border: 10px solid currentcolor;
+}
+Contoh
+Dalam contoh ini, warna latar belakang <div> diatur ke nilai warna elemen body saat ini:
+
+body {
+  color: purple;
+}
+
+div {
+  background-color: currentcolor;
+}
+Contoh
+Dalam contoh ini, warna batas dan warna bayangan <div> diatur ke nilai warna elemen badan saat ini:
+
+body {
+ color: green;
+}
+
+div {
+  box-shadow: 0px 0px 15px currentcolor;
+  border: 5px solid currentcolor;
+}
+Kata Kunci pewarisan
+Kata inheritkunci menentukan bahwa suatu properti harus mewarisi nilainya dari elemen induknya.
+
+Kata kunci tersebut inheritdapat digunakan untuk properti CSS apa pun, dan pada elemen HTML apa pun.
+
+Contoh
+Dalam contoh ini, pengaturan batas <span> akan diwarisi dari elemen induk: 
+
+div {
+  border: 2px solid red;
+}
+
+span {
+  border: inherit;
+}
+Latihan
+?
+Berapakah nilai RGBA yang setara untuk transparentkata kunci tersebut?
+
+
+rgba(255,255,255,0)
+rgba(0,0,0,0)
+rgba(0,0,0,1)
+rgba(255,255,255,1)

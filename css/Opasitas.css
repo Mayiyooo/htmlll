@@ -1,0 +1,140 @@
+Opacity / Transparansi CSS
+Properti opacitymenentukan opasitas/transparansi suatu elemen.
+
+Gambar Transparan
+Properti opacitydapat memiliki nilai antara 0,0 - 1,0. Semakin rendah nilainya, semakin transparan:
+
+Hutan
+opasitas 0,2
+
+Hutan
+opasitas 0,5
+
+Hutan
+opasitas 1
+(default)
+
+Contoh
+img {
+  opacity: 0.5;
+}
+Efek Hover Transparan
+Properti opacityini sering digunakan bersama dengan :hover pemilih untuk mengubah opasitas saat mouse diarahkan:
+
+Cahaya UtaraPegununganItalia
+Contoh
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+Contoh dijelaskan
+Blok CSS pertama mirip dengan kode pada Contoh 1. Selain itu, kami telah menambahkan apa yang seharusnya terjadi ketika pengguna mengarahkan kursor ke salah satu gambar. Dalam hal ini, kami ingin gambar TIDAK transparan ketika pengguna mengarahkan kursor ke atasnya. Kode CSS untuk ini adalah opacity:1;.
+
+Jika penunjuk tetikus menjauh dari gambar, gambar akan menjadi transparan lagi.
+
+Contoh efek hover terbalik:
+
+Cahaya UtaraPegununganItalia
+Contoh
+img:hover {
+  opacity: 0.5;
+}
+IKLAN
+
+Kotak Transparan
+Saat menggunakan opacityproperti untuk menambahkan transparansi pada latar belakang suatu elemen, semua elemen turunannya mewarisi transparansi yang sama. Hal ini dapat membuat teks di dalam elemen yang sepenuhnya transparan sulit dibaca:
+
+opasitas 1
+
+opasitas 0,6
+
+opasitas 0,3
+
+opasitas 0,1
+
+Contoh
+div {
+  opacity: 0.3;
+}
+Transparansi menggunakan RGBA
+Jika Anda tidak ingin menerapkan opasitas pada elemen anak, seperti pada contoh di atas, gunakan nilai warna RGBA . Contoh berikut menetapkan opasitas untuk warna latar belakang, bukan teks:
+
+100% opasitas
+
+60% opasitas
+
+30% opasitas
+
+10% opasitas
+
+Anda telah mempelajari dari Bab Warna CSS kami bahwa Anda dapat menggunakan RGB sebagai nilai warna. Selain RGB, Anda dapat menggunakan nilai warna RGB dengan kanal alfa (RGBA) - yang menentukan opasitas suatu warna.
+
+Nilai warna RGBA ditentukan dengan: rgba(merah, hijau, biru, alfa ). Parameter alfa berupa angka antara 0,0 (sepenuhnya transparan) dan 1,0 (sepenuhnya buram).
+
+Tip: Anda akan mempelajari lebih lanjut tentang Warna RGBA di Bab Warna CSS kami .
+
+Contoh
+div {
+  background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
+}
+Teks dalam Kotak Transparan
+Ini adalah beberapa teks yang ditempatkan dalam kotak transparan.
+
+Contoh
+<html>
+<head>
+<style>
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+</style>
+</head>
+<body>
+
+<div class="background">
+  <div class="transbox">
+    <p>This is some text that is placed in the transparent box.</p>
+  </div>
+</div>
+
+</body>
+</html>
+Contoh dijelaskan
+Pertama, kita membuat elemen <div> (class="background") dengan gambar latar belakang, dan batas.
+
+Lalu kita membuat <div> lain (class="transbox") di dalam <div> pertama.
+
+<div class="transbox"> memiliki warna latar belakang dan batas - div transparan.
+
+Di dalam <div> yang transparan, kita menambahkan beberapa teks di dalam elemen <p>.
+
+Latihan
+?
+Apa yang opacitydikontrol properti?
+
+
+Ukuran suatu elemen
+Penyelarasan suatu elemen
+Transparansi suatu elemen
+Warna suatu elemen
+
+Properti CSS
+Property	Description
+opacity	Sets the opacity level for an element

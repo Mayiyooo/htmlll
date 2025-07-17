@@ -1,0 +1,83 @@
+Tutorial CSS
+Pelajari CSS
+CSS adalah bahasa yang kita gunakan untuk memberi gaya pada dokumen HTML.
+
+CSS menguraikan bagaimana elemen HTML seharusnya ditampilkan.
+
+Tutorial ini akan mengajarkan Anda CSS dari dasar hingga tingkat lanjut.
+
+Contoh di Setiap Bab
+Tutorial CSS ini berisi ratusan contoh CSS.
+
+Dengan editor daring kami, Anda dapat mengedit CSS, dan mengeklik tombol untuk melihat hasilnya.
+
+Contoh CSS
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+Klik tombol "Coba Sendiri" untuk melihat cara kerjanya.
+
+Contoh CSS
+Pelajari lebih dari 300 contoh! Dengan editor kami, Anda dapat mengedit CSS, lalu klik tombol untuk melihat hasilnya.
+
+
+Gunakan Menu
+Kami sarankan Anda membaca tutorial ini, dalam urutan yang tercantum dalam menu.
+
+Jika Anda memiliki layar besar, menu akan selalu ada di sebelah kiri.
+
+Jika layar Anda kecil, buka menu dengan mengeklik tanda menu di bagian atas ☰ .
+
+Templat CSS
+Kami telah membuat beberapa templat W3.CSS responsif untuk Anda gunakan.
+
+Anda bebas memodifikasi, menyimpan, membagikan, dan menggunakannya di semua proyek Anda.
+
+Template CSS Gratis!
+
+IKLAN
+
+Latihan CSS
+Banyak bab dalam tutorial ini diakhiri dengan latihan di mana Anda dapat memeriksa tingkat pengetahuan Anda.
+
+Latihan
+?
+Seret dan lepas properti yang benar untuk menetapkan warna latar belakang hijau untuk suatu <div>elemen.
+div {
+  : green;
+}
+
+
+
+Kuis CSS
+Uji keterampilan CSS Anda dengan kuis.
+
+
+Lacak Kemajuan Anda
+Buat akun W3Schools gratis dan dapatkan akses ke lebih banyak fitur dan materi pembelajaran:
+
+Tanda centang
+Lihat tutorial, latihan, dan kuis Anda yang telah selesai
+Tanda centang
+Pantau kemajuan dan catatan harian Anda
+Tanda centang
+Tetapkan tujuan dan buat jalur pembelajaran
+Tanda centang
+Buat situs web pribadi Anda sendiri
+
+Catatan: Ini adalah fitur opsional. Anda dapat belajar di W3Schools tanpa membuat akun.
+
+Referensi CSS
+Di W3Schools Anda akan menemukan referensi CSS lengkap dari semua properti dan pemilih dengan sintaksis, contoh, dukungan browser, dan banyak lagi.
+
+Properti CSSDukungan Peramban CSSPemilih CSSKombinator CSSKelas semu CSSElemen semu CSSAturan CSSFungsi CSSAnimasi CSSFont Web Aman CSSUnit CSSKonversi Px ke EmWarna CSSNilai Default CSSEntitas CSSCSS Aural

@@ -1,0 +1,154 @@
+CSS - Aturan @property
+Aturan CSS @property
+Aturan ini @propertydigunakan untuk mendefinisikan properti CSS khusus langsung dalam lembar gaya tanpa harus menjalankan JavaScript apa pun.
+
+Aturan tersebut @propertymemiliki pemeriksaan dan pembatasan tipe data, menetapkan nilai default, dan mendefinisikan apakah properti dapat mewarisi nilai atau tidak.
+
+Contoh pendefinisian properti kustom:
+
+@property --myColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+Definisi di atas mengatakan bahwa --myColor adalah properti warna, ia dapat mewarisi nilai dari elemen induk, dan nilai default-nya adalah abu-abu muda.
+
+Untuk menggunakan properti khusus dalam CSS, kita menggunakan var() fungsi:
+
+body {
+  background-color: var(--myColor);
+}
+Manfaat penggunaan @property:
+
+Pemeriksaan tipe: Anda harus menentukan tipe data properti kustom, seperti <angka>, <warna>, <panjang>, dll. Ini mencegah kesalahan dan memastikan bahwa properti kustom digunakan dengan benar.
+Tetapkan nilai default: Anda menetapkan nilai default untuk properti kustom. Ini memastikan bahwa jika nilai yang tidak valid ditetapkan nanti, browser akan menggunakan nilai fallback yang ditentukan.
+Tetapkan perilaku pewarisan: Anda harus menentukan apakah properti kustom, secara default, akan mewarisi nilai dari elemen induknya atau tidak
+Dukungan Peramban
+Angka dalam tabel menentukan versi browser pertama yang sepenuhnya mendukung aturan tersebut.
+
+Property					
+@property	85	85	128	16.4	71
+Contoh @property Sederhana
+Contoh berikut mendefinisikan dua properti kustom: my-bg-color dan my-txt-color. Kemudian, div menggunakan properti kustom di background-color dan color:
+
+Contoh
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+@property --my-txt-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: darkblue;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+  color: var(--my-txt-color);
+}
+
+IKLAN
+
+Contoh @property lainnya
+Dalam contoh berikut, kami menggunakan properti kustom default pada elemen <div>. Kemudian, kami mengganti properti kustom di kelas .fresh dan kelas .nature (dengan mengatur beberapa warna lain), dan hasilnya berfungsi dengan sempurna:
+
+Contoh
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+}
+
+.fresh {
+  --my-bg-color: #ff6347;
+}
+
+.nature {
+  --my-bg-color: rgb(120, 180, 30);
+}
+
+Hindari Kesalahan dengan Pemeriksaan Tipe dan Nilai Fallback
+Dalam contoh berikut, kami menetapkan properti kustom di kelas .nature ke integer. Hal ini tidak valid, dan browser akan menggunakan warna fallback, yang didefinisikan dalam properti initial-value (lightgray):
+
+Contoh
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+}
+
+.fresh {
+  --my-bg-color: #ff6347;
+}
+
+.nature {
+  --my-bg-color: 2;
+}
+
+Penggunaan Nilai Warisan
+Dalam contoh berikut, kita akan menetapkan nilai "inherit" ke false. Ini berarti properti kustom TIDAK AKAN mewarisi nilai dari elemen induknya. Lihat hasilnya:
+
+Contoh
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: lightgray;
+}
+
+Contoh berikut menetapkan nilai "inherit" ke true. Ini berarti properti kustom AKAN mewarisi nilai dari elemen induknya. Lihat hasilnya:
+
+Contoh
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+Buat Animasi Halus dengan @property
+Peluang baru yang bisa Anda dapatkan dengan @property aturan ini adalah menganimasikan sesuatu yang sebelumnya tidak bisa dianimasikan: Gradien. Lihat contoh berikut:
+
+Contoh
+Tentukan dua properti khusus untuk gradien:
+
+@property --startColor {
+  syntax: "<color>";
+  initial-value: #EADEDB;
+  inherits: false;
+}
+
+@property --endColor {
+  syntax: "<color>";
+  initial-value: #BC70A4;
+  inherits: false;
+}
+Latihan
+?
+Apa tujuan utama @propertyaturan CSS?
+
+
+Untuk membuat dan menentukan properti khusus dengan batasan, nilai default, dan pewarisan.
+Untuk mengelola variabel CSS secara dinamis menggunakan JavaScript.
+Untuk menentukan gaya global untuk semua elemen.
+
+Aturan CSS @property
+Property	Description
+@property	Define custom CSS properties directly in the stylesheet without having to run any JavaScript

@@ -1,0 +1,134 @@
+Spesifisitas CSS
+Apa itu Spesifisitas?
+Jika ada dua atau lebih aturan CSS yang menunjuk ke elemen yang sama, pemilih dengan spesifisitas tertinggi akan "menang", dan deklarasi gayanya akan diterapkan ke elemen HTML tersebut.
+
+Anggap spesifisitas sebagai hierarki yang menentukan deklarasi gaya mana yang akhirnya diterapkan pada suatu elemen.
+
+Lihatlah contoh berikut:
+
+Contoh 1
+Di sini, kami menggunakan elemen "p" sebagai pemilih, dan menentukan warna merah untuk elemen ini. Hasilnya: Teks akan berwarna merah:
+
+<html>
+<head>
+  <style>
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p>Hello World!</p>
+
+</body>
+</html>
+
+Sekarang, lihat contoh 2:
+
+Contoh 2
+Di sini, kami telah menambahkan pemilih kelas (bernama "test"), dan menentukan warna hijau untuk kelas ini. Hasil: Teks akan berwarna hijau (meskipun kami telah menentukan warna merah untuk pemilih elemen "p"). Hal ini karena pemilih kelas memiliki prioritas yang lebih tinggi:
+
+<html>
+<head>
+  <style>
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p class="test">Hello World!</p>
+
+</body>
+</html>
+
+Sekarang, lihat contoh 3:
+
+Contoh 3
+Di sini, kami telah menambahkan pemilih id (bernama "demo"). Hasil: Teks akan berwarna biru, karena pemilih id memiliki prioritas lebih tinggi:
+
+<html>
+<head>
+  <style>
+    #demo {color: blue;}
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p id="demo" class="test">Hello World!</p>
+
+</body>
+</html>
+
+Sekarang, lihat contoh 4:
+
+Contoh 4
+Di sini, kami telah menambahkan gaya sebaris untuk elemen "p". Hasil: Teks akan berwarna merah muda, karena gaya sebaris memiliki prioritas tertinggi:
+
+<html>
+<head>
+  <style>
+    #demo {color: blue;}
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p id="demo" class="test" style="color: pink;">Hello World!</p>
+
+</body>
+</html>
+
+Hirarki Spesifisitas
+Setiap pemilih CSS memiliki posisi dalam hierarki spesifisitas.
+
+Priority	Example	Description
+Inline style	<h1 style="color: pink;">	Highest priority, directly applied with the style attribute
+Id selectors	#navbar	Second highest priority, identified by the unique id attribute of an element
+Classes and pseudo-classes	.test, :hover	Third highest priority, targeted using class names
+Attributes	[type="text"]	Low priority, applies to attributes
+Elements and pseudo-elements	 h1, ::before, ::after	Lowest priority, applies to HTML elements and pseudo-elements
+IKLAN
+
+Contoh Aturan Spesifisitas Lebih Lanjut
+Spesifisitas yang sama: aturan terbaru menang - Jika aturan yang sama ditulis dua kali ke dalam lembar gaya eksternal, maka aturan terbaru menang:
+
+Contoh
+h1 {background-color: yellow;}
+h1 {background-color: red;}
+
+Pemilih ID memiliki spesifisitas yang lebih tinggi daripada pemilih atribut - Lihat tiga baris kode berikut:
+
+Contoh
+div#myDiv {background-color: green;}
+#myDiv {background-color: yellow;}
+div[id=myDiv] {background-color: blue;}
+
+aturan pertama lebih spesifik daripada dua lainnya, dan karena itu akan diterapkan.
+
+Selektor kontekstual lebih spesifik daripada pemilih elemen tunggal - Lembar gaya yang disematkan lebih dekat dengan elemen yang akan diberi gaya. Jadi, dalam situasi berikut:
+
+Contoh
+/*From external CSS file:*/
+#content h1 {background-color: red;}
+
+/*In HTML file:*/
+<style>
+#content h1 {background-color: yellow;}
+</style>
+aturan terakhir akan diterapkan.
+
+Pemilih kelas mengalahkan sejumlah pemilih elemen - pemilih kelas seperti .intro mengalahkan h1, p, div, dan lain-lain:
+
+Contoh
+.intro {background-color: yellow;}
+h1 {background-color: red;}
+
+Pemilih universal (*) dan nilai yang diwarisi - Pemilih universal (*) dan nilai yang diwarisi tidak memengaruhi nilai bobot spesifisitas:
+
+Contoh
+* {background-color: yellow;}
+h1 {background-color: red;}
+

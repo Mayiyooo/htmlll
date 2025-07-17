@@ -1,0 +1,276 @@
+Pengkodean HTML (Kumpulan Karakter)
+Untuk menampilkan halaman HTML dengan benar, peramban web harus mengetahui rangkaian karakter mana yang akan digunakan.
+
+Atribut charset HTML
+Set karakter ditentukan dalam <meta>tag:
+
+Contoh
+<meta charset="UTF-8">
+Spesifikasi HTML5 mendorong pengembang web untuk menggunakan set karakter UTF-8.
+
+UTF-8 mencakup hampir semua karakter dan simbol di dunia!
+
+Pertumbuhan Web Unicode
+Referensi UTF-8 Lengkap
+
+Set Karakter ASCII
+ASCII adalah standar pengkodean karakter pertama untuk web. Standar ini mendefinisikan 128 karakter berbeda yang dapat digunakan di internet:
+
+Huruf Inggris (AZ)
+Angka (0-9)
+Karakter khusus seperti ! $ + - ( ) @ < >.
+Set Karakter ANSI
+ANSI (Windows-1252) adalah set karakter Windows asli:
+
+Identik dengan ASCII untuk 127 karakter pertama
+Karakter khusus dari 128 hingga 159
+Identik dengan UTF-8 dari 160 hingga 255
+<meta charset="Windows-1252">
+Set Karakter ISO-8859-1
+ISO-8859-1 adalah set karakter default untuk HTML 4. Set karakter ini mendukung 256 kode karakter yang berbeda. HTML 4 juga mendukung UTF-8.
+
+Identik dengan ASCII untuk 127 karakter pertama
+Tidak menggunakan karakter 128 sampai 159
+Identik dengan ANSI dan UTF-8 dari 160 hingga 255
+Contoh HTML 4
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+Contoh HTML 5
+<meta charset="ISO-8859-1">
+Set Karakter UTF-8
+identik dengan ASCII untuk nilai dari 0 hingga 127
+Tidak menggunakan karakter 128 sampai 159
+Identik dengan ANSI dan 8859-1 dari 160 hingga 255
+Berlanjut dari nilai 256 hingga 10.000 karakter
+<meta charset="UTF-8">
+Referensi Set Karakter HTML Lengkap .
+
+IKLAN
+
+Perbedaan Antara Set Karakter
+Tabel berikut menampilkan perbedaan antara set karakter yang dijelaskan di atas:
+
+Mati rasa	ASCII	ANSI	8859	UTF‑8	Keterangan
+32					ruang angkasa
+33	!	!	!	!	tanda seru
+34	"	"	"	"	tanda kutip
+35	#	#	#	#	tanda angka
+36	$	$	$	$	tanda dolar
+37	%	%	%	%	tanda persen
+38	&	&	&	&	ampersand
+39	'	'	'	'	apostrof
+40	(	(	(	(	tanda kurung kiri
+41	)	)	)	)	tanda kurung kanan
+42	*	*	*	*	asterisk
+43	+	+	+	+	tanda tambah
+44	,	,	,	,	koma
+45	-	-	-	-	tanda hubung minus
+46	.	.	.	.	tanda titik
+47	/	/	/	/	solidus
+48	0	0	0	0	angka nol
+49	1	1	1	1	angka satu
+50	2	2	2	2	angka dua
+51	3	3	3	3	angka tiga
+52	4	4	4	4	angka empat
+53	5	5	5	5	angka lima
+54	6	6	6	6	angka enam
+55	7	7	7	7	angka tujuh
+56	8	8	8	8	angka delapan
+57	9	9	9	9	angka sembilan
+58	:	:	:	:	usus besar
+59	;	;	;	;	titik koma
+60	<	<	<	<	kurang dari
+61	=	=	=	=	tanda sama dengan
+62	>	>	>	>	lebih besar dari
+63	?	?	?	?	tanda tanya
+64	@	@	@	@	komersial di
+65	A	A	A	A	Bahasa Latin A
+66	B	B	B	B	Bahasa Latin B
+67	C	C	C	C	Bahasa Latin C
+68	D	D	D	D	Latin D
+69	E	E	E	E	Latin E
+70	F	F	F	F	Bahasa Latin F
+71	G	G	G	G	Latin G
+72	H	H	H	H	Latin H
+73	SAYA	SAYA	SAYA	SAYA	Latin I
+74	J	J	J	J	Latin J
+75	K	K	K	K	Latin K
+76	L	L	L	L	Latin L
+77	M	M	M	M	Latin M
+78	N	N	N	N	Latin N
+79	HAI	HAI	HAI	HAI	Bahasa Latin O
+80	P	P	P	P	Latin P
+81	Q	Q	Q	Q	Latin Q
+82	R	R	R	R	Latin R
+83	S	S	S	S	Latin S
+84	T	T	T	T	Latin T
+85	Kamu	Kamu	Kamu	Kamu	Latin U
+86	V	V	V	V	Latin V
+87	W	W	W	W	Latin W
+88	X	X	X	X	Latin X
+89	kamu	kamu	kamu	kamu	Latin Y
+90	Z	Z	Z	Z	Latin Z
+91	[	[	[	[	tanda kurung siku kiri
+92	\	\	\	\	solidus terbalik
+93	]	]	]	]	tanda kurung siku kanan
+94	^	^	^	^	aksen sirkumfleks
+95	_	_	_	_	garis rendah
+96	"	"	"	"	aksen serius
+97	A	A	A	A	Latin kecil a
+98	B	B	B	B	huruf latin b kecil
+99	C	C	C	C	Latin c kecil
+100	D	D	D	D	huruf d kecil latin
+101	e	e	e	e	huruf e kecil latin
+102	F	F	F	F	huruf f kecil latin
+103	G	G	G	G	huruf latin g kecil
+104	H	H	H	H	huruf h kecil latin
+105	Saya	Saya	Saya	Saya	huruf i kecil latin
+106	J	J	J	J	huruf latin j kecil
+107	k	k	k	k	huruf k kecil latin
+108	aku	aku	aku	aku	huruf latin l kecil
+109	M	M	M	M	Latin kecil m
+110	N	N	N	N	huruf n kecil latin
+111	Hai	Hai	Hai	Hai	Latin kecil o
+112	P	P	P	P	huruf latin p kecil
+113	Q	Q	Q	Q	huruf q kecil latin
+114	R	R	R	R	Latin kecil r
+115	S	S	S	S	huruf latin s kecil
+116	T	T	T	T	huruf t kecil latin
+117	kamu	kamu	kamu	kamu	huruf u kecil latin
+118	v	v	v	v	Latin kecil v
+119	kami	kami	kami	kami	Latin kecil w
+120	X	X	X	X	Latin kecil x
+121	kamu	kamu	kamu	kamu	huruf y kecil latin
+122	z	z	z	z	huruf latin z kecil
+123	{	{	{	{	kurung kurawal kiri
+124	Bahasa Indonesia: |	Bahasa Indonesia: |	Bahasa Indonesia: |	Bahasa Indonesia: |	garis vertikal
+125	}	}	}	}	kurung kurawal kanan
+126	~	~	~	~	gelombang pasang
+127	MENGHAPUS	 	 	 	 
+128	 	€	 	 	tanda euro
+129	 				TIDAK DIGUNAKAN
+130	 	'	 	 	tanda kutip tunggal rendah-9
+131	 	ƒ	 	 	Huruf f kecil latin dengan kait
+132	 	"	 	 	tanda kutip rendah ganda-9
+133	 	…	 	 	elipsis horizontal
+134	 	†	 	 	belati
+135	 	‡	 	 	belati ganda
+136	 	ˆ	 	 	pengubah huruf aksen sirkumfleks
+137	 	‰	 	 	tanda per mil
+138	 	S	 	 	Latin S dengan caron
+139	 	‹	 	 	tanda kutip sudut tunggal yang mengarah ke kiri
+140	 	O	 	 	Ligatur kapital Latin OE
+141	 				TIDAK DIGUNAKAN
+142	 	Z	 	 	Latin Z dengan caron
+143	 				TIDAK DIGUNAKAN
+144	 				TIDAK DIGUNAKAN
+145	 	'	 	 	tanda kutip tunggal kiri
+146	 	'	 	 	tanda kutip tunggal kanan
+147	 	“	 	 	tanda kutip ganda kiri
+148	 	"	 	 	tanda kutip ganda kanan
+149	 	•	 	 	peluru
+150	 	–	 	 	tanda hubung
+151	 	—	 	 	tanda hubung em
+152	 	˜	 	 	tilde kecil
+153	 	™	 	 	tanda merek dagang
+154	 	S	 	 	Huruf s kecil Latin dengan caron
+155	 	>	 	 	tanda kutip sudut siku-siku tunggal
+156	 	œ	 	 	Ligatur kecil Latin oe
+157	 				TIDAK DIGUNAKAN
+158	 	z	 	 	Huruf z kecil latin dengan caron
+159	 	Ÿ	 	 	Latin Y dengan diaeresis
+160	 	 	 	 	ruang tanpa jeda
+161	 	¡	¡	¡	tanda seru terbalik
+162	 	¢	¢	¢	tanda sen
+163	 	£	£	£	tanda pound
+164	 	¤	¤	¤	tanda mata uang
+165	 	¥	¥	¥	tanda yen
+166	 	¦	¦	¦	batang patah
+167	 	§	§	§	tanda bagian
+168	 	¨	¨	¨	diaeresis
+169	 	©	©	©	tanda hak cipta
+170	 	ª	ª	ª	indikator ordinal feminin
+171	 	"	"	"	tanda kutip sudut ganda yang mengarah ke kiri
+172	 	¬	¬	¬	tidak menandatangani
+173	 	­	­	­	tanda hubung lunak
+174	 	®	®	®	tanda terdaftar
+175	 	¯	¯	¯	garis makron
+176	 	°	°	°	tanda derajat
+177	 	±	±	±	tanda plus-minus
+178	 	²	²	²	superskrip dua
+179	 	³	³	³	superskrip tiga
+180	 	"	"	"	aksen akut
+181	 	µ	µ	µ	tanda mikro
+182	 	¶	¶	¶	tanda pilcrow
+183	 	·	·	·	titik tengah
+184	 	¸	¸	¸	cedilla
+185	 	¹	¹	¹	superskrip satu
+186	 	º	º	º	indikator ordinal maskulin
+187	 	"	"	"	tanda kutip sudut ganda yang menunjuk ke kanan
+188	 	¼	¼	¼	pecahan vulgar seperempat
+189	 	½	½	½	pecahan vulgar setengah
+190	 	¾	¾	¾	pecahan vulgar tiga perempat
+191	 	""	""	""	tanda tanya terbalik
+192	 	A	A	A	Latin A dengan kuburan
+193	 	A	A	A	Latin A dengan akut
+194	 	A	A	A	Latin A dengan sirkumfleks
+195	 	A	A	A	Latin A dengan tilde
+196	 	A	A	A	Latin A dengan diaeresis
+197	 	A	A	A	Latin A dengan cincin di atas
+198	 	Æ	Æ	Æ	Bahasa Latin AE
+199	 	C	C	C	Latin C dengan cedilla
+200	 	Adalah	Adalah	Adalah	Latin E dengan kuburan
+201	 	Saya	Saya	Saya	Latin E dengan akut
+202	 	Saya	Saya	Saya	Latin E dengan sirkumfleks
+203	 	Aku	Aku	Aku	Latin E dengan diaeresis
+204	 	SAYA	SAYA	SAYA	Latin I dengan kuburan
+205	 	SAYA	SAYA	SAYA	Latin I dengan akut
+206	 	SAYA	SAYA	SAYA	Latin I dengan sirkumfleks
+207	 	SAYA	SAYA	SAYA	Latin I dengan diaeresis
+208	 	D	D	D	Etnis Latin
+209	 	N	N	N	Latin N dengan tilde
+210	 	HAI	HAI	HAI	Latin O dengan kuburan
+211	 	HAI	HAI	HAI	Latin O dengan akut
+212	 	HAI	HAI	HAI	Latin O dengan sirkumfleks
+213	 	HAI	HAI	HAI	Latin O dengan tilde
+214	 	HAI	HAI	HAI	Latin O dengan diaeresis
+215	 	×	×	×	tanda perkalian
+216	 	HAI	HAI	HAI	Huruf O Latin dengan guratan
+217	 	aku	aku	aku	Huruf U Latin dengan huruf grave
+218	 	aku	aku	aku	Latin U dengan akut
+219	 	aku	aku	aku	U Latin dengan sirkumfleks
+220	 	aku	aku	aku	Huruf U Latin dengan diaeresis
+221	 	Saya	Saya	Saya	Latin Y dengan akut
+222	 	TH	TH	TH	Duri Latin
+223	 	ß	ß	ß	Latin kecil tajam s
+224	 	A	A	A	Latin kecil a dengan kuburan
+225	 	A	A	A	Latin kecil dengan akut
+226	 	A	A	A	Huruf a kecil latin dengan sirkumfleks
+227	 	A	A	A	Huruf a kecil Latin dengan tilde
+228	 	A	A	A	Huruf a kecil Latin dengan diaresis
+229	 	A	A	A	Huruf a kecil latin dengan cincin di atas
+230	 	ae	ae	ae	Latin ae kecil
+231	 	C	C	C	Huruf c kecil Latin dengan cedilla
+232	 	adalah	adalah	adalah	Huruf e kecil Latin dengan grave
+233	 	adalah	adalah	adalah	Huruf e kecil Latin dengan huruf lancip
+234	 	saya	saya	saya	Huruf e kecil Latin dengan sirkumfleks
+235	 	aku	aku	aku	Huruf e kecil Latin dengan diaeresis
+236	 	Saya	Saya	Saya	Huruf i kecil Latin dengan huruf grave
+237	 	Saya	Saya	Saya	Huruf i kecil latin dengan huruf akut
+238	 	Saya	Saya	Saya	Huruf i kecil latin dengan sirkumfleks
+239	 	Saya	Saya	Saya	Huruf i kecil Latin dengan diaeresis
+240	 	D	D	D	Latin kecil eth
+241	 	N	N	N	Huruf n kecil Latin dengan tilde
+242	 	Hai	Hai	Hai	Huruf o kecil Latin dengan grave
+243	 	Hai	Hai	Hai	Huruf o kecil latin dengan aksen akut
+244	 	Hai	Hai	Hai	Huruf o kecil Latin dengan sirkumfleks
+245	 	Hai	Hai	Hai	Huruf o kecil Latin dengan tilde
+246	 	Hai	Hai	Hai	Huruf o kecil Latin dengan diaeresis
+247	 	÷	÷	÷	tanda pembagian
+248	 	Hai	Hai	Hai	Huruf o kecil latin dengan guratan
+249	 	aku	aku	aku	Huruf u kecil Latin dengan grave
+250	 	kamu	kamu	kamu	Huruf u kecil latin dengan lancip
+251	 	aku	aku	aku	Latin kecil dengan sirkumfleks
+252	 	aku	aku	aku	Huruf u kecil Latin dengan diaeresis
+253	 	aku	aku	aku	Huruf y kecil latin dengan lancip
+254	 	th	th	th	duri kecil latin
+255	 	saya	saya	saya	Huruf y kecil Latin dengan diaresis

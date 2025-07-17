@@ -1,0 +1,223 @@
+
+Kolom Grid
+Garis vertikal pada item grid disebut kolom .
+
+
+Baris Grid
+Garis horizontal pada item grid disebut baris .
+
+
+Kesenjangan Jaringan
+Ruang antara tiap kolom/baris disebut celah .
+
+
+Anda dapat menyesuaikan ukuran celah dengan menggunakan salah satu properti berikut:
+
+column-gap
+row-gap
+gap
+Properti celah kolom
+Properti column-gapmenentukan jarak antara kolom dalam kisi.
+
+Contoh
+Tentukan celah 50 piksel antara kolom dalam kisi:
+
+.container {
+  display: grid;
+  column-gap: 50px;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Properti celah baris
+Properti row-gapmenentukan jarak antar baris dalam kisi.
+
+Contoh
+Tentukan celah 50 piksel antara baris dalam kisi:
+
+.container {
+  display: grid;
+  row-gap: 50px;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+IKLAN
+
+Kesenjangan Properti
+Properti ini gapadalah properti singkatan untuk row-gapdan column-gap:
+
+Contoh
+Atur jarak antar baris menjadi 50 piksel, dan jarak antar kolom menjadi 100 piksel dalam kisi:
+
+.container {
+  display: grid;
+  gap: 50px 100px;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Contoh
+Atur jarak antara baris dan kolom menjadi 50px di grid:
+
+.container {
+  display: grid;
+  gap: 50px;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Garis Kisi-kisi
+Garis antar kolom disebut garis kolom .
+
+Garis antar baris disebut garis baris .
+
+
+Kita dapat menentukan di mana memulai dan mengakhiri item grid dengan menggunakan properti berikut:
+
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+grid-column
+grid-row
+Anda dapat merujuk ke nomor baris saat menempatkan item grid dalam wadah grid.
+
+Properti grid-column-start dan grid-column-end
+Properti grid-column-startmenentukan di mana memulai item kisi.
+
+Properti grid-column-endmenentukan di mana item grid akan diakhiri.
+
+Contoh
+Tempatkan item grid pertama pada baris kolom 1, dan biarkan berakhir pada baris kolom 3:
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Properti kolom grid
+Properti grid-columnadalah singkatan dari properti grid-column-startdan grid-column-endproperti.
+
+Contoh
+Tempatkan item grid pertama pada baris kolom 1, dan biarkan mencakup 2 kolom:
+
+.item1 {
+  grid-column: 1 / span 2;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Properti grid-row-start dan grid-row-end
+Properti grid-row-startmenentukan di mana memulai item kisi.
+
+Properti grid-row-endmenentukan di mana item grid akan diakhiri. 
+
+Contoh
+Tempatkan item grid pertama pada baris baris 1, dan biarkan berakhir pada baris baris 3:
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Properti grid-row
+Properti grid-rowadalah singkatan dari properti grid-row-startdan grid-row-endproperti.
+
+Contoh
+Tempatkan item grid pertama pada baris-garis 1, dan biarkan mencakup 2 baris:
+
+.item1 {
+  grid-row: 1 / span 2;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk mengubah wadah menjadi tata letak kisi.
+.container {
+  : ;
+}
+
+
+Semua Properti Kolom, Baris, dan Celah CSS Grid
+Property	Description
+display	Specifies the display behavior (the type of rendering box) of an element
+column-gap	Specifies the gap between the columns
+gap	A shorthand property for the row-gap and the column-gap properties
+grid-column	A shorthand property for the grid-column-start and the grid-column-end properties
+grid-column-end	Specifies where to end the grid item
+grid-column-start	Specifies where to start the grid item
+grid-row	A shorthand property for the grid-row-start and the grid-row-end properties
+grid-row-end	Specifies where to end the grid item
+grid-row-start	Specifies where to start the grid item
+row-gap	Specifies the gap between the grid rows

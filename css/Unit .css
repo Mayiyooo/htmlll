@@ -1,0 +1,67 @@
+Unit CSS
+Unit CSS
+CSS memiliki beberapa unit berbeda untuk mengekspresikan panjang.
+
+Banyak properti CSS yang mengambil nilai "panjang", seperti width, margin, padding, font-size, dll.
+
+Panjang adalah angka yang diikuti oleh satuan panjang, seperti 10px, 2em, dan seterusnya.
+
+Contoh
+Tetapkan nilai panjang yang berbeda, menggunakan px (piksel):
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 25px;
+  line-height: 50px;
+}
+
+Catatan: Spasi tidak boleh muncul di antara angka dan satuan. Namun, jika nilainya 0, satuan dapat dihilangkan.
+
+Untuk beberapa properti CSS, panjang negatif diizinkan.
+
+Ada dua jenis satuan panjang: absolut dan relatif .
+
+Panjang Mutlak
+Satuan panjang absolut bersifat tetap dan panjang yang dinyatakan dalam salah satu satuan ini akan tampak memiliki ukuran yang tepat.
+
+Satuan panjang absolut tidak disarankan untuk digunakan di layar, karena ukuran layar sangat bervariasi. Namun, satuan ini dapat digunakan jika media keluaran diketahui, misalnya untuk tata letak cetak.
+
+Unit	Description
+cm	centimeters
+mm	millimeters
+in	inches (1in = 96px = 2.54cm)
+px *	pixels (1px = 1/96th of 1in)
+pt	points (1pt = 1/72 of 1in)
+pc	picas (1pc = 12 pt)
+* Piksel (px) relatif terhadap perangkat tampilan. Untuk perangkat dengan dpi rendah, 1px setara dengan satu piksel perangkat (titik) pada layar. Untuk printer dan layar beresolusi tinggi, 1px menyiratkan beberapa piksel perangkat.
+
+Panjang Relatif
+Satuan panjang relatif menentukan panjang relatif terhadap properti panjang lainnya. Satuan panjang relatif memiliki skalabilitas yang lebih baik di antara berbagai media rendering.
+
+Unit	Description	
+em	Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	Relative to the x-height of the current font (rarely used)	
+ch	Relative to width of the "0" (zero)	
+fr	A fractional unit. 1fr equals 1 part of the available space	
+rem	Relative to font-size of the root element	
+vw	Relative to 1% of the width of the viewport*	
+vh	Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	Relative to the parent element	
+Tips: Unit em dan rem praktis untuk menciptakan tata letak yang skalabel sempurna!
+* Viewport = ukuran jendela browser. Jika lebar viewport 50 cm, 1vw = 0,5 cm.
+
+Dukungan Peramban
+Angka dalam tabel menentukan versi browser pertama yang sepenuhnya mendukung satuan panjang.
+
+Length Unit					
+em, ex, %, px, cm, mm, in, pt, pc	1.0	3.0	1.0	1.0	3.5
+ch	27.0	9.0	1.0	7.0	20.0
+rem	4.0	9.0	3.6	4.1	11.6
+vh, vw	20.0	9.0	19.0	6.0	20.0
+vmin	20.0	12.0	19.0	6.0	20.0
+vmax	26.0	16.0	19.0	7.0	20.0

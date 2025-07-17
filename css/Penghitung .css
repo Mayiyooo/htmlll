@@ -1,0 +1,80 @@
+
+Pizza
+Hamburger
+Hotdog
+Penghitung CSS adalah "variabel" yang dikelola oleh CSS, yang nilainya dapat ditingkatkan berdasarkan aturan CSS (untuk melacak seberapa sering variabel tersebut digunakan). Penghitung memungkinkan Anda menyesuaikan tampilan konten berdasarkan penempatannya dalam dokumen.
+
+Penomoran Otomatis Dengan Penghitung
+Penghitung CSS seperti "variabel". Nilai variabel dapat ditingkatkan berdasarkan aturan CSS (yang akan melacak seberapa sering variabel tersebut digunakan).
+
+Untuk bekerja dengan penghitung CSS, kita akan menggunakan properti berikut:
+
+counter-reset- Membuat atau mengatur ulang penghitung
+counter-increment- Menambah nilai penghitung
+content- Menyisipkan konten yang dihasilkan
+counter()atau counters()fungsi - Menambahkan nilai penghitung ke suatu elemen
+Untuk menggunakan penghitung CSS, penghitung tersebut harus dibuat terlebih dahulu dengan counter-reset.
+
+Contoh berikut membuat penghitung untuk halaman (dalam pemilih isi), lalu menambah nilai penghitung untuk setiap elemen <h2> dan menambahkan "Bagian < nilai penghitung >:" di awal setiap elemen <h2>:
+
+Contoh
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+IKLAN
+
+Penghitung Bersarang
+Contoh berikut membuat satu penghitung untuk halaman (bagian) dan satu penghitung untuk setiap elemen <h1> (subbagian). Penghitung "bagian" akan dihitung untuk setiap elemen <h1> dengan "Bagian < nilai penghitung bagian >.", dan penghitung "subbagian" akan dihitung untuk setiap elemen <h2> dengan "< nilai penghitung bagian >.< nilai penghitung subbagian >":
+
+Contoh
+body {
+  counter-reset: section;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+Penghitung juga berguna untuk membuat daftar yang diuraikan karena instans penghitung baru secara otomatis dibuat di elemen turunan. Di sini, kita menggunakan counters()fungsi ini untuk menyisipkan string di antara berbagai tingkat penghitung bersarang:
+
+Contoh
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}
+Latihan
+?
+Apa tujuan counter-resetproperti dalam CSS?
+
+
+Untuk menampilkan nilai penghitung
+Untuk menambah nilai penghitung
+Untuk membuat atau mengatur ulang penghitung
+Untuk menerapkan gaya pada penghitung
+
+Properti Penghitung CSS
+Property	Description
+content	Used with the ::before and ::after pseudo-elements, to insert generated content
+counter-increment	Increments one or more counter values
+counter-reset	Creates or resets one or more counters
+counter()	Returns the current value of the named counter
+counters()	Returns the current values of the named and nested counters

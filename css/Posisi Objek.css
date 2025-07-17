@@ -1,0 +1,49 @@
+Properti Posisi Objek CSS
+Properti CSS object-positiondigunakan untuk menentukan bagaimana <img> atau <video> harus diposisikan dalam wadahnya.
+
+Gambar
+Lihatlah gambar berikut dari Paris, yang berukuran 400x300 piksel:
+
+Paris
+Selanjutnya, kita gunakan object-fit: cover;untuk mempertahankan rasio aspek dan mengisi dimensi yang diberikan. Namun, gambar akan dipotong agar pas, seperti ini:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+Menggunakan Properti Posisi Objek
+Misalkan bagian gambar yang ditampilkan tidak diposisikan sesuai keinginan kita. Untuk memposisikan gambar tersebut, kita akan menggunakan object-positionproperti.
+
+Di sini kita akan menggunakan object-positionproperti untuk memposisikan gambar sehingga bangunan tua yang besar berada di tengah:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 80% 100%;
+}
+Di sini kita akan menggunakan object-positionproperti untuk memposisikan gambar sehingga Menara Eiffel yang terkenal berada di tengah:
+
+Paris
+Contoh
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 15% 100%;
+}
+Latihan
+?
+Properti CSS berikut yang mana yang harus digunakan bersama object-positionagar berfungsi?
+
+
+object-fit
+clip-path
+filter
+transform

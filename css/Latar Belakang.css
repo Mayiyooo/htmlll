@@ -1,0 +1,159 @@
+atar Belakang Ganda CSS
+Dalam bab ini Anda akan mempelajari cara menambahkan beberapa gambar latar belakang ke satu elemen.
+
+Anda juga akan mempelajari tentang properti berikut:
+
+background-size
+background-origin
+background-clip
+Latar Belakang Ganda CSS
+CSS memungkinkan Anda menambahkan beberapa gambar latar belakang untuk suatu elemen, melalui background-imageproperti.
+
+Gambar latar belakang yang berbeda dipisahkan dengan koma, dan gambar-gambar tersebut ditumpuk satu di atas yang lain, di mana gambar pertama paling dekat dengan pemirsa.
+
+Contoh berikut memiliki dua gambar latar belakang, gambar pertama adalah bunga (sejajar dengan bagian bawah dan kanan) dan gambar kedua adalah latar belakang kertas (sejajar dengan sudut kiri atas):
+
+Contoh
+#example1 {
+  background-image: url(img_flwr.gif), url(paper.gif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+}
+Beberapa gambar latar belakang dapat ditentukan menggunakan properti latar belakang individual (seperti di atas) atau backgroundproperti singkatan.
+
+Contoh berikut menggunakan backgroundproperti singkatan (hasil yang sama seperti contoh di atas):
+
+Contoh
+#example1 {
+  background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+}
+IKLAN
+
+Ukuran Latar Belakang CSS
+Properti CSS background-sizememungkinkan Anda menentukan ukuran gambar latar belakang.
+
+Ukurannya dapat ditentukan dalam panjang, persentase, atau dengan menggunakan salah satu dari dua kata kunci: berisi atau menutupi.
+
+Contoh berikut mengubah ukuran gambar latar belakang menjadi jauh lebih kecil daripada gambar asli (menggunakan piksel):
+
+Lorem Ipsum Dolor
+Lorem ipsum dolor sit amet, pembentuk adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+Dengan sedikit racun, latihan yang kita lakukan ullamcorper suscipit lobortis tidak akan keluar dari komodo yang diakibatkannya.
+
+Berikut kodenya:
+
+Contoh
+#div1 {
+  background: url(img_flower.jpg);
+  background-size: 100px 80px;
+  background-repeat: no-repeat;
+}
+Dua nilai lain yang mungkin untuk background-sizeadalah contain dan cover.
+
+Kata kunci ini containakan menskalakan gambar latar belakang agar sebesar mungkin (namun, baik lebar maupun tingginya harus pas di dalam area konten). Dengan demikian, tergantung pada proporsi gambar latar belakang dan area penempatan latar belakang, mungkin ada beberapa area latar belakang yang tidak tercakup oleh gambar latar belakang.
+
+Kata kunci ini coverakan mengubah skala gambar latar belakang sehingga area konten tertutup sepenuhnya oleh gambar latar belakang (lebar dan tingginya sama atau melebihi area konten). Dengan demikian, beberapa bagian gambar latar belakang mungkin tidak terlihat di area pemosisian latar belakang.
+
+Contoh berikut mengilustrasikan penggunaan containdan cover:
+
+Contoh
+#div1 {
+  background: url(img_flower.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#div2 {
+  background: url(img_flower.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+Tentukan Ukuran Beberapa Gambar Latar Belakang
+Properti ini background-sizejuga menerima beberapa nilai untuk ukuran latar belakang (menggunakan daftar yang dipisahkan koma), saat bekerja dengan beberapa latar belakang.
+
+Contoh berikut memiliki tiga gambar latar belakang yang ditentukan, dengan nilai ukuran latar belakang yang berbeda untuk setiap gambar:
+
+Contoh
+#example1 {
+  background: url(img_tree.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+  background-size: 50px, 130px, auto;
+}
+Gambar Latar Belakang Ukuran Penuh
+Sekarang kita ingin memiliki gambar latar belakang di situs web yang menutupi seluruh jendela browser setiap saat.
+
+Persyaratannya adalah sebagai berikut:
+
+Isi seluruh halaman dengan gambar (tanpa spasi)
+Skala gambar sesuai kebutuhan
+Pusatkan gambar di halaman
+Jangan menyebabkan scrollbar
+Contoh berikut menunjukkan cara melakukannya; Gunakan elemen <html> (elemen <html> setidaknya harus setinggi jendela peramban). Kemudian, atur latar belakang tetap dan terpusat. Kemudian, sesuaikan ukurannya dengan properti background-size:
+
+Contoh
+html {
+  background: url(img_man.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+Gambar Pahlawan
+Anda juga dapat menggunakan properti latar belakang yang berbeda pada <div> untuk membuat gambar hero (gambar besar dengan teks), dan meletakkannya di mana pun Anda inginkan.
+
+Contoh
+.hero-image {
+  background: url(img_man.jpg) no-repeat center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+Properti CSS background-origin
+Properti CSS background-originmenentukan di mana gambar latar belakang diposisikan.
+
+Properti ini memiliki tiga nilai berbeda:
+
+border-box - gambar latar belakang dimulai dari sudut kiri atas perbatasan
+padding-box - (default) gambar latar belakang dimulai dari sudut kiri atas tepi padding
+kotak konten - gambar latar belakang dimulai dari sudut kiri atas konten
+Contoh berikut mengilustrasikan background-originproperti tersebut:
+
+Contoh
+#example1 {
+  border: 10px solid black;
+  padding: 35px;
+  background: url(img_flwr.gif);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+Properti klip latar belakang CSS
+Properti CSS background-clipmenentukan area pengecatan latar belakang.
+
+Properti ini memiliki tiga nilai berbeda:
+
+border-box - (default) latar belakang dicat ke tepi luar border
+padding-box - latar belakang dicat ke tepi luar padding
+kotak konten - latar belakang dicat di dalam kotak konten
+Contoh berikut mengilustrasikan background-clipproperti tersebut:
+
+Contoh
+#example1 {
+  border: 10px dotted black;
+  padding: 35px;
+  background: yellow;
+  background-clip: content-box;
+}
+Latihan
+?
+Properti apa yang digunakan untuk menerapkan beberapa gambar latar belakang ke satu elemen?
+
+
+latar belakang-ulangi
+gambar latar belakang
+ukuran latar belakang
+latar belakang-asal
+
+Properti Latar Belakang CSS Lanjutan
+Property	Description
+background	A shorthand property for setting all the background properties in one declaration
+background-clip	Specifies the painting area of the background
+background-image	Specifies one or more background images for an element
+background-origin	Specifies where the background image(s) is/are positioned
+background-size	Specifies the size of the background image(s)

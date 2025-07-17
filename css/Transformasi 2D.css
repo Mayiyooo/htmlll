@@ -1,0 +1,172 @@
+Transformasi CSS 2D
+Transformasi CSS 2D
+Transformasi CSS memungkinkan Anda untuk memindahkan, memutar, mengubah skala, dan memiringkan elemen.
+
+Arahkan kursor ke elemen di bawah untuk melihat transformasi 2D:
+
+Putaran 2D
+Dalam bab ini Anda akan mempelajari tentang properti CSS berikut:
+
+transform
+Fungsi Transformasi CSS 2D
+Dengan properti CSS transformAnda dapat menggunakan fungsi transformasi 2D berikut:
+
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix()
+Tip: Anda akan mempelajari tentang transformasi 3D di bab berikutnya.
+
+Fungsi translate()
+Menerjemahkan
+Fungsi ini translate()memindahkan elemen dari posisi saat ini (berdasarkan parameter yang diberikan untuk sumbu X dan sumbu Y).
+
+Contoh berikut memindahkan elemen <div> 50 piksel ke kanan, dan 100 piksel ke bawah dari posisi saat ini:
+
+Contoh
+div {
+  transform: translate(50px, 100px);
+}
+Fungsi rotate()
+Memutar
+Fungsi ini rotate()memutar elemen searah jarum jam atau berlawanan arah jarum jam sesuai derajat tertentu.
+
+Contoh berikut memutar elemen <div> searah jarum jam dengan 20 derajat:
+
+Contoh
+div {
+  transform: rotate(20deg);
+}
+Menggunakan nilai negatif akan memutar elemen berlawanan arah jarum jam.
+
+Contoh berikut memutar elemen <div> berlawanan arah jarum jam dengan 20 derajat:
+
+Contoh
+div {
+  transform: rotate(-20deg);
+}
+IKLAN
+
+Fungsi skala()
+Skala
+Fungsi ini scale()menambah atau mengurangi ukuran elemen (berdasarkan parameter yang diberikan untuk lebar dan tinggi).
+
+Contoh berikut meningkatkan elemen <div> menjadi dua kali lebar aslinya, dan tiga kali tinggi aslinya: 
+
+Contoh
+div {
+  transform: scale(2, 3);
+}
+Contoh berikut mengurangi elemen <div> menjadi setengah dari lebar dan tinggi aslinya: 
+
+Contoh
+div {
+  transform: scale(0.5, 0.5);
+}
+Fungsi scaleX()
+Fungsi ini scaleX()menambah atau mengurangi lebar suatu elemen.
+
+Contoh berikut meningkatkan elemen <div> menjadi dua kali lebar aslinya: 
+
+Contoh
+div {
+  transform: scaleX(2);
+}
+Contoh berikut mengurangi elemen <div> menjadi setengah dari lebar aslinya: 
+
+Contoh
+div {
+  transform: scaleX(0.5);
+}
+Fungsi skalaY()
+Fungsi ini scaleY()menambah atau mengurangi tinggi suatu elemen.
+
+Contoh berikut meningkatkan elemen <div> menjadi tiga kali tinggi aslinya: 
+
+Contoh
+div {
+  transform: scaleY(3);
+}
+Contoh berikut mengurangi elemen <div> menjadi setengah dari tinggi aslinya: 
+
+Contoh
+div {
+  transform: scaleY(0.5);
+}
+Fungsi skewX()
+Fungsi ini skewX()memiringkan elemen sepanjang sumbu X pada sudut yang diberikan.
+
+Contoh berikut ini memiringkan elemen <div> 20 derajat sepanjang sumbu X:
+
+Contoh
+div {
+  transform: skewX(20deg);
+}
+Fungsi skewY()
+Fungsi ini skewY()memiringkan elemen sepanjang sumbu Y pada sudut yang ditentukan.
+
+Contoh berikut ini memiringkan elemen <div> 20 derajat sepanjang sumbu Y:
+
+Contoh
+div {
+  transform: skewY(20deg);
+}
+Fungsi skew()
+Fungsi ini skew()memiringkan elemen sepanjang sumbu X dan Y dengan sudut yang diberikan.
+
+Contoh berikut ini memiringkan elemen <div> 20 derajat sepanjang sumbu X, dan 10 derajat sepanjang sumbu Y:
+
+Contoh
+div {
+  transform: skew(20deg, 10deg);
+}
+Jika parameter kedua tidak ditentukan, nilainya nol. Jadi, contoh berikut akan memiringkan elemen <div> 20 derajat di sepanjang sumbu X:
+
+Contoh
+div {
+  transform: skew(20deg);
+}
+Fungsi matrix()
+Memutar
+Fungsi ini matrix()menggabungkan semua fungsi transformasi 2D menjadi satu.
+
+Fungsi matrix() mengambil enam parameter, berisi fungsi matematika, yang memungkinkan Anda memutar, menskalakan, memindahkan (menerjemahkan), dan memiringkan elemen.
+
+Parameternya adalah sebagai berikut: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+
+Contoh
+div {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+Latihan
+?
+Seret dan lepas fungsi yang benar untuk memutar elemen searah jarum jam sebesar 20 derajat.
+#example {
+  transform: (20deg);
+}
+
+
+Properti Transformasi CSS
+Tabel berikut mencantumkan semua properti transformasi 2D:
+
+Property	Description
+transform	Applies a 2D or 3D transformation to an element
+transform-origin	Allows you to change the position on transformed elements
+Fungsi Transformasi CSS 2D
+Function	Description
+matrix()	Defines a 2D transformation, using a matrix of six values
+translate()	Defines a 2D translation, moving the element along the X- and the Y-axis
+translateX()	Defines a 2D translation, moving the element along the X-axis
+translateY()	Defines a 2D translation, moving the element along the Y-axis
+scale()	Defines a 2D scale transformation, scaling the elements width and height
+scaleX()	Defines a 2D scale transformation, scaling the element's width
+scaleY()	Defines a 2D scale transformation, scaling the element's height
+rotate()	Defines a 2D rotation, the angle is specified in the parameter
+skew()	Defines a 2D skew transformation along the X- and the Y-axis
+skewX()	Defines a 2D skew transformation along the X-axis
+skewY()	Defines a 2D skew transformation along the Y-axis

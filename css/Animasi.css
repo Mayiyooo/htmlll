@@ -1,0 +1,306 @@
+
+Animasi CSS
+CSS memungkinkan animasi elemen HTML tanpa menggunakan JavaScript!
+
+CSS
+Dalam bab ini Anda akan mempelajari tentang properti berikut:
+
+@keyframes
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+animation-timing-function
+animation-fill-mode
+animation
+Apa itu Animasi CSS?
+Animasi memungkinkan suatu elemen berubah secara bertahap dari satu gaya ke gaya lainnya.
+
+Anda dapat mengubah properti CSS sebanyak-banyaknya, sebanyak yang Anda inginkan.
+
+Untuk menggunakan animasi CSS, Anda harus terlebih dahulu menentukan beberapa bingkai utama untuk animasi tersebut.
+
+Bingkai utama menentukan gaya apa yang akan dimiliki elemen pada waktu tertentu.
+
+Aturan @keyframes
+Saat Anda menentukan gaya CSS di dalam @keyframes aturan, animasi akan secara bertahap berubah dari gaya saat ini ke gaya baru pada waktu tertentu.
+
+Agar animasi dapat berfungsi, Anda mesti mengikat animasi tersebut ke suatu elemen.
+
+Contoh berikut mengikat animasi "contoh" ke elemen <div>. Animasi akan berlangsung selama 4 detik, dan secara bertahap akan mengubah warna latar belakang elemen <div> dari "merah" menjadi "kuning":
+
+Contoh
+/* The animation code */
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+Catatan: Properti ini animation-durationmenentukan durasi penyelesaian animasi. Jika animation-durationproperti ini tidak ditentukan, animasi tidak akan terjadi karena nilai default-nya adalah 0 detik. 
+
+Dalam contoh di atas kami telah menentukan kapan gaya akan berubah dengan menggunakan kata kunci "dari" dan "sampai" (yang mewakili 0% (mulai) dan 100% (selesai)).
+
+Anda juga bisa menggunakan persentase. Dengan persentase, Anda dapat menambahkan perubahan gaya sebanyak yang Anda inginkan.
+
+Contoh berikut akan mengubah warna latar belakang elemen <div> saat animasi telah selesai 25%, selesai 50%, dan lagi saat animasi telah selesai 100%:
+
+Contoh
+/* The animation code */
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+/* The element to apply the animation to */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+Contoh berikut akan mengubah warna latar belakang dan posisi elemen <div> saat animasi telah selesai 25%, selesai 50%, dan lagi saat animasi telah selesai 100%:
+
+Contoh
+/* The animation code */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+IKLAN
+
+Tunda Animasi
+Properti ini animation-delaymenentukan penundaan untuk memulai animasi.
+
+Contoh berikut memiliki penundaan 2 detik sebelum memulai animasi:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+Nilai negatif juga diperbolehkan. Jika menggunakan nilai negatif, animasi akan dimulai seolah-olah telah diputar selama N detik.
+
+Dalam contoh berikut, animasi akan dimulai seolah-olah telah diputar selama 2 detik:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: -2s;
+}
+Mengatur Berapa Kali Animasi Harus Berjalan
+Properti animation-iteration-countmenentukan berapa kali animasi harus dijalankan.
+
+Contoh berikut akan menjalankan animasi 3 kali sebelum berhenti:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+Contoh berikut menggunakan nilai "tak terbatas" untuk membuat animasi berlanjut selamanya:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+Jalankan Animasi dalam Arah Terbalik atau Siklus Alternatif
+Properti animation-directionmenentukan apakah animasi akan diputar maju, mundur, atau dalam siklus bergantian.
+
+Properti animation-direction dapat memiliki nilai berikut:
+
+normal- Animasi diputar seperti biasa (maju). Ini adalah pengaturan default.
+reverse- Animasi diputar dalam arah terbalik (mundur)
+alternate - Animasi diputar maju terlebih dahulu, lalu mundur
+alternate-reverse- Animasi diputar mundur terlebih dahulu, lalu maju
+Contoh berikut akan menjalankan animasi dalam arah sebaliknya (mundur):
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
+Contoh berikut menggunakan nilai "alternate" untuk membuat animasi berjalan maju terlebih dahulu, lalu mundur:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+Contoh berikut menggunakan nilai "alternate-reverse" untuk membuat animasi berjalan mundur terlebih dahulu, lalu maju:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+}
+Tentukan Kurva Kecepatan Animasi
+Properti animation-timing-functionmenentukan kurva kecepatan animasi.
+
+Properti animation-timing-function dapat memiliki nilai berikut:
+
+ease- Menentukan animasi dengan awal yang lambat, lalu cepat, lalu berakhir perlahan (ini default)
+linear- Menentukan animasi dengan kecepatan yang sama dari awal hingga akhir
+ease-in- Menentukan animasi dengan awal yang lambat
+ease-out- Menentukan animasi dengan akhir yang lambat
+ease-in-out- Menentukan animasi dengan awal dan akhir yang lambat
+cubic-bezier(n,n,n,n)- Memungkinkan Anda menentukan nilai Anda sendiri dalam fungsi kubik-bezier
+Contoh berikut menunjukkan beberapa kurva kecepatan berbeda yang dapat digunakan:
+
+Contoh
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+Tentukan mode pengisian untuk Animasi
+Animasi CSS tidak memengaruhi elemen sebelum bingkai kunci pertama diputar atau setelah bingkai kunci terakhir diputar. Properti animation-fill-mode dapat menggantikan perilaku ini.
+
+Properti animation-fill-modemenentukan gaya untuk elemen target saat animasi tidak diputar (sebelum dimulai, setelah berakhir, atau keduanya).
+
+Properti animation-fill-mode dapat memiliki nilai berikut:
+
+none- Nilai default. Animasi tidak akan menerapkan gaya apa pun ke elemen sebelum atau sesudahnya.
+forwards- Elemen akan mempertahankan nilai gaya yang ditetapkan oleh bingkai utama terakhir (tergantung pada arah animasi dan jumlah iterasi animasi)
+backwards- Elemen akan mendapatkan nilai gaya yang ditetapkan oleh bingkai utama pertama (tergantung pada arah animasi), dan mempertahankannya selama periode penundaan animasi
+both- Animasi akan mengikuti aturan maju dan mundur, memperluas properti animasi di kedua arah
+Contoh berikut memungkinkan elemen <div> mempertahankan nilai gaya dari bingkai utama terakhir saat animasi berakhir:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+Contoh berikut memungkinkan elemen <div> mendapatkan nilai gaya yang ditetapkan oleh bingkai utama pertama sebelum animasi dimulai (selama periode penundaan animasi):
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+Contoh berikut memungkinkan elemen <div> mendapatkan nilai gaya yang ditetapkan oleh bingkai utama pertama sebelum animasi dimulai, dan mempertahankan nilai gaya dari bingkai utama terakhir saat animasi berakhir:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+Properti Singkatan Animasi
+Contoh di bawah ini menggunakan enam properti animasi:
+
+Contoh
+div {
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+Efek animasi yang sama seperti di atas dapat dicapai dengan menggunakan animationproperti singkatan:
+
+Contoh
+div {
+  animation: example 5s linear 2s infinite alternate;
+}
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk mengatur durasi animasi menjadi 5 detik.
+#example {
+  -: ;
+}
+
+
+Properti Animasi CSS
+Tabel berikut mencantumkan aturan @keyframes dan semua properti animasi CSS:
+
+Property	Description
+@keyframes	Specifies the animation code
+animation	A shorthand property for setting all the animation properties
+animation-delay	Specifies a delay for the start of an animation
+animation-direction	Specifies whether an animation should be played forwards, backwards or in alternate cycles
+animation-duration	Specifies how long time an animation should take to complete one cycle
+animation-fill-mode	Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
+animation-iteration-count	Specifies the number of times an animation should be played
+animation-name	Specifies the name of the @keyframes animation
+animation-play-state	Specifies whether the animation is running or paused
+animation-timing-function	Specifies the speed curve of the animation

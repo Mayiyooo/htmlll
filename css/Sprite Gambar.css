@@ -1,0 +1,113 @@
+Sprite Gambar CSS
+Sprite Gambar
+Sprite gambar adalah kumpulan gambar yang dimasukkan menjadi satu gambar.
+
+Halaman web dengan banyak gambar dapat memerlukan waktu lama untuk dimuat dan menghasilkan banyak permintaan server.
+
+Menggunakan sprite gambar akan mengurangi jumlah permintaan server dan menghemat bandwidth.
+
+Sprite Gambar - Contoh Sederhana
+Alih-alih menggunakan tiga gambar terpisah, kami menggunakan gambar tunggal ini ("img_navsprites.gif"):
+
+gambar navigasi
+
+Dengan CSS, kita dapat menampilkan hanya bagian gambar yang kita butuhkan.
+
+Dalam contoh berikut, CSS menentukan bagian mana dari gambar "img_navsprites.gif" yang akan ditampilkan:
+
+Contoh
+#home {
+  width: 46px;
+  height: 44px;
+  background: url(img_navsprites.gif) 0 0;
+}
+Contoh dijelaskan:
+
+<img id="home" src="img_trans.gif">- Hanya mendefinisikan gambar transparan kecil karena atribut src tidak boleh kosong. Gambar yang ditampilkan akan menjadi gambar latar belakang yang kita tentukan di CSS.
+width: 46px; height: 44px;- Menentukan bagian gambar yang ingin kita gunakan
+background: url(img_navsprites.gif) 0 0;- Menentukan gambar latar belakang dan posisinya (kiri 0px, atas 0px)
+Ini adalah cara termudah untuk menggunakan sprite gambar, sekarang kita ingin mengembangkannya dengan menggunakan tautan dan efek hover.
+
+Sprite Gambar - Buat Daftar Navigasi
+Kami ingin menggunakan gambar sprite ("img_navsprites.gif") untuk membuat daftar navigasi.
+
+Kami akan menggunakan daftar HTML, karena daftar tersebut dapat berupa tautan dan juga mendukung gambar latar belakang:
+
+Contoh
+#navlist {
+  position: relative;
+}
+
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+
+#navlist li, #navlist a {
+  height: 44px;
+  display: block;
+}
+
+#home {
+  left: 0px;
+  width: 46px;
+  background: url('img_navsprites.gif') 0 0;
+}
+
+#prev {
+  left: 63px;
+  width: 43px;
+  background: url('img_navsprites.gif') -47px 0;
+}
+
+#next {
+  left: 129px;
+  width: 43px;
+  background: url('img_navsprites.gif') -91px 0;
+}
+Contoh dijelaskan:
+
+#navlist {position:relative;}- posisi diatur ke relatif untuk memungkinkan posisi absolut di dalamnya
+#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin dan padding diatur ke 0, gaya daftar dihapus, dan semua item daftar diposisikan absolut
+#navlist li, #navlist a {height:44px;display:block;}- tinggi semua gambar adalah 44px
+Sekarang mulailah memposisikan dan menata untuk setiap bagian tertentu:
+
+#home {left:0px;width:46px;}- Diposisikan paling kiri, dan lebar gambar adalah 46px
+#home {background:url(img_navsprites.gif) 0 0;}- Menentukan gambar latar belakang dan posisinya (kiri 0px, atas 0px)
+#prev {left:63px;width:43px;}- Diposisikan 63px ke kanan (lebar #home 46px + beberapa spasi ekstra antar item), dan lebarnya 43px
+#prev {background:url('img_navsprites.gif') -47px 0;}- Menentukan gambar latar belakang 47px ke kanan (lebar #home 46px + pembagi garis 1px)
+#next {left:129px;width:43px;}- Diposisikan 129px ke kanan (awal #prev adalah 63px + lebar #prev 43px + spasi tambahan), dan lebarnya 43px
+#next {background:url('img_navsprites.gif') -91px 0;}- Menentukan gambar latar belakang 91px ke kanan (lebar #home 46px + pembagi garis 1px + lebar #prev 43px + pembagi garis 1px)
+IKLAN
+
+Sprite Gambar - Efek Hover
+Sekarang kita ingin menambahkan efek hover ke daftar navigasi kita.
+
+Tip: Pemilih :hoverdapat digunakan pada semua elemen, tidak hanya pada tautan.
+
+Gambar baru kami ("img_navsprites_hover.gif") berisi tiga gambar navigasi dan tiga gambar untuk digunakan sebagai efek hover:
+
+gambar navigasi
+
+Karena ini adalah satu gambar tunggal, dan bukan enam file terpisah, tidak akan ada penundaan pemuatan saat pengguna mengarahkan kursor ke gambar tersebut.
+
+Kami hanya menambahkan tiga baris kode untuk menambahkan efek hover:
+
+Contoh
+#home a:hover {
+  background: url('img_navsprites_hover.gif') 0 -45px;
+}
+
+#prev a:hover {
+  background: url('img_navsprites_hover.gif') -47px -45px;
+}
+
+#next a:hover {
+  background: url('img_navsprites_hover.gif') -91px -45px;
+}
+Contoh dijelaskan:
+
+#home a:hover {background: url('img_navsprites_hover.gif') 0 -45px;}- Untuk ketiga gambar hover, kami menentukan posisi latar belakang yang sama, hanya 45px lebih jauh ke bawah

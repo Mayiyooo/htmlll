@@ -1,0 +1,85 @@
+Warna CSS
+CSS mendukung 140+ nama warna, nilai HEX, nilai RGB , nilai RGBA, nilai HSL, nilai HSLA, dan opasitas.
+
+Warna RGBA
+Nilai warna RGBA merupakan perluasan nilai warna RGB dengan saluran alfa - yang menentukan opasitas suatu warna.
+
+Nilai warna RGBA ditentukan dengan: rgba(merah, hijau, biru, alfa). Parameter alfa berupa angka antara 0,0 (sepenuhnya transparan) dan 1,0 (sepenuhnya buram).
+
+rgba(255, 0, 0, 0.2);
+rgba(255, 0, 0, 0.4);
+rgba(255, 0, 0, 0.6);
+rgba(255, 0, 0, 0.8);
+Contoh berikut mendefinisikan warna RGBA yang berbeda:
+
+Contoh
+#p1 {background-color: rgba(255, 0, 0, 0.3);}  /* red with opacity */
+#p2 {background-color: rgba(0, 255, 0, 0.3);}  /* green with opacity */
+#p3 {background-color: rgba(0, 0, 255, 0.3);}  /* blue with opacity */
+IKLAN
+
+Warna HSL
+HSL merupakan singkatan dari Hue (Warna), Saturation (Saturasi), dan Lightness (Kecerahan).
+
+Nilai warna HSL ditentukan dengan: hsl(hue, saturation, lightness).
+
+Hue adalah derajat pada roda warna (dari 0 hingga 360):
+0 (atau 360) berwarna merah
+120 berwarna hijau
+240 berwarna biru
+Saturasi adalah nilai persentase: 100% adalah warna penuh.
+Kecerahan juga merupakan persentase; 0% adalah gelap (hitam) dan 100% adalah putih.
+hsl(0, 100%, 30%);
+hsl(0, 100%, 50%);
+hsl(0, 100%, 70%);
+hsl(0, 100%, 90%);
+Contoh berikut mendefinisikan warna HSL yang berbeda:
+
+Contoh
+#p1 {background-color: hsl(120, 100%, 50%);}  /* green */
+#p2 {background-color: hsl(120, 100%, 75%);}  /* light green */
+#p3 {background-color: hsl(120, 100%, 25%);}  /* dark green */
+#p4 {background-color: hsl(120, 60%, 70%);}   /* pastel green */
+Warna HSLA
+Nilai warna HSLA merupakan perluasan nilai warna HSL dengan saluran alfa - yang menentukan opasitas suatu warna.
+
+Nilai warna HSLA ditentukan dengan: hsla(hue, saturation, lightness, alpha), di mana parameter alpha menentukan opasitas. Parameter alpha berupa angka antara 0,0 (sepenuhnya transparan) dan 1,0 (sepenuhnya buram).
+
+hsla(0, 100%, 30%, 0,3);
+hsla(0, 100%, 50%, 0,3);
+hsla(0, 100%, 70%, 0,3);
+hsla(0, 100%, 90%, 0,3);
+Contoh berikut mendefinisikan warna HSLA yang berbeda:
+
+Contoh
+#p1 {background-color: hsla(120, 100%, 50%, 0.3);}  /* green with opacity */
+#p2 {background-color: hsla(120, 100%, 75%, 0.3);}  /* light green with opacity */
+#p3 {background-color: hsla(120, 100%, 25%, 0.3);}  /* dark green with opacity */
+#p4 {background-color: hsla(120, 60%, 70%, 0.3);}   /* pastel green with opacity */
+Kegelapan
+Properti CSS opacitymengatur opasitas untuk keseluruhan elemen (baik warna latar belakang maupun teks akan buram/transparan).
+
+Nilai opacityproperti harus berupa angka antara 0,0 (sepenuhnya transparan) dan 1,0 (sepenuhnya buram).
+
+rgb(255, 0, 0);opasitas:0.2;
+rgb(255, 0, 0);opasitas:0.4;
+rgb(255, 0, 0);opasitas:0.6;
+rgb(255, 0, 0);opasitas:0.8;
+Perhatikan bahwa teks di atas juga akan transparan/buram!
+
+Contoh berikut menunjukkan elemen berbeda dengan opasitas:
+
+Contoh
+#p1 {background-color:rgb(255,0,0);opacity:0.6;}  /* red with opacity */
+#p2 {background-color:rgb(0,255,0);opacity:0.6;}  /* green with opacity */
+#p3 {background-color:rgb(0,0,255);opacity:0.6;}  /* blue with opacity */
+Latihan
+?
+Apa yang ditentukan oleh saluran alfa dalam RGBA dan HSLA?
+
+
+Warna rona
+Transparansi warna
+Kecerahan warna
+Saturasi warna
+

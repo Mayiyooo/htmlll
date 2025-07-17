@@ -1,0 +1,138 @@
+Tata Letak CSS - Properti Posisi
+Properti positionmenentukan jenis metode pemosisian yang digunakan untuk suatu elemen (statis, relatif, tetap, absolut atau lengket).
+
+Posisi Properti
+Properti positionmenentukan jenis metode pemosisian yang digunakan untuk suatu elemen.
+
+Ada lima nilai posisi yang berbeda:
+
+static
+relative
+fixed
+absolute
+sticky
+Elemen kemudian diposisikan menggunakan properti atas, bawah, kiri, dan kanan. Namun, properti-properti ini tidak akan berfungsi kecuali position properti tersebut ditetapkan terlebih dahulu. Properti-properti ini juga berfungsi secara berbeda, bergantung pada nilai posisinya.
+
+posisi: statis;
+Elemen HTML diposisikan statis secara default.
+
+Elemen yang diposisikan statis tidak terpengaruh oleh properti atas, bawah, kiri, dan kanan.
+
+Elemen dengan position: static;tidak diposisikan dengan cara khusus apa pun; elemen selalu diposisikan sesuai dengan alur normal halaman:
+
+Elemen <div> ini memiliki posisi: statis;
+Berikut adalah CSS yang digunakan:
+
+Contoh
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+posisi: relatif;
+Suatu elemen position: relative;diposisikan relatif terhadap posisi normalnya.
+
+Mengatur properti atas, kanan, bawah, dan kiri pada elemen yang posisinya relatif akan menyebabkannya disesuaikan menjauh dari posisi normalnya. Konten lain tidak akan disesuaikan agar sesuai dengan celah yang ditinggalkan oleh elemen tersebut.
+
+Elemen <div> ini memiliki posisi: relatif;
+Berikut adalah CSS yang digunakan:
+
+Contoh
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+IKLAN
+
+posisi: tetap;
+Elemen dengan position: fixed;diposisikan relatif terhadap viewport, artinya elemen tersebut akan selalu berada di tempat yang sama meskipun halaman digulir. Properti atas, kanan, bawah, dan kiri digunakan untuk memposisikan elemen.
+
+Elemen tetap tidak meninggalkan celah pada halaman tempat elemen tersebut biasanya berada.
+
+Perhatikan elemen tetap di pojok kanan bawah halaman. Berikut CSS yang digunakan:
+
+Contoh
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+Elemen <div> ini memilikiposition: fixed;
+posisi: absolut;
+Elemen dengan position: absolute;diposisikan relatif terhadap leluhur terdekat yang diposisikan (bukannya diposisikan relatif terhadap viewport, seperti tetap).
+
+Akan tetapi; jika elemen yang diposisikan absolut tidak memiliki leluhur yang diposisikan, elemen tersebut menggunakan badan dokumen, dan bergerak seiring dengan pengguliran halaman.
+
+Catatan: Elemen yang diposisikan absolut dihilangkan dari alur normal, dan dapat tumpang tindih dengan elemen lainnya.
+
+Berikut adalah contoh sederhananya:
+
+Elemen <div> ini memiliki posisi: relatif;Elemen <div> ini memiliki posisi: absolut;
+Berikut adalah CSS yang digunakan:
+
+Contoh
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+}
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+posisi: lengket;
+Elemen position: sticky;diposisikan berdasarkan posisi gulir pengguna.
+
+Elemen lengket dapat berganti-ganti antara relativedan fixed, tergantung pada posisi gulir. Elemen ini diposisikan relatif hingga posisi offset tertentu terpenuhi di area pandang - lalu "menempel" di tempatnya (seperti position:fixed).
+
+
+Catatan: Anda harus menentukan setidaknya satu dari top, right, bottomatau leftagar pemosisian lengket berfungsi.
+
+Dalam contoh ini, elemen lengket menempel di bagian atas halaman ( top: 0), saat Anda mencapai posisi gulirnya.
+
+Contoh
+div.sticky {
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+Memposisikan Teks Dalam Gambar
+Cara memposisikan teks di atas gambar:
+
+Contoh
+Cinque TerreBottom LeftTop LeftTop RightBottom RightCentered
+Cobalah Sendiri:
+
+    
+Contoh Lainnya
+Mengatur bentuk elemen.
+Contoh ini menunjukkan cara mengatur bentuk elemen. Elemen dipotong ke dalam bentuk ini, dan ditampilkan.
+
+Latihan
+?
+Berapakah nilai default properti positionuntuk elemen HTML?
+
+
+relative
+static
+absolute
+fixed
+
+Semua Properti Pemosisian CSS
+Property	Description
+bottom	Sets the bottom margin edge for a positioned box
+clip	Clips an absolutely positioned element
+left	Sets the left margin edge for a positioned box
+position	Specifies the type of positioning for an element
+right	Sets the right margin edge for a positioned box
+top	Sets the top margin edge for a positioned box
+

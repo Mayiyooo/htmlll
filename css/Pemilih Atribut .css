@@ -1,0 +1,113 @@
+Pemilih Atribut CSS
+Gaya Elemen HTML Dengan Atribut Tertentu
+Dimungkinkan untuk memberi gaya pada elemen HTML yang mempunyai atribut atau nilai atribut tertentu.
+
+Pemilih CSS [atribut]
+Pemilih [attribute]digunakan untuk memilih elemen dengan atribut tertentu.
+
+Contoh berikut memilih semua elemen <a> dengan atribut target:
+
+Contoh
+a[target] {
+  background-color: yellow;
+}
+Pemilih CSS [atribut="nilai"]
+Pemilih [attribute="value"]digunakan untuk memilih elemen dengan atribut dan nilai tertentu.
+
+Contoh berikut memilih semua elemen <a> dengan atribut target="_blank":
+
+Contoh
+a[target="_blank"] {
+  background-color: yellow;
+}
+Pemilih CSS [atribut~="nilai"]
+Pemilih [attribute~="value"]digunakan untuk memilih elemen dengan nilai atribut yang mengandung kata tertentu.
+
+Contoh berikut memilih semua elemen dengan atribut judul yang berisi daftar kata yang dipisahkan spasi, salah satunya adalah "bunga":
+
+Contoh
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+Contoh di atas akan mencocokkan elemen dengan title="flower", title="summer flower", dan title="flower new", tetapi tidak title="my-flower" atau title="flowers".
+
+
+Pemilih CSS [atribut|="nilai"]
+Pemilih [attribute|="value"]digunakan untuk memilih elemen dengan atribut yang ditentukan, yang nilainya dapat berupa nilai yang ditentukan persis, atau nilai yang ditentukan diikuti oleh tanda hubung (-).
+
+Catatan: Nilainya harus berupa kata utuh, baik sendiri, seperti class="top", atau diikuti tanda hubung ( - ), seperti class="top-text".
+
+Contoh
+[class|="top"] {
+  background: yellow;
+}
+Pemilih CSS [atribut^="nilai"]
+Pemilih [attribute^="value"]digunakan untuk memilih elemen dengan atribut yang ditentukan, yang nilainya dimulai dengan nilai yang ditentukan.
+
+Contoh berikut memilih semua elemen dengan nilai atribut kelas yang dimulai dengan "top":
+
+Catatan: Nilainya tidak harus berupa kata utuh!
+
+Contoh
+[class^="top"] {
+  background: yellow;
+}
+Pemilih CSS [atribut$="nilai"]
+Pemilih [attribute$="value"]digunakan untuk memilih elemen yang nilai atributnya diakhiri dengan nilai tertentu.
+
+Contoh berikut memilih semua elemen dengan nilai atribut kelas yang diakhiri dengan "test":
+
+Catatan: Nilainya tidak harus berupa kata utuh!  
+
+Contoh
+[class$="test"] {
+  background: yellow;
+}
+Pemilih CSS [atribut*="nilai"]
+Pemilih [attribute*="value"]digunakan untuk memilih elemen yang nilai atributnya berisi nilai tertentu.
+
+Contoh berikut memilih semua elemen dengan nilai atribut kelas yang berisi "te":
+
+Catatan: Nilainya tidak harus berupa kata utuh!  
+
+Contoh
+[class*="te"] {
+  background: yellow;
+}
+Menata Formulir
+Pemilih atribut dapat berguna untuk menata formulir tanpa kelas atau ID:
+
+Contoh
+input[type="text"] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type="button"] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+Kiat: Kunjungi Tutorial Formulir CSS kami untuk contoh lebih lanjut tentang cara menata formulir dengan CSS.
+
+Latihan
+?
+Pemilih manakah yang mencocokkan elemen dengan nilai atribut kelas yang dimulai dengan "top"?
+
+
+[class|="top"]
+[class^="top"]
+[class$="top"]
+[class*="top"]
+
+Semua Pemilih Atribut CSS
+Selector	Example	Example description
+[attribute]	[target]	Selects all elements with a target attribute
+[attribute=value]	[target="_blank"]	Selects all elements with target="_blank"
+[attribute~=value]	[title~="flower"]	Selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower"
+[attribute|=value]	[lang|="en"]	Selects all elements with a lang attribute value starting with "en"
+[attribute^=value]	a[href^="https"]	Selects all <a> elements with a href attribute value starting with "https"
+[attribute$=value]	a[href$=".pdf"]	Selects all <a> elements with a href attribute value ending with ".pdf"
+[attribute*=value]	a[href*="w3schools"]	Selects all <a> elements with a href attribute value containing the substring "w3schools"

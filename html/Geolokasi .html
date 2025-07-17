@@ -1,0 +1,133 @@
+API Geolokasi HTML
+API Geolokasi digunakan untuk mendapatkan lokasi pengguna saat ini.
+
+Temukan Posisi Pengguna
+API Geolokasi digunakan untuk mengakses lokasi pengguna saat ini.
+
+Karena hal ini dapat membahayakan privasi, lokasi tidak tersedia kecuali pengguna menyetujuinya.
+
+
+Catatan: API Geolokasi hanya tersedia pada konteks aman seperti HTTPS.
+
+Kiat: API Geolokasi paling akurat untuk perangkat dengan GPS, seperti telepon pintar atau jam tangan pintar.
+
+Dukungan Peramban
+Angka dalam tabel menunjukkan versi peramban pertama yang sepenuhnya mendukung Geolokasi.
+
+API					
+Geolocation	5.0	12.0	3.5	5.0	10.6
+Menggunakan API Geolokasi HTML
+API Geolokasi diakses melalui panggilan ke navigator.geolocation. Ini akan menyebabkan peramban meminta izin kepada pengguna untuk mengakses data lokasi mereka. Jika pengguna menerima, peramban akan mencari fungsionalitas terbaik yang tersedia di perangkat untuk mengakses informasi ini (misalnya GPS).
+
+Metode ini getCurrentPosition()digunakan untuk mengembalikan lokasi pengguna saat ini.
+
+Contoh berikut mengembalikan lintang dan bujur lokasi pengguna saat ini:
+
+Contoh
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
+Contoh dijelaskan:
+
+Periksa apakah Geolokasi didukung
+Jika Geolokasi didukung, jalankan getCurrentPosition()metode tersebut. Jika tidak, tampilkan pesan kepada pengguna.
+Fungsi success() menampilkan lokasi pengguna dalam garis lintang dan garis bujur
+Fungsi error() memberi peringatan teks jika browser mengambil kesalahan digetCurrentPosition()
+Penanganan Kesalahan dan Penolakan
+Parameter kedua dari getCurrentPosition()metode ini digunakan untuk menangani kesalahan. Parameter ini menentukan fungsi yang akan dijalankan jika gagal mendapatkan lokasi pengguna.
+
+Berikut adalah contoh penanganan kesalahan yang lebih spesifik:
+
+Contoh
+function error(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+Informasi Spesifik Lokasi
+Geolokasi juga sangat berguna untuk informasi spesifik lokasi, seperti:
+
+Informasi lokal terkini
+Menampilkan Tempat Menarik di Dekat Pengguna
+Navigasi belokan demi belokan (GPS)
+Metode getCurrentPosition() - Mengembalikan Data
+Metode ini getCurrentPosition()mengembalikan objek jika berhasil. Properti lintang, bujur, dan akurasi selalu dikembalikan. Properti lainnya dikembalikan jika tersedia:
+
+Property	Returns
+coords.latitude	The latitude as a decimal number (always returned)
+coords.longitude	The longitude as a decimal number (always returned)
+coords.accuracy	The accuracy of position (always returned)
+coords.altitude	The altitude in meters above the mean sea level (returned if available)
+coords.altitudeAccuracy	The altitude accuracy of position (returned if available)
+coords.heading	The heading as degrees clockwise from North (returned if available)
+coords.speed	The speed in meters per second (returned if available)
+timestamp	The date/time of the response (returned if available)
+Objek Geolokasi - Metode menarik lainnya
+Objek Geolokasi juga memiliki metode menarik lainnya:
+
+watchPosition()- Mengembalikan lokasi pengguna saat ini dan terus mengembalikan lokasi yang diperbarui saat pengguna bergerak (seperti GPS di mobil).
+clearWatch()- Menghentikan watchPosition()metode tersebut.
+Contoh di bawah ini menunjukkan watchPosition()metodenya. Anda memerlukan perangkat GPS yang akurat untuk mengujinya (seperti ponsel pintar):
+
+Contoh
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(success, error);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>

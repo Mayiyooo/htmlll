@@ -1,0 +1,406 @@
+Batas CSS
+Properti border CSS memungkinkan Anda menentukan gaya, lebar, dan warna border elemen.
+
+Saya memiliki batas di semua sisi.
+
+
+Saya memiliki batas bawah berwarna merah.
+
+
+Saya memiliki batas yang membulat.
+
+
+Saya memiliki batas kiri berwarna biru.
+
+Gaya Batas CSS
+Properti border-stylemenentukan jenis batas yang akan ditampilkan.
+
+Nilai berikut diizinkan:
+
+dotted- Menentukan batas putus-putus
+dashed- Menentukan batas putus-putus
+solid- Menentukan batas padat
+double- Menentukan batas ganda
+groove- Menentukan batas beralur 3D. Efeknya bergantung pada nilai warna batas
+ridge- Menentukan batas beralur 3D. Efeknya bergantung pada nilai warna batas
+inset- Menentukan batas sisipan 3D. Efeknya bergantung pada nilai warna batas.
+outset- Menentukan batas awal 3D. Efeknya bergantung pada nilai warna batas
+none- Tidak menentukan batas
+hidden- Menentukan batas tersembunyi
+Properti border-styledapat memiliki satu hingga empat nilai (untuk batas atas, batas kanan, batas bawah, dan batas kiri).
+
+Contoh
+Demonstrasi berbagai gaya perbatasan:
+
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+Hasil:
+
+A dotted border.
+
+A dashed border.
+
+A solid border.
+
+A double border.
+
+A groove border. The effect depends on the border-color value.
+
+A ridge border. The effect depends on the border-color value.
+
+An inset border. The effect depends on the border-color value.
+
+An outset border. The effect depends on the border-color value.
+
+No border.
+
+A hidden border.
+
+A mixed border.
+
+Catatan: Tidak satu pun properti border CSS LAINNYA (yang akan Anda pelajari lebih lanjut di bab berikutnya) yang akan memiliki efek APAPUN kecuali border-styleproperti tersebut ditetapkan!
+
+Latihan
+?
+Properti CSS manakah yang menentukan jenis batas yang akan ditampilkan?
+
+
+border-width
+border-color
+border-style
+border-radius
+
+
+Lebar Batas CSS
+Properti border-widthmenentukan lebar keempat batas.
+
+Lebar dapat diatur sebagai ukuran tertentu (dalam px, pt, cm, em, dll) atau dengan menggunakan salah satu dari tiga nilai yang telah ditentukan sebelumnya: tipis, sedang, atau tebal:
+
+Contoh
+Demonstrasi berbagai lebar batas:
+
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+}
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+Hasil:
+
+5px border-width
+medium border-width
+2px border-width
+thick border-width
+Lebar Sisi Spesifik
+Properti border-width dapat memiliki satu hingga empat nilai (untuk batas atas, batas kanan, batas bawah, dan batas kiri):
+
+Contoh
+p.one {
+  border-style: solid;
+  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+}
+
+p.two {
+  border-style: solid;
+  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+}
+
+p.three {
+  border-style: solid;
+  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+}
+Latihan
+?
+Properti mana yang digunakan untuk mengatur lebar batas elemen?
+
+
+border-style
+border-width
+border-color
+border-radius
+
+Warna Batas CSS
+Warna Batas CSS
+Properti border-colorini digunakan untuk mengatur warna keempat batas.
+
+Warna dapat diatur dengan:
+
+nama - tentukan nama warna, seperti "merah"
+HEX - tentukan nilai HEX, seperti "#ff0000"
+RGB - tentukan nilai RGB, seperti "rgb(255,0,0)"
+HSL - tentukan nilai HSL, seperti "hsl(0, 100%, 50%)"
+transparan
+Catatan: Jika border-colortidak disetel, ia mewarisi warna elemen.
+
+Contoh
+Demonstrasi warna batas yang berbeda:
+
+p.one {
+  border-style: solid;
+  border-color: red;
+}
+
+p.two {
+  border-style: solid;
+  border-color: green;
+}
+
+p.three {
+  border-style: dotted;
+  border-color: blue;
+}
+Hasil:
+
+Red border
+Green border
+Blue border
+Warna Sisi Spesifik
+Properti border-colordapat memiliki satu hingga empat nilai (untuk batas atas, batas kanan, batas bawah, dan batas kiri). 
+
+Contoh
+p.one {
+  border-style: solid;
+  border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+}
+
+Nilai HEX
+Warna batas juga dapat ditentukan menggunakan nilai heksadesimal (HEX):
+
+Contoh
+p.one {
+  border-style: solid;
+  border-color: #ff0000; /* red */
+}
+Nilai RGB
+Atau dengan menggunakan nilai RGB:
+
+Contoh
+p.one {
+  border-style: solid;
+  border-color: rgb(255, 0, 0); /* red */
+}
+Nilai HSL
+Anda juga dapat menggunakan nilai HSL:
+
+Contoh
+p.one {
+  border-style: solid;
+  border-color: hsl(0, 100%, 50%); /* red */
+}
+Anda dapat mempelajari lebih lanjut tentang nilai HEX, RGB, dan HSL di bab Warna CSS kami .
+
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk mengatur warna batas menjadi "hijau".
+p {
+  border-style: solid;
+  : ;
+}
+
+Sisi Batas CSS
+Batas CSS - Sisi Individual
+Dari contoh di halaman sebelumnya, Anda telah melihat bahwa adalah mungkin untuk menentukan batas yang berbeda untuk setiap sisi.
+
+Dalam CSS, ada juga properti untuk menentukan setiap batas (atas, kanan, bawah, dan kiri):
+
+Contoh
+p {
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+}
+Hasil:
+
+Different Border Styles
+Contoh di atas memberikan hasil yang sama seperti ini:
+
+Contoh
+p {
+  border-style: dotted solid;
+}
+Jadi, beginilah cara kerjanya:
+
+Jika border-styleproperti memiliki empat nilai:
+
+border-style: bertitik padat dan putus-putus ganda;
+batas atas bertitik
+batas kanan padat
+batas bawah ganda
+batas kiri putus-putus
+Jika border-styleproperti memiliki tiga nilai:
+
+border-style: bertitik padat ganda;
+batas atas bertitik
+batas kanan dan kiri solid
+batas bawah ganda
+Jika border-styleproperti memiliki dua nilai:
+
+border-style: bertitik padat;
+batas atas dan bawah diberi titik-titik
+batas kanan dan kiri solid
+Jika border-styleproperti memiliki satu nilai:
+
+gaya batas: bertitik;
+keempat batasnya bertitik
+Contoh
+/* Four values */
+p {
+  border-style: dotted solid double dashed;
+}
+
+/* Three values */
+p {
+  border-style: dotted solid double;
+}
+
+/* Two values */
+p {
+  border-style: dotted solid;
+}
+
+/* One value */
+p {
+  border-style: dotted;
+}
+Properti ini border-styledigunakan dalam contoh di atas. Namun, properti ini juga berfungsi dengan border-width dan border-color.
+
+Latihan
+?
+Seret dan letakkan nilai yang benar untuk memberi gaya pada batas atas sebagai putus-putus dan batas kanan sebagai padat.
+p {
+  border--style: dotted;
+  border--style: solid;
+}
+
+Properti Perbatasan Singkatan CSS
+Properti Singkatan CSS Border
+Seperti yang Anda lihat di halaman sebelumnya, ada banyak hal yang perlu dipertimbangkan saat menangani batas.
+
+Untuk mempersingkat kode, dimungkinkan juga untuk menentukan semua properti batas individual dalam satu properti.
+
+Properti ini borderadalah properti singkatan untuk properti perbatasan individual berikut:
+
+border-width
+border-style(diperlukan)
+border-color
+Contoh
+p {
+  border: 5px solid red;
+}
+Hasil:
+
+Some text
+
+Anda juga dapat menentukan semua properti batas individual hanya untuk satu sisi:
+
+Batas Kiri
+p {
+  border-left: 6px solid red;
+}
+Hasil:
+
+Some text
+
+Batas Bawah
+p {
+  border-bottom: 6px solid red;
+}
+Hasil:
+
+Some text
+
+Latihan
+?
+Seret dan lepas nilai yang benar untuk menetapkan batas sebagai 5px, padat, dan hijau.
+p {
+  border:   ;
+}
+
+
+Batas Bulat CSS
+Properti border-radiusini digunakan untuk menambahkan batas bulat pada suatu elemen:
+
+Batas normal
+
+Batas bundar
+
+Batas yang lebih bulat
+
+Batas paling bulat
+
+Contoh
+p {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+Contoh Lainnya
+Semua properti batas atas dalam satu deklarasi
+Contoh ini memperagakan properti singkat untuk menetapkan semua properti untuk batas atas dalam satu deklarasi.
+
+Mengatur gaya batas bawah
+Contoh ini memperagakan cara mengatur gaya batas bawah.
+
+Mengatur lebar batas kiri
+Contoh ini memperagakan cara mengatur lebar batas kiri.
+
+Mengatur warna keempat border.
+Contoh ini menunjukkan cara mengatur warna keempat border. Border dapat terdiri dari satu hingga empat warna.
+
+Mengatur warna batas kanan
+Contoh ini memperagakan cara mengatur warna batas kanan.
+
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk membuat elemen dengan sudut membulat.
+p {
+  border: 2px solid red;
+  : ;
+}
+
+
+Semua Properti Batas CSS
+Property	Description
+border	Sets all the border properties in one declaration
+border-bottom	Sets all the bottom border properties in one declaration
+border-bottom-color	Sets the color of the bottom border
+border-bottom-style	Sets the style of the bottom border
+border-bottom-width	Sets the width of the bottom border
+border-color	Sets the color of the four borders
+border-left	Sets all the left border properties in one declaration
+border-left-color	Sets the color of the left border
+border-left-style	Sets the style of the left border
+border-left-width	Sets the width of the left border
+border-radius	Sets all the four border-*-radius properties for rounded corners
+border-right	Sets all the right border properties in one declaration
+border-right-color	Sets the color of the right border
+border-right-style	Sets the style of the right border
+border-right-width	Sets the width of the right border
+border-style	Sets the style of the four borders
+border-top	Sets all the top border properties in one declaration
+border-top-color	Sets the color of the top border
+border-top-style	Sets the style of the top border
+border-top-width	Sets the width of the top border
+border-width	Sets the width of the four borders

@@ -1,0 +1,87 @@
+
+Ukuran Kotak CSS
+Properti CSS box-sizingmemungkinkan kita untuk menyertakan padding dan border dalam total lebar dan tinggi suatu elemen.
+
+Tanpa Properti box-sizing CSS
+Secara default, lebar dan tinggi elemen dihitung seperti ini:
+
+lebar + padding + border = lebar sebenarnya dari sebuah elemen
+tinggi + padding + border = tinggi sebenarnya dari sebuah elemen
+
+Artinya: Saat Anda mengatur lebar/tinggi suatu elemen, elemen tersebut sering kali tampak lebih besar daripada yang telah Anda atur (karena batas dan bantalan elemen ditambahkan ke lebar/tinggi elemen yang ditentukan).
+
+Ilustrasi berikut menunjukkan dua elemen <div> dengan lebar dan tinggi yang ditentukan sama:
+
+Div ini lebih kecil (lebar 300px dan tinggi 100px).
+
+Div ini lebih besar (lebarnya juga 300px dan tingginya 100px).
+
+Kedua elemen <div> di atas menghasilkan ukuran yang berbeda dalam hasil (karena div2 memiliki padding yang ditentukan):
+
+Contoh
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+}
+Properti box-sizingmemecahkan masalah ini.
+
+IKLAN
+
+Dengan Properti box-sizing CSS
+Properti ini box-sizingmemungkinkan kita untuk menyertakan padding dan border dalam total lebar dan tinggi suatu elemen.
+
+Jika Anda mengatur box-sizing: border-box;pada suatu elemen, padding dan border disertakan dalam lebar dan tinggi:
+
+Kedua div sekarang berukuran sama!
+
+Hore!
+
+Berikut adalah contoh yang sama seperti di atas, dengan box-sizing: border-box; ditambahkan ke kedua elemen <div>:
+
+Contoh
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+Karena hasil penggunaannya box-sizing: border-box;jauh lebih baik, banyak pengembang ingin semua elemen di halaman mereka berfungsi dengan cara ini.
+
+Kode di bawah ini memastikan semua elemen berukuran lebih intuitif. Banyak peramban sudah menggunakannya box-sizing: border-box;untuk banyak elemen formulir (tetapi tidak semuanya - itulah sebabnya input dan area teks terlihat berbeda pada width: 100%;).
+
+Menerapkan ini ke semua elemen adalah aman dan bijaksana:
+
+Contoh
+* {
+  box-sizing: border-box;
+}
+Latihan
+?
+Properti CSS mana yang digunakan untuk mengontrol model kotak suatu elemen?
+
+
+box-sizing
+margin
+padding
+border
+box-shadow
+
+Properti Ukuran Kotak CSS
+Property	Description
+box-sizing	Defines how the width and height of an element are calculated: should they include padding and borders, or not

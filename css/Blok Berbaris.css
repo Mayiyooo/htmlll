@@ -1,0 +1,65 @@
+Tata Letak CSS - tampilan: blok-sebaris
+Tampilan: Nilai blok sebaris
+Dibandingkan dengan display: inline, perbedaan utamanya adalah display: inline-blockmemungkinkan untuk mengatur lebar dan tinggi pada elemen.
+
+Dibandingkan dengan display: block, perbedaan utamanya adalah display: inline-blocktidak menambahkan jeda baris setelah elemen, sehingga elemen dapat diletakkan di samping elemen lainnya.
+
+Contoh berikut menunjukkan perilaku yang berbeda dari display: inline, display: inline-block dan display: block:
+
+Contoh
+span.a {
+  display: inline; /* the default for span */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+IKLAN
+
+Menggunakan inline-block untuk Membuat Tautan Navigasi
+Salah satu penggunaan umum display: inline-block adalah untuk menampilkan item daftar secara horizontal, alih-alih vertikal. Contoh berikut membuat tautan navigasi horizontal:
+
+Contoh
+.nav {
+  background-color: yellow;
+  list-style-type: none;
+  text-align: center; 
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk menampilkan item daftar secara horizontal menggunakan inline-block.
+.nav li {
+  : ;
+}
+
+
+Properti CSS
+Property	Description
+display	Specifies the display behavior (the type of rendering box) of an element

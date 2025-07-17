@@ -1,0 +1,118 @@
+Transisi CSS
+Transisi CSS
+Transisi CSS memungkinkan Anda mengubah nilai properti dengan lancar, selama durasi tertentu.
+
+Arahkan kursor ke elemen di bawah untuk melihat efek transisi CSS:
+
+CSS
+Dalam bab ini Anda akan mempelajari tentang properti berikut:
+
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function
+Bagaimana Cara Menggunakan Transisi CSS?
+Untuk membuat efek transisi, Anda harus menentukan dua hal:
+
+properti CSS yang ingin Anda tambahkan efeknya
+durasi efeknya
+Catatan: Jika bagian durasi tidak ditentukan, transisi tidak akan berpengaruh, karena nilai default adalah 0.
+
+Contoh berikut menunjukkan elemen <div> merah berukuran 100px * 100px. Elemen <div> juga telah menetapkan efek transisi untuk properti lebar, dengan durasi 2 detik:
+
+Contoh
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+Efek transisi akan dimulai ketika properti CSS yang ditentukan (lebar) berubah nilai.
+
+Sekarang, mari kita tentukan nilai baru untuk properti lebar saat pengguna mengarahkan kursor ke elemen <div>:
+
+Contoh
+div:hover {
+  width: 300px;
+}
+Perhatikan bahwa saat kursor keluar dari elemen, ia akan secara bertahap berubah kembali ke gaya aslinya.
+
+Ubah Beberapa Nilai Properti
+Contoh berikut menambahkan efek transisi untuk properti lebar dan tinggi, dengan durasi 2 detik untuk lebar dan 4 detik untuk tinggi:
+
+Contoh
+div {
+  transition: width 2s, height 4s;
+}
+IKLAN
+
+Tentukan Kurva Kecepatan Transisi
+Properti transition-timing-functionmenentukan kurva kecepatan efek transisi.
+
+Properti transition-timing-function dapat memiliki nilai berikut:
+
+ease- menentukan efek transisi dengan awal yang lambat, lalu cepat, lalu berakhir perlahan (ini default)
+linear- menentukan efek transisi dengan kecepatan yang sama dari awal hingga akhir
+ease-in- menentukan efek transisi dengan awal yang lambat
+ease-out- menentukan efek transisi dengan akhir yang lambat
+ease-in-out- menentukan efek transisi dengan awal dan akhir yang lambat
+cubic-bezier(n,n,n,n)- memungkinkan Anda menentukan nilai Anda sendiri dalam fungsi kubik-bezier
+Contoh berikut menunjukkan beberapa kurva kecepatan berbeda yang dapat digunakan:
+
+Contoh
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+Tunda Efek Transisi
+Properti transition-delaymenentukan penundaan (dalam detik) untuk efek transisi.
+
+Contoh berikut memiliki penundaan 1 detik sebelum memulai:
+
+Contoh
+div {
+  transition-delay: 1s;
+}
+Transisi + Transformasi
+Contoh berikut menambahkan efek transisi ke transformasi:
+
+Contoh
+div {
+  transition: width 2s, height 2s, transform 2s;
+}
+Contoh Transisi Lainnya
+Properti transisi CSS dapat ditentukan satu per satu, seperti ini:
+
+Contoh
+div {
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+atau dengan menggunakan properti singkatan transition:
+
+Contoh
+div {
+  transition: width 2s linear 1s;
+}
+Latihan
+?
+Seret dan lepas properti dan durasi yang benar untuk menambahkan efek transisi ke properti lebar dengan durasi 3 detik.
+#example {
+  :  ;
+}
+
+
+Properti Transisi CSS
+Tabel berikut mencantumkan semua properti transisi CSS:
+
+Property	Description
+transition	A shorthand property for setting the four transition properties into a single property
+transition-delay	Specifies a delay (in seconds) for the transition effect
+transition-duration	Specifies how many seconds or milliseconds a transition effect takes to complete
+transition-property	Specifies the name of the CSS property the transition effect is for
+transition-timing-function	Specifies the speed curve of the transition effect

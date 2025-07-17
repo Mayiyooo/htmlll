@@ -1,0 +1,144 @@
+Kelas semu CSS
+Apa itu Pseudo-class?
+Kelas semu digunakan untuk menentukan status khusus suatu elemen.
+
+Misalnya, dapat digunakan untuk:
+
+Gaya elemen saat pengguna menggerakkan mouse di atasnya
+Gaya tautan yang dikunjungi dan tidak dikunjungi secara berbeda
+Tata gaya elemen saat mendapat fokus
+Gaya elemen formulir yang valid/tidak valid/diperlukan/opsional
+
+Arahkan Mouse ke Saya
+
+Klik Saya Untuk Mendapatkan Fokus
+Sintaksis
+Sintaks kelas semu:
+
+selector:pseudo-class {
+  property: value;
+}
+Jangkar Kelas Semu
+Tautan dapat ditampilkan dengan berbagai cara:
+
+Contoh
+/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+
+Catatan: a:hover HARUS muncul setelah a:linkdan a:visiteddalam definisi CSS agar efektif! a:activeHARUS muncul setelah a:hoverdefinisi CSS agar efektif! Nama pseudo-class tidak peka huruf besar-kecil.
+
+IKLAN
+
+Kelas semu dan Kelas HTML
+Kelas semu dapat digabungkan dengan kelas HTML:
+
+Bila Anda mengarahkan kursor pada tautan dalam contoh, warnanya akan berubah:
+
+Contoh
+a.highlight:hover {
+  color: #ff0000;
+}
+Arahkan kursor ke <div>
+Contoh penggunaan :hoverpseudo-class pada elemen <div>:
+
+Contoh
+div:hover {
+  background-color: blue;
+}
+
+Tooltip Sederhana Hover
+Arahkan kursor ke elemen <div> untuk menampilkan elemen <p> (seperti keterangan alat):
+
+Arahkan kursor ke saya untuk memperlihatkan elemen <p>.
+Contoh
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+
+CSS - Pseudo-kelas :first-child
+Kelas :first-childsemu cocok dengan elemen tertentu yang merupakan anak pertama dari elemen lain.
+
+Cocokkan elemen <p> pertama
+Dalam contoh berikut, pemilih cocok dengan elemen <p> apa pun yang merupakan anak pertama dari elemen apa pun:
+
+Contoh
+p:first-child {
+  color: blue;
+}
+Cocokkan elemen <i> pertama di semua elemen <p>
+Dalam contoh berikut, pemilih cocok dengan elemen <i> pertama di semua elemen <p>:
+
+Contoh
+p i:first-child {
+  color: blue;
+}
+Cocokkan semua elemen <i> di semua elemen anak pertama <p>
+Dalam contoh berikut, pemilih mencocokkan semua elemen <i> di elemen <p> yang merupakan anak pertama dari elemen lain:
+
+Contoh
+p:first-child i {
+  color: blue;
+}
+CSS - Kelas semu :lang
+Kelas :langsemu memungkinkan Anda menentukan aturan khusus untuk bahasa yang berbeda.
+
+Dalam contoh di bawah, :langmendefinisikan tanda kutip untuk elemen <q> dengan lang="no":
+
+Contoh
+<html>
+<head>
+<style>
+q:lang(no) {
+  quotes: "~" "~";
+}
+</style>
+</head>
+<body>
+
+<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+
+</body>
+</html>
+Contoh Lainnya
+Menambahkan gaya berbeda ke hyperlink
+Contoh ini memperagakan cara menambahkan gaya lain ke hyperlink.
+
+Penggunaan :focus
+Contoh ini memperagakan cara menggunakan pseudo-kelas :focus.
+
+Latihan
+?
+Apa kegunaan pseudo-class CSS?
+
+
+Untuk menentukan warna suatu elemen
+Untuk memilih elemen berdasarkan kontennya
+Untuk menentukan status khusus suatu elemen
+Untuk membuat desain responsif
+
+Referensi Kelas Semu CSS
+Untuk daftar lengkap semua Pseudo-kelas CSS, kunjungi Referensi Pseudo-kelas CSS kami .
+

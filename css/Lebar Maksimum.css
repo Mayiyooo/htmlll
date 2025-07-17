@@ -1,0 +1,42 @@
+Tata Letak CSS - lebar dan lebar maksimum
+Menggunakan lebar, lebar maksimum dan margin: otomatis;
+Seperti disebutkan dalam bab sebelumnya; elemen tingkat blok selalu menempati lebar penuh yang tersedia (membentang ke kiri dan kanan sejauh mungkin).
+
+Mengatur widthelemen tingkat blok akan mencegahnya meregang hingga ke tepi wadahnya. Kemudian, Anda dapat mengatur margin ke otomatis untuk memusatkan elemen secara horizontal di dalam wadahnya. Elemen akan menggunakan lebar yang ditentukan, dan ruang yang tersisa akan dibagi rata antara kedua margin:
+
+Elemen <div> ini memiliki lebar 500px, dan margin diatur ke otomatis.
+
+Catatan: Masalah di <div>atas terjadi ketika jendela peramban lebih kecil dari lebar elemen. Peramban kemudian menambahkan bilah gulir horizontal ke halaman.
+
+Menggunakannya max-width, dalam situasi ini, akan meningkatkan penanganan jendela kecil oleh peramban. Hal ini penting saat membuat situs dapat digunakan di perangkat kecil:
+
+Elemen <div> ini memiliki lebar maksimum 500px, dan margin diatur ke otomatis.
+
+Tip: Ubah ukuran jendela browser menjadi kurang dari 500px lebarnya, untuk melihat perbedaan antara kedua div!
+
+Berikut adalah contoh dua div di atas:
+
+Contoh
+div.ex1 {
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk menetapkan lebar maksimum elemen divmenjadi 800 piksel.
+div {
+  : ;
+}
+
+
+Properti CSS
+Property	Description
+max-width	Defines the maximum width of an element
+width	Sets the width of an element

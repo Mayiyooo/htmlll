@@ -1,0 +1,74 @@
+Komentar CSS
+Komentar CSS tidak ditampilkan di browser, tetapi dapat membantu mendokumentasikan kode sumber Anda.
+
+Komentar CSS
+Komentar digunakan untuk menjelaskan kode, dan dapat membantu saat Anda mengedit kode sumber di lain waktu.
+
+Komentar diabaikan oleh browser.
+
+Komentar CSS ditempatkan di dalam <style>elemen, dan dimulai dengan /*dan diakhiri dengan */:
+
+Contoh
+/* This is a single-line comment */
+p {
+  color: red;
+}
+Anda dapat menambahkan komentar di mana pun Anda inginkan dalam kode:
+
+Contoh
+p {
+  color: red;  /* Set text color to red */
+}
+Bahkan di tengah baris kode:
+
+Contoh
+p {
+  color: /*red*/blue; 
+}
+Komentar juga dapat mencakup beberapa baris: 
+
+Contoh
+/* This is
+a multi-line
+comment */
+
+p {
+  color: red;
+}
+IKLAN
+
+Komentar HTML dan CSS
+Dari tutorial HTML, Anda mempelajari bahwa Anda dapat menambahkan komentar ke sumber HTML Anda dengan menggunakan <!--...-->sintaksis.
+
+Dalam contoh berikut, kami menggunakan kombinasi komentar HTML dan CSS:
+
+Contoh
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  color: red; /* Set text color to red */
+}
+</style>
+</head>
+<body>
+
+<h2>My Heading</h2>
+
+<!-- These paragraphs will be red -->
+<p>Hello World!</p>
+<p>This paragraph is styled with CSS.</p>
+<p>HTML and CSS comments are not shown in the output.</p>
+
+</body>
+</html>
+Latihan
+?
+Apa sintaksis yang benar untuk komentar CSS?
+
+
+<!-- Ini adalah komentar -->
+// Ini adalah komentar
+/* Ini adalah komentar */
+# Ini adalah komentar

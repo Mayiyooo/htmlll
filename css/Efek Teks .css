@@ -1,0 +1,117 @@
+Efek Teks CSS
+CSS Text Overflow, Word Wrap, Aturan Pemutusan Baris, dan Mode Penulisan
+Dalam bab ini Anda akan mempelajari tentang properti berikut:
+
+text-overflow
+word-wrap
+word-break
+writing-mode
+CSS Text Overflow
+Properti CSS text-overflowmenentukan bagaimana konten yang meluap dan tidak ditampilkan harus diberi sinyal kepada pengguna.
+
+Itu dapat dipotong:
+
+Ini adalah teks panjang yang tidak muat di dalam kotak
+
+atau dapat ditulis sebagai elipsis (...):
+
+Ini adalah teks panjang yang tidak muat di dalam kotak
+
+Kode CSS-nya adalah sebagai berikut:
+
+Contoh
+p.test1 {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+p.test2 {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+Contoh berikut menunjukkan bagaimana Anda dapat menampilkan konten yang meluap saat mengarahkan kursor ke elemen:
+
+Contoh
+div.test:hover {
+  overflow: visible;
+}
+IKLAN
+
+Pembungkusan Kata CSS
+Properti CSS word-wrapmemungkinkan kata-kata panjang dapat dipecah dan dipindahkan ke baris berikutnya. 
+
+Jika suatu kata terlalu panjang untuk dimuat dalam suatu area, kata tersebut akan meluas ke luar:
+
+Paragraf ini mengandung kata yang sangat panjang: ini kata yang sangat sangat sangat sangat sangat panjang. Kata yang panjang ini akan terputus dan berpindah ke baris berikutnya.
+
+Properti word-wrap memungkinkan Anda memaksa teks untuk dibungkus - bahkan jika itu berarti membaginya di tengah kata:
+
+Paragraf ini mengandung kata yang sangat panjang: ini kata yang sangat sangat sangat sangat sangat panjang. Kata yang panjang ini akan terputus dan berpindah ke baris berikutnya.
+
+Kode CSS-nya adalah sebagai berikut:
+
+Contoh
+Izinkan kata-kata panjang dipecah dan dipindah ke baris berikutnya:
+
+p {
+  word-wrap: break-word;
+}
+Pemecahan Kata CSS
+Properti CSS word-breakmenentukan aturan pemutusan baris.
+
+Paragraf ini berisi beberapa teks. Baris ini akan terputus saat tanda hubung.
+
+Paragraf ini berisi beberapa teks. Baris akan terputus jika ada karakter apa pun.
+
+Kode CSS-nya adalah sebagai berikut:
+
+Contoh
+p.test1 {
+  word-break: keep-all;
+}
+
+p.test2 {
+  word-break: break-all;
+}
+Mode Penulisan CSS
+Properti CSS writing-modemenentukan apakah baris teks ditata secara horizontal atau vertikal.
+
+Beberapa teks dengan elemen span denganvertikal-rlmode penulisan.
+
+Contoh berikut menunjukkan beberapa mode penulisan yang berbeda:
+
+Contoh
+p.test1 {
+  writing-mode: horizontal-tb;
+}
+
+span.test2 {
+  writing-mode: vertical-rl;
+}
+
+p.test2 {
+  writing-mode: vertical-rl;
+}
+Latihan
+?
+Seret dan letakkan nilai yang benar untuk memungkinkan kata-kata panjang dipecah dan berpindah ke baris berikutnya.
+#example {
+  word-wrap: ;
+}
+
+
+Properti Efek Teks CSS
+Tabel berikut mencantumkan properti efek teks CSS:
+
+Property	Description
+text-justify	Specifies how justified text should be aligned and spaced
+text-overflow	Specifies how overflowed content that is not displayed should be signaled to the user
+word-break	Specifies line breaking rules for non-CJK scripts
+word-wrap	Allows long words to be able to be broken and wrap onto the next line
+writing-mode	Specifies whether lines of text are laid out horizontally or vertically

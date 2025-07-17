@@ -1,0 +1,184 @@
+Keterangan Alat CSS
+Buat keterangan alat dengan CSS.
+
+Demo: Contoh Tooltip
+Tooltip sering digunakan untuk menentukan informasi tambahan tentang sesuatu saat pengguna menggerakkan penunjuk tetikus ke suatu elemen:
+
+AtasBenarDasarKiri
+Tooltip Dasar
+Buat keterangan alat yang muncul saat pengguna menggerakkan tetikus ke suatu elemen:
+
+Contoh
+<style>
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+Contoh Dijelaskan
+HTML: Gunakan elemen kontainer (seperti <div>) dan tambahkan "tooltip"kelas ke dalamnya. Saat pengguna mengarahkan kursor ke <div> ini, teks tooltip akan ditampilkan.
+
+Teks keterangan alat ditempatkan di dalam elemen sebaris (seperti <span>) dengan class="tooltiptext".
+
+CSS: Kelas tooltipuse position:relative, yang diperlukan untuk memposisikan teks tooltip ( position:absolute). Catatan: Lihat contoh di bawah ini tentang cara memposisikan tooltip.
+
+Kelas ini tooltiptextmenyimpan teks tooltip yang sebenarnya. Teks ini disembunyikan secara default, dan akan terlihat saat diarahkan (lihat di bawah). Kami juga telah menambahkan beberapa gaya dasar: lebar 120 piksel, warna latar belakang hitam, warna teks putih, teks di tengah, dan padding atas dan bawah 5 piksel.
+
+Properti CSS border-radiusdigunakan untuk menambahkan sudut membulat pada teks tooltip.
+
+Pemilih :hoverdigunakan untuk menampilkan teks keterangan alat saat pengguna menggerakkan tetikus di atas <div> dengan class="tooltip".
+
+
+Tooltip Pemosisian
+Dalam contoh ini, tooltip ditempatkan di sebelah kanan ( left:105%) teks "hoverable" (<div>). Perhatikan juga bahwa top:-5pxdigunakan untuk menempatkannya di tengah elemen penampungnya. Kami menggunakan angka 5 karena teks tooltip memiliki padding atas dan bawah sebesar 5 piksel. Jika Anda meningkatkan padding-nya, tingkatkan juga nilai propertinya topagar tetap berada di tengah (jika Anda menginginkannya). Hal yang sama berlaku jika Anda ingin tooltip ditempatkan di sebelah kiri.
+
+Tooltip Kanan
+.tooltip .tooltiptext {
+  top: -5px;
+  left: 105%;
+}
+Hasil:
+
+Hover over me
+Tooltip Kiri
+.tooltip .tooltiptext {
+  top: -5px;
+  right: 105%;
+}
+Hasil:
+
+Hover over me
+Jika Anda ingin tooltip muncul di atas atau di bawah, lihat contoh di bawah ini. Perhatikan bahwa kami menggunakan margin-leftproperti dengan nilai minus 60 piksel. Ini untuk memusatkan tooltip di atas/di bawah teks yang dapat diarahkan. Nilai ini diatur ke setengah lebar tooltip (120/2 = 60).
+
+Tooltip Teratas
+.tooltip .tooltiptext {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+Hasil:
+
+Hover over me
+Tooltip Bawah
+.tooltip .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+Hasil:
+
+Hover over me
+Panah Tooltip
+Untuk membuat panah yang seharusnya muncul dari sisi tertentu pada tooltip, tambahkan konten "kosong" setelah tooltip, beserta kelas pseudo-elemen ::afterdan content propertinya. Panah itu sendiri dibuat menggunakan border. Ini akan membuat tooltip terlihat seperti gelembung ucapan.
+
+Contoh ini menunjukkan cara menambahkan panah di bagian bawah keterangan alat:
+
+Panah Bawah
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+Hasil:
+
+Hover over me
+Contoh Dijelaskan
+Posisikan panah di dalam keterangan alat: top: 100%akan menempatkan panah di bagian bawah keterangan alat. left: 50%akan memusatkan panah.
+
+Catatan: Properti ini border-widthmenentukan ukuran panah. Jika Anda mengubah ini, ubah juga nilainya margin-left. Ini akan menjaga panah tetap di tengah.
+
+Ini border-colordigunakan untuk mengubah konten menjadi panah. Kami mengatur batas atas menjadi hitam, dan sisanya menjadi transparan. Jika semua sisi berwarna hitam, Anda akan mendapatkan kotak persegi hitam.
+
+Contoh ini menunjukkan cara menambahkan panah di bagian atas tooltip. Perhatikan bahwa kali ini kita mengatur warna batas bawah:
+
+Panah Atas
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+Hasil:
+
+Hover over me
+Contoh ini menunjukkan cara menambahkan panah di sebelah kiri tooltip:
+
+Panah Kiri
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+Hasil:
+
+Hover over me
+Contoh ini menunjukkan cara menambahkan panah di sebelah kanan tooltip:
+
+Panah Kanan
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+Hasil:
+
+Hover over me
+Tooltip Fade In (Animasi)
+Jika Anda ingin memudarkan teks tooltip saat teks tersebut akan terlihat, Anda dapat menggunakan transitionproperti CSS bersama dengan opacity properti tersebut, dan mengubahnya dari tidak terlihat sama sekali menjadi 100% terlihat, dalam beberapa detik tertentu (1 detik dalam contoh kita):
+
+Contoh
+.tooltip .tooltiptext {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}

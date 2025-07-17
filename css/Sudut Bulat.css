@@ -1,0 +1,141 @@
+Sudut Bulat CSS
+Sudut Bulat CSS
+Dengan properti CSS border-radius, Anda dapat memberikan elemen apa pun "sudut membulat".
+
+Properti radius batas CSS
+Properti CSS border-radiusmenentukan radius sudut suatu elemen.
+
+Tip: Properti ini memungkinkan Anda menambahkan sudut membulat ke elemen!
+
+Berikut tiga contohnya:
+
+1. Sudut membulat untuk elemen dengan warna latar belakang tertentu:
+
+Sudut membulat!
+
+2. Sudut membulat untuk elemen dengan batas:
+
+Sudut membulat!
+
+3. Sudut membulat untuk elemen dengan gambar latar belakang:
+
+Sudut membulat!
+
+Berikut kodenya:
+
+Contoh
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners3 {
+  border-radius: 25px;
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+Tip: Properti border-radiussebenarnya adalah properti singkatan untuk properti border-top-left-radius, border-top-right-radius, border-bottom-right-radius dan border-bottom-left-radius.
+
+IKLAN
+
+CSS border-radius - Tentukan Setiap Sudut
+Properti border-radiusdapat memiliki satu hingga empat nilai. Berikut aturannya:
+
+Empat nilai - border-radius: 15px 50px 30px 5px; (nilai pertama berlaku untuk sudut kiri atas, nilai kedua berlaku untuk sudut kanan atas, nilai ketiga berlaku untuk sudut kanan bawah, dan nilai keempat berlaku untuk sudut kiri bawah): 
+
+Tiga nilai - border-radius: 15px 50px 30px; (nilai pertama berlaku untuk sudut kiri atas, nilai kedua berlaku untuk sudut kanan atas dan kiri bawah, dan nilai ketiga berlaku untuk sudut kanan bawah):
+
+Dua nilai - border-radius: 15px 50px; (nilai pertama berlaku untuk sudut kiri atas dan kanan bawah, dan nilai kedua berlaku untuk sudut kanan atas dan kiri bawah):
+
+Satu nilai - border-radius: 15px; (nilai ini berlaku untuk keempat sudut, yang dibulatkan secara sama:
+
+Berikut kodenya:
+
+Contoh
+#rcorners1 {
+  border-radius: 15px 50px 30px 5px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners2 {
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners3 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners4 {
+  border-radius: 15px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+Anda juga dapat membuat sudut elips:
+
+Contoh
+#rcorners1 {
+  border-radius: 50px / 15px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners2 {
+  border-radius: 15px / 50px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+#rcorners3 {
+  border-radius: 50%;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+Latihan
+?
+Seret dan lepas nilai yang benar untuk membulatkan semua sudut divsecara merata hingga 10 piksel.
+div {
+  border-radius: ;
+}
+
+
+Properti Sudut Bulat CSS
+Property	Description
+border-radius	A shorthand property for setting all the four border-*-*-radius properties
+border-top-left-radius	Defines the shape of the border of the top-left corner
+border-top-right-radius	Defines the shape of the border of the top-right corner
+border-bottom-right-radius	Defines the shape of the border of the bottom-right corner
+border-bottom-left-radius	Defines the shape of the border of the bottom-left corner

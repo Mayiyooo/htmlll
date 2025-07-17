@@ -1,0 +1,64 @@
+Video HTML YouTube
+Cara termudah untuk memutar video dalam HTML adalah dengan menggunakan YouTube.
+
+Kesulitan dengan Format Video?
+Mengonversi video ke format lain bisa jadi sulit dan memakan waktu.
+
+Solusi yang lebih mudah adalah membiarkan YouTube memutar video di halaman web Anda.
+
+ID Video YouTube
+YouTube akan menampilkan id (seperti tgbNymZ7vqY), saat Anda menyimpan (atau memutar) video.
+
+Anda dapat menggunakan id ini, dan merujuk ke video Anda dalam kode HTML.
+
+Memutar Video YouTube dalam HTML
+Untuk memutar video Anda di halaman web, lakukan hal berikut:
+
+Unggah video ke YouTube
+Catat ID videonya
+Tentukan <iframe>elemen di halaman web Anda
+Biarkan srcatribut menunjuk ke URL video
+Gunakan atribut widthdan heightuntuk menentukan dimensi pemain
+Tambahkan parameter lain ke URL (lihat di bawah)
+Contoh
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+Putar Otomatis + Bisukan YouTube
+Anda bisa membiarkan video Anda mulai diputar otomatis saat pengguna mengunjungi halaman tersebut dengan menambahkan autoplay=1URL YouTube. Namun, memulai video secara otomatis bisa mengganggu pengunjung Anda!
+
+Catatan: Peramban Chromium tidak mengizinkan putar otomatis dalam kebanyakan kasus. Namun, putar otomatis tanpa suara selalu diizinkan.
+
+Tambahkan mute=1setelah autoplay=1untuk membiarkan video Anda mulai diputar secara otomatis (tetapi tanpa suara).
+
+YouTube - Putar Otomatis + Bisukan
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
+IKLAN
+
+Daftar Putar YouTube
+Daftar video yang dipisahkan koma untuk diputar (selain URL asli).
+
+Putaran YouTube
+Tambahkan playlist=videoIDdan loop=1untuk membiarkan video Anda berputar selamanya.
+
+loop=0(default) - Video akan diputar satu kali saja.
+
+loop=1- Video akan berulang (selamanya).
+
+YouTube - Putar terus menerus
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+Kontrol YouTube
+Tambahkan controls=0untuk TIDAK menampilkan kontrol di pemutar video.
+
+controls=0- Kontrol pemutar tidak ditampilkan.
+
+controls=1(default) - Kontrol pemutar ditampilkan.
+
+YouTube - Kontrol
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>

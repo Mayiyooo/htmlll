@@ -1,0 +1,158 @@
+Bilah Navigasi CSS
+Demo: Bilah Navigasi
+Vertikal
+
+Rumah
+Berita
+Kontak
+Tentang
+Horisontal
+
+RumahBeritaKontakTentang
+
+Rumah
+Berita
+Kontak
+Tentang
+Bilah Navigasi
+Memiliki navigasi yang mudah digunakan penting untuk situs web mana pun.
+
+Dengan CSS Anda dapat mengubah menu HTML yang membosankan menjadi bilah navigasi yang menarik.
+
+Bilah Navigasi = Daftar Tautan
+Bilah navigasi memerlukan HTML standar sebagai dasarnya.
+
+Dalam contoh kita, kita akan membuat bilah navigasi dari daftar HTML standar.
+
+Bilah navigasi pada dasarnya adalah daftar tautan, jadi penggunaan elemen <ul> dan <li> sangat masuk akal:
+
+Contoh
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+Sekarang mari kita hapus poin-poin, margin, dan padding dari daftar:
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+Contoh dijelaskan:
+
+list-style-type: none;- Menghapus poin. Bilah navigasi tidak memerlukan penanda daftar.
+Mengatur margin: 0;dan padding: 0; menghapus pengaturan default browser
+Kode dalam contoh di atas adalah kode standar yang digunakan pada bilah navigasi vertikal dan horizontal, yang akan Anda pelajari lebih lanjut di bab berikutnya.
+
+Bilah Navigasi Vertikal CSS
+Bilah Navigasi Vertikal
+Rumah
+Berita
+Kontak
+Tentang
+Untuk membuat bilah navigasi vertikal, Anda dapat memberi gaya pada elemen <a> di dalam daftar, selain kode dari halaman sebelumnya:
+
+Contoh
+li a {
+  display: block;
+  width: 60px;
+}
+Contoh dijelaskan:
+
+display: block;- Menampilkan tautan sebagai elemen blok membuat seluruh area tautan dapat diklik (bukan hanya teksnya), dan memungkinkan kita menentukan lebarnya (dan bantalan, margin, tinggi, dll. jika Anda mau)
+width: 60px;- Elemen blok menggunakan lebar penuh yang tersedia secara default. Kami ingin menentukan lebar 60 piksel.
+Anda juga dapat mengatur lebar <ul>, dan menghapus lebar <a>, karena keduanya akan menggunakan lebar penuh yang tersedia saat ditampilkan sebagai elemen blok. Ini akan menghasilkan hasil yang sama seperti contoh sebelumnya:
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+li a {
+  display: block;
+}
+IKLAN
+
+Contoh Bilah Navigasi Vertikal
+Buat bilah navigasi vertikal dasar dengan warna latar belakang abu-abu dan ubah warna latar belakang tautan saat pengguna menggerakkan mouse di atasnya:
+
+Rumah
+Berita
+Kontak
+Tentang
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+Tautan Navigasi Aktif/Saat Ini
+Tambahkan kelas "aktif" ke tautan saat ini untuk memberi tahu pengguna halaman mana yang sedang dia buka:
+
+Rumah
+Berita
+Kontak
+Tentang
+Contoh
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+Tautan Tengah & Tambahkan Batas
+Tambahkan text-align:center<li> atau <a> untuk memusatkan tautan.
+
+Tambahkan borderproperti ke <ul> untuk menambahkan batas di sekitar navbar. Jika Anda juga ingin batas di dalam navbar, tambahkan a border-bottomke semua elemen <li>, kecuali yang terakhir:
+
+Rumah
+Berita
+Kontak
+Tentang
+Contoh
+ul {
+  border: 1px solid #555;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+Navbar Vertikal Tetap Setinggi Penuh
+Buat navigasi samping "lengket" dengan ketinggian penuh:
+
+
+Contoh
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}

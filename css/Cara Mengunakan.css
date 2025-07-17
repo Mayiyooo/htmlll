@@ -1,0 +1,154 @@
+Cara Menambahkan CSS
+Saat browser membaca lembar gaya, ia akan memformat dokumen HTML sesuai dengan informasi dalam lembar gaya.
+
+Tiga Cara Memasukkan CSS
+Ada tiga cara untuk menyisipkan lembar gaya:
+
+CSS Eksternal
+CSS internal
+CSS sebaris
+CSS Eksternal
+Dengan lembar gaya eksternal, Anda dapat mengubah tampilan seluruh situs web hanya dengan mengubah satu file!
+
+Setiap halaman HTML harus menyertakan referensi ke berkas lembar gaya eksternal di dalam elemen <link>, di dalam bagian kepala.
+
+Contoh
+Gaya eksternal didefinisikan dalam elemen <link>, di dalam bagian <head> halaman HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+Lembar gaya eksternal dapat ditulis dalam editor teks apa pun, dan harus disimpan dengan ekstensi .css.
+
+File .css eksternal tidak boleh berisi tag HTML apa pun.
+
+Berikut tampilan file "mystyle.css":
+
+"gaya saya.css"
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+Catatan: Jangan tambahkan spasi antara nilai properti (20) dan unit (px):
+Salah (spasi): margin-left: 20 px;
+Benar (tanpa spasi):margin-left: 20px;
+
+IKLAN
+
+CSS internal
+Lembar gaya internal dapat digunakan jika satu halaman HTML memiliki gaya yang unik.
+
+Gaya internal didefinisikan di dalam elemen <style>, di dalam bagian kepala.
+
+Contoh
+Gaya internal didefinisikan dalam elemen <style>, di dalam bagian <head> halaman HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+CSS sebaris
+Gaya sebaris dapat digunakan untuk menerapkan gaya unik untuk satu elemen.
+
+Untuk menggunakan gaya sebaris, tambahkan atribut style ke elemen yang relevan. Atribut style dapat berisi properti CSS apa pun.
+
+Contoh
+Gaya sebaris didefinisikan dalam atribut "style" dari elemen yang relevan:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:blue;text-align:center;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+
+</body>
+</html>
+Tips: Gaya sebaris menghilangkan banyak keunggulan lembar gaya (karena mencampur konten dengan presentasi). Gunakan metode ini dengan bijak.
+
+Beberapa Lembar Gaya
+Jika beberapa properti telah ditetapkan untuk pemilih (elemen) yang sama dalam lembar gaya yang berbeda, nilai dari lembar gaya terakhir yang dibaca akan digunakan. 
+
+Asumsikan bahwa lembar gaya eksternal memiliki gaya berikut untuk elemen <h1>:
+
+h1 {
+  color: navy;
+}
+Kemudian, asumsikan bahwa lembar gaya internal juga memiliki gaya berikut untuk elemen <h1>:
+
+h1 {
+  color: orange;   
+}
+Contoh
+Jika gaya internal didefinisikan setelah tautan ke lembar gaya eksternal, elemen <h1> akan berwarna "oranye":
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<style>
+h1 {
+  color: orange;
+}
+</style>
+</head>
+Contoh
+Namun, jika gaya internal didefinisikan sebelum tautan ke lembar gaya eksternal, elemen <h1> akan menjadi "biru tua": 
+
+<head>
+<style>
+h1 {
+  color: orange;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+Urutan Berjenjang
+Gaya apa yang akan digunakan ketika ada lebih dari satu gaya yang ditentukan untuk elemen HTML?
+
+Semua gaya di halaman akan "diturunkan" ke lembar gaya "virtual" baru berdasarkan aturan berikut, dengan nomor satu sebagai prioritas tertinggi:
+
+Gaya sebaris (di dalam elemen HTML)
+Lembar gaya eksternal dan internal (di bagian kepala)
+Peramban bawaan
+Jadi, gaya sebaris memiliki prioritas tertinggi, dan akan mengesampingkan gaya eksternal dan internal serta pengaturan default browser.
+
+
+Pernah dengar tentang W3Schools Spaces ? Di sini, Anda bisa membuat situs web sendiri, atau menyimpan cuplikan kode untuk digunakan nanti, gratis.
+
+* tidak perlu kartu kredit
+
+Latihan
+?
+Seret dan lepas tag yang benar untuk menyertakan berkas CSS eksternal.
+<head>
+  < rel="stylesheet" href="styles.css">
+</head>

@@ -1,0 +1,177 @@
+Efek Bayangan CSS
+Norwegia
+Bayangan
+
+Dengan CSS Anda dapat membuat efek bayangan!
+
+Arahkan kursor ke saya!
+Efek Bayangan CSS
+Dengan CSS Anda dapat menambahkan bayangan pada teks dan elemen.
+
+Dalam bab ini Anda akan mempelajari tentang properti berikut:
+
+text-shadow
+box-shadow
+Bayangan Teks CSS
+Properti CSS text-shadowmenerapkan bayangan pada teks.
+
+Dalam penggunaan paling sederhana, Anda hanya menentukan bayangan horizontal (2px) dan bayangan vertikal (2px):
+
+Efek bayangan teks!
+Contoh
+h1 {
+  text-shadow: 2px 2px;
+}
+Selanjutnya, tambahkan warna ke bayangan:
+
+Efek bayangan teks!
+Contoh
+h1 {
+  text-shadow: 2px 2px red;
+}
+Lalu, tambahkan efek buram pada bayangan:
+
+Efek bayangan teks!
+Contoh
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+Contoh berikut menunjukkan teks putih dengan bayangan hitam:
+
+Efek bayangan teks!
+Contoh
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+Contoh berikut menunjukkan bayangan cahaya neon merah:
+
+Efek bayangan teks!
+Contoh
+h1 {
+  text-shadow: 0 0 3px #FF0000;
+}
+
+Bayangan Ganda
+Untuk menambahkan lebih dari satu bayangan pada teks, Anda dapat menambahkan daftar bayangan yang dipisahkan koma.
+
+Contoh berikut menunjukkan bayangan cahaya neon merah dan biru:
+
+Efek bayangan teks!
+Contoh
+h1 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+Contoh berikut menunjukkan teks putih dengan bayangan hitam, biru, dan biru tua:
+
+Efek bayangan teks!
+Contoh
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+Anda juga dapat menggunakan properti text-shadow untuk membuat batas polos di sekitar beberapa teks (tanpa bayangan):
+
+Batas di sekitar teks!
+Contoh
+h1 {
+  color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+Latihan
+?
+Berapa nilai minimum yang diperlukan untuk menentukan bayangan teks?
+
+
+Nilai bayangan horizontal dan vertikal
+Bayangan horizontal, bayangan vertikal, dan radius buram
+Bayangan horizontal, bayangan vertikal, radius kabur, dan warna
+Warna dan radius buram
+Bayangan Kotak CSS
+Properti CSS box-shadow
+Properti CSS box-shadowdigunakan untuk menerapkan satu atau lebih bayangan pada suatu elemen.
+
+Tentukan Bayangan Horizontal dan Vertikal
+Dalam penggunaan paling sederhana, Anda hanya perlu menentukan bayangan horizontal dan vertikal. Warna bayangan default adalah warna teks saat ini.
+
+Elemen <div> dengan bayangan kotak
+Contoh
+Tentukan bayangan horizontal dan vertikal:
+
+div {
+  box-shadow: 10px 10px;
+}
+Tentukan Warna untuk Bayangan
+Parameter colormenentukan warna bayangan.
+
+Elemen <div> dengan bayangan kotak biru muda
+Contoh
+Tentukan warna untuk bayangan:
+
+div {
+  box-shadow: 10px 10px lightblue;
+}
+Tambahkan Efek Buram pada Bayangan
+Parameter ini blurmenentukan radius blur. Semakin tinggi angkanya, semakin kabur bayangannya.
+
+Elemen <div> dengan bayangan kotak biru muda kabur berukuran 5px
+Contoh
+Tambahkan efek buram pada bayangan:
+
+div {
+  box-shadow: 10px 10px 5px lightblue;
+}
+Mengatur Radius Penyebaran Bayangan
+Parameter ini spreadmenentukan radius sebaran. Nilai positif akan meningkatkan ukuran bayangan, sedangkan nilai negatif akan memperkecil ukuran bayangan.
+
+Elemen <div> dengan bayangan kotak biru muda yang kabur, dengan radius sebaran 12 piksel
+Contoh
+Mengatur radius penyebaran bayangan:
+
+div {
+  box-shadow: 10px 10px 5px 12px lightblue;
+}
+IKLAN
+
+Atur Parameter sisipan
+Parameter insetmengubah bayangan dari bayangan luar (awal) menjadi bayangan dalam.
+
+Elemen <div> dengan bayangan kotak sisipan berwarna biru muda yang kabur
+Contoh
+Tambahkan parameter inset:
+
+div {
+  box-shadow: 10px 10px 5px lightblue inset;
+}
+Tambahkan Beberapa Bayangan
+Suatu elemen juga dapat memiliki beberapa bayangan:
+
+Contoh
+div {
+  box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+}
+Kartu
+Anda juga dapat menggunakan box-shadowproperti untuk membuat kartu seperti kertas:
+
+1
+1 Januari 2021
+
+Norwegia
+Hardanger, Norwegia
+
+Contoh
+div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+ 
+Latihan
+?
+Apa fungsi parameter "spread" dalam box-shadowproperti?
+
+
+Menentukan warna bayangan
+Mengontrol kaburnya bayangan
+Menentukan seberapa besar bayangan tumbuh atau menyusut
+Mengubah arah bayangan

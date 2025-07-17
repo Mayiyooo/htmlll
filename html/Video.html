@@ -1,0 +1,84 @@
+ideo HTML
+Elemen HTML <video>digunakan untuk menampilkan video di halaman web.
+
+Video
+Contoh
+Atas kebaikan Big Buck Bunny :
+
+Elemen HTML <video>
+Untuk menampilkan video dalam HTML, gunakan <video>elemen:
+
+Contoh
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+Cara Kerjanya
+Atribut controlsmenambahkan kontrol video, seperti putar, jeda, dan volume.
+
+Sebaiknya selalu sertakan widthatribut height. Jika tinggi dan lebar tidak diatur, halaman mungkin berkedip saat video dimuat.
+
+Elemen ini <source>memungkinkan Anda menentukan berkas video alternatif yang dapat dipilih oleh peramban. Peramban akan menggunakan format pertama yang dikenali.
+
+Teks antara tag <video>dan </video>hanya akan ditampilkan di browser yang tidak mendukung <video>elemen tersebut.
+
+HTML <video> Putar Otomatis
+Untuk memulai video secara otomatis, gunakan autoplayatribut:
+
+Contoh
+<video width="320" height="240" autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+Catatan: Peramban Chromium tidak mengizinkan putar otomatis dalam kebanyakan kasus. Namun, putar otomatis tanpa suara selalu diizinkan.
+
+Tambahkan mutedsetelah autoplayuntuk membiarkan video Anda mulai diputar secara otomatis (tetapi tanpa suara):
+
+Contoh
+<video width="320" height="240" autoplay muted>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+Dukungan Peramban
+Angka dalam tabel menunjukkan versi browser pertama yang sepenuhnya mendukung <video>elemen tersebut.
+
+Element					
+<video>	4.0	9.0	3.5	4.0	10.5
+
+Format Video HTML
+Ada tiga format video yang didukung: MP4, WebM, dan Ogg. Dukungan peramban untuk berbagai format tersebut adalah:
+
+Browser	MP4	WebM	Ogg
+Edge	YES	YES	YES
+Chrome	YES	YES	YES
+Firefox	YES	YES	YES
+Safari	YES	YES	NO
+Opera	YES	YES	YES
+Video HTML - Jenis Media
+File Format	Media Type
+MP4	video/mp4
+WebM	video/webm
+Ogg	video/ogg
+Video HTML - Metode, Properti, dan Peristiwa
+DOM HTML mendefinisikan metode, properti, dan peristiwa untuk <video>elemen.
+
+Ini memungkinkan Anda memuat, memutar, dan menjeda video, serta mengatur durasi dan volume.
+
+Ada juga peristiwa DOM yang dapat memberitahukan Anda saat video mulai diputar, dijeda, dll.
+
+Contoh: Menggunakan JavaScript
+
+Putar/Jeda Besar Kecil Normal
+
+Video milik Big Buck Bunny .
+
+Untuk referensi DOM lengkap, kunjungi Referensi DOM Audio/Video HTML kami .
+
+Tag Video HTML
+Tag	Description
+<video>	Defines a video or movie
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>
+<track>	Defines text tracks in media players

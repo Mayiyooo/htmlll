@@ -1,0 +1,133 @@
+z-index
+Properti ini z-indexmenentukan urutan tumpukan suatu elemen.
+
+Properti z-indeks
+Bila elemen diposisikan, elemen tersebut dapat tumpang tindih dengan elemen lainnya.
+
+Properti z-indexmenentukan urutan tumpukan suatu elemen (elemen mana yang harus ditempatkan di depan, atau di belakang, elemen lainnya).
+
+Suatu elemen dapat memiliki tatanan tumpukan positif atau negatif:
+
+Ini adalah judulKarena gambar memiliki indeks-z -1, gambar akan ditempatkan di belakang teks.
+Contoh
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+Catatan: z-index hanya berfungsi pada elemen yang diposisikan (posisi: absolut, posisi: relatif, posisi: tetap, atau posisi: lengket) dan item fleksibel (elemen yang merupakan anak langsung dari elemen tampilan: fleksibel).
+
+IKLAN
+
+Contoh z-indeks lainnya
+Contoh
+Di sini kita melihat bahwa elemen dengan urutan tumpukan lebih besar selalu berada di atas elemen dengan urutan tumpukan lebih rendah:
+
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+</body>
+</html>
+Tanpa indeks-z
+Jika dua elemen yang diposisikan saling tumpang tindih tanpa z-index ditentukan, elemen yang didefinisikan terakhir dalam kode HTML akan ditampilkan di atas.
+
+Contoh
+Contoh yang sama seperti di atas, tetapi di sini tanpa indeks-z yang ditentukan:
+
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+</body>
+</html>
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk membuat elemen muncul di depan semua elemen lainnya dalam urutan tumpukan.
+.box {
+  : absolute;
+  : ;
+}
+
+
+Properti CSS
+Property	Description
+z-index	Sets the stack order of an element

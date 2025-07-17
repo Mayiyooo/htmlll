@@ -1,0 +1,88 @@
+Kueri Media CSS
+Kueri Media CSS
+Aturan @mediayang diperkenalkan dalam CSS2 memungkinkan untuk mendefinisikan aturan gaya yang berbeda untuk jenis media yang berbeda.
+
+Kueri media dalam CSS3 memperluas gagasan jenis media CSS2: Alih-alih mencari jenis perangkat, kueri tersebut melihat kemampuan perangkat.
+
+Kueri media dapat digunakan untuk memeriksa banyak hal, seperti:
+
+lebar dan tinggi viewport
+orientasi viewport (lanskap atau potret)
+resolusi
+Menggunakan kueri media merupakan teknik populer untuk memberikan lembar gaya yang disesuaikan ke desktop, laptop, tablet, dan telepon seluler (seperti iPhone dan telepon Android).
+
+Jenis Media CSS
+Value	Description
+all	Used for all media type devices
+print	Used for print preview mode
+screen	Used for computer screens, tablets, smart-phones etc.
+Fitur Media Umum CSS
+Berikut adalah beberapa fitur media yang umum digunakan:
+
+Value	Description
+orientation	Orientation of the viewport. Landscape or portrait
+max-height	Maximum height of the viewport
+min-height	Minimum height of the viewport
+height	Height of the viewport (including scrollbar)
+max-width	Maximum width of the viewport
+min-width	Minimum width of the viewport
+width	Width of the viewport (including scrollbar)
+Sintaks Kueri Media
+Kueri media terdiri atas jenis media dan dapat memuat satu atau beberapa fitur media, yang dapat menghasilkan nilai benar atau salah.
+
+@media not|only mediatype and (media feature) and (media feature) {
+  CSS-Code;
+}
+Tipe media bersifat opsional (jika dihilangkan, akan disetel ke all). Namun, jika Anda menggunakan not atau only , Anda juga harus menentukan tipe media .
+
+Hasil kueri bernilai benar jika jenis media yang ditentukan cocok dengan jenis perangkat tempat dokumen ditampilkan dan semua fitur media dalam kueri media bernilai benar. Jika kueri media bernilai benar, lembar gaya atau aturan gaya yang sesuai akan diterapkan, mengikuti aturan cascading normal.
+
+Arti kata kunci not , only , dan :
+
+catatan: Kata kunci ini membalikkan arti seluruh kueri media.
+
+Hanya: Kata kunci ini mencegah peramban lama yang tidak mendukung kueri media menerapkan gaya yang ditentukan. Kata kunci ini tidak berpengaruh pada peramban modern.
+
+dan: Kata kunci ini menggabungkan jenis media dan satu atau lebih fitur media.
+
+Anda juga dapat menautkan ke stylesheet yang berbeda untuk media yang berbeda dan lebar jendela browser (viewport) yang berbeda:
+
+<link rel="stylesheet" media="print" href="print.css">
+<link rel="stylesheet" media="screen" href="screen.css">
+<link rel="stylesheet" media="screen and (min-width: 480px)" href="example1.css">
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
+etc....
+
+Contoh Sederhana Pertanyaan Media
+Salah satu cara menggunakan media queries adalah dengan memiliki bagian CSS alternatif tepat di dalam lembar gaya Anda.
+
+Contoh berikut mengubah warna latar belakang menjadi hijau muda jika lebar area pandang 480 piksel atau lebih (jika area pandang kurang dari 480 piksel, warna latar belakang akan menjadi merah muda):
+
+Contoh
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+Contoh berikut menunjukkan menu yang akan melayang di sebelah kiri halaman jika lebar area pandang 480 piksel atau lebih (jika area pandang kurang dari 480 piksel, menu akan berada di atas konten):
+
+Contoh
+@media screen and (min-width: 480px) {
+  #leftsidebar {width: 200px; float: left;}
+  #main {margin-left: 216px;}
+}
+Contoh Kueri Media Lainnya
+Untuk contoh yang lebih banyak mengenai media query, buka halaman berikutnya: Contoh CSS MQ .
+
+Latihan
+?
+Apa tujuan @mediaaturan dalam CSS?
+
+
+Untuk menambahkan animasi ke elemen
+Untuk menentukan gaya untuk berbagai jenis media
+Untuk mengoptimalkan CSS agar pemuatan lebih cepat
+Untuk mengatur gaya untuk media cetak saja
+
+Referensi CSS @media
+Untuk ikhtisar lengkap semua jenis media dan fitur/ekspresi, silakan lihat aturan @media dalam referensi CSS kami .

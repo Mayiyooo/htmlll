@@ -1,0 +1,130 @@
+
+Pekerja web adalah berkas JavaScript eksternal yang berjalan di latar belakang, tanpa memengaruhi kinerja halaman.
+
+Apa itu Web Worker?
+Saat menjalankan skrip di halaman HTML, halaman tersebut menjadi tidak responsif hingga skrip selesai.
+
+Web worker adalah berkas JavaScript eksternal yang berjalan di latar belakang, terlepas dari skrip lain, tanpa memengaruhi kinerja halaman. Anda dapat terus melakukan apa pun yang Anda inginkan: mengeklik, memilih sesuatu, dll., selagi web worker berjalan di latar belakang.
+
+Pekerja web berguna untuk kode berat yang tidak dapat dijalankan pada utas utama, tanpa menyebabkan tugas panjang yang membuat halaman tidak responsif.
+
+Dukungan Peramban
+Angka dalam tabel menunjukkan versi browser pertama yang sepenuhnya mendukung Web Workers API.
+
+API					
+Web Workers	4.0	10.0	3.5	4.0	11.5
+Contoh API Pekerja Web
+Contoh berikut ini membuat pekerja web sederhana yang menghitung angka di latar belakang:
+
+Contoh
+Count numbers:
+Start Worker Stop Worker
+
+Catatan: Biasanya pekerja web tidak digunakan untuk skrip sederhana seperti itu, tetapi untuk tugas yang lebih intensif pada CPU!
+
+Periksa Dukungan API Web Worker
+Sebelum menggunakan web worker, kita dapat dengan cepat memeriksa dukungan browser:
+
+Contoh
+Uji dukungan peramban:
+
+<script>
+const x = document.getElementById("result");
+if(typeof(Worker) !== "undefined") {
+  x.innerHTML = "Your browser support Web Workers!";
+} else {
+  x.innerHTML = "Sorry, your browser does not support Web Workers.";
+}
+</script>
+IKLAN
+
+Membuat File Web Worker .js
+Sekarang, mari kita membuat pekerja web dalam berkas JavaScript eksternal.
+
+Di sini, kita membuat skrip yang berguna. Skrip ini disimpan dalam berkas "demo_workers.js":
+
+var i = 0;
+
+function timedCount() {
+  i = i + 1;
+  postMessage(i);
+  setTimeout("timedCount()",500);
+}
+
+timedCount();
+Catatan: Bagian penting dari kode di atas adalah postMessage()metode - yang digunakan untuk mengirim pesan kembali ke halaman HTML.
+
+Membuat Objek Pekerja Web
+Setelah kita membuat file web worker .js, kita dapat memanggilnya dari halaman HTML.
+
+Baris berikut memeriksa apakah pekerja (w) sudah ada, jika tidak, ia membuat objek pekerja web baru dan menunjuk ke file .js: "demo_workers.js":
+
+if (typeof(w) == "undefined") {
+  w = new Worker("demo_workers.js");
+}
+Lalu kita dapat MENGIRIM dan MENGAMBIL pesan dari pekerja web.
+
+Data dikirim antara pekerja web dan utas utama melalui sistem pesan - kedua belah pihak mengirim pesan mereka menggunakan postMessage() metode tersebut, dan menanggapi pesan melalui onmessage pengendali peristiwa.
+
+Tambahkan onmessagependengar peristiwa ke objek pekerja web.
+
+w.onmessage = function(event){
+  document.getElementById("result").innerHTML = event.data;
+};
+Ketika web worker di .js memposting pesan, kode di dalam event listener akan dieksekusi. Data dari web worker disimpan di event.data.js.
+
+Mengakhiri Pekerja Web
+Saat objek pekerja web dibuat, objek tersebut akan terus mendengarkan pesan hingga diakhiri.
+
+Untuk menghentikan objek pekerja web, dan membebaskan sumber daya browser/komputer, gunakan terminate()metode:
+
+w.terminate();
+Gunakan kembali Web Worker
+Jika Anda menetapkan variabel pekerja web ke tidak terdefinisi, setelah diakhiri, Anda dapat menggunakan kembali pekerja/kode:
+
+w = undefined;
+Contoh Web Worker Lengkap
+Kita telah melihat kode Web Worker dalam file .js.
+
+Berikut ini kode lengkap untuk halaman HTML:
+
+Contoh
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+let w;
+
+function startWorker() {
+  const x = document.getElementById("result");
+  if (typeof(Worker) !== "undefined") {
+    if (typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      x.innerHTML = event.data;
+    };
+  } else {
+    x.innerHTML = "Sorry! No Web Worker support.";
+  }
+}
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
+</script>
+
+</body>
+</html>
+Pekerja Web dan DOM
+Karena pekerja web berada dalam file .js eksternal, mereka tidak memiliki akses ke objek JavaScript berikut:
+
+Objek jendela
+Objek dokumen
+Objek induk

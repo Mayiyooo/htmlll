@@ -1,0 +1,62 @@
+
+Flexbox Responsif
+Anda mempelajari dari bab Kueri Media CSS bahwa Anda dapat menggunakan kueri media untuk membuat tata letak yang berbeda untuk ukuran layar dan perangkat yang berbeda.
+
+Laptop dan Desktop:
+
+1
+2
+3
+Ponsel dan Tablet :
+
+1
+2
+3
+
+Misalnya, jika Anda ingin membuat tata letak dua kolom untuk sebagian besar ukuran layar, dan tata letak satu kolom untuk ukuran layar kecil (seperti ponsel dan tablet), Anda dapat mengubah dari flex-directionmenjadi rowpada column titik henti tertentu (800 piksel dalam contoh di bawah):
+
+Contoh
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+Cara lain adalah dengan mengubah persentase properti flexitem fleksibel untuk membuat tata letak yang berbeda untuk ukuran layar yang berbeda. Perhatikan bahwa kita juga harus menyertakan flex-wrap: wrap;pada wadah fleksibel agar contoh ini berfungsi:
+
+Contoh
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item-left {
+  flex: 50%;
+}
+
+.flex-item-right {
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+
+IKLAN
+
+Galeri Gambar Responsif menggunakan Flexbox
+Gunakan flexbox untuk membuat galeri gambar responsif yang bervariasi antara empat, dua, atau gambar lebar penuh, tergantung pada ukuran layar:
+
+ 
+Situs Web Responsif menggunakan Flexbox
+Gunakan flexbox untuk membuat situs web responsif, berisi bilah navigasi fleksibel dan konten fleksibel:
+

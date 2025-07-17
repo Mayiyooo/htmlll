@@ -1,0 +1,95 @@
+Aturan !penting CSS
+Apa itu !penting?
+Aturan !importantdalam CSS digunakan untuk menambahkan lebih banyak kepentingan pada suatu properti/nilai dari biasanya.
+
+Faktanya, jika Anda menggunakan !importantaturan tersebut, aturan tersebut akan mengesampingkan SEMUA aturan gaya sebelumnya untuk properti spesifik pada elemen tersebut!
+
+Mari kita lihat sebuah contoh:
+
+Contoh
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+p {
+  background-color: red !important;
+}
+
+Contoh Dijelaskan
+Pada contoh di atas, ketiga paragraf akan mendapatkan warna latar belakang merah, meskipun pemilih ID dan pemilih kelas memiliki spesifisitas yang lebih tinggi. !importantAturan tersebut menggantikan background-colorproperti dalam kedua kasus.
+
+Penting Tentang !important
+Satu-satunya cara untuk mengganti !important aturan adalah dengan memasukkan !important aturan lain pada deklarasi dengan spesifisitas yang sama (atau lebih tinggi) dalam kode sumber - dan di sinilah masalahnya dimulai! Hal ini membuat kode CSS membingungkan dan proses debug akan sulit, terutama jika Anda memiliki lembar gaya yang besar!
+
+Di sini kami telah membuat contoh sederhana. Tidak terlalu jelas, ketika Anda melihat kode sumber CSS, warna mana yang dianggap paling penting:
+
+Contoh
+#myid {
+  background-color: blue !important;
+}
+
+.myclass {
+  background-color: gray !important;
+}
+
+p {
+  background-color: red !important;
+}
+
+Tips: Ada baiknya mengetahui !important aturan ini. Anda mungkin melihatnya di beberapa kode sumber CSS. Namun, jangan menggunakannya kecuali benar-benar diperlukan.
+
+IKLAN
+
+Mungkin Satu atau Dua Penggunaan Wajar dari !important
+Salah satu cara untuk menggunakannya !importantadalah jika Anda perlu mengganti gaya yang tidak dapat diganti dengan cara lain. Ini bisa dilakukan jika Anda menggunakan Sistem Manajemen Konten (CMS) dan tidak dapat mengedit kode CSS. Kemudian, Anda dapat mengatur beberapa gaya khusus untuk mengganti beberapa gaya CMS.
+
+Cara lain untuk menggunakannya !importantadalah: Asumsikan Anda menginginkan tampilan khusus untuk semua tombol di halaman. Di sini, tombol diberi gaya dengan warna latar belakang abu-abu, teks putih, dan sedikit padding serta border:
+
+Contoh
+.button {
+  background-color: #8c8c8c;
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+Tampilan tombol terkadang dapat berubah jika kita menempatkannya di dalam elemen lain dengan spesifisitas yang lebih tinggi, dan propertinya saling bertentangan. Berikut contohnya:
+
+Contoh
+.button {
+  background-color: #8c8c8c;
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+#myDiv a {
+  color: red;
+  background-color: yellow;
+}
+
+Untuk "memaksa" semua tombol agar memiliki tampilan yang sama, apa pun yang terjadi, kita dapat menambahkan !important aturan ke properti tombol, seperti ini:
+
+Contoh
+.button {
+  background-color: #8c8c8c !important;
+  color: white !important;
+  padding: 5px !important;
+  border: 1px solid black !important;
+}
+
+#myDiv a {
+  color: red;
+  background-color: yellow;
+}
+
+Latihan
+?
+Seret dan lepas urutan properti dan nilai yang benar, termasuk !importantaturan, ke contoh berikut:
+p {
+  :  ;
+}

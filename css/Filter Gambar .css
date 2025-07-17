@@ -1,0 +1,229 @@
+Efek Filter Gambar CSS
+Properti filter CSS digunakan untuk menambahkan efek visual ke elemen.
+
+
+Filter CSS
+Properti CSS filterdigunakan untuk menambahkan efek visual (seperti kabur dan saturasi) ke elemen.
+
+Di dalam properti filter, Anda dapat menggunakan fungsi CSS berikut:
+
+blur()
+brightness()
+contrast()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+saturate()
+sepia()
+Fungsi CSS blur()
+Fungsi blur()filter menerapkan efek buram pada suatu elemen. Nilai yang lebih besar akan menghasilkan lebih banyak keburaman.
+
+Contoh
+Terapkan efek buram yang berbeda ke elemen <img>:
+
+#img1 {
+  filter: blur(2px);
+}
+
+#img2 {
+  filter: blur(6px);
+}
+
+IKLAN
+
+Fungsi CSS kecerahan()
+Fungsi brightness()filter menyesuaikan kecerahan suatu elemen.
+
+Nilai lebih dari 100% akan memberikan hasil yang lebih cerah
+Nilai di bawah 100% akan memberikan hasil yang lebih gelap
+0% akan membuat gambar menjadi hitam sepenuhnya
+100% adalah default, dan mewakili gambar asli
+Contoh
+Membuat gambar lebih terang dan lebih gelap dari aslinya:
+
+#img1 {
+  filter: brightness(150%);
+}
+
+#img2 {
+  filter: brightness(50%);
+}
+
+Fungsi CSS contrast()
+Fungsi contrast()filter menyesuaikan kontras suatu elemen.
+
+Nilai lebih dari 100% meningkatkan kontras
+Nilai di bawah 100% menurunkan kontras
+0% akan membuat gambar menjadi abu-abu sepenuhnya
+100% adalah default, dan mewakili gambar asli
+Contoh
+Meningkatkan dan mengurangi kontras untuk gambar:
+
+#img1 {
+  filter: contrast(150%);
+}
+
+#img2 {
+  filter: contrast(50%);
+}
+
+Fungsi CSS drop-shadow()
+Fungsi drop-shadow()filter menerapkan efek bayangan jatuh pada gambar.
+
+Contoh
+Tambahkan efek bayangan yang berbeda ke gambar:
+
+#img1 {
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+#img2 {
+  filter: drop-shadow(10px 10px 7px lightblue);
+}
+
+Fungsi grayscale() CSS
+Fungsi grayscale()filter mengubah gambar menjadi skala abu-abu.
+
+100% (atau 1) akan membuat gambar sepenuhnya berwarna abu-abu
+0% (atau 0) tidak akan ada efeknya
+Contoh
+Mengatur berbagai skala abu-abu untuk suatu gambar:
+
+#img1 {
+  filter: grayscale(1);
+}
+
+#img2 {
+  filter: grayscale(60%);
+}
+
+#img3 {
+  filter: grayscale(0.4);
+}
+
+Fungsi CSS hue-rotate()
+Fungsi hue-rotate()filter menerapkan rotasi warna pada suatu elemen.
+
+Fungsi ini menerapkan rotasi rona pada gambar. Nilai ini menentukan jumlah derajat di sekitar lingkaran warna tempat gambar akan disesuaikan. Rotasi rona positif akan meningkatkan nilai rona, sementara rotasi negatif akan menurunkan nilai rona. 0 derajat mewakili gambar asli.
+
+Contoh
+Mengatur berbagai rotasi warna untuk gambar:
+
+#img1 {
+  filter: hue-rotate(200deg);
+}
+
+#img2 {
+  filter: hue-rotate(90deg);
+}
+
+#img3 {
+  filter: hue-rotate(-90deg);
+}
+
+Fungsi CSS invert()
+Fungsi invert()filter membalikkan warna gambar.
+
+100% (atau 1) akan membuat gambar terbalik sepenuhnya
+0% (atau 0) tidak akan ada efeknya
+Contoh
+Membalikkan warna gambar:
+
+#img1 {
+  filter: invert(0.3);
+}
+
+#img2 {
+  filter: invert(70%);
+}
+
+#img3 {
+  filter: invert(100%);
+}
+
+Fungsi CSS opacity()
+Fungsi opacity()filter menerapkan efek opasitas pada suatu elemen.
+
+100% (atau 1) tidak akan ada efeknya
+50% (atau 0,5) akan membuat elemen 50% transparan
+0% (atau 0) akan membuat elemen sepenuhnya transparan
+Contoh
+Mengatur berbagai opasitas untuk suatu gambar:
+
+#img1 {
+  filter: opacity(80%);
+}
+
+#img2 {
+  filter: opacity(50%);
+}
+
+#img3 {
+  filter: opacity(0.2);
+}
+
+Fungsi CSS saturate()
+Fungsi saturate()filter menyesuaikan saturasi (intensitas warna) suatu elemen.
+
+0% (atau 0) akan membuat elemen tersebut sepenuhnya tidak jenuh
+100% (atau 1) tidak akan ada efeknya
+200% (atau 2) akan membuat elemen menjadi super jenuh
+Contoh
+Mengatur berbagai saturasi untuk gambar:
+
+#img1 {
+  filter: saturate(0);
+}
+
+#img2 {
+  filter: saturate(100%);
+}
+
+#img3 {
+  filter: saturate(200%);
+}
+
+Fungsi CSS sepia()
+Fungsi sepia()filter mengubah gambar menjadi sepia (warna yang lebih hangat, lebih coklat/kuning).
+
+100% (atau 1) akan membuat gambar menjadi sepia sepenuhnya
+0% (atau 0) tidak akan ada efeknya
+Contoh
+Tetapkan berbagai sepia untuk suatu gambar:
+
+#img1 {
+  filter: sepia(1);
+}
+
+#img2 {
+  filter: sepia(60%);
+}
+
+#img3 {
+  filter: sepia(0.4);
+}
+
+Latihan
+?
+Seret dan lepas fungsi yang benar untuk menerapkan efek buram pada gambar.
+img {
+  filter: (8px);
+}
+
+
+Fungsi Filter CSS
+Tabel berikut mencantumkan fungsi filter CSS:
+
+Function	Description
+blur()	Applies a blur effect to an element
+brightness()	Adjusts the brightness of an element
+contrast()	Adjusts the contrast of an element
+drop-shadow()	Applies a drop-shadow effect to an image
+grayscale()	Converts an image to grayscale
+hue-rotate()	Applies a color rotation to an element
+invert()	Inverts the color of an image
+opacity()	Applies an opacity effect to an element
+saturate()	Adjusts the saturation (color intensity) of an element
+sepia()	Converts an image to sepia

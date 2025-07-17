@@ -1,0 +1,167 @@
+Tautan CSS
+Dengan CSS, tautan dapat diberi gaya dalam berbagai cara berbeda.
+
+Tautan Teks Tautan Teks Tombol Tautan Tombol Tautan
+Tautan Gaya
+Tautan dapat diberi gaya dengan properti CSS apa pun (misalnya color, font-family, background, dll.).
+
+Contoh
+a {
+  color: hotpink;
+}
+Selain itu, tautan dapat diberi gaya berbeda, bergantung pada negara tempat tautan itu berada.
+
+Keempat status tautan tersebut adalah:
+
+a:link- tautan normal yang belum dikunjungi
+a:visited- tautan yang telah dikunjungi pengguna
+a:hover- tautan saat pengguna mengarahkan kursor ke atasnya
+a:active- tautan saat diklik
+Contoh
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+Saat mengatur gaya untuk beberapa status tautan, ada beberapa aturan urutan:
+
+a:hover HARUS muncul setelah a:link dan a:visited
+a:active HARUS datang setelah a:hover
+
+Dekorasi Teks
+Properti text-decorationini sebagian besar digunakan untuk menghapus garis bawah dari tautan:
+
+Contoh
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+Warna Latar Belakang
+Properti ini background-colordapat digunakan untuk menentukan warna latar belakang untuk tautan:
+
+Contoh
+a:link {
+  background-color: yellow;
+}
+
+a:visited {
+  background-color: cyan;
+}
+
+a:hover {
+  background-color: lightgreen;
+}
+
+a:active {
+  background-color: hotpink;
+} 
+Tombol Tautan
+Contoh ini menunjukkan contoh yang lebih maju di mana kita menggabungkan beberapa properti CSS untuk menampilkan tautan sebagai kotak/tombol:
+
+Contoh
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+Contoh Lainnya
+Contoh
+Contoh ini menunjukkan cara menambahkan gaya lain ke hyperlink:
+
+a.one:link {color: #ff0000;}
+a.one:visited {color: #0000ff;}
+a.one:hover {color: #ffcc00;}
+
+a.two:link {color: #ff0000;}
+a.two:visited {color: #0000ff;}
+a.two:hover {font-size: 150%;}
+
+a.three:link {color: #ff0000;}
+a.three:visited {color: #0000ff;}
+a.three:hover {background: #66ff66;}
+
+a.four:link {color: #ff0000;}
+a.four:visited {color: #0000ff;}
+a.four:hover {font-family: monospace;}
+
+a.five:link {color: #ff0000; text-decoration: none;}
+a.five:visited {color: #0000ff; text-decoration: none;}
+a.five:hover {text-decoration: underline;}
+Contoh
+Contoh lain cara membuat kotak/tombol tautan:
+
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+Contoh
+Contoh ini menunjukkan berbagai jenis kursor (dapat berguna untuk tautan):
+
+<span style="cursor: auto">auto</span><br>
+<span style="cursor: crosshair">crosshair</span><br>
+<span style="cursor: default">default</span><br>
+<span style="cursor: e-resize">e-resize</span><br>
+<span style="cursor: help">help</span><br>
+<span style="cursor: move">move</span><br>
+<span style="cursor: n-resize">n-resize</span><br>
+<span style="cursor: ne-resize">ne-resize</span><br>
+<span style="cursor: nw-resize">nw-resize</span><br>
+<span style="cursor: pointer">pointer</span><br>
+<span style="cursor: progress">progress</span><br>
+<span style="cursor: s-resize">s-resize</span><br>
+<span style="cursor: se-resize">se-resize</span><br>
+<span style="cursor: sw-resize">sw-resize</span><br>
+<span style="cursor: text">text</span><br>
+<span style="cursor: w-resize">w-resize</span><br>
+<span style="cursor: wait">wait</span>
+Latihan
+?
+Apa pseudo-kelas CSS yang tepat untuk memberi gaya pada tautan saat tautan telah dikunjungi?
+
+
+a:hover
+a:visited
+a:active
+a:link

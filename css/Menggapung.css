@@ -1,0 +1,266 @@
+Tata Letak CSS - mengambang dan jelas
+Properti CSS floatmenentukan bagaimana suatu elemen harus mengambang.
+
+Properti CSS clearmenentukan elemen apa yang dapat mengapung di samping elemen yang dihapus dan di sisi mana.
+
+
+
+Properti mengapung
+Properti ini floatdigunakan untuk memposisikan dan memformat konten, misalnya membiarkan gambar mengambang ke kiri terhadap teks dalam suatu wadah.
+
+Properti floatdapat memiliki salah satu nilai berikut:
+
+left- Elemen mengapung di sebelah kiri wadahnya
+right- Elemen mengapung di sebelah kanan wadahnya
+none- Elemen tidak mengambang (akan ditampilkan tepat di tempat kemunculannya dalam teks). Ini adalah default
+inherit- Elemen mewarisi nilai float dari induknya
+Dalam penggunaan yang paling sederhana, floatproperti ini dapat digunakan untuk membungkus teks di sekitar gambar.
+
+Contoh - float:right;
+Contoh berikut menentukan bahwa gambar harus mengambang di sebelah kanan dalam teks:
+
+NanasLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum menambah aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+
+Contoh
+img {
+  float: right;
+}
+IKLAN
+
+Contoh - float:left;
+Contoh berikut menentukan bahwa gambar harus mengambang di sebelah kiri dalam teks:
+
+NanasLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum menambah aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+
+Contoh
+img {
+  float: left;
+}
+Contoh - Tidak ada float
+Dalam contoh berikut, gambar akan ditampilkan tepat di tempat gambar tersebut muncul dalam teks (float: none;):
+
+Nanas Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum menambah aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+
+Contoh
+img {
+  float: none;
+}
+Contoh - Melayang Berdampingan
+Biasanya, elemen div akan ditampilkan di atas satu sama lain. Namun, jika kita menggunakan `div`, float: leftkita dapat membiarkan elemen-elemen tersebut mengapung berdampingan:
+
+Contoh
+div {
+  float: left;
+  padding: 15px;
+}
+
+.div1 {
+  background: red;
+}
+
+.div2 {
+  background: yellow;
+}
+
+.div3 {
+  background: green;
+}
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk membuat gambar melayang di sebelah kiri wadahnya.
+img {
+  : ;
+}
+
+
+Properti CSS
+Property	Description
+clear	Specifies what should happen with the element that is next to a floating element
+float	Specifies whether an element should float to the left, right, or not att all
+
+Tata Letak CSS - jelas dan clearfix
+Properti yang Jelas
+Bila kita menggunakan floatproperti, dan kita menginginkan elemen berikutnya di bawah (bukan di kanan atau kiri), kita harus menggunakan clear properti tersebut.
+
+Properti clearmenentukan apa yang seharusnya terjadi dengan elemen yang ada di sebelah elemen mengambang.
+
+Properti cleardapat memiliki salah satu nilai berikut:
+
+none- Elemen tidak didorong di bawah elemen yang melayang di kiri atau kanan. Ini adalah default.
+left- Elemen didorong di bawah elemen yang mengambang di sebelah kiri
+right- Elemen didorong di bawah elemen yang melayang ke kanan
+both- Elemen didorong di bawah elemen kiri dan kanan yang mengambang
+inherit- Elemen mewarisi nilai yang jelas dari induknya
+Saat menghapus float, Anda harus mencocokkan penghapusan dengan float: Jika suatu elemen melayang ke kiri, maka Anda harus menghapusnya ke kiri. Elemen yang melayang akan tetap melayang, tetapi elemen yang dihapus akan muncul di bawahnya di halaman web.
+
+Contoh
+Contoh ini menghapus float di sebelah kiri. Artinya, elemen <div2> didorong ke bawah elemen <div1> yang berada di sebelah kiri: 
+
+div1 {
+  float: left;
+}
+
+div2 {
+  clear: left;
+}
+
+Peretasan Clearfix
+Jika elemen yang melayang lebih tinggi daripada elemen yang ditampungnya, elemen tersebut akan "meluap" keluar dari wadahnya. Kita kemudian dapat menambahkan trik clearfix untuk mengatasi masalah ini:
+
+Tanpa Clearfix
+
+Dengan Clearfix
+
+Contoh
+.clearfix {
+  overflow: auto;
+}
+Clearfix overflow: autoberfungsi dengan baik selama Anda dapat mengontrol margin dan padding (jika tidak, Anda mungkin akan melihat bilah gulir). Namun , trik Clearfix yang baru dan modern lebih aman digunakan, dan kode berikut digunakan untuk sebagian besar halaman web:
+
+Contoh
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+Anda akan mempelajari lebih lanjut tentang ::afterpseudo-elemen pada bab berikutnya.
+
+Latihan
+?
+Apa yang clearditentukan properti tersebut?
+
+
+Penyelarasan elemen yang melayang
+Apa yang seharusnya terjadi dengan elemen di sebelah elemen mengambang
+Ukuran elemen yang melayang
+Visibilitas elemen yang mengambang
+
+Properti CSS
+Property	Description
+clear	Specifies what should happen with the element that is next to a floating element
+float	Specifies whether an element should float to the left, right, or not at all
+
+Tata Letak CSS - Contoh Float
+Halaman ini berisi contoh float umum.
+
+Kisi Kotak / Kotak dengan Lebar yang Sama
+Kotak 1
+
+Kotak 2
+
+
+Kotak 1
+
+Kotak 2
+
+Kotak 3
+
+Dengan floatproperti tersebut, mudah untuk meletakkan kotak-kotak berisi konten berdampingan:
+
+Contoh
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+  padding: 50px; /* if you want space between the images */
+}
+Apa itu box-sizing?
+
+Anda dapat dengan mudah membuat tiga kotak mengambang berdampingan. Namun, ketika Anda menambahkan sesuatu yang memperbesar lebar setiap kotak (misalnya padding atau border), kotak tersebut akan pecah. box-sizingProperti ini memungkinkan kita untuk memasukkan padding dan border ke dalam total lebar (dan tinggi) kotak, memastikan padding tetap berada di dalam kotak dan tidak pecah.
+
+Anda dapat membaca lebih lanjut tentang properti box-sizing di Bab Ukuran Kotak CSS kami .
+
+Gambar Berdampingan
+ItaliaHutanPegunungan
+Kotak-kotak kisi juga dapat digunakan untuk menampilkan gambar berdampingan:
+
+Contoh
+.img-container {
+  float: left;
+  width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+  padding: 5px; /* if you want space between the images */
+}
+Kotak dengan Tinggi yang Sama
+Pada contoh sebelumnya, Anda telah mempelajari cara membuat kotak mengapung berdampingan dengan lebar yang sama. Namun, membuat kotak mengapung dengan tinggi yang sama tidaklah mudah. Solusi cepatnya adalah dengan mengatur tinggi tetap, seperti pada contoh di bawah ini:
+
+Kotak 1
+Beberapa konten, beberapa konten, beberapa konten
+
+Kotak 2
+Beberapa konten, beberapa konten, beberapa konten
+
+Beberapa konten, beberapa konten, beberapa konten
+
+Beberapa konten, beberapa konten, beberapa konten
+
+Contoh
+.box {
+  height: 500px;
+}
+Namun , ini tidak terlalu fleksibel. Tidak masalah jika Anda dapat menjamin bahwa kotak-kotak tersebut akan selalu berisi jumlah konten yang sama. Namun, seringkali, kontennya tidak sama. Jika Anda mencoba contoh di atas di ponsel, Anda akan melihat bahwa konten kotak kedua akan ditampilkan di luar kotak. Di sinilah CSS3 Flexbox berguna - karena dapat secara otomatis meregangkan kotak agar sama panjangnya dengan kotak terpanjang:
+
+Contoh
+Menggunakan Flexbox untuk membuat kotak fleksibel:
+
+Kotak 1 - Ini beberapa teks untuk memastikan kontennya benar-benar tinggi. Ini beberapa teks untuk memastikan kontennya benar-benar tinggi. Ini beberapa teks untuk memastikan kontennya benar-benar tinggi.
+Kotak 2 - Tinggi saya akan mengikuti Kotak 1.
+Tip:   Anda dapat membaca lebih lanjut tentang Modul Tata Letak Flexbox di Bab CSS Flexbox kami .
+
+Menu Navigasi
+Anda juga dapat menggunakan floatdaftar hyperlink untuk membuat menu horizontal:
+
+Contoh
+RumahBeritaKontakTentang
+Contoh Tata Letak Web
+Hal yang umum juga dilakukan untuk membuat seluruh tata letak web menggunakan floatproperti:
+
+
+Contoh
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+Contoh Lainnya
+Gambar dengan batas dan margin yang mengambang ke kanan dalam paragraf.
+Biarkan gambar mengambang ke kanan dalam paragraf. Tambahkan batas dan margin ke gambar.
+
+Gambar dengan keterangan yang mengambang ke kanan
+Biarkan gambar dengan keterangan mengambang ke kanan.
+
+Biarkan huruf pertama paragraf melayang ke kiri
+dan beri gaya pada huruf tersebut.
+
+Membuat situs web dengan float
+Gunakan float untuk membuat beranda dengan navbar, header, footer, konten kiri, dan konten utama.
+
+Semua Properti Float CSS
+Property	Description
+box-sizing	Defines how the width and height of an element are calculated: should they include padding and borders, or not
+clear	Specifies what should happen with the element that is next to a floating element
+float	Specifies whether an element should float to the left, right, or not at all
+overflow	Specifies what happens if content overflows an element's box
+overflow-x	Specifies what to do with the left/right edges of the content if it overflows the element's content area
+overflow-y	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area

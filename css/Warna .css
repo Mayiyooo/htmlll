@@ -1,0 +1,396 @@
+Warna CSS
+Warna ditentukan menggunakan nama warna yang telah ditetapkan, atau nilai RGB, HEX, HSL, RGBA, HSLA.
+
+Nama Warna CSS
+Dalam CSS, warna dapat ditentukan dengan menggunakan nama warna yang telah ditentukan sebelumnya:
+
+Tomat
+Oranye
+DodgerBiru
+SedangLautHijau
+Abu-abu
+Biru Batu Tulis
+Ungu
+Abu-abu Muda
+
+CSS/HTML mendukung 140 nama warna standar .
+
+Warna Latar Belakang CSS
+Anda dapat mengatur warna latar belakang untuk elemen HTML:
+
+Halo Dunia
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Dengan sedikit racun, latihan yang kita lakukan ullamcorper suscipit lobortis tidak akan keluar dari komodo yang diakibatkannya.
+
+Contoh
+<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<p style="background-color:Tomato;">Lorem ipsum...</p>
+
+Warna Teks CSS
+Anda dapat mengatur warna teks:
+
+Halo Dunia
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+Dengan sedikit racun, latihan kami yang ullamcorper suscipit lobortis tidak akan keluar dari komodo yang diakibatkannya.
+
+Contoh
+<h1 style="color:Tomato;">Hello World</h1>
+<p style="color:DodgerBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+IKLAN
+
+Warna Batas CSS
+Anda dapat mengatur warna batas:
+
+Halo Dunia
+Halo Dunia
+Halo Dunia
+Contoh
+<h1 style="border:2px solid Tomato;">Hello World</h1>
+<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border:2px solid Violet;">Hello World</h1>
+Nilai Warna CSS
+Dalam CSS, warna juga dapat ditentukan menggunakan nilai RGB, nilai HEX, nilai HSL, nilai RGBA, dan nilai HSLA:
+
+Sama dengan nama warna "Tomat":
+
+rgb(255, 99, 71)
+#ff6347
+hsl(9, 100%, 64%)
+Sama dengan nama warna "Tomat", tetapi 50% transparan:
+
+rgba(255, 99, 71, 0,5)
+hsla(9, 100%, 64%, 0,5)
+Contoh
+<h1 style="background-color:rgb(255, 99, 71);">...</h1>
+<h1 style="background-color:#ff6347;">...</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+<h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+Pelajari lebih lanjut tentang Nilai Warna
+Anda akan mempelajari lebih lanjut tentang RGB , HEX dan HSL di bab berikutnya.
+
+Latihan
+?
+Manakah dari berikut ini yang merupakan nama warna yang telah ditetapkan sebelumnya dalam CSS?
+
+
+MerahHijauBiru
+biru
+RGB
+HEKSAGON
+
+Warna CSS RGB
+Nilai warna RGB mewakili sumber cahaya MERAH, HIJAU, dan BIRU.
+
+Nilai RGB
+Dalam CSS, warna dapat ditentukan sebagai nilai RGB, menggunakan rumus ini:
+
+rgb ( merah, hijau , biru )
+
+Setiap parameter (merah, hijau, dan biru) menentukan intensitas warna antara 0 dan 255.
+
+Misalnya, rgb(255, 0, 0) ditampilkan sebagai merah, karena merah ditetapkan ke nilai tertingginya (255) dan yang lainnya ditetapkan ke 0.
+
+Untuk menampilkan warna hitam, atur semua parameter warna ke 0, seperti ini: rgb(0, 0, 0).
+
+Untuk menampilkan warna putih, atur semua parameter warna ke 255, seperti ini: rgb(255, 255, 255).
+
+Lakukan percobaan dengan mencampur nilai RGB di bawah ini:
+
+rgb(255, 99, 71)
+
+MERAH
+
+
+255
+HIJAU
+
+
+99
+BIRU
+
+
+71
+Contoh
+rgb(255, 0, 0)
+rgb(0, 0, 255)
+rgb(60, 179, 113)
+rgb(238, 130, 238)
+rgb(255, 165, 0)
+rgb(106, 90, 205)
+
+Nuansa abu-abu sering kali didefinisikan menggunakan nilai yang sama untuk ketiga sumber cahaya:
+
+Contoh
+rgb(60, 60, 60)
+rgb(90, 90, 90)
+rgb(120, 120, 120)
+rgb(180, 180, 180)
+rgb(210, 210, 210)
+rgb(240, 240, 240)
+
+IKLAN
+
+Nilai RGBA
+Nilai warna RGBA merupakan perluasan nilai warna RGB dengan saluran alfa - yang menentukan opasitas suatu warna.
+
+Nilai warna RGBA ditentukan dengan:
+
+rgba ( merah, hijau , biru, alfa )
+
+Parameter alpha adalah angka antara 0,0 (sepenuhnya transparan) dan 1,0 (tidak transparan sama sekali):
+
+Lakukan percobaan dengan mencampur nilai RGBA di bawah ini:
+
+rgba(255, 99, 71, 0,5)
+
+MERAH
+
+
+255
+HIJAU
+
+
+99
+BIRU
+
+
+71
+ALFA
+
+
+0,5
+Contoh
+rgba(255, 99, 71, 0)
+rgba(255, 99, 71, 0.2)
+rgba(255, 99, 71, 0.4)
+rgba(255, 99, 71, 0.6)
+rgba(255, 99, 71, 0.8)
+rgba(255, 99, 71, 1)
+
+Latihan
+?
+Manakah dari berikut ini yang mewakili warna merah dalam format RGB?
+
+
+rgb(255, 255, 255)
+rgb(255, 0, 0)
+rgb(0, 0, 255)
+rgb(0, 255, 0)
+
+Warna CSS HEX
+Warna heksadesimal ditentukan dengan: #RRGGBB, di mana bilangan bulat heksadesimal RR (merah), GG (hijau) dan BB (biru) menentukan komponen warna.
+
+Nilai HEX
+Dalam CSS, warna dapat ditentukan menggunakan nilai heksadesimal dalam bentuk:
+
+#rrggbb​
+
+Di mana rr (merah), gg (hijau) dan bb (biru) adalah nilai heksadesimal antara 00 dan ff (sama dengan desimal 0-255).
+
+Misalnya, #ff0000 ditampilkan sebagai merah, karena merah ditetapkan ke nilai tertinggi (ff) dan yang lainnya ditetapkan ke nilai terendah (00).
+
+Untuk menampilkan warna hitam, atur semua nilai ke 00, seperti ini: #000000.
+
+Untuk menampilkan warna putih, atur semua nilai ke ff, seperti ini: #ffffff.  
+
+Lakukan percobaan dengan mencampur nilai HEX di bawah ini:
+
+#ff6347
+
+MERAH
+
+
+ff
+HIJAU
+
+
+63
+BIRU
+
+
+47
+Contoh
+#ff0000
+#0000ff
+#3cb371
+#ee82ee
+#ffa500
+#6a5acd
+
+Nuansa abu-abu sering kali didefinisikan menggunakan nilai yang sama untuk ketiga sumber cahaya:
+
+Contoh
+#3c3c3c
+#616161
+#787878
+#b4b4b4
+#f0f0f0
+#f9f9f9
+
+IKLAN
+
+Nilai HEX 3 Digit
+Terkadang Anda akan melihat kode hex 3 digit di sumber CSS.
+
+Kode heksadesimal 3 digit merupakan singkatan dari beberapa kode heksadesimal 6 digit.
+
+Kode heksadesimal 3 digit memiliki bentuk sebagai berikut:
+
+# rgb
+
+Di mana r, g, dan b mewakili komponen merah, hijau, dan biru dengan nilai antara 0 dan f.
+
+Kode heksadesimal 3 digit hanya dapat digunakan jika kedua nilai (RR, GG, dan BB) sama untuk setiap komponen. Jadi, jika kita memiliki #ff00cc, kodenya dapat ditulis seperti ini: #f0c.
+
+Berikut ini adalah sebuah contoh:
+
+Contoh
+body {
+  background-color: #fc9; /* same as #ffcc99 */
+}
+
+h1 {
+  color: #f0f; /* same as #ff00ff */
+}
+
+p {
+  color: #b58; /* same as #bb5588 */
+}
+Latihan
+?
+Nilai HEX berikut manakah yang mewakili warna putih?
+
+
+#000000
+#ff0000
+#ffffff
+#00ff00
+
+Warna CSS HSL
+HSL merupakan singkatan dari hue (rona), saturation (saturasi), dan lightness (cahaya).
+
+Nilai HSL
+Dalam CSS, warna dapat ditentukan menggunakan rona, saturasi, dan kecerahan (HSL) dalam bentuk:
+
+hsl ( rona , saturasi , kecerahan )
+
+Rona adalah derajat pada roda warna dari 0 hingga 360. 0 adalah merah, 120 adalah hijau, dan 240 adalah biru.
+
+Saturasi adalah nilai persentase. 0% berarti warna abu-abu, dan 100% adalah warna penuh.
+
+Kecerahan juga merupakan persentase. 0% adalah hitam, 50% tidak terang atau gelap, 100% adalah putih
+
+Lakukan percobaan dengan mencampur nilai HSL di bawah ini:
+
+hsl(0, 100%, 50%)
+
+WARNA
+
+
+0
+KEJENUHAN
+
+
+100%
+KERINGANAN
+
+
+50%
+Contoh
+hsl(0, 100%, 50%)
+hsl(240, 100%, 50%)
+hsl(147, 50%, 47%)
+hsl(300, 76%, 72%)
+hsl(39, 100%, 50%)
+hsl(248, 53%, 58%)
+
+Kejenuhan
+Saturasi dapat dijelaskan sebagai intensitas warna.
+
+100% adalah warna murni, tidak ada nuansa abu-abu.
+
+50% adalah 50% abu-abu, tetapi Anda masih dapat melihat warnanya.
+
+0% sepenuhnya abu-abu; Anda tidak dapat lagi melihat warnanya.
+
+Contoh
+hsl(0, 100%, 50%)
+hsl(0, 80%, 50%)
+hsl(0, 60%, 50%)
+hsl(0, 40%, 50%)
+hsl(0, 20%, 50%)
+hsl(0, 0%, 50%)
+
+
+Keringanan
+Tingkat kecerahan suatu warna dapat dijelaskan sebagai seberapa banyak cahaya yang ingin Anda berikan pada warna tersebut, di mana 0% berarti tidak ada cahaya (hitam), 50% berarti 50% cahaya (tidak gelap maupun terang) dan 100% berarti kecerahan penuh (putih).
+
+Contoh
+hsl(0, 100%, 0%)
+hsl(0, 100%, 25%)
+hsl(0, 100%, 50%)
+hsl(0, 100%, 75%)
+hsl(0, 100%, 90%)
+hsl(0, 100%, 100%)
+
+Nuansa Abu-abu
+Nuansa abu-abu sering kali ditentukan dengan mengatur rona dan saturasi ke 0, dan menyesuaikan kecerahan dari 0% hingga 100% untuk mendapatkan nuansa yang lebih gelap/lebih terang:
+
+Contoh
+hsl(0, 0%, 0%)
+hsl(0, 0%, 24%)
+hsl(0, 0%, 47%)
+hsl(0, 0%, 71%)
+hsl(0, 0%, 94%)
+hsl(0, 0%, 100%)
+
+Nilai HSLA
+Nilai warna HSLA merupakan perluasan nilai warna HSL dengan saluran alfa - yang menentukan opasitas suatu warna.
+
+Nilai warna HSLA ditentukan dengan:
+
+hsla ( rona, saturasi , kecerahan, alfa )
+
+Parameter alpha adalah angka antara 0,0 (sepenuhnya transparan) dan 1,0 (tidak transparan sama sekali):
+
+Lakukan percobaan dengan mencampur nilai HSLA di bawah ini:
+
+hsla(0, 100%, 50%, 0,5)
+
+WARNA
+
+
+0
+KEJENUHAN
+
+
+100%
+KERINGANAN
+
+
+50%
+ALFA
+
+
+0,5
+Contoh
+hsla(9, 100%, 64%, 0)
+hsla(9, 100%, 64%, 0.2)
+hsla(9, 100%, 64%, 0.4)
+hsla(9, 100%, 64%, 0.6)
+hsla(9, 100%, 64%, 0.8)
+hsla(9, 100%, 64%, 1)
+
+Latihan
+?
+Apa kepanjangan dari 'H' dalam HSL?
+
+
+Warna
+Tinggi
+Menyorot
+Menangani

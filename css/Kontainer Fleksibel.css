@@ -1,0 +1,517 @@
+Flex
+Wadah CSS Flex
+Seperti yang kami tentukan di bab sebelumnya, ini adalah wadah fleksibel (area biru) dengan tiga item fleksibel :
+
+1
+2
+3
+Kontainer fleksibel menjadi fleksibel dengan menetapkan displayproperti ke flex:
+
+Contoh
+.flex-container {
+  display: flex;
+}
+
+Properti CSS yang kami gunakan untuk wadah fleksibel adalah:
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+Properti CSS flex-direction
+Properti ini flex-directionmenentukan arah tampilan item fleksibel dalam wadah fleksibel.
+
+Properti flex-directiondapat memiliki salah satu nilai berikut:
+
+row
+column
+row-reverse
+column-reverse
+Contoh
+Nilainya rowadalah nilai default, dan menampilkan item fleksibel secara horizontal (dari kiri ke kanan):
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai columnmenampilkan item fleksibel secara vertikal (dari atas ke bawah):
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai row-reversemenampilkan item fleksibel secara horizontal (tetapi dari kanan ke kiri):
+
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai column-reversemenampilkan item fleksibel secara vertikal (tetapi dari bawah ke atas):
+
+.flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+Hasil:
+
+1
+2
+3
+
+Properti CSS flex-wrap
+Properti ini flex-wrapmenentukan apakah item fleksibel harus dibungkus atau tidak, jika tidak ada cukup ruang untuk item tersebut dalam satu baris fleksibel.
+
+Properti flex-wrapdapat memiliki salah satu nilai berikut:
+
+nowrap
+wrap
+wrap-reverse
+Contoh
+Nilai tersebut nowrapmenentukan bahwa item fleksibel tidak akan dibungkus (ini adalah default):
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Nilai tersebut wrapmenentukan bahwa item fleksibel akan dibungkus jika perlu:
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Nilai tersebut wrap-reversemenentukan bahwa item fleksibel akan dibungkus jika perlu, dalam urutan terbalik:
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Properti CSS flex-flow
+Properti flex-flowadalah properti singkatan untuk menyetel properti flex-directiondan flex-wrap.
+
+Contoh
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+Properti CSS justify-content
+Properti ini justify-contentdigunakan untuk menyelaraskan item fleksibel saat item tersebut tidak menggunakan semua ruang yang tersedia pada sumbu utama (horizontal).
+
+Properti justify-contentdapat memiliki salah satu nilai berikut:
+
+center
+flex-start
+flex-end
+space-around
+space-between
+space-evenly
+Contoh
+Nilai tersebut centermemposisikan item fleksibel di tengah wadah:
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai ini flex-startmemposisikan item fleksibel di awal wadah (ini adalah default):
+
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai tersebut flex-endmemposisikan item fleksibel di akhir wadah:
+
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai space-aroundmenampilkan item fleksibel dengan spasi di sekitarnya:
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai space-betweenmenampilkan item fleksibel dengan spasi di antara mereka:
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai space-evenlymenampilkan item fleksibel dengan ruang yang sama di sekelilingnya:
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+Hasil:
+
+1
+2
+3
+
+Properti CSS align-items
+Properti ini align-itemsdigunakan untuk menyelaraskan item fleksibel ketika item tersebut tidak menggunakan semua ruang yang tersedia pada sumbu silang (vertikal).
+
+Properti align-itemsdapat memiliki salah satu nilai berikut:
+
+center
+flex-start
+flex-end
+stretch
+baseline
+normal
+Dalam contoh berikut ini kami menggunakan wadah setinggi 200 piksel, untuk mendemonstrasikan align-itemsproperti dengan lebih baik.
+
+Contoh
+Nilai tersebut centermemposisikan item fleksibel di tengah wadah:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai tersebut flex-startmemposisikan item fleksibel di bagian atas wadah:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: flex-start;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai tersebut flex-endmemposisikan item fleksibel di bagian bawah wadah:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: flex-end;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai tersebut stretchmeregangkan item fleksibel untuk mengisi wadah (ini sama dengan "normal" yang merupakan nilai default):
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: stretch;
+}
+Hasil:
+
+1
+2
+3
+
+Contoh
+Nilai tersebut baselinememposisikan item fleksibel di garis dasar kontainer:
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  align-items: baseline;
+}
+Catatan: Contoh ini menggunakan ukuran font yang berbeda untuk menunjukkan bahwa item disejajarkan dengan garis dasar teks:
+
+1
+2
+3
+4
+
+Properti CSS align-content
+Properti ini align-contentdigunakan untuk menyelaraskan garis fleksibel.
+
+Properti align-contentini serupa dengan align-items, tetapi alih-alih menyelaraskan item fleksibel, ia menyelaraskan garis fleksibel.
+
+Properti align-contentdapat memiliki salah satu nilai berikut:
+
+center
+stretch
+flex-start
+flex-end
+space-around
+space-between
+space-evenly
+Dalam contoh berikut ini kami menggunakan wadah setinggi 600 piksel, dengan flex-wrapproperti yang ditetapkan ke wrap, untuk mendemonstrasikan align-contentproperti tersebut dengan lebih baik.
+
+Contoh
+Dengan center, garis fleksibel dikemas ke arah tengah wadah:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Dengan stretch, garis fleksibel meregang untuk menempati sisa ruang wadah (ini adalah default):
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Dengan flex-start, garis fleksibel dikemas ke arah awal wadah:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Dengan flex-end, garis fleksibel dikemas ke arah ujung wadah: 
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Dengan space-between, spasi antara garis fleksibel sama, tetapi item pertama sejajar dengan tepi awal wadah, dan item terakhir sejajar dengan tepi akhir wadah:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Dengan space-around, spasi antara garis fleksibel sama, tetapi spasi sebelum item pertama dan setelah item terakhir diatur menjadi setengah dari spasi antara garis fleksibel:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Contoh
+Dengan space-evenly, garis fleksibel didistribusikan secara merata dalam wadah fleksibel, dengan ruang yang sama di atas, bawah, dan di antara:
+
+.flex-container {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+Hasil:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+Pemusatan Sempurna
+Dalam contoh berikut ini kita akan memecahkan masalah gaya umum: pemusatan sempurna.
+
+SOLUSI: Atur properti justify-contentdan align-itemske center, dan item fleksibel akan terpusat sempurna:
+
+Contoh
+.flex-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+Properti Wadah CSS Flex
+Tabel berikut mencantumkan semua properti CSS Flex Container:
+
+Property	Description
+align-content	Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines
+align-items	Vertically aligns the flex items when the items do not use all available space on the cross-axis
+display	Specifies the display behavior (the type of rendering box) for an element
+flex-direction	Specifies the direction of the flex items inside a flex container
+flex-flow	A shorthand property for flex-direction and flex-wrap
+flex-wrap	Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line
+justify-content	Horizontally aligns the flex items when the items do not use all available space on the main-axis

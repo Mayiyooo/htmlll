@@ -1,0 +1,64 @@
+
+Kombinator CSS
+Kombinator adalah sesuatu yang menjelaskan hubungan antara penyeleksi.
+
+Selektor CSS dapat berisi lebih dari satu selektor sederhana. Di antara selektor sederhana tersebut, kita dapat menyertakan sebuah kombinator.
+
+Ada empat kombinator berbeda dalam CSS:
+
+Kombinator turunan (spasi)
+Kombinator anak (>)
+Kombinator saudara berikutnya (+)
+Kombinator saudara kandung berikutnya (~)
+Kombinator Keturunan
+Kombinator keturunan mencocokkan semua elemen yang merupakan keturunan elemen tertentu.
+
+Contoh berikut memilih semua elemen <p> di dalam elemen <div>: 
+
+Contoh
+div p {
+  background-color: yellow;
+}
+Penggabung Anak (>)
+Kombinator anak memilih semua elemen yang merupakan anak dari elemen tertentu.
+
+Contoh berikut memilih semua elemen <p> yang merupakan anak dari elemen <div>:
+
+Contoh
+div > p {
+  background-color: yellow;
+}
+IKLAN
+
+Kombinator Saudara Berikutnya (+)
+Kombinator saudara berikutnya digunakan untuk memilih elemen yang berada tepat setelah elemen spesifik lainnya.
+
+Elemen saudara harus mempunyai elemen induk yang sama, dan "berdekatan" berarti "langsung mengikuti".
+
+Contoh berikut memilih elemen <p> pertama yang ditempatkan tepat setelah elemen <div>:
+
+Contoh
+div + p {
+  background-color: yellow;
+}
+Kombinator saudara berikutnya (~)
+Kombinator saudara kandung berikutnya memilih semua elemen yang merupakan saudara kandung berikutnya dari elemen yang ditentukan.
+
+Contoh berikut memilih semua elemen <p> yang merupakan saudara kandung berikutnya dari elemen <div>: 
+
+Contoh
+div ~ p {
+  background-color: yellow;
+}
+Latihan
+?
+Kombinator manakah yang memilih elemen yang merupakan anak langsung dari elemen tertentu?
+
+
+Kombinator anak (> )
+Kombinator turunan (spasi)
+Kombinator saudara berikutnya (+)
+Kombinator saudara kandung berikutnya (~)
+
+Referensi Kombinator CSS
+Untuk daftar lengkap semua kombinator CSS, kunjungi Referensi Kombinator CSS kami .

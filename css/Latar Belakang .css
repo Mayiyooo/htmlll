@@ -1,0 +1,307 @@
+Latar Belakang CSS
+Properti latar belakang CSS digunakan untuk menambahkan efek latar belakang untuk elemen.
+
+Dalam bab ini, Anda akan mempelajari tentang properti latar belakang CSS berikut:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+background(properti singkatan)
+Warna latar belakang CSS
+Properti background-colormenentukan warna latar belakang suatu elemen.
+
+Contoh
+Warna latar belakang halaman diatur seperti ini:
+
+body {
+  background-color: lightblue;
+}
+Dengan CSS, warna paling sering ditentukan oleh:
+
+nama warna yang valid - seperti "merah"
+nilai HEX - seperti "#ff0000"
+nilai RGB - seperti "rgb(255,0,0)"
+Lihat Nilai Warna CSS untuk daftar lengkap kemungkinan nilai warna.
+
+Elemen Lainnya
+Anda dapat mengatur warna latar belakang untuk elemen HTML apa pun:
+
+Contoh
+Di sini, elemen <h1>, <p>, dan <div> akan memiliki warna latar belakang yang berbeda: 
+
+h1 {
+  background-color: green;
+}
+
+div {
+  background-color: lightblue;
+}
+
+p {
+  background-color: yellow;
+}
+IKLAN
+
+Opacity / Transparansi
+Properti ini opacitymenentukan opasitas/transparansi suatu elemen. Nilainya dapat berkisar dari 0,0 hingga 1,0. Semakin rendah nilainya, semakin transparan:
+
+opasitas 1
+
+opasitas 0,6
+
+opasitas 0,3
+
+opasitas 0,1
+
+Contoh
+div {
+  background-color: green;
+  opacity: 0.3;
+}
+Catatan: Saat menggunakan opacityproperti untuk menambahkan transparansi pada latar belakang suatu elemen, semua elemen turunannya mewarisi transparansi yang sama. Hal ini dapat membuat teks di dalam elemen yang sepenuhnya transparan sulit dibaca.
+
+Transparansi menggunakan RGBA
+Jika Anda tidak ingin menerapkan opasitas pada elemen anak, seperti pada contoh di atas, gunakan nilai warna RGBA . Contoh berikut menetapkan opasitas untuk warna latar belakang, bukan teks:
+
+100% opasitas
+
+60% opasitas
+
+30% opasitas
+
+10% opasitas
+
+Anda telah mempelajari dari Bab Warna CSS kami bahwa Anda dapat menggunakan RGB sebagai nilai warna. Selain RGB, Anda dapat menggunakan nilai warna RGB dengan kanal alfa (RGB A ) - yang menentukan opasitas suatu warna.
+
+Nilai warna RGBA ditentukan dengan: rgba(merah, hijau, biru, alfa ). Parameter alfa berupa angka antara 0,0 (sepenuhnya transparan) dan 1,0 (sepenuhnya buram).
+
+Tip: Anda akan mempelajari lebih lanjut tentang Warna RGBA di Bab Warna CSS kami .
+
+Contoh
+div {
+  background: rgba(0, 128, 0, 0.3) /* Green background with 30% opacity */
+}
+Latihan
+?
+Seret dan lepas properti yang benar untuk menetapkan warna latar belakang hijau untuk suatu <div>elemen.
+div {
+  : green;
+}
+
+
+Properti Warna Latar Belakang CSS
+Property	Description
+background-color	Sets the background color of an element
+
+
+Gambar latar belakang CSS
+Properti background-imagemenentukan gambar yang akan digunakan sebagai latar belakang suatu elemen.
+
+Secara default, gambar diulang sehingga menutupi seluruh elemen.
+
+Contoh
+Mengatur gambar latar belakang untuk suatu halaman: 
+
+body {
+  background-image: url("paper.gif");
+}
+Contoh
+Contoh ini menunjukkan kombinasi teks dan gambar latar belakang yang buruk . Teksnya sulit dibaca: 
+
+body {
+  background-image: url("bgdesert.jpg");
+}
+Catatan: Saat menggunakan gambar latar belakang, gunakan gambar yang tidak mengganggu teks.
+
+Gambar latar belakang juga dapat diatur untuk elemen tertentu, seperti elemen <p>:
+
+Contoh
+p {
+  background-image: url("paper.gif");
+}
+Latihan
+?
+Properti CSS mana yang digunakan untuk mengatur gambar latar belakang?
+
+
+background-img
+background-image
+background-url
+image-background
+
+Properti Gambar Latar Belakang CSS
+Property	Description
+background-image	Sets the background image for an element
+
+Pengulangan Gambar Latar Belakang CSS
+Latar belakang CSS-ulangi
+Secara default, background-imageproperti mengulang gambar baik secara horizontal maupun vertikal.
+
+Beberapa gambar sebaiknya diulang hanya secara horizontal atau vertikal, atau akan terlihat aneh, seperti ini:
+
+Contoh
+body {
+  background-image: url("gradient_bg.png");
+}
+Jika gambar di atas diulang hanya secara horizontal ( background-repeat: repeat-x;), latar belakang akan terlihat lebih baik:
+
+Contoh
+body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}
+Tip: Untuk mengulang gambar secara vertikal, aturbackground-repeat: repeat-y;
+
+CSS background-repeat: no-repeat
+Menampilkan gambar latar belakang hanya satu kali juga ditentukan oleh background-repeatproperti:
+
+Contoh
+Tampilkan gambar latar belakang satu kali saja:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+}
+Pada contoh di atas, gambar latar belakang ditempatkan di tempat yang sama dengan teks. Kita ingin mengubah posisi gambar agar tidak terlalu mengganggu teks.
+
+Posisi latar belakang CSS
+Properti background-positionini digunakan untuk menentukan posisi gambar latar belakang.
+
+Contoh
+Posisikan gambar latar belakang di sudut kanan atas: 
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+Latihan
+?
+Seret dan lepas properti dan nilai yang benar untuk mengulang gambar latar belakang secara horizontal.
+body {
+  background-image: url("gradient_bg.png");
+  : ;
+}
+
+
+Properti Pengulangan dan Posisi Latar Belakang CSS
+Property	Description
+background-position	Sets the starting position of a background image
+background-repeat	Sets how a background image will be repeated
+
+Lampiran Latar Belakang CSS
+Lampiran latar belakang CSS
+Properti background-attachmentmenentukan apakah gambar latar belakang harus digulir atau tetap (tidak akan digulir bersama bagian halaman lainnya):
+
+Contoh
+Tentukan bahwa gambar latar belakang harus diperbaiki:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+Contoh
+Tentukan bahwa gambar latar belakang harus bergulir bersama dengan sisa halaman:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+}
+Latihan
+?
+Apa yang background-attachmentdikontrol properti?
+
+
+Ukuran gambar latar belakang
+Apakah gambar latar belakang bergulir bersama halaman atau tetap diam
+Warna gambar latar belakang
+Warna beberapa gambar latar belakang
+
+Lampiran Latar Belakang CSS
+Lampiran latar belakang CSS
+Properti background-attachmentmenentukan apakah gambar latar belakang harus digulir atau tetap (tidak akan digulir bersama bagian halaman lainnya):
+
+Contoh
+Tentukan bahwa gambar latar belakang harus diperbaiki:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+Contoh
+Tentukan bahwa gambar latar belakang harus bergulir bersama dengan sisa halaman:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+}
+Latihan
+?
+Apa yang background-attachmentdikontrol properti?
+
+
+Ukuran gambar latar belakang
+Apakah gambar latar belakang bergulir bersama halaman atau tetap diam
+Warna gambar latar belakang
+Warna beberapa gambar latar belakang
+
+Singkatan Latar Belakang CSS
+Latar belakang CSS - Properti singkatan
+Untuk mempersingkat kode, Anda juga dapat menentukan semua properti latar belakang dalam satu properti tunggal. Ini disebut properti singkatan.
+
+Alih-alih menulis:
+
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+Anda dapat menggunakan properti singkatan background:
+
+Contoh
+Gunakan properti singkatan untuk menetapkan properti latar belakang dalam satu deklarasi:
+
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+Saat menggunakan properti singkatan, urutan nilai properti adalah:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+Tidak masalah jika salah satu nilai properti hilang, selama nilai lainnya berada dalam urutan ini. Perhatikan bahwa kami tidak menggunakan properti background-attachment dalam contoh di atas, karena tidak memiliki nilai.
+
+Latihan
+?
+Apa tujuan dari backgroundproperti singkatan CSS?
+
+
+Untuk menentukan hanya warna latar belakang suatu elemen
+Untuk mengatur perilaku gulir default untuk semua elemen
+Untuk menerapkan efek gradien ke latar belakang
+Untuk menentukan beberapa properti latar belakang dalam satu deklarasi
+
+Semua Properti Latar Belakang CSS
+Property	Description
+background	Sets all the background properties in one declaration
+background-attachment	Sets whether a background image is fixed or scrolls with the rest of the page
+background-clip	Specifies the painting area of the background
+background-color	Sets the background color of an element
+background-image	Sets the background image for an element
+background-origin	Specifies where the background image(s) is/are positioned
+background-position	Sets the starting position of a background image
+background-repeat	Sets how a background image will be repeated
+background-size	Specifies the size of the background image(s)

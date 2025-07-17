@@ -1,0 +1,206 @@
+- Contoh
+Kueri Media CSS - Contoh Lainnya
+Mari kita lihat beberapa contoh lagi penggunaan media query.
+
+Kueri media adalah teknik populer untuk menyajikan lembar gaya yang disesuaikan untuk berbagai perangkat. Sebagai contoh sederhana, kita dapat mengubah warna latar belakang untuk berbagai perangkat:
+
+
+Contoh
+/* Set the background color of body to tan */
+body {
+  background-color: tan;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+Apakah Anda bertanya-tanya mengapa kami menggunakan 992 piksel dan 600 piksel? Itulah yang kami sebut "titik henti tipikal" untuk perangkat. Anda dapat membaca lebih lanjut tentang titik henti tipikal di Tutorial Desain Web Responsif kami .
+
+Kueri Media untuk Menu
+Dalam contoh ini, kami menggunakan kueri media untuk membuat menu navigasi responsif, yang desainnya bervariasi pada ukuran layar yang berbeda.
+
+Layar besar:
+
+Layar kecil:
+
+Contoh
+/* The navbar container */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+IKLAN
+
+Kueri Media untuk Kolom
+Penggunaan umum kueri media adalah untuk membuat tata letak yang fleksibel. Dalam contoh ini, kami membuat tata letak yang bervariasi antara empat, dua, dan lebar penuh kolom, bergantung pada ukuran layar yang berbeda:
+
+Layar besar:
+
+Layar sedang:
+
+Layar kecil:
+
+Contoh
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+Tips: Cara yang lebih modern untuk membuat tata letak kolom adalah dengan menggunakan CSS Flexbox (lihat contoh di bawah). Namun, cara ini tidak didukung di Internet Explorer 10 dan versi sebelumnya. Jika Anda memerlukan dukungan IE6-10, gunakan float (seperti yang ditunjukkan di atas).
+
+Untuk mempelajari lebih lanjut tentang Modul Tata Letak Kotak Fleksibel, baca bab CSS Flexbox kami .
+
+Untuk mempelajari lebih lanjut tentang Desain Web Responsif, baca Tutorial Desain Web Responsif kami .
+
+Contoh
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 20px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+Sembunyikan Elemen dengan Kueri Media
+Penggunaan umum lainnya dari kueri media adalah untuk menyembunyikan elemen pada ukuran layar yang berbeda:
+
+Saya akan disembunyikan di layar kecil.
+Contoh
+/* If the screen size is 600px wide or less, hide the element */
+@media screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+Ubah Ukuran Font dengan Media Query
+Anda juga dapat menggunakan kueri media untuk mengubah ukuran font suatu elemen pada ukuran layar yang berbeda:
+
+Ukuran Font Variabel.
+Contoh
+/* If screen size is more than 600px wide, set the font-size of <div> to 80px */
+@media screen and (min-width: 600px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If screen size is 600px wide, or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+Galeri Gambar Fleksibel
+Dalam contoh ini, kami menggunakan media queries bersama dengan flexbox untuk membuat galeri gambar responsif:
+
+Contoh
+
+Situs Web Fleksibel
+Dalam contoh ini, kami menggunakan kueri media bersama flexbox untuk membuat situs web responsif, berisi bilah navigasi fleksibel dan konten fleksibel.
+
+Contoh
+
+Orientasi: Potret / Lanskap
+Kueri media juga dapat digunakan untuk mengubah tata letak halaman tergantung pada orientasi peramban.
+
+Anda dapat memiliki serangkaian properti CSS yang hanya akan berlaku ketika jendela browser lebih lebar dari tingginya, yang disebut orientasi "Lanskap":
+
+Contoh
+Gunakan warna latar belakang biru muda jika orientasinya dalam mode lanskap:
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+Lebar Min ke Lebar Maksimum
+Anda juga dapat menggunakan nilai untuk menetapkan lebar minimum dan lebar maksimum.(max-width: ..) and (min-width: ..)
+
+Misalnya, bila lebar browser antara 600 dan 900px, ubah tampilan elemen <div>:
+
+Contoh
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  div.example {
+    font-size: 50px;
+    padding: 50px;
+    border: 8px solid black;
+    background: yellow;
+  }
+}
+Menggunakan nilai tambahan: Dalam contoh di bawah ini, kami menambahkan kueri media tambahan ke kueri media yang sudah ada menggunakan koma:
+
+Contoh
+/* When the width is between 600px and 900px or above 1100px - change the appearance of <div> */
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
+  div.example {
+    font-size: 50px;
+    padding: 50px;
+    border: 8px solid black;
+    background: yellow;
+  }
+}
+Referensi CSS @media
+Untuk ikhtisar lengkap semua jenis media dan fitur/ekspresi, silakan lihat aturan @media dalam referensi CSS kami .
+
+Kiat: Untuk mempelajari lebih lanjut tentang desain web responsif (cara menargetkan perangkat dan layar yang berbeda), menggunakan titik henti kueri media, baca Tutorial Desain Web Responsif kami .
+
+

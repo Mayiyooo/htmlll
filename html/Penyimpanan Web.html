@@ -1,0 +1,145 @@
+API Seret dan Lepas HTML
+API Drag and Drop HTML memungkinkan suatu elemen untuk diseret dan dijatuhkan.
+
+Contoh
+Tarik gambar W3Schools ke persegi panjang kedua.
+
+Seret dan Jatuhkan
+Seret dan lepas adalah fitur yang sangat umum. Fitur ini digunakan saat Anda "mengambil" suatu objek dan menyeretnya ke lokasi lain.
+
+Dukungan Peramban
+Angka dalam tabel menunjukkan versi browser pertama yang sepenuhnya mendukung Drag and Drop.
+
+API					
+Drag and Drop	4.0	9.0	3.5	6.0	12.0
+Contoh API Drag and Drop HTML
+Contoh di bawah ini adalah contoh drag and drop sederhana:
+
+Contoh
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+<img id="img1" src="img_logo.gif" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69">
+
+</body>
+</html>
+Mungkin ini terlihat rumit, tetapi mari kita bahas semua bagian berbeda dari acara drag and drop.
+
+
+Jadikan Elemen Dapat Diseret
+Pertama-tama: Untuk membuat elemen dapat diseret, atur draggableatribut ke true:
+
+<img id="img1" draggable="true">
+atau:
+
+<p id="p1" draggable="true">Draggable text</p>
+Apa yang Akan Diseret - ondragstart dan setData()
+Kemudian, tentukan apa yang akan terjadi saat elemen diseret.
+
+Dalam contoh di atas, ondragstartatribut elemen <img> memanggil fungsi (dragstartHandler(ev)), yang menentukan data apa yang akan diseret.
+
+Metode ini dataTransfer.setData()menetapkan tipe data dan nilai data yang diseret:
+
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+Dalam kasus ini, tipe datanya adalah "teks" dan nilainya adalah id elemen yang dapat diseret ("img1").
+
+Tempat Menjatuhkan - ondragover
+Atribut ondragoverelemen <div> memanggil fungsi (dragoverHandler(ev)), yang menentukan di mana data yang diseret dapat dijatuhkan.
+
+Secara default, data/elemen tidak dapat dihapus di elemen lain. Untuk mengizinkan penghapusan, kita harus mencegah penanganan default elemen tersebut.
+
+Hal ini dilakukan dengan memanggil preventDefault()metode untuk acara ondragover:
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+Lakukan Drop - ondrop
+Ketika data yang diseret dijatuhkan, peristiwa jatuh akan terjadi.
+
+Dalam contoh di atas, atribut ondrop dari elemen <div> memanggil fungsi, dropHandler(event):
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+Kode dijelaskan:
+
+Panggilan preventDefault()untuk mencegah penanganan data default browser (defaultnya adalah terbuka sebagai tautan saat dijatuhkan)
+Dapatkan data yang diseret dengan dataTransfer.getData()metode ini. Metode ini akan mengembalikan data apa pun yang telah diatur ke tipe yang sama dalam setData()metode ini.
+Data yang diseret adalah id elemen yang diseret ("img1")
+Tambahkan elemen yang diseret ke elemen yang dijatuhkan
+Contoh Lainnya
+Contoh
+Cara menyeret dan melepas elemen <h1> ke elemen <div>:
+
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+<h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</h1>
+Contoh
+Cara menyeret dan melepas elemen <a> ke elemen <div>:
+
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"></div>
+
+<a id="link1" href="https://w3schools.com" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</a>
+Contoh
+Cara menyeret dan melepas gambar bolak-balik di antara dua elemen <div>:
+
